@@ -24,7 +24,7 @@ The source code for the various implementations can be found here:
 [R](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.R), and
 [JavaScript](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.js).
 We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
-The following micro-benchmark results are from a MacBook Pro with a 2.53GHz Intel Core 2 Duo CPU and 8GB of 1066MHz DDR3 RAM:
+The following micro-benchmark results are from a 80-core Linux machine with an Intel(R) Xeon(R) CPU E7-8850 2.00GHz CPU and 1TB of 1067MHz DDR3 RAM:
 
 <div class="figure">
 {% include benchmarks.html %}
@@ -32,8 +32,8 @@ The following micro-benchmark results are from a MacBook Pro with a 2.53GHz Inte
 benchmark times relative to C (smaller is better).
 </p>
 <p class="note">
-C compiled by Clang 4.0, taking best timing from all optimization levels (-O0 through -O3).<br>
-The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use NumPy (v1.5.1) functions; the rest are pure Python implementations.
+C compiled by gcc 4.8.1, taking best timing from all optimization levels (-O0 through -O3).<br>
+The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use NumPy (v1.6.1) functions; the rest are pure Python implementations.
 </p>
 </div>
 
