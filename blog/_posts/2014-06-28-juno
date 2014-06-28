@@ -1,0 +1,26 @@
+---
+layout: post
+title:  Juno: The environment Julia deserves
+authors:
+    - <a href="http://github.com/one-more-minute/">Mike Innes</a>
+---
+
+The Julia Language developers are greedy. Ungraciously, unashamedly so.
+
+But what the Julia project has to teach us is that demanding better technology is a good thing—so long you’re willing to put your money where your mouth is and build it. They did just that, and some truly great things have come out of it. So let’s continue to be greedy and demand more; because as amazing as the technology that surrounds us is, there’s always room for something better.
+
+This applies particularly to our tools, because aside from the REPL (which, in fairness, is probably the best around), Julia doesn’t yet have the environment it deserves. Like the language itself, Julia’s tools should be intuitive yet powerful; the curious novice should be able to play around and make something interesting without a steep learning curve, but equally the most serious hacker should have the tools they need to enjoy doing what they do best.
+
+Traditionally, as with languages themselves, editors have had to make tradeoffs between ease of use and power. I love the sheer hackability and power of Emacs—but most people don’t have time to train as concert pianists so that they can edit text. I love the simplicity and usability of Sublime Text, but I want to be able to dig into my tools, take them apart and put them back together again, because all of the most interesting projects start with simple tinkering.
+
+The Light Table project is a really interesting step in this direction, and I think it makes an excellent base for a Julia environment. Despite having it’s roots in Emacs-like editors, it’s not just an Emacs clone in a different Lisp, and has plenty of interesting ideas of it’s own — from simple things like familiar default shortcuts to novel features like inline results. On top of that, it’s easy to modify and extend, meaning that we can be imaginative in choosing features to support without the burden of building everything from scratch.
+
+I want to use Light Table to build Juno, an environment which is powerful for experts but usable and productive from the first time you open it. It should enable you to quickly build modules, packages and projects by modifying them as they are running and interactively displaying results, and it should do this equally well whether you are running Julia on an ancient laptop or commanding a thousand servers. Documentation and sources should never be more than a keystroke away, and should be equally interactive. It should integrate well with existing tools like the REPL and IJulia so that you can build your own powerful, interactive tools as you use them. Profiling results, error messages and the upcoming debugger should highlight and annotate relevant lines so that it’s easy to tell at a glance what’s happening in your code.
+
+Building an environment that’s as good as I want it to be is an ambitious project, and there’s no way I can do it all on my own. There will be plenty of interesting challenges, and I’ll need lots of input from the community to keep me on the right track. But this summer I hope that I can get the ball rolling (or at least convince you that I’m not *just* talking out of my ass), and if I can do that I’ll have achieved something to be proud of.
+
+It’s going to be an exciting summer.
+
+---
+
+Click [here](http://github.com/one-more-minute/Jupiter-LT) to try out the beta version of Juno.
