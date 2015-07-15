@@ -2,6 +2,10 @@
 layout: default
 title:  The Julia Language
 ---
+<head>
+<script type="text/javascript">window.liveSettings={api_key:"37759e0e6c3f4da9b1d59fcd5f66ffa4"};</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+</head>
 
 Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments.
 It provides a sophisticated compiler, [distributed parallel execution](http://docs.julialang.org/en/release-0.3/manual/parallel-computing/), numerical accuracy, and an [extensive mathematical function library](http://docs.julialang.org/en/release-0.3/stdlib/).
