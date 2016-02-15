@@ -156,6 +156,15 @@ The [Images.jl](https://github.com/timholy/Images.jl) package implements several
 **Expected Results:** A port of Axiom to Julia
 
 
+
+## Project: Ensure Julia runs smoothly on current large HPC systems
+
+Julia employs several techniques that are novel in the field of high-performance computing, such as just-in-time computing, or first-class support of an interactive environment, or dynamically adding/removing worker processes. This clashes with the traditional ahead-of-time compiled programes running in batch mode. However, the advantages of Julia's approach are clear. This project explores how "typical" Julia programs can be run efficiently on current large-scale systems such as [Blue Waters](https://bluewaters.ncsa.illinois.edu) or [Cori](http://www.nersc.gov/users/computational-systems/cori/).
+
+**Expected Results:** Run a large, parallel Julia application on a high-end HPC system
+
+
+
 # Theme: Improvements to base Julia functionality
 
 ## Project: LibGit2 support
