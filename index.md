@@ -51,7 +51,7 @@ To get a sense of relative performance of Julia compared to other languages that
 [Go](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.go), and
 [Mathematica](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.nb).
 We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
-The following micro-benchmark results were obtained on a single core (serial execution) on an Intel(R) Xeon(R) CPU E7-8850 2.00GHz CPU with 1TB of 1067MHz DDR3 RAM, running Linux:
+The following micro-benchmark results were obtained on a single core (serial execution) on an Intel(R) Xeon(R) CPU E7-8850 2.00&nbsp;GHz CPU with 1&nbsp;TB of 1067&nbsp;MHz DDR3 RAM, running Linux:
 
 <div class="figure">
 {% include benchmarks.html %}
@@ -140,12 +140,12 @@ The eventual goal is to let people stop worrying about administering machines an
 
 <a href="/images/gadfly-demo.png" target="_blank"><img src="/images/gadfly-demo.png" width="100%" /></a>
 
-# Free, Open Source and Library-Friendly
+# Free, Open Source and library-friendly
 
 The core of the Julia implementation is licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
 Various libraries used by the Julia environment include their own licenses such as the [GPL](http://en.wikipedia.org/wiki/GNU_General_Public_License), [LGPL](http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License), and [BSD](http://en.wikipedia.org/wiki/BSD_licenses)
 (therefore the environment, which consists of the language, user interfaces, and libraries, is under the GPL).
 The language can be built as a shared library, so users can combine Julia with their own C/Fortran code or proprietary third-party libraries.
-Furthermore, Julia makes it [simple to call external functions](http://docs.julialang.org/en/release-0.3/manual/calling-c-and-fortran-code/) in C and Fortran shared libraries, without writing any wrapper code or even recompiling existing code.
+Furthermore, Julia makes it [simple to call external functions](http://docs.julialang.org/en/release-0.4/manual/calling-c-and-fortran-code/) in C and Fortran shared libraries, without writing any wrapper code or even recompiling existing code.
 You can try calling external library functions directly from Julia's interactive prompt, getting immediate feedback.
 See [LICENSE](https://github.com/JuliaLang/julia/blob/master/LICENSE.md) for the full terms of Julia's licensing.
