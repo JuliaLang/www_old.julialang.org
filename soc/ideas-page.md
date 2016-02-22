@@ -182,6 +182,16 @@ Some possible aims of this project:
 * Efficient generation of non-uniform variates, across different floating point precisions.
 * Massively parallel random number generators, such as [SPRNG](http://www.sprng.org) or the [Random123](https://www.deshawresearch.com/resources_random123.html) entropy streams, and integration with [ComputeFramework.jl](https://github.com/shashi/ComputeFramework.jl).
 
+## Helper functions for CUDA Programming
+
+CUDA has become a major part of high-performance computing. Julia currently supports CUDA programming via the CUDA.jl package, but its usability since the interface is very low level. The goal of the project would be to implement wrappers for basic CUDA programs in order to help facilitate CUDA programming in Julia. Possible aims for the project include:
+
+* Writing an interface for vectorized function evaluations. This would be a general CUDA kernal which evaluates element-wise some function, and a Julia wrapper takes in a C-compatible Julia function on scalars and computes this function element-wise on the GPU. This wrapper would have default settings for setting grid/block sizes, and the CUDA kernal should automatically divide the workload across the GPU in some efficient manner.
+* Generalizing the previous function to multiple dimensions, i.e. a wrapper which takes in a Julia function which is vectorized to solve inputs as one-dimensional array, etc. 
+* Use the wrapper to implement standard vectorized methods for CuArrays, i.e. +,-,/,cos, etc.
+* Write wrappers for efficiently doing vectorized solving on multiple GPUs. A goal would be to implement a distributedCuArray type which automatically distributes between chosen GPU devices (based on default parameters determined via information about the GPUs),  performs the vectorized evaluations simultaniously on the multiple GPUs, and extends functions for sending the results to the host and freeing memory.
+* Writing tutorials / documentation for using this new functionality.
+* Performing testing to determine the overhead of using this interface vs manually writing CUDA kernals.
 
 ## Writing high-performance, multithreaded kernels for image processing
 
