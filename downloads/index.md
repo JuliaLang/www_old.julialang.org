@@ -99,7 +99,7 @@ tarball is much smaller in size, but will download dependency tarballs on demand
 <tr>
     <th> Source </th>
     <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-latest.tar.gz">Tarball</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-latest.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5-latest/julia-0.5-latest-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-full.tar.gz.asc">GPG</a>) </td>
     <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/release-0.5">GitHub</a> </td>
 </tr>
 </tbody></table>
