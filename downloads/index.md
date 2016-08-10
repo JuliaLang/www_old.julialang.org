@@ -67,13 +67,13 @@ Older releases of Julia for all platforms are available on the [Older releases p
 
 For Julia 0.3, only critical bugfixes are being supported. Releases older than 0.3 are now unmaintained.
 
-# Release Candidates (v0.5.0-rc1)
+# Release Candidates (v0.5.0-rc2)
 
 We are currently testing release candidates for the next version of Julia. Please see
 [platform](platform.html) specific instructions if you have trouble installing Julia.
 Checksums for this release are available in both
-[MD5](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.0-rc1.md5)
-and [SHA256](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.0-rc1.sha256) format.
+[MD5](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.0-rc2.md5)
+and [SHA256](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.0-rc2.sha256) format.
 Download the release candidate here, and please report any issues to the
 [issue tracker](https://github.com/JuliaLang/julia/issues) on GitHub.
 Full tarballs contain all dependencies bundled within the tarball alongside Julia,
@@ -98,8 +98,8 @@ tarball is much smaller in size, but will download dependency tarballs on demand
 </tr>
 <tr>
     <th> Source </th>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-latest.tar.gz">Tarball</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-latest.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc1/julia-0.5.0-rc1-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc2/julia-0.5.0-rc2-latest.tar.gz">Tarball</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc2/julia-0.5.0-rc2-latest.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc2/julia-0.5.0-rc2-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.0-rc2/julia-0.5.0-rc2-full.tar.gz.asc">GPG</a>) </td>
     <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/release-0.5">GitHub</a> </td>
 </tr>
 </tbody></table>
