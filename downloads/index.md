@@ -62,9 +62,9 @@ Please see the [Juno website](http://junolab.org) for setup instructions, and [t
 
 # Older Releases
 
-Older releases of Julia for all platforms are available on the [Older releases page](http://julialang.org/downloads/oldreleases.html).
+Older releases of Julia for all platforms are available on the [Older Releases page](http://julialang.org/downloads/oldreleases.html).
 
-For Julia 0.3, only critical bugfixes are being supported. Releases older than 0.3 are now unmaintained.
+Releases older than 0.4 are now unmaintained.
 
 # Release Candidates (v0.5.0-rc4)
 
