@@ -7,19 +7,23 @@ All participants in the Julia community are requested to read the
 [Julia Community Standards](standards/), and abide by them in all Julia related
 forums.
 
-# Discourse
+# Mailing Lists
+
+## Discourse
 
 The primary online discussion venue for Julia is the Discourse forum at
 [discourse.julialang.org](https://discourse.julialang.org/). This is a new site which is
 to replace many of the mailing lists below. Announcements will be made on the relevant
 lists if and when they are moved.
 
-# Mailing Lists
+## Google groups
 
 * [julia-news](https://groups.google.com/group/julia-news) – low traffic mailing list for important announcements, such as new releases.
 * [julia-opt](https://groups.google.com/group/julia-opt) – discussions related to numerical optimization in julia. This includes Mathematical Programming (linear, mixed-integer, conic, semi-definite, etc.), constrained and unconstrained gradient-based and gradient-free optimization, and related topics.
 * [JuliaBox](https://groups.google.com/group/julia-box) – discussions related to running Julia in the so-called cloud.
 * [julia-users-es](https://groups.google.com/forum/#!forum/julialanges) – discussions around the usage of Julia in the Spanish language.
+* [JuliaTokyo](https://groups.google.com/forum/#!forum/julia-tokyo) – discussions around the usage of Julia in the Japanese language.
+* [Julia Users Berlin](https://groups.google.com/forum/#!forum/julia-users-berlin)
 
 ## Old lists
 
@@ -57,14 +61,17 @@ Various Julia projects are hosted under the following umbrella organizations on 
 * [JuliaDiffEq](https://github.com/JuliaDiffEq) – Differential equation solving and analysis
 * [JuliaIO](https://github.com/JuliaIO) – IO-related functionality, such as serialization
 * [JuliaInterop](https://github.com/JuliaInterop) – Easy interoperability between Julia and not Julia
-* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
 * [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs 
 * [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
 * [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
-* [Julia-i18n](https://github.com/Julia-i18n) - Internationalization (i18n) and localization (l10n) for Julians
 * [JuliaEditorSupport](https://github.com/JuliaEditorSupport) - Extensions/Plugins for text editors and IDEs
-* [JuliaBerry](https://github.com/JuliaBerry) - [Julia resources for the Raspberry Pi](https://juliaberry.github.io/)
+* [JuliaBerry](https://github.com/JuliaBerry) – [Julia resources for the Raspberry Pi](https://juliaberry.github.io/)
+* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians
+* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language
+* [JuliaLangPt](https://github.com/JuliaLangPt) – Site for translation of Julia documentation, etc. to Portuguese
+* [JuliaCN](https://github.com/JuliaCN) – An open-source orgnization for Julia localization in Chinese
+* [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language
 
 # Google Summer of Code 2014
 
@@ -80,21 +87,76 @@ Various Julia videos and playlists are posted on [YouTube](https://www.youtube.c
 
 # Twitter
 
-* Tweet using the [#JuliaLang](https://twitter.com/hashtag/julialang?src=hash) hashtag on Twitter.
-* Tweets mainly in Spanish using the [#JuliaLangsEs](https://twitter.com/JuliaLangsEs) hashtag on Twitter.
+* [The Julia Language](https://twitter.com/JuliaLanguage) use [#JuliaLang](https://twitter.com/hashtag/julialang?src=hash) hashtag.
+* [Julia News](https://twitter.com/julialang_news)
+* [Julia Bloggers](https://twitter.com/juliabloggers)
+* [Julia Pulse](https://twitter.com/JuliaHeartbeat)
+* [Julia StackOverflow](https://twitter.com/JuliaOverflow)
+* [JuliaComputing](https://twitter.com/JuliaComputing)
+* [Julia-i18n](https://twitter.com/julia_i18n)
+* [JuliaLangEs](https://twitter.com/JuliaLangsEs) use [#JuliaLangEs](https://twitter.com/hashtag/JuliaLangEs?src=hash) hashtag.
+* [JuliaLang Japan](https://twitter.com/JuliaLangJa) use [#JuliaTokyo](https://twitter.com/hashtag/JuliaTokyo?src=hash) hashtag.
 
 # StackOverflow
 
-Use the [julia-lang](http://stackoverflow.com/questions/tagged/julia-lang) tag on StackOverflow, if you post a Julia related question on StackOverflow.
+* Use the [julia-lang](http://stackoverflow.com/questions/tagged/julia-lang) tag on StackOverflow, if you post a Julia related question on StackOverflow.
+* Use the [julia](http://es.stackoverflow.com/questions/tagged/julia) tag on *StackOverflow en Español*, if you post a Julia related question on StackOverflow in Spanish.
 
 # Chat Rooms
 
-* Many Julia users and developers hang out in the [#julia IRC channel](http://webchat.freenode.net/?channels=julia) on Freenode.
-* [julia](https://gitter.im/JuliaLang/julia) Gitter chat room is for discussions around the usage of Julia.
-* [julialang-es](https://gitter.im/JuliaLangEs/julialang-es) Gitter chat room is for discussions around the usage of Julia in the Spanish language.
-* [julia-coverage](https://gitter.im/kshyatt/julia-coverage) Gitter chat room is for discussions around Julia tests coverage.
+## IRC
 
-# QQ groups
+* Many Julia users and developers hang out in the [#julia IRC channel](http://webchat.freenode.net/?channels=julia) on Freenode.
+
+## Gitter
+
+* [julia](https://gitter.im/JuliaLang/julia) Gitter chat room is for discussions around the usage of Julia.
+* [julia-coverage](https://gitter.im/kshyatt/julia-coverage) Gitter chat room is for discussions around Julia tests coverage.
+* [JuliaPraxis](https://gitter.im/JuliaPraxis) gitter chat rooms are for discussions around Julia best practices.
+* [JuliaQuantum](https://gitter.im/JuliaQuantum/home)
+* [JunoIDE](https://gitter.im/JunoLab/Juno)
+* [JuliaML](https://gitter.im/JuliaML/chat)
+* [JuliaGL](https://gitter.im/JuliaGL/meta)
+* [BioJulia](https://gitter.im/BioJulia/home)
+* [JuliaOpt](https://gitter.im/JuliaOpt/home)
+* [IntelLabs](https://gitter.im/IntelLabs/home)
+* [JuliaOpt](https://gitter.im/JuliaOpt/home)
+* [UCIDataScienceInitiative](https://gitter.im/UCIDataScienceInitiative/home)
+* [Julia-i18n](https://gitter.im/Julia-i18n/julia-i18n) Gitter chat room is for discussions around Julia internationalization and localization.
+* [julialang-es](https://gitter.im/JuliaLangEs/julialang-es) Gitter chat room is for discussions around the usage of Julia in the Spanish language.
+* [JuliaLangPt/julia](https://gitter.im/JuliaLangPt/julia) Gitter chat room is for discussions around the usage of Julia in the Portuguese language.
+
+### Packages
+
+* [Gadfly.jl](https://gitter.im/dcjones/Gadfly.jl)
+* [LightGraphs.jl](https://gitter.im/JuliaGraphs/LightGraphs.jl)
+* [GR.jl](https://gitter.im/jheinen/GR.jl)
+* [FixedSizeArrays.jl](https://gitter.im/SimonDanisch/FixedSizeArrays.jl)
+* [DSGE.jl](https://gitter.im/FRBNY-DSGE/DSGE.jl)
+* [Docile.jl](https://gitter.im/MichaelHatherly/Docile.jl)
+* [Mathematica.jl](https://gitter.im/MikeInnes/Mathematica.jl)
+* [Nanopore.jl](https://gitter.im/gawbul/Nanopore.jl)
+* [GLPlot.jl](https://gitter.im/SimonDanisch/GLPlot.jl)
+* [Plots.jl](https://gitter.im/tbreloff/Plots.jl)
+* [Datetime.jl](https://gitter.im/quinnj/Datetime.jl)
+* [Lazy.jl](https://gitter.im/MikeInnes/Lazy.jl)
+* [Phylogenetics.jl](https://gitter.im/Ward9250/Phylogenetics.jl)
+* [JavaCall.jl](https://gitter.im/aviks/JavaCall.jl)
+* [ValidatedNumerics.jl](https://gitter.im/dpsanders/ValidatedNumerics.jl)
+* [ROOT.jl](https://gitter.im/jpata/ROOT.jl)
+* [Ito.jl](https://gitter.im/aviks/Ito.jl)
+* [LispSyntax.jl](https://gitter.im/swadey/LispSyntax.jl)
+* [Interact.jl](https://gitter.im/JuliaLang/Interact.jl)
+* [Escher.jl](https://gitter.im/shashi/Escher.jl)
+* [Diversity.jl](https://gitter.im/richardreeve/Diversity.jl)
+* [Control.jl](https://gitter.im/jcrist/Control.jl)
+* [Lexicon.jl](https://gitter.im/MichaelHatherly/Lexicon.jl)
+* [JuliaFem.jl](https://gitter.im/JuliaFEM/JuliaFEM.jl)
+* [Hypre.jl](https://gitter.im/jgoldfar/Hypre.jl)
+* [DataFrames.jl](https://gitter.im/JuliaLang/DataFrames.jl)
+* [IterativeSolvers.jl](https://gitter.im/JuliaLang/IterativeSolvers.jl)
+
+## QQ groups
 
 QQ is a more convenient chat service for users in China: [About QQ](http://www.imqq.com/?lang=1033)/[QQchat](http://qqchat.qq.com/). The following are some QQ groups for Julia users and developers:
 
@@ -105,11 +167,28 @@ QQ is a more convenient chat service for users in China: [About QQ](http://www.i
 
 To join a QQ group, search for a QQ ID in the Tencent QQ service software or app.
 
-# Facebook
+## Slack
 
+* [JuliaTokyo](https://juliatokyo.slack.com), get your [invite](https://julia-tokyo-inviter.herokuapp.com/).
+
+## WhatsApp
+
+* [JuliaLangEs], get your [invite](https://chat.whatsapp.com/invite/J9T033nZO8MLn96wWjlnHb).
+
+# Social networks
+
+## Facebook
+
+* [Julia Programming Language](https://www.facebook.com/groups/juliaproglang/) group for discussions around the usage of Julia.
 * [JuliaLangEs](https://www.facebook.com/groups/julialang.es/) group for discussions around the usage of Julia in the Spanish language.
+* [JuliaTokyo](https://www.facebook.com/groups/885166968160540/) group for discussions around the usage of Julia in the Japanese language.
+* [Julia Korea](https://www.facebook.com/groups/juliakorea/) group for discussions around the usage of Julia in the Korean language.
 
-# Meetups
+## VK
+
+* [Julia programming language](https://vk.com/julia_lang) group for discussions around the usage of Julia.
+
+## Meetups
 
 Julia has several [local user groups](http://julia.meetup.com):
 
@@ -118,7 +197,8 @@ North America
 * [Bay Area Julia Users](http://www.meetup.com/Bay-Area-Julia-Users/)
 * [Cambridge Area Julia Users Network](http://www.meetup.com/julia-cajun/)
 * [Chicago Julia Meetup](http://www.meetup.com/JuliaChicago/)
-* [JuliaLangEs - México, D.F.](http://www.meetup.com/es/julialanges-mx/)
+* [JuliaLangEs - México, D.F.](http://www.meetup.com/julialanges-mx/)
+* [León Julia Meetup](https://www.meetup.com/LeonJuliaMeetup/)
 * [NYC Julia User Group](http://www.meetup.com/NYC-Julia-User-Group/)
 * [Seattle Julia Users](http://www.meetup.com/Seattle-Julia-Users/)
 * [Southern California Julia Users](http://www.meetup.com/Southern-California-Julia-Users/)
@@ -131,14 +211,12 @@ Europe
 * [London Julia Users Group](http://www.meetup.com/London-Julia-Users-Group/)
 * [Zurich Julia Users Group](http://www.meetup.com/Zurich-Julia-User-Group/)
 * [Vienna Julia Meetup](http://www.meetup.com/Vienna-Julia-Meetup/)
-* [Julia Users Berlin](http://julia-users-berlin.github.io/)
+* [Julia Users Berlin](https://www.meetup.com/Julia-Users-Group/), see also our [news site](http://julia-users-berlin.github.io/)
 
 Asia
 
 * [Bangalore Julia User Group](http://www.meetup.com/Bangalore-Julia-User-Group/)
-* [Julia Tokyo](http://julia.tokyo/)
-* [Julia China](http://julialang.cn/)
-* [Julia Korea](https://www.facebook.com/groups/juliakorea/)
+* [Beijing Julia User Group](https://www.meetup.com/juliacn/)
 
 Australia
 
@@ -151,9 +229,15 @@ South America
 
 Don't have one in your area? Why not start one!
 
+## Connpass
+
+Asia
+
+* [Julia Tokyo](https://juliatokyo.connpass.com/)
+
+
 # Reddit
 
 [The Julia Language SubReddit](http://www.reddit.com/r/Julia/) is a collection of various blog posts and articles related to Julia.
 
-
-[julia-users]: https://groups.google.com/group/julia-users
+Don't see your community resourses listed here? Please submit a [pull request](https://github.com/JuliaLang/julialang.github.com/edit/master/community/index.md) so we can share them!
