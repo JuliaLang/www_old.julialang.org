@@ -90,34 +90,6 @@ While many tricks for presolving LPs are well known, there is significant room f
 imagination in writing a presolve for SDP; the project might well lead to a publication
 were the student so inclined.
 
-## PETSc integration for scalable technical computing
-
-[PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.
-
-This project proposal is to develop a new Julia package to interface with PETsc, thus allowing users access to state of the art scalable algorithms for optimization, eigenproblem solvers, finite element mesh computations, and hyperbolic partial differential equation solvers. The more mathematically oriented student may choose to study the performance of these various algorithms as compared to other libraries and naïve implementations. Alternatively, students may also be interested in working on the LLVM BlueGene port for deploying Julia with PetSc integration in an actual supercomputing environment.
-
-**Expected Results:** New wrappers for PETSc functions in the [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) package.
-
-
-
-## Native Julia solvers for ordinary differential equations
-
-Julia needs to have a full set of ordinary differential equations (ODE) and algebraic differential equation (DAE) solvers, as they are vital for numeric programming. This project aims at extending the [ODE.jl](https://github.com/JuliaLang/ODE.jl) package in the following areas: specification and implementation of an API, both internal and user-facing; documentation; and adding new solvers.
-
-The user-facing API should have both a high-level, easy-to-use interface and a low-level API giving access to all package features.  The design goal of the internal API is that adding new solvers is straightforward and that other solvers, such as [Sundials.jl](https://github.com/JuliaLang/Sundials.jl) or [DASSL.jl](https://github.com/pwl/DASSL.jl), can be easily hooked up to be used through ODE.jl.  The package needs a manual hosted on [Read the Docs](http://readthedocs.org/) and in-line code documentation.  More solvers need to be implemented, in particular implicit solvers (e.g. [PR #72](https://github.com/JuliaLang/ODE.jl/pull/72)).
-
-**Expected Results**: A production-quality ODE/DAE solver package.
-
-
-
-## Native Julia implementations of iterative solvers for numerical linear algebra
-
-Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
-
-This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
-
-
-
 ## Fixed-size arrays with SIMD support
 
 Julia uses OpenBLAS for matrix algebra, but OpenBLAS is better suited for large matrices. For operations with small matrices and vectors, one can often obtain substantial speedups by implementing everything in Julia. At least two candidate implementations [already](https://github.com/twadleigh/ImmutableArrays.jl) [exist](https://github.com/JuliaLang/julia/issues/5857), with the first more thoroughly developed but the second (currently just a sketch) having some features that are attractive for inclusion in `Base`.
@@ -202,6 +174,42 @@ Some possible aims of this project:
 The [Images.jl](https://github.com/timholy/Images.jl) package implements several algorithms that do not use, but would be well-suited for, multi-threading. This project would implement multithreaded versions of `imfilter` and `imfilter_gaussian`. While such kernels might be written by hand, it is also attractive to explore various "frameworks" that reduce the amount of boilerplate code required. One recommended approach would be to explore using the [ParallelAccelerator.jl](https://github.com/IntelLabs/ParallelAccelerator.jl); alternatively, one might leverage the [KernelTools.jl](https://github.com/timholy/KernelTools.jl) package in conjunction with julia 0.5's native threading capabilities.
 
 **Expected Results:** multithreaded implementation of `imfilter` and `imfilter_gaussian`.
+
+# Theme: Numerical Linear Algebra
+
+## Native Julia implementations of iterative solvers for numerical linear algebra
+
+Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
+
+This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
+
+## Native Usage of LinearMaps in Iterative Solvers
+
+While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from LinearMaps.jl, these applications can be directly supported in the library.
+
+## PETSc integration for scalable technical computing
+
+[PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.
+
+This project proposal is to develop a new Julia package to interface with PETsc, thus allowing users access to state of the art scalable algorithms for optimization, eigenproblem solvers, finite element mesh computations, and hyperbolic partial differential equation solvers. The more mathematically oriented student may choose to study the performance of these various algorithms as compared to other libraries and naïve implementations. Alternatively, students may also be interested in working on the LLVM BlueGene port for deploying Julia with PetSc integration in an actual supercomputing environment.
+
+**Expected Results:** New wrappers for PETSc functions in the [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) package.
+
+## Native Julia solvers for ordinary differential equations
+
+Julia needs to have a full set of ordinary differential equations (ODE) and algebraic differential equation (DAE) solvers, as they are vital for numeric programming. This project aims at extending the [ODE.jl](https://github.com/JuliaLang/ODE.jl) package in the following areas: specification and implementation of an API, both internal and user-facing; documentation; and adding new solvers.
+
+The user-facing API should have both a high-level, easy-to-use interface and a low-level API giving access to all package features.  The design goal of the internal API is that adding new solvers is straightforward and that other solvers, such as [Sundials.jl](https://github.com/JuliaLang/Sundials.jl) or [DASSL.jl](https://github.com/pwl/DASSL.jl), can be easily hooked up to be used through ODE.jl.  The package needs a manual hosted on [Read the Docs](http://readthedocs.org/) and in-line code documentation.  More solvers need to be implemented, in particular implicit solvers (e.g. [PR #72](https://github.com/JuliaLang/ODE.jl/pull/72)).
+
+**Expected Results**: A production-quality ODE/DAE solver package.
+
+
+
+## Native Julia implementations of iterative solvers for numerical linear algebra
+
+Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
+
+This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
 
 # Juno & Tooling related ideas
 
