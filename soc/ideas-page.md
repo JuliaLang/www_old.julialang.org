@@ -108,16 +108,6 @@ The user-facing API should have both a high-level, easy-to-use interface and a l
 
 **Expected Results**: A production-quality ODE/DAE solver package.
 
-
-
-## Native Julia implementations of iterative solvers for numerical linear algebra
-
-Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
-
-This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
-
-
-
 ## Fixed-size arrays with SIMD support
 
 Julia uses OpenBLAS for matrix algebra, but OpenBLAS is better suited for large matrices. For operations with small matrices and vectors, one can often obtain substantial speedups by implementing everything in Julia. At least two candidate implementations [already](https://github.com/twadleigh/ImmutableArrays.jl) [exist](https://github.com/JuliaLang/julia/issues/5857), with the first more thoroughly developed but the second (currently just a sketch) having some features that are attractive for inclusion in `Base`.
@@ -202,6 +192,18 @@ Some possible aims of this project:
 The [Images.jl](https://github.com/timholy/Images.jl) package implements several algorithms that do not use, but would be well-suited for, multi-threading. This project would implement multithreaded versions of `imfilter` and `imfilter_gaussian`. While such kernels might be written by hand, it is also attractive to explore various "frameworks" that reduce the amount of boilerplate code required. One recommended approach would be to explore using the [ParallelAccelerator.jl](https://github.com/IntelLabs/ParallelAccelerator.jl); alternatively, one might leverage the [KernelTools.jl](https://github.com/timholy/KernelTools.jl) package in conjunction with julia 0.5's native threading capabilities.
 
 **Expected Results:** multithreaded implementation of `imfilter` and `imfilter_gaussian`.
+
+# Theme: Numerical Linear Algebra
+
+## Native Julia implementations of iterative solvers for numerical linear algebra
+
+Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
+
+This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
+
+## Native Usage of LinearMaps in Iterative Solvers
+
+While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from LinearMaps.jl, these applications can be directly supported in the library.
 
 # Juno & Tooling related ideas
 
@@ -328,9 +330,6 @@ Julia employs several techniques that are novel in the field of high performance
 
 
 # Theme: Julia Graphics and User Interfaces
-
-## 2D Graphics Improvements
-The [Winston](https://github.com/nolta/Winston.jl) package can be used for plotting 2D graphs and images. The package is already very useful but compared to the full featured Matplotlib python package there are still several things missing. This project can either go into the direction of improving the plotting itself (more graph types, more customization) or could go into the direction of increasing the interactivity of plotting windows (zooming, data picking ...) In the later case a close integration with Gtk.jl would be one way to go.
 
 ## Gtk.jl Improvements
 The [Gtk.jl](https://github.com/JuliaLang/Gtk.jl) package is shaping up pretty well. Still there are various corners currently unimplemented and besides documentation it is very important to get installation of Gtk completely simple on all three major platforms. Furthermore, there is currently quite some manual tweaking necessary to get Gtk looking good on OSX. These installation issues are very crutial for serious integration of Gtk.jl into the Julia universe.
