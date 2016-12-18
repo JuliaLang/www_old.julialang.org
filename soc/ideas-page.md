@@ -111,7 +111,6 @@ seeking out opportunties for possible improvements along the way, such as suppor
 `Float32` and `BigFloat`, exploiting fused multiply-add operations, and improving errors
 and boundary cases.
 
-
 ## Matrix functions
 
 Matrix functions maps matrices onto other matrices, and can often be interpreted as generalizations of ordinary functions like sine and exponential, which map numbers to numbers. Once considered a niche province of numerical algorithms, matrix functions now appear routinely in applications to cryptography, aircraft design, nonlinear dynamics, and finance.
@@ -158,7 +157,6 @@ The [Images.jl](https://github.com/timholy/Images.jl) package implements several
 ## Parallel graph development
 
 The [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl) package provides a fast, robust set of graph analysis tools. This project would implement additions to LightGraphs to support parallel computation for a subset of graph algorithms. Examples of algorithms that would benefit from adaptation to parallelism would include centrality measures and traversals.
-
 
 **Expected Results:** creation of LightGraphs-based data structures and algorithms that take advantage of large-scale parallel computing environments.
 
@@ -227,9 +225,7 @@ Plotting is a fundamental tool for analyzing the numerical solutions to differen
 Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
 This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
 
-
 ## Native Usage of LinearMaps in Iterative Solvers
-
 
 While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from [LinearMaps.jl](https://github.com/Jutho/LinearMaps.jl), these applications can be directly supported in the library.
 
@@ -237,7 +233,6 @@ While one normally thinks of solving the linear equation Ax=b with A being a mat
 
 [PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.
 This project proposal is to develop a new Julia package to interface with PETsc, thus allowing users access to state of the art scalable algorithms for optimization, eigenproblem solvers, finite element mesh computations, and hyperbolic partial differential equation solvers. The more mathematically oriented student may choose to study the performance of these various algorithms as compared to other libraries and naïve implementations. Alternatively, students may also be interested in working on the LLVM BlueGene port for deploying Julia with PetSc integration in an actual supercomputing environment.
-
 
 **Expected Results:** New wrappers for PETSc functions in the [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) package.
 
@@ -366,8 +361,6 @@ Julia could be a great replacement for C in Python projects, where it can be use
 
 **Knowledge Prerequisites:** Python (especially C interop).
 
-
-
 ## Project: Ensure that Julia runs smoothly on current large HPC systems
 
 Julia employs several techniques that are novel in the field of high performance computing, such as just-in-time compiling, or first-class support of an interactive environment, or dynamically adding/removing worker processes. This clashes with the traditional ahead-of-time compiled programes running in batch mode. However, the advantages of Julia's approach are clear. This project explores how "typical" Julia programs can be run efficiently on current large scale systems such as, e.g. [Blue Waters](https://bluewaters.ncsa.illinois.edu) or [Cori](http://www.nersc.gov/users/computational-systems/cori/).
@@ -375,8 +368,6 @@ Julia employs several techniques that are novel in the field of high performance
 **Expected Results:** Run a large, parallel Julia application on a high-end HPC system
 
 **Knowledge Prerequisites:** High-performance computing, MPI
-
-
 
 # Theme: Julia Graphics and User Interfaces
 
