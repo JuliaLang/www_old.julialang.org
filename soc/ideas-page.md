@@ -42,12 +42,9 @@ Scientific and technical computing often makes use of publicly available dataset
 
 This project proposal is to develop a new Julia package that will implement a standard means to write data packages to make large external datasets accessible by downloading to a local machine. When a data package is installed, it will automatically download the dataset it wraps, validate it, e.g. with stored checksums, and make that data available as a `DataFrame` or other Julia structure. In addition to a standard structure, the `Pkg.generate` function should be extended to generate data packages.
 
-
-
 ## Simple persistent distributed storage
 
 This project proposes to implement a very simple persistent storage mechanism for Julia variables so that data can be saved to and loaded from disk with a consistent interface that is agnostic of the underlying storage layer. Data will be tagged with a minimal amount of metadata by default to support type annotations, time-stamped versioning and other user-specifiable tags, not unlike the `git stash` mechanism for storing blobs. The underlying engine for persistent storage should be generic and interoperable with any reasonable choice of binary blob storage mechanism, e.g. MongoDB, ODBC, or HDFS. Of particular interest will be persistent storage for distributed objects such as `DArray`s, and making use of the underlying storage engine's mechanisms for data movement and redundant storage for such data.
-
 
 ## Native Julia library for constrained optimization
 
@@ -89,22 +86,6 @@ passing the problem to a solver, would be a welcome addition to the Convex.jl li
 While many tricks for presolving LPs are well known, there is significant room for
 imagination in writing a presolve for SDP; the project might well lead to a publication
 were the student so inclined.
-
-## PETSc integration for scalable technical computing
-
-[PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.
-
-This project proposal is to develop a new Julia package to interface with PETsc, thus allowing users access to state of the art scalable algorithms for optimization, eigenproblem solvers, finite element mesh computations, and hyperbolic partial differential equation solvers. The more mathematically oriented student may choose to study the performance of these various algorithms as compared to other libraries and naïve implementations. Alternatively, students may also be interested in working on the LLVM BlueGene port for deploying Julia with PetSc integration in an actual supercomputing environment.
-
-**Expected Results:** New wrappers for PETSc functions in the [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) package.
-
-## Native Julia implementations of iterative solvers for numerical linear algebra
-
-Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
-
-This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
-
-
 
 ## Fixed-size arrays with SIMD support
 
@@ -149,47 +130,37 @@ There are many ways of potentially improving bignum performance in Julia. We cou
 
 Not all of these options are either practical or agreeable. And it isn't clear which options are going to lead to the best performance or to the nicest Julia code. A balance would need to be struck to use what's actually available in Julia in a way that is performant but also flexible enough to support future developer needs. The absolutely fastest option may not be the best long term option and consultation on the Julia list will be important for this project. The project should implement prototypes of a number of options, and present a performance comparison to the Julia developers before settling on a final design.
 
-## Native Julia implementations of massively parallel dense linear algebra routines
-
-A large portion of big data analytics is predicated upon efficient linear algebraic operations on extremely large matrices. However, massively parallel linear algebra has traditionally focussed on supercomputer architectures, and comparatively little work has been done on efficient scaling on more heterogeneous architectures such as commodity clusters and cloud computing servers, where memory hierarchies and network topologies both introduce latency and bandwidth bottlenecks that differ significantly from those on supercomputers.
-
-This project proposal is for implementing native Julia algorithms involving efficient, cache-conscious matrix operations on tiled matrices. Students will be expected to implement tiled algorithms and tune the performance of typical algorithms such as the singular value decomposition or linear solve.
-
-
-
-## Native Julia implementations of massively parallel sparse linear algebra routines
-
-Modern data-intensive computations, such as Google's PageRank algorithm, can often be cast as operations involving sparse matrices of extremely large nominal dimensions. Unlike dense matrices, which decompose naturally into many homogeneous tiles, efficient algorithms for working with sparse matrices must be fully cognizant of the sparsity pattern of specific matrices at hand, which oftentimes reduce to efficiently computing partitions of extremely large graphs.
-
-This project proposal is for implementing native Julia algorithms for massively parallel sparse linear algebra routines. Unlike the project above for dense linear algebra, efficient parallel algorithms for sparse linear algebra are comparatively less well studied and understood. Students will be expected to implement several algorithms for common tasks such as linear solvers or computing eigenvectors, and benchmark the performance of these algrithms on various real world applications.
-
-
-
 ## Dynamic distributed execution for data parallel tasks in Julia
 
 Distributed computation frameworks like Hadoop/MapReduce have demonstrated the usefulness of an abstraction layer that takes care of low level concurrency concerns such as atomicity and fine-grained synchronization, thus allowing users to concentrate on task-level decomposition of extremely large problems such as massively distributed text processing. However, the tree-based scatter/gather design of MapReduce limits its usefulness for general purpose data parallelism, and in particular poses significant restrictions on the implementation of iterative algorithms.
 
 This project proposal is to implement a native Julia framework for distributed execution for general purpose data parallelism, using dynamic, runtime-generated general task graphs which are flexible enough to describe multiple classes of parallel algorithms. Students will be expected to weave together native Julia parallelism constructs such as the `ClusterManager` for massively parallel execution, and automate the handling of data dependencies using native Julia `RemoteRefs` as remote data futures and handles. Students will also be encouraged to experiment with novel scheduling algorithms.
 
-
 ## Random number generation
 
 [Monte Carlo methods](https://en.wikipedia.org/wiki/Monte_Carlo_method) are becoming increasingly important in large-scale numerical computations, requiring large quantities of random numbers.
 To ensure accuracy of the simulated systems, it is critical that the [pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) is both fast and reliable, avoiding problems with periodicity and dependence, robust to statistical tests such as the [Crush suite](https://github.com/andreasnoack/RNGTest.jl).
-Challenges are even greater in massively parallel computations, which require going beyond running many copies of serial algorithms for generating pseudorandom numbers, due to well-known synchronization effects which can compromise the quality and uniformity of of random sampling.
+Challenges are even greater in massively parallel computations, which require going beyond running many copies of serial algorithms for generating pseudorandom numbers, due to well-known synchronization effects which can compromise the quality and uniformity of of random sampling. A previous Google Summer of Code project created [RNG.jl](https://github.com/sunoru/RNG.jl), and there are more random number generating algorithms to explore.
 
 Some possible aims of this project:
 
 * High-quality Julia implementations of PRNG algorithms such as the [xorshift family](http://xorshift.di.unimi.it/), seeking possible low-level optimisations along the way.
 * Efficient generation of non-uniform variates, across different floating point precisions.
 * Massively parallel random number generators, such as [SPRNG](http://www.sprng.org) or the [Random123](https://www.deshawresearch.com/resources_random123.html) entropy streams, and integration with [ComputeFramework.jl](https://github.com/shashi/ComputeFramework.jl).
-
+* Support for fast parallel random number generators on GPUs
 
 ## Writing high-performance, multithreaded kernels for image processing
 
 The [Images.jl](https://github.com/timholy/Images.jl) package implements several algorithms that do not use, but would be well-suited for, multi-threading. This project would implement multithreaded versions of `imfilter` and `imfilter_gaussian`. While such kernels might be written by hand, it is also attractive to explore various "frameworks" that reduce the amount of boilerplate code required. One recommended approach would be to explore using the [ParallelAccelerator.jl](https://github.com/IntelLabs/ParallelAccelerator.jl); alternatively, one might leverage the [KernelTools.jl](https://github.com/timholy/KernelTools.jl) package in conjunction with julia 0.5's native threading capabilities.
 
 **Expected Results:** multithreaded implementation of `imfilter` and `imfilter_gaussian`.
+
+## Parallel graph development
+
+The [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl) package provides a fast, robust set of graph analysis tools. This project would implement additions to LightGraphs to support parallel computation for a subset of graph algorithms. Examples of algorithms that would benefit from adaptation to parallelism would include centrality measures and traversals.
+
+
+**Expected Results:** creation of LightGraphs-based data structures and algorithms that take advantage of large-scale parallel computing environments.
 
 # Theme: Numerical Methods for Differential Equations
 
@@ -250,7 +221,40 @@ Plotting is a fundamental tool for analyzing the numerical solutions to differen
 
 **Expected Results**: Publication-quality plot recipes.
 
-# Theme: Juno & Tooling Related Ideas
+# Theme: Numerical Linear Algebra
+
+## Native Julia implementations of iterative solvers for numerical linear algebra
+Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
+This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
+
+
+## Native Usage of LinearMaps in Iterative Solvers
+
+
+While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from [LinearMaps.jl](https://github.com/Jutho/LinearMaps.jl), these applications can be directly supported in the library.
+
+## PETSc integration for scalable technical computing
+
+[PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.
+This project proposal is to develop a new Julia package to interface with PETsc, thus allowing users access to state of the art scalable algorithms for optimization, eigenproblem solvers, finite element mesh computations, and hyperbolic partial differential equation solvers. The more mathematically oriented student may choose to study the performance of these various algorithms as compared to other libraries and naïve implementations. Alternatively, students may also be interested in working on the LLVM BlueGene port for deploying Julia with PetSc integration in an actual supercomputing environment.
+
+
+**Expected Results:** New wrappers for PETSc functions in the [PETSc.jl](https://github.com/JuliaParallel/PETSc.jl) package.
+
+## Native Julia implementations of massively parallel dense linear algebra routines
+
+A large portion of big data analytics is predicated upon efficient linear algebraic operations on extremely large matrices. However, massively parallel linear algebra has traditionally focussed on supercomputer architectures, and comparatively little work has been done on efficient scaling on more heterogeneous architectures such as commodity clusters and cloud computing servers, where memory hierarchies and network topologies both introduce latency and bandwidth bottlenecks that differ significantly from those on supercomputers.
+
+This project proposal is for implementing native Julia algorithms involving efficient, cache-conscious matrix operations on tiled matrices. Students will be expected to implement tiled algorithms and tune the performance of typical algorithms such as the singular value decomposition or linear solve.
+
+## Native Julia implementations of massively parallel sparse linear algebra routines
+
+Modern data-intensive computations, such as Google's PageRank algorithm, can often be cast as operations involving sparse matrices of extremely large nominal dimensions. Unlike dense matrices, which decompose naturally into many homogeneous tiles, efficient algorithms for working with sparse matrices must be fully cognizant of the sparsity pattern of specific matrices at hand, which oftentimes reduce to efficiently computing partitions of extremely large graphs.
+
+
+This project proposal is for implementing native Julia algorithms for massively parallel sparse linear algebra routines. Unlike the project above for dense linear algebra, efficient parallel algorithms for sparse linear algebra are comparatively less well studied and understood. Students will be expected to implement several algorithms for common tasks such as linear solvers or computing eigenvectors, and benchmark the performance of these algrithms on various real world applications.
+
+# Juno & Tooling related ideas
 
 ## Documentation search & navigation
 
@@ -399,11 +403,12 @@ A possible mentor can be contacted on the julia-users mailing list.
 
 [Plots.jl](https://github.com/tbreloff/Plots.jl) has become the preferred graphical interface for many users.  It has the potential to become the standard Julia interface for data visualization, and there are many potential ways that a student could contribute:
 
-- Expanding backend support.  Integration with real-time visualization platforms (GLVisualize).  Easy latex plotting for scientific research publications (PGFPlots).
+- Expanding backend support.  Integration with real-time visualization platforms ([GLVisualize.jl](https://github.com/JuliaGL/GLVisualize.jl)).  Easy latex plotting for scientific research publications ([PGFPlots.jl](https://github.com/sisl/PGFPlots.jl)).
 - Adding recipes for statistics, machine learning (see [MLPlots.jl](https://github.com/JuliaML/MLPlots.jl)), or any other fields which you have an interest.
 - Documentation and/or tutorials.
-- Better integration with Graphs, DataStreams, etc
- 
+- Better integration with Graphs, DataStreams, etc.
+- Improved support for the Grammar of Graphics API in Plots.jl via [GGPlots.jl](https://github.com/JuliaPlots/GGPlots.jl).
+
 # Theme: Machine Learning Frameworks
 
 ## Expanding and improving LearnBase/JuliaML
