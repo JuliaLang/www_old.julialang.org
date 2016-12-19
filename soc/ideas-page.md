@@ -54,6 +54,15 @@ The [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl) package prov
 
 **Expected Results:** creation of LightGraphs-based data structures and algorithms that take advantage of large-scale parallel computing environments.
 
+
+## Project: Ensure that Julia runs smoothly on current large HPC systems
+
+Julia employs several techniques that are novel in the field of high performance computing, such as just-in-time compiling, or first-class support of an interactive environment, or dynamically adding/removing worker processes. This clashes with the traditional ahead-of-time compiled programes running in batch mode. However, the advantages of Julia's approach are clear. This project explores how "typical" Julia programs can be run efficiently on current large scale systems such as, e.g. [Blue Waters](https://bluewaters.ncsa.illinois.edu) or [Cori](http://www.nersc.gov/users/computational-systems/cori/).
+
+**Expected Results:** Run a large, parallel Julia application on a high-end HPC system
+
+**Knowledge Prerequisites:** High-performance computing, MPI
+
 # Theme: Base Mathematics Libraries
 
 ## Upgrading openlibm
@@ -184,37 +193,37 @@ In recent years, the popular Sundials library has added a suite of implicit-expl
 
 **Expected Results**: An interface to the Sundials ARKODE methods in Sundials.jl.
 
-## Tools for Global Sensitivity Analysis
+## Tools for global sensitivity analysis
 
 Global Sensitivity Analysis is a popular tool to assess the affect that parameters have on a differential equation model. Global Sensitivity Analysis tools can be much more efficient than Local Sensitivity Analysis tools, and give a better view of how parameters affect the model in a more general sense. Julia currently has an implemention Local Sensitivity Analysis, but there is no method for Global Sensitivity Analysis. The goal of this project would be to implement methods like the Morris method in [DiffEqSensitivity.jl](https://github.com/JuliaDiffEq/DiffEqSensitivity.jl) which can be used with any differential equation solver on the common interface.
 
 **Expected Results**: Efficient functions for performing Global Sensitivity Analysis.
 
-## Machine Learning for Parameter Estimation of Differential Equation Models
+## Machine learning for parameter estimation of differential equation models
 
 Machine learning has become a popular tool for understanding data, but scientists typically want to use this data to better understand their differential equation-based models. The intersection between these two fields is parameter estimation. This is the idea of using techniques from machine learning in order to identify the values for model parameters from data. Currently, [DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl) shows how to link the differential equation solvers with the optimization packages for parameter estimation, but no link to machine learning tools have been created. The tools are all in place for this pairing between JuliaDiffEq and JuliaML.
 
 **Expected Results**: Modular tools for using JuliaML's libraries for parameter estimation of differential equations.
 
-## Bayesian Estimation using Stan.jl for Parameters of Differential Equations.
+## Bayesian estimation using Stan.jl for parameters of differential equations
 
 Bayesian estimation of parameters for differential equations is a popular technique since this outputs probability distributions for the underlying parameters. Julia's `ParameterizedFunction` makes it easy to solve differential equations with explicit parameters, and holds enough information to be used with [Stan.jl](https://github.com/goedman/Stan.jl). The purpose for this project is to create a function in [DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl) which translates the saved information of the model definition in a `ParameterizedFunction` to automatically write the input to Stan.jl, and tools for tweaking the inputs.
 
 **Expected Results**: A function which takes in a `ParameterizedFunction` and performs parameter estimation using Stan.jl
 
-## Discretizations of Partial Differential Equations
+## Discretizations of partial differential equations
 
 One of the major uses for differential equations solvers is for partial differential equations (PDEs). PDEs are solved by discretizing to create ODEs which are then solved using ODE solvers. However, in many cases a good understanding of the PDEs are required to perform this discretization and minimize the error. The purpose of this project is to produce a library with common PDE discretizations to make it easier for users to solve common PDEs.
 
 **Expected Results**: A production-quality PDE solver package for some common PDEs.
 
-## Solving PDEs Discretized via Spectral Methods
+## Solving partial differential equations discretized via spectral methods
 
 [ApproxFun.jl](https://github.com/JuliaApproximation/ApproxFun.jl) provides tools which can discretize many partial differential equations using spectral methods which have exponential convergence and thus low error. However, to solve time-dependent problems, these tools have to be paired with ODE solvers. While a fixed-basis discretization is currently able to be solved, it is more efficient to allow the spectral methods to adapt the basis as necessary for error control. However, this means that the differential equation must be solved where the input is not an array, but a nontrivial Julia-defined type. The goal would be to extend [OrdinaryDiffEq.jl](https://github.com/JuliaDiffEq/OrdinaryDiffEq.jl) to be able to directly handle `Fun` types.
 
 **Expected Results**: Native support in OrdinaryDiffEq.jl for ODEs defined on ApproxFun.jl `Fun`s.
 
-## Improved Plotting for Differential Equations
+## Improved plotting for differential equations
 
 Plotting is a fundamental tool for analyzing the numerical solutions to differential equations. The plotting functionality in JuliaDiffEq is provided by plot recipes to [Plots.jl](https://github.com/tbreloff/Plots.jl) which create plots directly from the differential equation solution types. However, this functionality is currently limited. Some goals for this project would be:
 
@@ -228,10 +237,11 @@ Plotting is a fundamental tool for analyzing the numerical solutions to differen
 # Theme: Numerical Linear Algebra
 
 ## Native Julia implementations of iterative solvers for numerical linear algebra
+
 Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control.
 This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
 
-## Native Usage of LinearMaps in Iterative Solvers
+## Native usage of LinearMaps in iterative solvers
 
 While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from [LinearMaps.jl](https://github.com/Jutho/LinearMaps.jl), these applications can be directly supported in the library.
 
@@ -367,23 +377,18 @@ Julia could be a great replacement for C in Python projects, where it can be use
 
 **Knowledge Prerequisites:** Python (especially C interop).
 
-## Project: Ensure that Julia runs smoothly on current large HPC systems
-
-Julia employs several techniques that are novel in the field of high performance computing, such as just-in-time compiling, or first-class support of an interactive environment, or dynamically adding/removing worker processes. This clashes with the traditional ahead-of-time compiled programes running in batch mode. However, the advantages of Julia's approach are clear. This project explores how "typical" Julia programs can be run efficiently on current large scale systems such as, e.g. [Blue Waters](https://bluewaters.ncsa.illinois.edu) or [Cori](http://www.nersc.gov/users/computational-systems/cori/).
-
-**Expected Results:** Run a large, parallel Julia application on a high-end HPC system
-
-**Knowledge Prerequisites:** High-performance computing, MPI
-
 # Theme: Julia Graphics and User Interfaces
 
 ## 2D Graphics Improvements
+
 The [Winston](https://github.com/nolta/Winston.jl) package can be used for plotting 2D graphs and images. The package is already very useful but compared to the full featured Matplotlib python package there are still several things missing. This project can either go into the direction of improving the plotting itself (more graph types, more customization) or could go into the direction of increasing the interactivity of plotting windows (zooming, data picking ...) In the later case a close integration with Gtk.jl would be one way to go.
 
 ## Gtk.jl Improvements
+
 The [Gtk.jl](https://github.com/JuliaLang/Gtk.jl) package is shaping up pretty well. Still there are various corners currently unimplemented and besides documentation it is very important to get installation of Gtk completely simple on all three major platforms. Furthermore, there is currently quite some manual tweaking necessary to get Gtk looking good on OSX. These installation issues are very crutial for serious integration of Gtk.jl into the Julia universe.
 
 ## QML bindings for Julia
+
 QML is a markup language similar to JavaScript and used by th QT library to create graphical user interfaces.
 QT Creator (open source IDE) provides a graphical editor to create QML forms. QML forms are cross-platform
 and can be used on Linux, Mac, Windows, Android, OSX, IPhone etc. It would be great if they could also be used
