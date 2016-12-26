@@ -40,37 +40,6 @@ Various Julia projects are hosted under the following umbrella organizations on 
 * [JuliaLang](https://github.com/JuliaLang) – [The language](http://www.julialang.org/)
 * [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language
 
-## General
-
-* [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
-* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians
-* [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
-* [JuliaPraxis](https://github.com/JuliaPraxis) - Best practices
-
-## Data Science
-
-* [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
-* [JuliaImages](https://github.com/JuliaImages) - Image Processing
-* [JuliaML](https://github.com/JuliaML) - [Machine Learning](https://juliaml.github.io/)
-* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://www.juliastats.org/)
-
-## Mathematics
-
-* [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
-* [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/)
-* [JuliaGeometry](https://github.com/JuliaGeometry) - Computational Geometry
-* [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
-* [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
-* [JuliaOpt](https://github.com/JuliaOpt) – [Optimization](http://www.juliaopt.org/)
-* [JuliaSparse](https://github.com/JuliaSparse) – Sparse matrix solvers
-
-## Visualization
-
-* [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
-* [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs
-* [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
-* [JuliaGL](https://github.com/JuliaGL) - OpenGL API and ecosystem
-
 ## Computing
 
 * [JuliaArray](https://github.com/JuliaArrays)
@@ -83,6 +52,30 @@ Various Julia projects are hosted under the following umbrella organizations on 
 * [JuliaPolyhedra](https://github.com/JuliaPolyhedra) – [Polyhedral computation](https://juliapolyhedra.github.io/)
 * [JuliaWeb](https://github.com/JuliaWeb) – Web stack
 
+## Data Science
+
+* [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
+* [JuliaImages](https://github.com/JuliaImages) - Image Processing
+* [JuliaML](https://github.com/JuliaML) - [Machine Learning](https://juliaml.github.io/)
+* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://www.juliastats.org/)
+
+## General
+
+* [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
+* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians
+* [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
+* [JuliaPraxis](https://github.com/JuliaPraxis) - Best practices
+
+## Mathematics
+
+* [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
+* [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/)
+* [JuliaGeometry](https://github.com/JuliaGeometry) - Computational Geometry
+* [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
+* [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
+* [JuliaOpt](https://github.com/JuliaOpt) – [Optimization](http://www.juliaopt.org/)
+* [JuliaSparse](https://github.com/JuliaSparse) – Sparse matrix solvers
+
 ## Scientific Domains
 
 * [BioJulia](https://github.com/BioJulia) – Biology
@@ -90,6 +83,13 @@ Various Julia projects are hosted under the following umbrella organizations on 
 * [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
 * [JuliaQuant](https://github.com/JuliaQuant) – Finance
 * [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/)
+
+## Visualization
+
+* [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
+* [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs
+* [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
+* [JuliaGL](https://github.com/JuliaGL) - OpenGL API and ecosystem
 
 # Google Summer of Code 2014
 
