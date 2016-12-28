@@ -178,7 +178,7 @@ for the result of `f(tmp7)`, and another four are allocated
 internally by `f(tmp7)` for the same reasons, for *12 arrays in all*.
 The resulting `X = ...` expression does *not* update `X` in-place, but
 rather makes the variable `X` "point" to a new array returned by `f(tmp7)`,
-discarding the old array `X`.   All of these arrays are eventually
+discarding the old array `X`.   All of these extra arrays are eventually
 deallocated by Julia's garbage collector, but in the meantime it wastes
 a lot of memory (more than an order of magnitude!)
 
