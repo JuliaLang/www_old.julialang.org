@@ -92,7 +92,7 @@ have to guess at what vaguely defined subset of library functions work
 for vectors.
 
 One possible solution is to vectorize *every function automatically*.   The
-language [Chapel](https://en.wikipedia.org/wiki/Chapel_(programming_language)
+language [Chapel](https://en.wikipedia.org/wiki/Chapel_%28programming_language%29)
 does this: every function `f(x::Number...)` implicitly
 defines a function `f(x::Array...)` that evaluates `map(f, x...)`
 [(Chamberlain et al, 2011)](http://pgas11.rice.edu/papers/ChamberlainEtAl-Chapel-Iterators-PGAS11.pdf).
@@ -190,7 +190,7 @@ from the fact that you have 12 loops (12 passes over memory) compared
 to one, largely because of the loss of [cache locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
 In particular, main computer memory (RAM) is relatively slow (much slower than
-arithmetic), so recently used data is stored in a [cache](https://en.wikipedia.org/wiki/Cache_(computing): a small amount
+arithmetic), so recently used data is stored in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
 of much faster memory.  Furthermore, there is a hierarchy of smaller,
 faster caches, culminating in the [register memory](https://en.wikipedia.org/wiki/Processor_register)
 of the CPU itself.   This means that, for good performance, you should
