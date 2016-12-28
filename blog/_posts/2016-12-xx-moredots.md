@@ -146,7 +146,7 @@ There is a tension between two general principles in computing: on
 the one hand, re-using highly optimized code is often good for
 performance; on the other other hand, optimized code that is specialized
 for your problem can usually beat general-purpose functions.
-This is illustrated nicely by the vectorized version of our code above:
+This is illustrated nicely by the traditional vectorized version of our code above:
 
 ```jl
 f(x) = 3x.^2 + 5x + 2
