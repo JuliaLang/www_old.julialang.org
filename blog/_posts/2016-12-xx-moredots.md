@@ -198,7 +198,7 @@ load each data item `x = X[i]` *once* into cache (into a register for small enou
 then perform several operations like `f(2x^2 + 6x^3 - sqrt(x))` on `x`
 while you still have fast access to it, before loading the next datum;
 this is called "temporal locality."   The ordinary vectorized code
-destroys this potential locality: each `X[i]` is loaded once for a
+discards this potential locality: each `X[i]` is loaded once for a
 single small operation like `2*X[i]`, writing the result out to a temporary
 array before immediately reading the next `X[i]`.
 
