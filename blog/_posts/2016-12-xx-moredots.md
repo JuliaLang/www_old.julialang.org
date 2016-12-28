@@ -225,7 +225,7 @@ could fuse e.g. `2*X + Y` into a single loop, allocating a single
 array for the result, the compiler would need to:
 
 * Given the types of `X` and `Y`, figure out what `*` and `+` functions
-  to call.  (Julia already does, when type inference succeeds.)
+  to call.  (Julia already does this, when type inference succeeds.)
 
 * Look inside of those functions, realize that they are elementwise loops over `X`
   and `Y`, and realize that they are [pure](https://en.wikipedia.org/wiki/Pure_function)
