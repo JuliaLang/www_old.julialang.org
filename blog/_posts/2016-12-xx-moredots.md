@@ -230,7 +230,7 @@ array for the result, the compiler would need to:
 * Look inside of those functions, realize that they are elementwise loops over `X`
   and `Y`, and realize that they are [pure](https://en.wikipedia.org/wiki/Pure_function)
   (e.g. `2*X` has no side-effects like modifying `Y`).  Also, it needs to infer
-  not only the same purity of expressions like `X[i]` (which are calls to a function `getindex(X, i)`
+  not only the purity of expressions like `X[i]` (which are calls to a function `getindex(X, i)`
   that is "just another function" to the compiler), but to detect
   what data dependencies they imply.
 
