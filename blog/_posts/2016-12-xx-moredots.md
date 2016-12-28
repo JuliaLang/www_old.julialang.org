@@ -258,8 +258,8 @@ variety of languages (e.g. [Kennedy & McKinley, 1993](http://dl.acm.org/citation
 [Sarkar, 2010](http://ieeexplore.ieee.org/document/5389392/);
 [Prasad et al., 2011](http://dl.acm.org/citation.cfm?id=1993517);
 [Wu et al., 2012](http://dl.acm.org/citation.cfm?id=2457490)), is to only
-perform loop fusion for *a few "blessed" types and operations* that the
-compiler can be built to recognize. In Julia, for example, we could
+perform loop fusion for *a few "built-in" types and operations* that the
+compiler can be designed to recognize. In Julia, for example, we could
 potentially build the compiler to recognize that it can fuse
 `*`, `+`, `.^`, and similar operations for the built-in `Array` type,
 but only for elements that are one of a few built-in numeric types (`Float64`, `Int`, etc.).
