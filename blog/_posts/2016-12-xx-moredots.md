@@ -337,7 +337,7 @@ in advance which functions are likely to be applied to vectors
 
 Another approach that has been suggested is to define updating operators
 like `x += y` to be equivalent to calls to a special function,
-like `plusequals!(x, y)` that can be defined as in-place operations, rather
+like `x = plusequals!(x, y)` that can be defined as an in-place operation, rather
 than a synonym for `x = x + y` as in Julia today.
 ([NumPy does this](https://docs.python.org/3.3/reference/datamodel.html#object.__iadd__).)
 By itself, this can be used to [avoid temporary arrays in some simple cases](http://blog.svenbrauch.de/2016/04/13/processing-scientific-data-in-python-and-numpy-but-doing-it-fast/) by breaking them into a sequence of in-place updates, but
