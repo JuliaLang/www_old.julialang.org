@@ -205,8 +205,9 @@ array before immediately reading the next `X[i]`.
 On a typical modern computer, therefore, the traditional vectorized
 code `X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))` is **almost 10× slower** than
 the devectorized or fused-vectorized versions of the same code at the
-beginning of this article.   This is not unique to Julia!  It is true
-in any language unless the language's compiler can somehow automatically
+beginning of this article.   This is not unique to Julia!  Such
+vectorized code is suboptimal
+in any language unless the language's compiler can automatically
 fuse all of these loops (even ones that appear inside function calls),
 which rarely happens for the reasons described below.
 
