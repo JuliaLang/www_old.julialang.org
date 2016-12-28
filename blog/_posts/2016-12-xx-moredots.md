@@ -348,7 +348,7 @@ equivalent to `x .= x .+ y`, which does a single fused loop in-place,
 but this syntax now extends to arbitrary combinations of arbitrary functions.)
 
 A third partway solution is to define a [domain-specific
-language](https://en.wikipedia.org/wiki/Domain-specific_language), on top of
+language (DSL)](https://en.wikipedia.org/wiki/Domain-specific_language), on top of
 Julia, for expressing a fusing sequence of vectorized operations, which then
 hooks into a code-generation engine to produce the fused loops.   This kind of
 approach was implemented directly in Julia, thanks to Julia's metaprogramming
@@ -358,9 +358,21 @@ can be found in the
 [Theano](http://deeplearning.net/software/theano/introduction.html) and
 [PyOP2](https://op2.github.io/PyOP2/) software, both of which generate code in a
 low-level language (e.g. C++) whose compiler is invoked as needed.   The common
-limitation of these approaches, however, is that they are again limited to a
+limitation of these implementations, however, is that they are again restricted to a
 small set of "vector operations" (and a small set of array/scalar types in
 Theano and PyOP2) that are known to their code-generation engines.
+
+A more full-featured version of the DSL idea would be to
+implement a function like `fuse("x .= 2 .* x .+ sqrt.(x)", x=X)` or,
+in Julia, a macro `@fuse X .= 2 .* X .+ sqrt.(X)`, that implemented
+the same syntactic loop-fusion sugar as above.   A function version
+would require some way to declare variables in the DSL (as in Theano) and pass them
+in from Julia, making it a bit awkward to use.   The macro version
+would be much more workable, though it still requires support in the Julia
+parser to recognize expressions like `sqrt.(X)` and `.=`, but the
+decision was made to make fusing the default rather than requiring
+a `@fuse` annotation. In both cases, you still need fast higher-order
+`broadcast`-like functions to support fusion of arbitrary code, as described below.
 
 ## Should other languages implement syntactic loop fusion?
 
@@ -368,7 +380,8 @@ Obviously, Julia's approach of syntactic loop fusion relies on the
 fact that, as a young language, we are still relatively free to
 redefine core syntactic elements like `f.(x)` and `x .+ y`.  But
 suppose you were willing to add this or similar syntax to an
-existing language, like Python or Go; would you then be able to
+existing language, like Python or Go, or as a DSL on top of those
+languages as suggested above; would you then be able to
 implement the same fusing semantics efficiently?
 
 There is a catch: `2 .* x .+ x .^ 2` is sugar for
