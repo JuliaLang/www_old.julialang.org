@@ -155,7 +155,7 @@ X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))
 
 Each of the operations like `X.^2`  and `5*X` *individually*
 calls highly optimized functions, but their *combination*
-leaves a lot of performance on the table.   To see that,
+leaves a lot of performance on the table when `X` is an array.   To see that,
 you have to realize that this code is equivalent to:
 
 ```
