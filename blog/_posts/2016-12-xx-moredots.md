@@ -51,7 +51,7 @@ The short answers are:
 2. The dots allow Julia to recognize the "vectorized" nature of the
   operations at a *syntactic* level (before e.g. the type of `x` is known),
   and hence the loop fusion is a *syntactic guarantee*, not a
-  compiler optimization that may or may not occur for carefully written code.
+  compiler optimization that may or may not occur for carefully written code.  They also allow the *caller* to "vectorize" *any* function, rather than relying on the function author.
 
 3. Other languages have implemented loop fusion for vectorized operations,
   but typically for only a small set of types and operations/functions that
