@@ -224,9 +224,9 @@ think that it is "obvious" that it could be combined into a single loop
 over `X`.  Why can't Julia's compiler be smart enough to recognize this?
 
 The thing that you need to realize is that, in Julia, there is nothing
-particularly special about `+` or `sqrt` — they are just functions
+particularly special about `+` or `sqrt` — they are arbitrary functions
 and could do *anything*.   `X + Y` could send an email or open
-a plotting window for all the compiler knows.   To figure out that it
+a plotting window, for all the compiler knows.   To figure out that it
 could fuse e.g. `2*X + Y` into a single loop, allocating a single
 array for the result, the compiler would need to:
 
