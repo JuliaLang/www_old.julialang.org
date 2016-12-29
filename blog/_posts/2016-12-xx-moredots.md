@@ -62,8 +62,9 @@ The short answers are:
 
 ## Isn't vectorized code already fast?
 
-Let's rewrite the code above in a more traditional vectorized style, without
-so many dots, that you might use in Julia 0.4 or in other languages
+To explore this question (also discussed
+[in this blog post](http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code/)), let's begin by rewriting the code above in a more traditional vectorized style, without
+so many dots, such as you might use in Julia 0.4 or in other languages
 (most famously Matlab, Python/Numpy, or R).   
 
 ```jl
@@ -71,10 +72,10 @@ X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))
 ```
 
 Of course, this assumes that the functions `sqrt` and `f` are "vectorized,"
-i.e. that they take vector arguments `X` and compute the
+i.e. that they accept vector arguments `X` and compute the
 function elementwise.  This is true of `sqrt` in Julia 0.4, but it
-means that we have to rewrite our own function `f` in a vectorized style, as
-e.g. `f(x) = 3x.^2 + 5x + 2` (using the elementwise operator `.^` because
+means that we have to rewrite our function `f` from above in a vectorized style, as
+e.g. `f(x) = 3x.^2 + 5x + 2` (changing `f` to use the elementwise operator `.^` because
 `array^scalar` is not defined).   (If we cared a lot about efficiency, we
 might instead define a special method `f(X::AbstractArray) = map(f, X)`
 or use the `@vectorize_1arg f Number` macro defined in Julia 0.4.)
@@ -88,7 +89,7 @@ write it specially or define a corresponding elementwise method.
 
 (Even if a function *accepts* an array argument `x` — our function `f`
 accepts any `x` type, and in Matlab or R there is no distinction between
-a scalar and a 1-element array — doesn't mean it will *work* elementwise
+a scalar and a 1-element array — that doesn't mean it will *work* elementwise
 for an array unless you write the function with that in mind.)
 
 For library functions like `sqrt`, this means that the library authors
@@ -98,7 +99,7 @@ for vectors.
 
 One possible solution is to vectorize *every function automatically*.   The
 language [Chapel](https://en.wikipedia.org/wiki/Chapel_%28programming_language%29)
-does this: every function `f(x::Number...)` implicitly
+does this: every function `f(x...)` implicitly
 defines a function `f(x::Array...)` that evaluates `map(f, x...)`
 [(Chamberlain et al, 2011)](http://pgas11.rice.edu/papers/ChamberlainEtAl-Chapel-Iterators-PGAS11.pdf).
 This could be implemented in Julia as well via
@@ -148,8 +149,8 @@ form of optimized library routines, programming would be a lot easier!)
 ### Why vectorized code is not as fast as it could be
 
 There is a tension between two general principles in computing: on
-the one hand, re-using highly optimized code is often good for
-performance; on the other other hand, optimized code that is specialized
+the one hand, *re-using* highly optimized code is good for
+performance; on the other other hand, optimized code that is *specialized*
 for your problem can usually beat general-purpose functions.
 This is illustrated nicely by the traditional vectorized version of our code above:
 
@@ -216,7 +217,7 @@ in any language unless the language's compiler can automatically
 fuse all of these loops (even ones that appear inside function calls),
 which rarely happens for the reasons described below.
 
-## Why does Julia need the dots to fuse the loops?
+## Why does Julia need dots to fuse the loops?
 
 You might look at an expression like `2 * X.^2 + 6 * X.^3 - sqrt(X)` and
 think that it is "obvious" that it could be combined into a single loop
@@ -229,10 +230,10 @@ a plotting window for all the compiler knows.   To figure out that it
 could fuse e.g. `2*X + Y` into a single loop, allocating a single
 array for the result, the compiler would need to:
 
-* Given the types of `X` and `Y`, figure out what `*` and `+` functions
+1. Given the types of `X` and `Y`, figure out what `*` and `+` functions
   to call.  (Julia already does this, when type inference succeeds.)
 
-* Look inside of those functions, realize that they are elementwise loops over `X`
+2. Look inside of those functions, realize that they are elementwise loops over `X`
   and `Y`, and realize that they are [pure](https://en.wikipedia.org/wiki/Pure_function)
   (e.g. `2*X` has no side-effects like modifying `Y`).  Also, it needs to infer
   not only the purity of expressions like `X[i]` (which are calls to a function `getindex(X, i)`
