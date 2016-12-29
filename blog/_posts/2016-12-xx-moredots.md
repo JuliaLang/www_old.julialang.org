@@ -454,4 +454,4 @@ Nevertheless, it seems to be a rare feature, especially in [imperative languages
 higher-order functions are a key ingredient of Julia that allows
 a function like `broadcast` to be written in Julia itself (and
 hence be extensible to user-defined containers), rather than having
-to be built in to the compiler (and limited to "built-in" types).
+to be built in to the compiler (and probably limited to "built-in" container types).
