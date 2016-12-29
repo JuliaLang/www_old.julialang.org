@@ -279,7 +279,7 @@ as much of possible of Julia *in Julia* itself [(Bezanson, 2015)](https://github
 Put another way, the same *optimizations should be just as available to user-defined
 types and functions* as to the "built-in" functions of Julia's standard library
 (`Base`).  You should be able to define your own array types
-(e.g. the [StaticArrays](https://github.com/JuliaArrays/StaticArrays.jl)
+(e.g. via the [StaticArrays](https://github.com/JuliaArrays/StaticArrays.jl)
 package or [PETSc arrays](https://github.com/JuliaParallel/PETSc.jl))
 and functions (such as our `f` above), and have them be capable of fusing vectorized operations.
 
