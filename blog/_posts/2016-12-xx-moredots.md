@@ -4,7 +4,7 @@ title:  More Dots: Syntactic Loop Fusion in Julia
 author: <a href="http://math.mit.edu/~stevenj">Steven G. Johnson</a>
 ---
 
-After a [lengthy design process](https://github.com/JuliaLang/julia/issues/8450), Julia 0.6 includes new facilities for writing code in the "vectorized"
+After a [lengthy design process](https://github.com/JuliaLang/julia/issues/8450) and [preliminary foundations in Julia 0.5](http://julialang.org/blog/2016/10/julia-0.5-highlights#vectorized-function-calls), Julia 0.6 includes new facilities for writing code in the "vectorized"
 style (familiar from Matlab, Numpy, R, etcetera) while avoiding the
 overhead that this style of programming usually imposes: multiple
 vectorized operations can now be "fused" into a single loop, without
