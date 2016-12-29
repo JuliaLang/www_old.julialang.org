@@ -43,7 +43,7 @@ In this blog post, we delve into some of the details of this new development, in
 The short answers are:
 
 1. [Ordinary vectorized code is fast, but not as fast as a hand-written loop](http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code/)
-  (assuming loops are efficiently compiled)
+  (assuming loops are efficiently compiled, as in Julia)
   because each vectorized operation generates a new temporary array and
   executes a separate loop, leading to a lot of overhead when multiple
   vectorized operations are combined.
