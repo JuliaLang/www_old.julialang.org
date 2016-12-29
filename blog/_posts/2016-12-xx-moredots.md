@@ -376,18 +376,18 @@ would require some way to declare variables in the DSL (as in Theano) and pass t
 in from Julia, making it a bit awkward to use.   The macro version
 would be much more workable, though it still requires support in the Julia
 parser to recognize expressions like `sqrt.(X)` and `.=`, but the
-decision was made to make fusing the default rather than requiring
-a `@fuse` annotation. In both cases, you still need fast higher-order
+decision was made to make fusing the default, and to completely eliminate the separate "vectorized" methods Julia 0.4 was required to define, rather than requiring
+a `@fuse`-like annotation. Even with such a DSL, however, you still need to support fast higher-order
 `broadcast`-like functions to support fusion of arbitrary code, as described below.
 
 ## Should other languages implement syntactic loop fusion?
 
-Obviously, Julia's approach of syntactic loop fusion relies on the
+Obviously, Julia's approach of syntactic loop fusion relies partly on the
 fact that, as a young language, we are still relatively free to
 redefine core syntactic elements like `f.(x)` and `x .+ y`.  But
 suppose you were willing to add this or similar syntax to an
-existing language, like Python or Go, or as a DSL on top of those
-languages as suggested above; would you then be able to
+existing language, like Python or Go, or create a DSL add-on on top of those
+languages as discussed above; would you then be able to
 implement the same fusing semantics efficiently?
 
 There is a catch: `2 .* x .+ x .^ 2` is sugar for
