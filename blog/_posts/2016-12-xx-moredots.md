@@ -203,7 +203,7 @@ of the CPU itself.   This means that, for good performance, you should
 load each data item `x = X[i]` *once* (so that it goes into cache, or into a register for small enough types), and
 then perform several operations like `f(2x^2 + 6x^3 - sqrt(x))` on `x`
 while you still have fast access to it, before loading the next datum;
-this is called "temporal locality."   The ordinary vectorized code
+this is called "temporal locality."   The traditional vectorized code
 discards this potential locality: each `X[i]` is loaded once for a
 single small operation like `2*X[i]`, writing the result out to a temporary
 array before immediately reading the next `X[i]`.
