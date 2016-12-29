@@ -193,7 +193,7 @@ these temporary arrays is significant: heap allocation is expensive.
 If the array `X` is large enough, then the time for the heap allocation
 and garbage collection may be negligible, but you pay a *different* performance price
 from the fact that you have 12 loops (12 passes over memory) compared
-to one, largely because of the loss of [cache locality](https://en.wikipedia.org/wiki/Locality_of_reference).
+to one, in part because of the loss of [cache locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
 In particular, main computer memory (RAM) is relatively slow (much slower than
 arithmetic), so recently used data is stored in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
