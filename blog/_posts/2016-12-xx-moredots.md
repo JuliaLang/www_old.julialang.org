@@ -196,7 +196,7 @@ from the fact that you have 12 loops (12 passes over memory) compared
 to one, in part because of the loss of [memory locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
 In particular, main computer memory (RAM) is relatively slow (much slower than
-arithmetic), so recently used data is stored in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
+arithmetic!), so recently used data is stored in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
 of much faster memory.  Furthermore, there is a hierarchy of smaller,
 faster caches, culminating in the [register memory](https://en.wikipedia.org/wiki/Processor_register)
 of the CPU itself.   This means that, for good performance, you should
