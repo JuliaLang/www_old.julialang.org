@@ -200,7 +200,7 @@ arithmetic!), so recently used data is stored in a [cache](https://en.wikipedia.
 of much faster memory.  Furthermore, there is a hierarchy of smaller,
 faster caches, culminating in the [register memory](https://en.wikipedia.org/wiki/Processor_register)
 of the CPU itself.   This means that, for good performance, you should
-load each data item `x = X[i]` *once* into cache (into a register for small enough types), and
+load each data item `x = X[i]` *once* (so that it goes into cache, or into a register for small enough types), and
 then perform several operations like `f(2x^2 + 6x^3 - sqrt(x))` on `x`
 while you still have fast access to it, before loading the next datum;
 this is called "temporal locality."   The ordinary vectorized code
