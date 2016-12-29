@@ -251,7 +251,7 @@ In contrast, when the Julia compiler sees an expression like `2 .* X .+ Y`,
 it knows just from the *syntax* (the "spelling") that these are elementwise
 operations, and it *guarantees* that it will *always* fuse into a single
 loop, freeing it from the need to prove purity.  This is what we
-term **syntactic loop fusion**.
+term **syntactic loop fusion**, described in more detail below.
 
 ### A halfway solution: Loop fusion for a few operations/types
 
