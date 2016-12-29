@@ -230,7 +230,7 @@ a plotting window, for all the compiler knows.   To figure out that it
 could fuse e.g. `2*X + Y` into a single loop, allocating a single
 array for the result, the compiler would need to:
 
-1. Given the types of `X` and `Y`, figure out what `*` and `+` functions
+1. Once the types of `X` and `Y` are determined, figure out what `*` and `+` functions
   to call.  (Julia already does this, when type inference succeeds.)
 
 2. Look inside of those functions, realize that they are elementwise loops over `X`
