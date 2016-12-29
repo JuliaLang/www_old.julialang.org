@@ -448,10 +448,9 @@ being passed, the Julia compiler is free to inline `f(x)` into the generated cod
 if it wants to, and all of the function-call overhead can disappear.
 
 Julia is neither the first nor the only language that can inline
-higher-order functions; e.g. it is reportedly [possible in Haskell](http://stackoverflow.com/questions/25566517/can-haskell-inline-functions-passed-as-an-argument),
-and indeed this kind of optimization is even more
-important in such [functional languages](https://en.wikipedia.org/wiki/Functional_programming).
-But it is less widely available in [imperative languages](https://en.wikipedia.org/wiki/Imperative_programming). Fast
+higher-order functions; e.g. it is reportedly [possible in Haskell](http://stackoverflow.com/questions/25566517/can-haskell-inline-functions-passed-as-an-argument) and in
+the [Kotlin](https://kotlinlang.org/docs/reference/inline-functions.html) language.
+Nevertheless, it seems to be a rare feature, especially in [imperative languages](https://en.wikipedia.org/wiki/Imperative_programming). Fast
 higher-order functions are a key ingredient of Julia that allows
 a function like `broadcast` to be written in Julia itself (and
 hence be extensible to user-defined containers), rather than having
