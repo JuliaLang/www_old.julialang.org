@@ -34,26 +34,26 @@ end
 
 In this blog post, we delve into some of the details of this new development, in order to answer questions that often arise when this feature is presented:
 
-* What is the overhead of traditional "vectorized" code?  Isn't vectorized code supposed to be fast already?
+1. What is the overhead of traditional "vectorized" code?  Isn't vectorized code supposed to be fast already?
 
-* Why are all these dots necessary?  Couldn't Julia just optimize "ordinary" vector code?
+2. Why are all these dots necessary?  Couldn't Julia just optimize "ordinary" vector code?
 
-* Is this something unique to Julia, or can other languages do the same thing?
+3. Is this something unique to Julia, or can other languages do the same thing?
 
 The short answers are:
 
-* Ordinary vectorized code is fast, but not as fast as a hand-written loop
+1. [Ordinary vectorized code is fast, but not as fast as a hand-written loop](http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code/)
   (assuming loops are efficiently compiled)
   because each vectorized operation generates a new temporary array and
   executes a separate loop, leading to a lot of overhead when multiple
   vectorized operations are combined.
 
-* The dots allow Julia to recognize the "vectorized" nature of the
+2. The dots allow Julia to recognize the "vectorized" nature of the
   operations at a *syntactic* level (before e.g. the type of `x` is known),
   and hence the loop fusion is a *syntactic guarantee*, not a
   compiler optimization that may or may not occur for carefully written code.
 
-* Other languages have implemented loop fusion for vectorized operations,
+3. Other languages have implemented loop fusion for vectorized operations,
   but typically for only a small set of types and operations/functions that
   are known to the compiler.  Julia's ability to do it generically, even
   for *user-defined* array types and functions/operators, is unusual
@@ -82,9 +82,14 @@ or use the `@vectorize_1arg f Number` macro defined in Julia 0.4.)
 ### Which functions are vectorized?
 
 As an aside, this example illustrates an annoyance with the vectorized style:
+you have to *decide in advance* whether a given function `f(x)`
+will also be applied elementwise to arrays, and either
+write it specially or define a corresponding elementwise method.
 
-* You have to decide *in advance* whether a given function `f(x::Number)`
-  will also be applied elementwise to arrays, and define a corresponding elementwise method.
+(Even if a function *accepts* an array argument `x` — our function `f`
+accepts any `x` type, and in Matlab or R there is no distinction between
+a scalar and a 1-element array — doesn't mean it will *work* elementwise
+for an array unless you write the function with that in mind.)
 
 For library functions like `sqrt`, this means that the library authors
 have to guess at which functions should have vectorized methods, and users
@@ -427,9 +432,12 @@ the cost of the computations inside `f`.
 If `f(x)` is expensive enough, then the overhead of the function call may be negligible,
 but for a cheap function like `f(x) = 2*x + x^2` the overhead can be very
 significant: with Julia 0.4, the overhead is roughly a factor of two compared
-to a hand-written loop that evaluates `z = x[i]; y[i] = 2*z + z^2`.   Since lots
+to a hand-written loop that evaluates `z = x[i]; y[i] = 2*z + z^2`.     Since lots
 of vectorized code in practice evaluates relatively cheap functions like this,
-it would be a big problem for a generic vectorization method based on `broadcast`.
+it would be a big problem for a generic vectorization method based on `broadcast`.  (The function call also inhibits [SIMD optimization](https://software.intel.com/en-us/articles/vectorization-in-julia)
+by the compiler, which prevents computations in `f(x)` from
+being applied simultaneously to several `x[i]`
+elements.)
 
 However, in Julia 0.5, every function has its own type.  And, in Julia,
 whenever you call a function like `naivebroadcast(f, x)`, a *specialized version*
