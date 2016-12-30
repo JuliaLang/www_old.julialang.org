@@ -274,7 +274,7 @@ for Julia to implement at some point!
 However, even though Julia will certainly implement additional compiler
 optimizations as time passes, one of the key principles of Julia's design
 is to "build in" as little as possible into the core language, implementing
-as much of possible of Julia *in Julia* itself [(Bezanson, 2015)](https://github.com/JeffBezanson/phdthesis/blob/master/main.pdf).
+as much as possible of Julia *in Julia* itself [(Bezanson, 2015)](https://github.com/JeffBezanson/phdthesis/blob/master/main.pdf).
 Put another way, the same *optimizations should be just as available to user-defined
 types and functions* as to the "built-in" functions of Julia's standard library
 (`Base`).  You should be able to define your own array types
@@ -293,7 +293,7 @@ the types of the variables etc.), and transforms them into calls to
 `broadcast`.  Moreover, it guarantees that *nested* "dot calls" will
 *always* be fused into a single broadcast call, i.e. a single loop.
 
-Put another way, `f.(g.(x .+ 1))` is treated by Julia as simply
+Put another way, `f.(g.(x .+ 1))` is treated by Julia as merely
 [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) for
 `broadcast(x -> f(g(x + 1)), x)`.   An assignment `x .= f.(g.(y))`
 is treated as sugar for the in-place operation
@@ -335,8 +335,8 @@ address the problems of vectorization.  For example, functions could
 be specially [annotated to declare that they are pure](https://github.com/JuliaLang/julia/issues/414),
 one could specially annotate container types with
 array-like semantics, etcetera, to help the compiler recognize the
-possibility of fusion.   But again, this imposes a lot of requirements
-on the library authors, and as above it requires them to identify
+possibility of fusion.   But this imposes a lot of requirements
+on library authors, and once again it requires them to identify
 in advance which functions are likely to be applied to vectors
 (and hence be worth the additional analysis and annotation effort).
 
