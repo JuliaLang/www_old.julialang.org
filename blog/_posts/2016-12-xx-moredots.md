@@ -195,12 +195,12 @@ a lot of memory (an order of magnitude!)
 
 By itself, allocating/freeing memory can take a significant amount of time
 compared to our other computations. This is especially true if `X` is very small
-so that overhead matters (in our benchmark LINK NOTEBOOK, we pay a 10× cost for a 6-element array
-and a 6× cost for a 36-element array), or very large so that
-the memory churn matters (see below for numbers).
-Furthermore, you pay a *different* performance price
-from the fact that you have 12 loops (12 passes over memory) compared
-to one, in part because of the loss of [memory locality](https://en.wikipedia.org/wiki/Locality_of_reference).
+so that the allocation overhead matters (in our benchmark LINK NOTEBOOK, we pay
+a 10× cost for a 6-element array and a 6× cost for a 36-element array), or very
+large so that the memory churn matters (see below for numbers). Furthermore, you
+pay a *different* performance price from the fact that you have 12 loops (12
+passes over memory) compared to one, in part because of the loss of [memory
+locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
 In particular, reading or writing data in main computer memory (RAM) is much slower than performing scalar arithmetic operations like `+` and `*`, so computer hardware stores recently used data in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
 of much faster memory.  Furthermore, there is a hierarchy of smaller,
