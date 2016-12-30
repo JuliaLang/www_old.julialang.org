@@ -451,7 +451,7 @@ by the compiler, which prevents computations in `f(x)` from
 being applied simultaneously to several `x[i]`
 elements.)
 
-However, in Julia 0.5, every function has its own type.  And, in Julia,
+However, [in Julia 0.5, every function has its own type](http://julialang.org/blog/2016/10/julia-0.5-highlights#functions).  And, in Julia,
 whenever you call a function like `naivebroadcast(f, x)`, a *specialized version*
 of `naivebroadcast` is compiled for `typeof(f)` and `typeof(x)`.   Since
 the compiled code is specific to `typeof(f)`, i.e. to the specific function
