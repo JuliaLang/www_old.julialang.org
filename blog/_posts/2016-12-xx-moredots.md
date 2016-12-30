@@ -114,7 +114,7 @@ favor of `sqrt.(X)`, and dot operators
 like `x .+ y` are [now equivalent](https://github.com/JuliaLang/julia/pull/17623) to
 dot calls `(+).(x,y)`.   (Unlike Chapel's implicit vectorization, Julia's
 `f.(x...)` syntax corresponds to `broadcast(f, x...)` rather than `map`,
-which allows you to combine arrays of different shapes/dimensions.)
+allowing you to combine arrays of different shapes/dimensions.)
 From the standpoint of the programmer, this adds a certain amount of
 clarity because it indicates explicitly when an elementwise operation
 is occuring.  From the standpoint of the compiler, dot-call syntax
