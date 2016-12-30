@@ -221,7 +221,7 @@ at the beginning of this article for `X = zeros(10^6)`.   Even if we
 pre-allocate all of the temporary arrays (completely eliminating the allocation
 cost),  our benchmarks show that performing a separate loop for each operation
 still is about 4–5× slower for a million-element `X`. This is not unique to
-Julia!  Unfused vectorized code is suboptimal in any language unless the
+Julia!  **Unfused vectorized code is suboptimal in any language** unless the
 language's compiler can automatically fuse all of these loops (even ones that
 appear inside function calls), which rarely happens for the reasons described
 below.
