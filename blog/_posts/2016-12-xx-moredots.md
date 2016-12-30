@@ -191,7 +191,7 @@ The resulting `X = ...` expression does *not* update `X` in-place, but
 rather makes the variable `X` "point" to a new array returned by `f(tmp7)`,
 discarding the old array `X`.   All of these extra arrays are eventually
 deallocated by Julia's garbage collector, but in the meantime it wastes
-a lot of memory (by an order of magnitude!)
+a lot of memory (an order of magnitude!)
 
 If the array `X` is small, then the performance cost of allocating
 these temporary arrays is significant (10× slower for a 6-element array
