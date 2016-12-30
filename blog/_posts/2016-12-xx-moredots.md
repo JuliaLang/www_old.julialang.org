@@ -87,9 +87,9 @@ you have to *decide in advance* whether a given function `f(x)`
 will also be applied elementwise to arrays, and either
 write it specially or define a corresponding elementwise method.
 
-(Even if a function *accepts* an array argument `x` — our function `f`
-accepts any `x` type, and in Matlab or R there is no distinction between
-a scalar and a 1-element array — that doesn't mean it will *work* elementwise
+(Our function `f` accepts any `x` type, and in Matlab or R there is no distinction between
+a scalar and a 1-element array.  However, even if a function *accepts* an array argument `x`,
+that doesn't mean it will *work* elementwise
 for an array unless you write the function with that in mind.)
 
 For library functions like `sqrt`, this means that the library authors
