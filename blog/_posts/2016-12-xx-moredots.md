@@ -30,7 +30,9 @@ for i in eachindex(X)
 end
 ```
 
-(Of course, like all Julia code, to get good performance both of these snippets should be executed inside some function, not in global scope.)
+(Of course, like all Julia code, to get good performance both of these snippets should be executed inside some function, not in global scope.)   To see the details of a variety of performance experiments with this example code, follow along in the attached IJulia/Jupyter notebook (TODO NOTEBOOK LINK): we find that the
+`X .= ...` code has performance within 10% of the hand-devectorized loop,
+except for very small arrays where there is a modest overhead (e.g. 30% overhead for a length-1 array `X`).
 
 In this blog post, we delve into some of the details of this new development, in order to answer questions that often arise when this feature is presented:
 
@@ -189,9 +191,11 @@ deallocated by Julia's garbage collector, but in the meantime it wastes
 a lot of memory (more than an order of magnitude!)
 
 If the array `X` is small, then the performance cost of allocating
-these temporary arrays is significant: heap allocation is expensive.
+these temporary arrays is significant (10× slower for a 6-element array
+and 6× slower for a 36-element array in our benchmark LINK NOTEBOOK): heap allocation is expensive.
 If the array `X` is large enough, then the time for the heap allocation
-and garbage collection may be negligible, but you pay a *different* performance price
+may be negligible, although continual garbage-collection is still expensive.
+Furthermore, you pay a *different* performance price
 from the fact that you have 12 loops (12 passes over memory) compared
 to one, in part because of the loss of [memory locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
@@ -207,14 +211,17 @@ discards this potential locality: each `X[i]` is loaded once for a
 single small operation like `2*X[i]`, writing the result out to a temporary
 array before immediately reading the next `X[i]`.
 
-On a typical modern computer, therefore, the traditional vectorized
-code `X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))` turns out to be **almost 10× slower** than
-the devectorized or fused-vectorized versions of the same code at the
-beginning of this article for `X = rand(10^6)`.   This is not unique to Julia!  Such
-vectorized code is suboptimal
-in any language unless the language's compiler can automatically
-fuse all of these loops (even ones that appear inside function calls),
-which rarely happens for the reasons described below.
+In typical performance benchmarks (LINK NOTEBOOK), therefore, the traditional
+vectorized code `X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))` turns out to be **about
+10× slower** than the devectorized or fused-vectorized versions of the same code
+at the beginning of this article for `X = zeros(10^6)`.   Even if we
+pre-allocate all of the temporary arrays (completely eliminating the allocation
+cost),  our benchmarks show that performing a separate loop for each operation
+still is about 4–5× slower** for a million-element `X`. This is not unique to
+Julia!  Unfused vectorized code is suboptimal in any language unless the
+language's compiler can automatically fuse all of these loops (even ones that
+appear inside function calls), which rarely happens for the reasons described
+below.
 
 ## Why does Julia need dots to fuse the loops?
 
