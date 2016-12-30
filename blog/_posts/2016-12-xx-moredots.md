@@ -193,11 +193,11 @@ discarding the old array `X`.   All of these extra arrays are eventually
 deallocated by Julia's garbage collector, but in the meantime it wastes
 a lot of memory (an order of magnitude!)
 
-If the array `X` is small, then the performance cost of allocating
-these temporary arrays is significant (10× slower for a 6-element array
-and 6× slower for a 36-element array in our benchmark LINK NOTEBOOK): heap allocation is expensive.
-If the array `X` is large enough, then the time for the heap allocation
-may be negligible, although continual garbage-collection is still expensive.
+By itself, allocating/freeing memory can take a significant amount of time
+compared to our other computations. This is especially true if `X` is very small
+so that overhead matters (in our benchmark LINK NOTEBOOK, we pay a 10× cost for a 6-element array
+and a 6× cost for a 36-element array), or very large so that
+the memory churn matters (see below for numbers).
 Furthermore, you pay a *different* performance price
 from the fact that you have 12 loops (12 passes over memory) compared
 to one, in part because of the loss of [memory locality](https://en.wikipedia.org/wiki/Locality_of_reference).
