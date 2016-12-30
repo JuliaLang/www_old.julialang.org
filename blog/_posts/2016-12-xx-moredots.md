@@ -145,7 +145,7 @@ And vectorized operations like `scalar*array` or `sqrt(array)` are still fast in
 (calling optimized library routines, albeit ones written in Julia itself).
 
 Furthermore, if your problem involves a function that does not have a pre-written,
-highly optimized, vectorized library routine in Julia, and does not
+highly optimized, vectorized library routine in Julia, and that does not
 decompose easily into existing vectorized building blocks like `scalar*array`, then
 you can write your own building block without dropping down to a low-level language.
 (If all the performance-critical code you will ever need already existed in the
