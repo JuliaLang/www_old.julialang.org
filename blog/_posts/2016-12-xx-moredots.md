@@ -31,7 +31,8 @@ end
 ```
 
 (Of course, like all Julia code, to get good performance both of these snippets should be executed inside some function, not in global scope.)   To see the details of a variety of performance experiments with this example code, follow along in the attached IJulia/Jupyter notebook (TODO NOTEBOOK LINK): we find that the
-`X .= ...` code has performance within 10% of the hand-devectorized loop,
+`X .= ...` code has performance within 10% of the hand-devectorized loop (which itself is close to the
+speed of C code),
 except for very small arrays where there is a modest overhead (e.g. 30% overhead for a length-1 array `X`).
 
 In this blog post, we delve into some of the details of this new development, in order to answer questions that often arise when this feature is presented:
@@ -137,7 +138,8 @@ compile them to efficient code in general.
 
 Thanks to Julia's design, a properly written devectorized loop in Julia
 has performance comparable to C or Fortran, so there is no *necessity*
-of vectorizing, but of course vectorization may still be convenient for some problems.
+of vectorizing; this is explicitly demonstrated for the devectorized
+loop above in the accompanying notebook (LINK NOTEBOOK). However, vectorization may still be *convenient* for some problems.
 And vectorized operations like `scalar*array` or `sqrt(array)` are still fast in Julia
 (calling optimized library routines, albeit ones written in Julia itself).
 
