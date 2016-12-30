@@ -10,7 +10,8 @@ overhead that this style of programming usually imposes: multiple
 vectorized operations can now be "fused" into a single loop, without
 allocating any extraneous temporary arrays.
 
-This is best illustrated with an example.  Suppose we have
+This is best illustrated with an example (in which we get
+*order-of-magnitude* savings in memory and time, as demonstrated below).  Suppose we have
 a function `f(x) = 3x^2 + 5x + 2` that evaluates a polynomial,
 and we want to evaluate `f(2x^2 + 6x^3 - sqrt(x))` for a whole array `X`,
 storing the result in-place in `X`.  You can now do:
