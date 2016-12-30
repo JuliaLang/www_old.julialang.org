@@ -244,16 +244,18 @@ array for the result, the compiler would need to:
 
 2. Look inside of those functions, realize that they are elementwise loops over `X`
   and `Y`, and realize that they are [pure](https://en.wikipedia.org/wiki/Pure_function)
-  (e.g. `2*X` has no side-effects like modifying `Y`).  Also, it needs to infer
-  not only the purity of expressions like `X[i]` (which are calls to a function `getindex(X, i)`
-  that is "just another function" to the compiler), but to detect
-  what data dependencies they imply.
+  (e.g. `2*X` has no side-effects like modifying `Y`).
 
-The key difficulty is the second step: looking at an arbitrary function and
-figuring out that it is a pure elementwise loop or data access turns out to be a
-very hard problem in general.  If fusion is viewed as a compiler *optimization*,
-then the compiler is only free to fuse if it can *prove* that fusion *won't
-change the results*, which requires the detection of purity and other data-dependency
+3. Analyze expressions like `X[i]` (which are calls to a function `getindex(X, i)`
+  that is "just another function" to the compiler), to detect that they
+  are memory reads/writes and determine what *data dependencies* they imply
+  (e.g. to figure out that `2*X` allocates a temporary array that can be eliminated).
+
+The second and third steps pose an *enormous challenge*: looking at an arbitrary
+function and "understanding" it at this level turns out to be a very hard
+problem for a computer.  If fusion is viewed as a compiler *optimization*, then the
+compiler is only free to fuse if it can *prove* that fusion *won't change the
+results*, which requires the detection of purity and other data-dependency
 analyses.
 
 In contrast, when the Julia compiler sees an expression like `2 .* X .+ Y`,
