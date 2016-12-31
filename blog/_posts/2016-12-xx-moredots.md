@@ -80,8 +80,8 @@ i.e. that they accept vector arguments `X` and compute the
 function elementwise.  This is true of `sqrt` in Julia 0.4, but it
 means that we have to rewrite our function `f` from above in a vectorized style, as
 e.g. `f(x) = 3x.^2 + 5x + 2` (changing `f` to use the elementwise operator `.^` because
-`vector^scalar` is not defined).   (If we cared a lot about efficiency
-in Julia 0.4, we might have instead used the `@vectorize_1arg f Number` macro to generate
+`vector^scalar` is not defined).   (If we were using Julia 0.4 and cared a lot about efficiency,
+we might have instead used the `@vectorize_1arg f Number` macro to generate
 more specialized elementwise code.)
 
 ### Which functions are vectorized?
