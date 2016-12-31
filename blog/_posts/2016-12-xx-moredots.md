@@ -354,10 +354,10 @@ to nested calls, and hence they fuse for dotted operations.   For
 example `3 .* x .+ y` is equivalent to `(+).((*).(3, x), y)`, and
 hence it fuses into `broadcast((x,y) -> 3*x+y, x, y)`.   Note
 also that the fusion stops only when a "non-dot" call is encountered,
-e.g. `sqrt.(abs.(sort(x.^2)))` fuses the `sqrt` and `abs` operations
+e.g. `sqrt.(abs.(sort!(x.^2)))` fuses the `sqrt` and `abs` operations
 into a single loop, but `x.^2` occurs in a separate loop (producing
 a temporary array) because of the intervening non-dot function call
-`sort(...)`.
+`sort!(...)`.
 
 ### Other partway solutions
 
