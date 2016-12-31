@@ -116,9 +116,9 @@ Thus, the *caller* decides which functions to vectorize.  In Julia 0.6,
 "traditionally" vectorized library functions like `sqrt(X)` are [deprecated](https://github.com/JuliaLang/julia/pull/17302) in
 favor of `sqrt.(X)`, and dot operators
 like `x .+ y` are [now equivalent](https://github.com/JuliaLang/julia/pull/17623) to
-dot calls `(+).(x,y)`.   (Unlike Chapel's implicit vectorization, Julia's
+dot calls `(+).(x,y)`.   Unlike Chapel's implicit vectorization, Julia's
 `f.(x...)` syntax corresponds to `broadcast(f, x...)` rather than `map`,
-allowing you to combine arrays of different shapes/dimensions.)
+allowing you to *combine arrays and scalars or arrays of different shapes/dimensions.*
 From the standpoint of the programmer, this adds a certain amount of
 clarity because it indicates explicitly when an elementwise operation
 is occuring.  From the standpoint of the compiler, dot-call syntax
@@ -196,17 +196,17 @@ a lot of memory (an order of magnitude!)
 By itself, allocating/freeing memory can take a significant amount of time
 compared to our other computations. This is especially true if `X` is very small
 so that the allocation overhead matters (in our benchmark LINK NOTEBOOK, we pay
-a 10× cost for a 6-element array and a 6× cost for a 36-element array), or very
-large so that the memory churn matters (see below for numbers). Furthermore, you
-pay a *different* performance price from the fact that you have 12 loops (12
-passes over memory) compared to one, in part because of the loss of [memory
-locality](https://en.wikipedia.org/wiki/Locality_of_reference).
+a 10× cost for a 6-element array and a 6× cost for a 36-element array), or  if
+`X` is very large so that the memory churn matters (see below for numbers).
+Furthermore, you pay a *different* performance price from the fact that you have
+12 loops (12 passes over memory) compared to one, in part because of the loss of
+[memory locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 
 In particular, reading or writing data in main computer memory (RAM) is much slower than performing scalar arithmetic operations like `+` and `*`, so computer hardware stores recently used data in a [cache](https://en.wikipedia.org/wiki/Cache_%28computing%29): a small amount
 of much faster memory.  Furthermore, there is a hierarchy of smaller,
 faster caches, culminating in the [register memory](https://en.wikipedia.org/wiki/Processor_register)
 of the CPU itself.   This means that, for good performance, you should
-load each data item `x = X[i]` *once* (so that it goes into cache, or into a register for small enough types), and
+load each datum `x = X[i]` *once* (so that it goes into cache, or into a register for small enough types), and
 then perform several operations like `f(2x^2 + 6x^3 - sqrt(x))` on `x`
 while you still have fast access to it, before loading the next datum;
 this is called "temporal locality."   The traditional vectorized code
@@ -239,8 +239,8 @@ a plotting window, for all the compiler knows.   To figure out that it
 could fuse e.g. `2*X + Y` into a single loop, allocating a single
 array for the result, the compiler would need to:
 
-1. Once the types of `X` and `Y` are determined, figure out what `*` and `+` functions
-  to call.  (Julia already does this, when type inference succeeds.)
+1. Deduce the types of `X` and `Y` and figure out what `*` and `+` functions
+  to call.  (Julia already does this, at least when [type inference](https://en.wikipedia.org/wiki/Type_inference) succeeds.)
 
 2. Look inside of those functions, realize that they are elementwise loops over `X`
   and `Y`, and realize that they are [pure](https://en.wikipedia.org/wiki/Pure_function)
