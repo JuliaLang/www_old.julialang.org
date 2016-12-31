@@ -447,7 +447,7 @@ However, [in Julia 0.5, every function has its own type](http://julialang.org/bl
 whenever you call a function like `naivebroadcast(f, x)`, a *specialized version*
 of `naivebroadcast` is compiled for `typeof(f)` and `typeof(x)`.   Since
 the compiled code is specific to `typeof(f)`, i.e. to the specific function
-being passed, the Julia compiler is free to inline `f(x)` into the generated code
+being passed, the Julia compiler is free to [inline](https://en.wikipedia.org/wiki/Inline_expansion) `f(x)` into the generated code
 if it wants to, and all of the function-call overhead can disappear.
 
 Julia is neither the first nor the only language that can inline
