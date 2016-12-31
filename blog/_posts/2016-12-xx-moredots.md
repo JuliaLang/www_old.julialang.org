@@ -80,7 +80,7 @@ i.e. that they accept vector arguments `X` and compute the
 function elementwise.  This is true of `sqrt` in Julia 0.4, but it
 means that we have to rewrite our function `f` from above in a vectorized style, as
 e.g. `f(x) = 3x.^2 + 5x + 2` (changing `f` to use the elementwise operator `.^` because
-`array^scalar` is not defined).   (If we cared a lot about efficiency, we
+`vector^scalar` is not defined).   (If we cared a lot about efficiency, we
 might instead define a special method `f(X::AbstractArray) = map(f, X)`
 or use the `@vectorize_1arg f Number` macro defined in Julia 0.4.)
 
@@ -127,15 +127,15 @@ below, which we think is an overwhelming advantage of this style.
 
 ### Why vectorized code is fast
 
-In many dynamic languages for technical computing, vectorization is
-seen as a key (often *the* key) performance optimization.   It allows
-your code to take advantage of highly optimized (perhaps even parallelized)
-library routines for basic operations like `scalar*array` or `sqrt(array)`.
-Those functions, in turn, are usually implemented in a low-level language
-like C or Fortran.   Writing your own "devectorized" loops, in contrast,
-is too slow, unless you are willing to drop down to a low-level language
-yourself, because the semantics of those languages make it hard to
-compile them to efficient code in general.
+In many dynamically typed languages popular for interactive technical computing
+(Matlab, Python, R, etc.), vectorization is seen as a key (often *the* key)
+performance optimization.   It allows your code to take advantage of highly
+optimized (perhaps even parallelized) library routines for basic operations like
+`scalar*array` or `sqrt(array)`. Those functions, in turn, are usually
+implemented in a low-level language like C or Fortran.   Writing your own
+"devectorized" loops, in contrast, is too slow, unless you are willing to drop
+down to a low-level language yourself, because the semantics of those dynamic
+languages make it hard to compile them to efficient code in general.
 
 Thanks to Julia's design, a properly written devectorized loop in Julia
 has performance within a few percent of C or Fortran, so there is no *necessity*
@@ -221,7 +221,7 @@ at the beginning of this article for `X = zeros(10^6)`.   Even if we
 pre-allocate all of the temporary arrays (completely eliminating the allocation
 cost),  our benchmarks show that performing a separate loop for each operation
 still is about 4–5× slower for a million-element `X`. This is not unique to
-Julia!  **Unfused vectorized code is suboptimal in any language** unless the
+Julia!  **Vectorized code is suboptimal in any language** unless the
 language's compiler can automatically fuse all of these loops (even ones that
 appear inside function calls), which rarely happens for the reasons described
 below.
@@ -260,7 +260,7 @@ analyses.
 
 In contrast, when the Julia compiler sees an expression like `2 .* X .+ Y`,
 it knows just from the *syntax* (the "spelling") that these are elementwise
-operations, and it *guarantees* that it will *always* fuse into a single
+operations, and Julia *guarantees* that the code will *always* fuse into a single
 loop, freeing it from the need to prove purity.  This is what we
 term **syntactic loop fusion**, described in more detail below.
 
@@ -276,12 +276,21 @@ variety of languages (e.g. [Kennedy & McKinley, 1993](http://dl.acm.org/citation
 [Prasad et al., 2011](http://dl.acm.org/citation.cfm?id=1993517);
 [Wu et al., 2012](http://dl.acm.org/citation.cfm?id=2457490)), is to only
 perform loop fusion for *a few "built-in" types and operations* that the
-compiler can be designed to recognize. In Julia, for example, we could
+compiler can be designed to recognize.   The same idea has also been
+implemented as [domain-specific
+languages (DSLs)](https://en.wikipedia.org/wiki/Domain-specific_language),
+or extensions of existing languages; in Python, for example, loop fusion for a small
+set of vector operations and array/scalar types can be found in the
+[Theano](http://deeplearning.net/software/theano/introduction.html),
+[PyOP2](https://op2.github.io/PyOP2/), and [Numba](https://github.com/numba/numba/pull/1110)
+software. Likewise, in Julia we could
 potentially build the compiler to recognize that it can fuse
 `*`, `+`, `.^`, and similar operations for the built-in `Array` type,
-but only for elements that are one of a few built-in numeric types (`Float64`, `Int`, etc.).
-These operations are common enough that this may still be a worthwhile optimization
-for Julia to implement at some point!
+(and perhaps only for a few scalar types).
+This has, in fact, already been implemented in Julia as a macro-based DSL (you add a `@vec` or `@acc`
+decorators to a vectorized expression) in the [Devectorize](https://github.com/lindahua/Devectorize.jl)
+and [ParallelAccelerator](https://github.com/IntelLabs/ParallelAccelerator.jl)
+packages.
 
 However, even though Julia will certainly implement additional compiler
 optimizations as time passes, one of the key principles of Julia's design
@@ -293,6 +302,17 @@ types and functions* as to the "built-in" functions of Julia's standard library
 (e.g. via the [StaticArrays](https://github.com/JuliaArrays/StaticArrays.jl)
 package or [PETSc arrays](https://github.com/JuliaParallel/PETSc.jl))
 and functions (such as our `f` above), and have them be capable of fusing vectorized operations.
+
+Moreover, a difficulty with fancy compiler optimizations is that, as a
+programmer, you are often unsure whether they will occur.  You have to learn to
+avoid coding styles that accidentally prevent the compiler from recognizing
+the fusion opportunity (e.g. because you called a "non-built-in" function), you
+need to learn to use additional compiler-diagnostic tools to identify which
+optimizations are taking place, and you need to continually check these
+diagnostics as new versions of the compiler and language are released.  With
+vectorized code, losing a fusion optimization may mean wasting an order of
+magnitude in memory and time, so you have to worry much more than you would for
+a typical compiler micro-optimization.
 
 ### Syntactic loop fusion in Julia
 
@@ -333,7 +353,7 @@ Note that "side-by-side" binary operations are actually equivalent
 to nested calls, and hence they fuse for dotted operations.   For
 example `3 .* x .+ y` is equivalent to `(+).((*).(3, x), y)`, and
 hence it fuses into `broadcast((x,y) -> 3*x+y, x, y)`.   Note
-also that the fusion stops as soon as a "non-dot" call is encountered,
+also that the fusion stops only when a "non-dot" call is encountered,
 e.g. `sqrt.(abs.(sort(x.^2)))` fuses the `sqrt` and `abs` operations
 into a single loop, but `x.^2` occurs in a separate loop (producing
 a temporary array) because of the intervening non-dot function call
@@ -364,33 +384,6 @@ multiple loops.   (In Julia 0.6, you can do `x .+= y` and it is
 equivalent to `x .= x .+ y`, which does a single fused loop in-place,
 but this syntax now extends to arbitrary combinations of arbitrary functions.)
 
-A third partway solution is to define a [domain-specific
-language (DSL)](https://en.wikipedia.org/wiki/Domain-specific_language), on top of
-Julia, for expressing a fusing sequence of vectorized operations, which then
-hooks into a code-generation engine to produce the fused loops.   This kind of
-approach was implemented directly in Julia, thanks to Julia's metaprogramming
-facilities, in the [Devectorize
-package](https://github.com/lindahua/Devectorize.jl). In Python, this approach
-can be found in the
-[Theano](http://deeplearning.net/software/theano/introduction.html) and
-[PyOP2](https://op2.github.io/PyOP2/) software, both of which generate code in a
-low-level language (e.g. C++) whose compiler is invoked as needed.   The common
-limitation of these implementations, however, is that they are again restricted to a
-small set of "vector operations" (and a small set of array/scalar types in
-Theano and PyOP2) that are known to their code-generation engines.
-
-A more full-featured version of the DSL idea would be to
-implement a function like `fuse("x .= 2 .* x .+ sqrt.(x)", x=X)` or,
-in Julia, a macro `@fuse X .= 2 .* X .+ sqrt.(X)`, that implemented
-the same syntactic loop-fusion sugar as above.   A function version
-would require some way to declare variables in the DSL (as in Theano) and pass them
-in from Julia, making it a bit awkward to use.   The macro version
-would be much more workable, though it still requires support in the Julia
-parser to recognize expressions like `sqrt.(X)` and `.=`, but the
-decision was made to make fusing the default, and to completely eliminate the separate "vectorized" methods Julia 0.4 was required to define, rather than requiring
-a `@fuse`-like annotation. Even with such a DSL, however, you still need to support fast higher-order
-`broadcast`-like functions to support fusion of arbitrary code, as described below.
-
 ## Should other languages implement syntactic loop fusion?
 
 Obviously, Julia's approach of syntactic loop fusion relies partly on the
@@ -406,14 +399,13 @@ There is a catch: `2 .* x .+ x .^ 2` is sugar for
 fast we need the [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function)
 `broadcast` to be very fast as well.  First, this
 requires that arbitrary user-defined scalar (non-vectorized!) functions like
-`x -> 2*x + x^2` be compiled to fast code, which isn't true in
-most other dynamically typed high-level languages like Python, but is usually true
-in statically typed languages like Go.   Second, it ideally requires that
+`x -> 2*x + x^2` be compiled to fast code, which is often a challenge
+in high-level dynamic languages.   Second, it ideally requires that
 higher-order functions like `broadcast` be able to [inline](https://en.wikipedia.org/wiki/Inline_expansion)
 the function argument `x -> 2*x + x^2`, and this facility is even
 less common.  (It wasn't available in Julia until version 0.5.)
 
-### The importance of inlining
+### The importance of higher-order inlining
 
 In particular, consider
 a naive implementation of `broadcast` (only for one-argument functions):
