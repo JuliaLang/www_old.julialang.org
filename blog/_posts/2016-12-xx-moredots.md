@@ -487,7 +487,7 @@ of `3`s is ever explicitly constructed.
 More generally, if you combine two arrays of different dimensions or shapes,
 any "singleton" (length 1) or missing dimension of one array is "broadcasted"
 across that dimension of the other array.   For example, `A .+ [1,2,3]`
-adds `[1,2,3]` to *each column* of an *n*×3 matrix `A`.   Another typical
+adds `[1,2,3]` to *each column* of an 3×*n* matrix `A`.   Another typical
 example is to combine a row vector (or a 1×*n* array) and a column vector to make a matrix
 (2d array):
 
