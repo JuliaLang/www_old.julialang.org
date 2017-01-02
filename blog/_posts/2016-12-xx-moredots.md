@@ -65,7 +65,7 @@ The short answers are:
   compile higher-order functions.
 
 Finally, we'll review that why, since these dots actually correspond to
-`broadcast` operations, they can **combine arrays and scalars, or containers
+`broadcast` operations, they can **combine arrays and scalars, or combine containers
 of different shapes and kinds**.  And, moreover, Julia 0.6 expanded and
 clarified the notion of a "scalar" for `broadcast`, so that it is **not limited to numerical operations**: you can use `broadcast` for string
 processing and many other tasks as well.
