@@ -518,7 +518,7 @@ neither the `broadcast` function nor the dot-call fusion syntax is limited
 to numeric data.  For example:
 
 ```jl
-julia> s = ["The QUICK Brown", "dog     jumped", "over the LAZY fox."];
+julia> s = ["The QUICK Brown", "fox     jumped", "over the LAZY dog."];
 
 julia> s .= replace.(lowercase.(s), r"\s+", "-")
 3-element Array{String,1}:
