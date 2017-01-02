@@ -293,7 +293,7 @@ software. Likewise, in Julia we could
 potentially build the compiler to recognize that it can fuse
 `*`, `+`, `.^`, and similar operations for the built-in `Array` type,
 (and perhaps only for a few scalar types).
-This has, in fact, already been implemented in Julia as a macro-based DSL (you add a `@vec` or `@acc`
+This has, in fact, already been implemented in Julia as a macro-based DSL (you add `@vec` or `@acc`
 decorators to a vectorized expression) in the [Devectorize](https://github.com/lindahua/Devectorize.jl)
 and [ParallelAccelerator](https://github.com/IntelLabs/ParallelAccelerator.jl)
 packages.
