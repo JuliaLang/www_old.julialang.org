@@ -67,7 +67,7 @@ The short answers are:
 Finally, we'll review that why, since these dots actually correspond to
 `broadcast` operations, they can **combine arrays and scalars, or combine containers
 of different shapes and kinds**.  And, moreover, Julia 0.6 expanded and
-clarified the notion of a "scalar" for `broadcast`, so that it is **not limited to numerical operations**: you can use `broadcast` and "dot calls" for many other
+clarified the notion of a "scalar" for `broadcast`, so that it is **not limited to numerical operations**: you can use `broadcast` and fusing "dot calls" for many other
 tasks (e.g. string processing).
 
 ## Isn't vectorized code already fast?
