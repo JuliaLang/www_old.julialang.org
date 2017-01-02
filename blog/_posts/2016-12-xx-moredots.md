@@ -565,8 +565,8 @@ now take an `f::Fun` and do, for example, `exp.(f.^2 .+ f.^3)` and it will
 translate to `broadcast(y -> exp(y^2 + y^3), f)`.  This `broadcast` call, in
 turn, will evaluate `exp(y^2 + y^3)` for `y = f(x)` at cleverly selected `x`
 points, construct a polynomial fit, and return a new `Fun` object representing
-the fit. (Conceptually, this replaces "elementwise" operations on containers
-with "pointwise" operations on functions.) In contrast, ApproxFun also allows
+the fit. (Conceptually, this replaces *elementwise* operations on containers
+with *pointwise* operations on functions.) In contrast, ApproxFun also allows
 you to compute the same result using `exp(f^2 + f^3)`, but in this case it will go
 through the fitting process *four times* (constructing four `Fun` objects), once
 for each operation like `f^2`, and is more than an order of magnitude slower
