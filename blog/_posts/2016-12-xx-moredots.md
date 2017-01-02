@@ -64,6 +64,12 @@ The short answers are:
   and relies in part on the syntax choices above and on its ability to efficiently
   compile higher-order functions.
 
+Finally, we'll review that why, since these dots actually correspond to
+`broadcast` operations, they can **combine arrays and scalars, or containers
+of different shapes and kinds**.  And, moreover, Julia 0.6 expanded and
+clarified the notion of a "scalar" for `broadcast`, so that it is **not limited to numerical operations**: you can use `broadcast` for string
+processing and many other tasks as well.
+
 ## Isn't vectorized code already fast?
 
 To explore this question (also discussed
@@ -458,3 +464,135 @@ higher-order functions are a key ingredient of Julia that allows
 a function like `broadcast` to be written in Julia itself (and
 hence be extensible to user-defined containers), rather than having
 to be built in to the compiler (and probably limited to "built-in" container types).
+
+## Not just elementwise math: The power of `broadcast`
+
+Dot calls correspond to the `broadcast` function in Julia.  Broadcasting
+is a powerful concept (also found, for example, in [NumPy](https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html) and
+[Matlab](https://www.mathworks.com/help/matlab/ref/bsxfun.html)) in which
+the concept of "elementwise" operations is extended to encompass combining
+arrays of different shapes or arrays and scalars.   Moreover, this is
+not limited to arrays of numbers, and starting in Julia 0.6 a
+"scalar" in a `broadcast` context can be an object of an arbitrary type.
+
+### Combining containers of different shapes
+
+You may have noticed that the examples above included expressions like
+`6 .* X.^3` that combine an array (`X`) with scalars (`6` and `3`).
+Conceptually, in `X.^3` the scalar `3` is "expanded" (or "broadcasted")
+to match the size of `X`, as if it became an array `[3,3,3,...]`,
+before performing `^` elementwise.  In practice of course, no array
+of `3`s is ever explicitly constructed.
+
+More generally, if you combine two arrays of different dimensions or shapes,
+any "singleton" (length 1) or missing dimension of one array is "broadcasted"
+across that dimension of the other array.   For example, `A .+ [1,2,3]`
+adds `[1,2,3]` to *each column* of an *n*×3 matrix `A`.   Another typical
+example is to combine a row vector (or a 1×*n* array) and a column vector to make a matrix
+(2d array):
+
+```jl
+julia> [1 2 3] .+ [10,20,30]
+3×3 Array{Int64,2}:
+ 11  12  13
+ 21  22  23
+ 31  32  33
+```
+
+(If `x` is a row vector, and `y` is a column vector, then `A = x .+ y` makes
+a matrix with `A[i,j] = x[j] + y[i]`.)
+
+Although other languages have also implemented similar `broadcast` semantics,
+Julia is unusual in being able to support such operations for *arbitrary* user-defined
+functions and types with *performance comparable to hand-written C* loops, even though
+its `broadcast` function is written *entirely in Julia* with no special support
+from the compiler.   This not only requires efficient compilation and
+higher-order inlining as mentioned above, but also the ability
+to [efficiently iterate over arrays of arbitrary dimensionalities](http://julialang.org/blog/2016/02/iteration) determined
+at runtime.
+
+### Not just numbers
+
+Although the examples above were all for numeric computations, in fact
+neither the `broadcast` function nor the dot-call fusion syntax is limited
+to numeric data.  For example:
+
+```jl
+julia> s = ["The QUICK Brown", "dog     jumped", "over the LAZY fox."];
+
+julia> s .= replace.(lowercase.(s), r"\s+", "-")
+3-element Array{String,1}:
+ "the-quick-brown"   
+ "dog-jumped"        
+ "over-the-lazy-fox."
+```
+
+Here, we have an array `s` of strings, and we convert each string to
+lower case and then replace any sequence of whitespace (the [regular expression](http://docs.julialang.org/en/latest/manual/strings.html#Regular-Expressions-1)
+`r"\s+"`) with a hyphen `"-"`.  Since these two dot calls are nested,
+they are fused into a single loop over `s` and are written in-place in `s`
+thanks to the `s .= ...` (temporary *strings* are allocated in this process,
+but not temporary *arrays* of strings).   Furthermore, note that the
+arguments `r"\s+"` and `"-"` are treated as "scalars" and are "broadcasted"
+to every element of `s`.
+
+The general rule (starting in Julia 0.6) is that, in `broadcast`, arguments of *any type* are
+*treated as scalars by default*.  The main exceptions are arrays (subtypes of
+`AbstractArray`) and tuples, which are treated as containers and are iterated
+over.  (If you define your own container type that is not a subtype of
+`AbstractArray`, you can tell `broadcast` to treat as a container to
+be iterated over by overloading `Base.Broadcast.containertype` and a
+couple of other functions.)
+
+### Not just containers
+
+Since the dot-call syntax corresponds to `broadcast`, and `broadcast` is just an
+ordinary Julia function to which you can add your own methods (as opposed to
+some kind of privileged compiler built-in), many possibilities open up.  Not
+only can you extend fusing dot calls to your own data structures (e.g.
+[DistributedArrays](https://github.com/JuliaParallel/DistributedArrays.jl)
+extends `broadcast` to work for arrays
+[distributed](https://en.wikipedia.org/wiki/Distributed_memory) across multiple
+computers), but you can apply the same syntax to data types that are *hardly
+"containers" at all*.
+
+For example, the [ApproxFun](https://github.com/JuliaApproximation/ApproxFun.jl)
+package defines an object called a `Fun` that represents a numerical
+approximation of a user-defined function (essentially, a `Fun` is a fancy
+polynomial fit). By defining [`broadcast` methods for
+`Fun`](https://github.com/JuliaApproximation/ApproxFun.jl/issues/356), you can
+now take an `f::Fun` and do, for example, `exp.(f.^2 .+ f.^3)` and it will
+translate to `broadcast(y -> exp(y^2 + y^3), f)`.  This `broadcast` call, in
+turn, will evaluate `exp(y^2 + y^3)` for `y = f(x)` at cleverly selected `x`
+points, construct a polynomial fit, and return a new `Fun` object representing
+the fit. (Conceptually, this replaces "elementwise" operations on containers
+with "pointwise" operations on functions.) In contrast, ApproxFun also allows
+you to compute the same result using `exp(f^2 + f^3)`, but in this case it will go
+through the fitting process *four times* (constructing four `Fun` objects), once
+for each operation like `f^2`, and is more than an order of magnitude slower
+due to this lack of fusion.
+
+### `broadcast` vs. `map`
+
+It is instructive to compare `broadcast` with `map`, since `map` *also*
+applies a function elementwise to one or more arrays.   (The dot-call
+syntax invokes `broadcast`, not `map`.) The basic differences are:
+
+* `broadcast` handles only *containers with "shapes"*, whereas `map`
+  handles "shapeless" containers like `Set` or iterators of
+  unknown length like `eachline`.
+
+* `map` requires all array-like arguments to have the *same shape* (and
+  hence cannot combine arrays and scalars) whereas `broadcast` does
+  not (it can "expand" smaller containers to match larger ones).
+
+* `map` treats all arguments as *containers by default*, and in particular
+  expects its arguments to [act as iterators](http://docs.julialang.org/en/latest/manual/interfaces.html#man-interface-iteration-1).
+  In contrast, `broadcast` treats its arguments as *scalars by default* (i.e., as 0-dimensional arrays
+  of one element), except for a few types like `AbstractArray` and `Tuple`
+  that are explicitly declared to be broadcast containers.
+
+Sometimes, of course, their behavior coincides, e.g. `map(sqrt, [1,2,3])` and
+`sqrt.([1,2,3])` give the same result.  But, in general, neither `map`
+nor `broadcast` generalizes the other — each has things they can do that
+the other cannot.
