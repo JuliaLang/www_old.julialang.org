@@ -31,10 +31,10 @@ for i in eachindex(X)
 end
 ```
 
-(Of course, like all Julia code, to get good performance both of these snippets should be executed inside some function, not in global scope.)   To see the details of a variety of performance experiments with this example code, follow along in the attached IJulia/Jupyter notebook (TODO NOTEBOOK LINK): we find that the
+(Of course, like all Julia code, to get good performance both of these snippets should be executed inside some function, not in global scope.)   To see the details of a variety of performance experiments with this example code, follow along in the attached IJulia/Jupyter [notebook]: we find that the
 `X .= ...` code has performance within 10% of the hand-devectorized loop (which itself is within 5% of the
 speed of C code),
-except for very small arrays where there is a modest overhead (e.g. 30% overhead for a length-1 array `X`).
+except for very small arrays where there is a modest overhead (e.g. 50% overhead for a length-1 array `X`).
 
 In this blog post, we delve into some of the details of this new development, in order to answer questions that often arise when this feature is presented:
 
@@ -146,7 +146,7 @@ languages make it hard to compile them to efficient code in general.
 Thanks to Julia's design, a properly written devectorized loop in Julia
 has performance within a few percent of C or Fortran, so there is no *necessity*
 of vectorizing; this is explicitly demonstrated for the devectorized
-loop above in the accompanying notebook (LINK NOTEBOOK). However, vectorization may still be *convenient* for some problems.
+loop above in the accompanying [notebook]. However, vectorization may still be *convenient* for some problems.
 And vectorized operations like `scalar*array` or `sqrt(array)` are still fast in Julia
 (calling optimized library routines, albeit ones written in Julia itself).
 
@@ -201,7 +201,7 @@ a lot of memory (an order of magnitude!)
 
 By itself, allocating/freeing memory can take a significant amount of time
 compared to our other computations. This is especially true if `X` is very small
-so that the allocation overhead matters (in our benchmark LINK NOTEBOOK, we pay
+so that the allocation overhead matters (in our benchmark [notebook], we pay
 a 10× cost for a 6-element array and a 6× cost for a 36-element array), or  if
 `X` is very large so that the memory churn matters (see below for numbers).
 Furthermore, you pay a *different* performance price from the fact that you have
@@ -220,7 +220,7 @@ discards this potential locality: each `X[i]` is loaded once for a
 single small operation like `2*X[i]`, writing the result out to a temporary
 array before immediately reading the next `X[i]`.
 
-In typical performance benchmarks (LINK NOTEBOOK), therefore, the traditional
+In typical performance benchmarks (see [notebook]), therefore, the traditional
 vectorized code `X = f(2 * X.^2 + 6 * X.^3 - sqrt(X))` turns out to be **about
 10× slower** than the devectorized or fused-vectorized versions of the same code
 at the beginning of this article for `X = zeros(10^6)`.   Even if we
@@ -596,3 +596,5 @@ Sometimes, of course, their behavior coincides, e.g. `map(sqrt, [1,2,3])` and
 `sqrt.([1,2,3])` give the same result.  But, in general, neither `map`
 nor `broadcast` generalizes the other — each has things they can do that
 the other cannot.
+
+[notebook]: https://github.com/JuliaLang/julialang.github.com/blob/moredots/blog/_posts/moredots/More-Dots.ipynb
