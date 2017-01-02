@@ -540,7 +540,7 @@ The general rule (starting in Julia 0.6) is that, in `broadcast`, arguments of *
 *treated as scalars by default*.  The main exceptions are arrays (subtypes of
 `AbstractArray`) and tuples, which are treated as containers and are iterated
 over.  (If you define your own container type that is not a subtype of
-`AbstractArray`, you can tell `broadcast` to treat as a container to
+`AbstractArray`, you can tell `broadcast` to treat it as a container to
 be iterated over by overloading `Base.Broadcast.containertype` and a
 couple of other functions.)
 
@@ -580,7 +580,7 @@ syntax invokes `broadcast`, not `map`.) The basic differences are:
 
 * `broadcast` handles only *containers with "shapes"*, whereas `map`
   handles "shapeless" containers like `Set` or iterators of
-  unknown length like `eachline`.
+  unknown length like `eachline(file)`.
 
 * `map` requires all array-like arguments to have the *same shape* (and
   hence cannot combine arrays and scalars) whereas `broadcast` does
