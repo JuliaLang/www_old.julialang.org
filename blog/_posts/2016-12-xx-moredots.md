@@ -523,8 +523,8 @@ julia> s = ["The QUICK Brown", "fox     jumped", "over the LAZY dog."];
 julia> s .= replace.(lowercase.(s), r"\s+", "-")
 3-element Array{String,1}:
  "the-quick-brown"   
- "dog-jumped"        
- "over-the-lazy-fox."
+ "fox-jumped"        
+ "over-the-lazy-dog."
 ```
 
 Here, we have an array `s` of strings, and we convert each string to
