@@ -532,7 +532,7 @@ lower case and then replace any sequence of whitespace (the [regular expression]
 `r"\s+"`) with a hyphen `"-"`.  Since these two dot calls are nested,
 they are fused into a single loop over `s` and are written in-place in `s`
 thanks to the `s .= ...` (temporary *strings* are allocated in this process,
-but not temporary *arrays* of strings).   Furthermore, note that the
+but not temporary *arrays* of strings).   Furthermore, notice that the
 arguments `r"\s+"` and `"-"` are treated as "scalars" and are "broadcasted"
 to every element of `s`.
 
