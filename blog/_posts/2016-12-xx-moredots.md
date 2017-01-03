@@ -574,7 +574,7 @@ due to this lack of fusion.
 
 ### `broadcast` vs. `map`
 
-It is instructive to compare `broadcast` with `map`, since `map` *also*
+Finally, it is instructive to compare `broadcast` with `map`, since `map` *also*
 applies a function elementwise to one or more arrays.   (The dot-call
 syntax invokes `broadcast`, not `map`.) The basic differences are:
 
