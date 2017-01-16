@@ -153,7 +153,7 @@ for computing these quantities to allow for easier development of native solvers
 Specifically, [ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
 symbolically computes explicit functions for these quantities in many cases,
 and the user can also specify the functions. But if no function is found,
-then the library functions can must provide fallbacks using
+then the library functions can provide fallbacks using
 [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
 and [ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl) for autodifferentiation,
 and [Calculus.jl](https://github.com/johnmyleswhite/Calculus.jl) for a fallback
