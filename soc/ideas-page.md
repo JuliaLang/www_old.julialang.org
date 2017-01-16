@@ -194,7 +194,7 @@ for computing these quantities to allow for easier development of native solvers
 Specifically, [ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
 symbolically computes explicit functions for these quantities in many cases,
 and the user can also specify the functions. But if no function is found,
-then the library functions can must provide fallbacks using 
+then the library functions can must provide fallbacks using
 [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
 and [ReverseDiff.jl](https://github.com/JuliaDiff/ReverseDiff.jl) for autodifferentiation,
 and [Calculus.jl](https://github.com/johnmyleswhite/Calculus.jl) for a fallback
@@ -211,6 +211,30 @@ For more details, see
 [the following issue](https://github.com/JuliaDiffEq/DiffEqDiffTools.jl/issues/1).
 
 **Expected Results**: A high-performance backend library for native differential equation solvers.
+
+## Natural syntax parsing and symbolic transformations of differential equations
+
+[ParameterizedFunctions.jl](https://github.com/JuliaDiffEq/ParameterizedFunctions.jl)
+is a component of the JuliaDiffEq ecosystem that allows for users to define differential
+equations in a natural syntax (with parameters). The benefits of this setup are threefold:
+
+- The existence of parameters allows for optimization / machine learning techniques
+  to be applied to and learn parameters from data.
+- The natural syntax allows [DifferentialEquations.jl Online](http://app.juliadiffeq.org/)
+  to have a user-friendly programming-free frontend.
+- The setup allows for [SymEngine.jl](https://github.com/symengine/SymEngine.jl)
+  to symbolically calculate various mathematical objects to speed up the solvers.
+
+However, the macros are currently only able to parse ordinary differential equations (ODEs)
+and stochastic differential equations (SDEs). An extension to the language and parser
+will need to be introduced in order to handle differential algebraic equations (DAEs)
+and delay differential equations (DDEs). In addition, symbolic enhancements could
+be applied to automatically lower the index of the DAEs and transform delay equations
+into larger systems of ODEs, greatly increasing the amount of equations which can
+be easily solved. Finally, this improved parser can be used to develop new pages
+for DifferentialEquations.jl Online for solving DAEs and DDEs.
+
+**Expected Results**: An improved parser within the macro which supports delay and algebraic differential equations.
 
 ## Native Julia solvers for ordinary differential equations and algebraic differential equations
 
@@ -251,16 +275,6 @@ Bayesian estimation of parameters for differential equations is a popular techni
 One of the major uses for differential equations solvers is for partial differential equations (PDEs). PDEs are solved by discretizing to create ODEs which are then solved using ODE solvers. However, in many cases a good understanding of the PDEs are required to perform this discretization and minimize the error. The purpose of this project is to produce a library with common PDE discretizations to make it easier for users to solve common PDEs.
 
 **Expected Results**: A production-quality PDE solver package for some common PDEs.
-
-## Improved plotting for differential equations
-
-Plotting is a fundamental tool for analyzing the numerical solutions to differential equations. The plotting functionality in JuliaDiffEq is provided by plot recipes to [Plots.jl](https://github.com/tbreloff/Plots.jl) which create plots directly from the differential equation solution types. However, this functionality is currently limited. Some goals for this project would be:
-
-- The ability to pass the triangular mesh into Plots.jl. This is essential for plotting the solutions to finite element PDE discretizations on non-convex domains.
-- Methods for visualizing ODEs which change size.
-- Visualizations for results of parameter sensitivity analysis and parameter estimation.
-
-**Expected Results**: Publication-quality plot recipes.
 
 # Theme: Numerical Linear Algebra
 
