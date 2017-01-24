@@ -25,8 +25,7 @@ lists if and when they are moved.
 * [JuliaTokyo](https://groups.google.com/forum/#!forum/julia-tokyo) – discussions around the usage of Julia in the Japanese language.
 * [Julia Users Berlin](https://groups.google.com/forum/#!forum/julia-users-berlin)
 
-## Old lists
-
+o
 The following lists were previously used, and are now in a read-only state for archive purposes:
 
 * [julia-users][julia-users] – discussion around the usage of Julia. New users of Julia can ask their questions here. As a courtesy to others, do check the archives and documentation to see if a particular question is already answered.
@@ -41,37 +40,64 @@ There is also a list of [packages](http://pkg.julialang.org/) for Julia, many of
 
 Various Julia projects are hosted under the following umbrella organizations on GitHub:
 
-* [JuliaLang](https://github.com/JuliaLang) – [The language](http://www.julialang.org/)
-* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://www.juliastats.org/)
-* [JuliaOpt](https://github.com/JuliaOpt) – [Optimization](http://www.juliaopt.org/)
-* [JuliaParallel](https://github.com/JuliaParallel) – [Parallel programming in Julia](http://juliaparallel.github.io/)
-* [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
-* [JuliaGPU](https://github.com/JuliaGPU) – GPU computing
-* [BioJulia](https://github.com/BioJulia) – Biology
-* [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/)
-* [JuliaAstro](https://github.com/JuliaAstro) – Astronomy
-* [JuliaQuant](https://github.com/JuliaQuant) – Finance
-* [JuliaSparse](https://github.com/JuliaSparse) – Sparse matrix solvers
-* [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
-* [JuliaWeb](https://github.com/JuliaWeb) – Web stack
-* [JuliaCI](https://github.com/JuliaCI) – Continuous Integration Support for Julia packages
-* [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
-* [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
-* [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
-* [JuliaDiffEq](https://github.com/JuliaDiffEq) – Differential equation solving and analysis
-* [JuliaIO](https://github.com/JuliaIO) – IO-related functionality, such as serialization
-* [JuliaInterop](https://github.com/JuliaInterop) – Easy interoperability between Julia and not Julia
-* [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
-* [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs 
-* [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
-* [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
-* [JuliaEditorSupport](https://github.com/JuliaEditorSupport) - Extensions/Plugins for text editors and IDEs
-* [JuliaBerry](https://github.com/JuliaBerry) – [Julia resources for the Raspberry Pi](https://juliaberry.github.io/)
-* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians
-* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language
+* [JuliaLang](https://github.com/JuliaLang) – [The language](http://www.julialang.org/)
+* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language
 * [JuliaLangPt](https://github.com/JuliaLangPt) – Site for translation of Julia documentation, etc. to Portuguese
 * [JuliaCN](https://github.com/JuliaCN) – An open-source orgnization for Julia localization in Chinese
 * [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language
+
+## Computing
+
+* [JuliaArrays](https://github.com/JuliaArrays)
+* [JuliaBerry](https://github.com/JuliaBerry) – [Julia resources for the Raspberry Pi](https://juliaberry.github.io/)
+* [JuliaCI](https://github.com/JuliaCI) – Continuous Integration Support for Julia packages
+* [JuliaGPU](https://github.com/JuliaGPU) – GPU computing
+* [JuliaInterop](https://github.com/JuliaInterop) – Easy interoperability between Julia and not Julia
+* [JuliaIO](https://github.com/JuliaIO) – IO-related functionality, such as serialization
+* [JuliaParallel](https://github.com/JuliaParallel) – [Parallel programming in Julia](http://juliaparallel.github.io/)
+* [JuliaWeb](https://github.com/JuliaWeb) – Web stack
+
+## Data Science
+
+* [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
+* [JuliaImages](https://github.com/JuliaImages) - Image Processing
+* [JuliaML](https://github.com/JuliaML) - [Machine Learning](https://juliaml.github.io/)
+* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://www.juliastats.org/)
+
+## General
+
+* [JuliaDocs](https://github.com/juliadocs) – Documentation-related packages for Julia
+* [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
+* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians
+* [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
+* [JuliaText](https://github.com/JuliaText)
+* [JuliaPraxis](https://github.com/JuliaPraxis) - Best practices
+
+## Mathematics
+
+* [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
+* [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/)
+* [JuliaGeometry](https://github.com/JuliaGeometry) - Computational Geometry
+* [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
+* [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
+* [JuliaOpt](https://github.com/JuliaOpt) – [Optimization](http://www.juliaopt.org/)
+* [JuliaPolyhedra](https://github.com/JuliaPolyhedra) – [Polyhedral computation](https://juliapolyhedra.github.io/)
+* [JuliaSparse](https://github.com/JuliaSparse) – Sparse matrix solvers
+
+## Scientific Domains
+
+* [BioJulia](https://github.com/BioJulia) – Biology
+* [JuliaAstro](https://github.com/JuliaAstro) – Astronomy
+* [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
+* [JuliaQuant](https://github.com/JuliaQuant) – Finance
+* [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/)
+
+## Visualization
+
+* [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
+* [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs
+* [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
+* [JuliaGL](https://github.com/JuliaGL) - OpenGL API and ecosystem
 
 # Google Summer of Code 2014
 
@@ -110,51 +136,50 @@ Various Julia videos and playlists are posted on [YouTube](https://www.youtube.c
 
 ## Gitter
 
-* [julia](https://gitter.im/JuliaLang/julia) Gitter chat room is for discussions around the usage of Julia.
-* [julia-coverage](https://gitter.im/kshyatt/julia-coverage) Gitter chat room is for discussions around Julia tests coverage.
-* [JuliaPraxis](https://gitter.im/JuliaPraxis) gitter chat rooms are for discussions around Julia best practices.
-* [JuliaQuantum](https://gitter.im/JuliaQuantum/home)
-* [JunoIDE](https://gitter.im/JunoLab/Juno)
-* [JuliaML](https://gitter.im/JuliaML/chat)
-* [JuliaGL](https://gitter.im/JuliaGL/meta)
+### Organizations
+
 * [BioJulia](https://gitter.im/BioJulia/home)
-* [JuliaOpt](https://gitter.im/JuliaOpt/home)
 * [IntelLabs](https://gitter.im/IntelLabs/home)
-* [JuliaOpt](https://gitter.im/JuliaOpt/home)
-* [UCIDataScienceInitiative](https://gitter.im/UCIDataScienceInitiative/home)
+* **[julia](https://gitter.im/JuliaLang/julia)** Gitter chat room is for discussions around the usage of Julia.
+* [julia-coverage](https://gitter.im/kshyatt/julia-coverage) Gitter chat room is for discussions around Julia tests coverage.
+* [JuliaCPH](https://gitter.im/JuliaCPH/chat) Julia Copenhagen Meetup.
+* [JuliaDiffEq](https://gitter.im/JuliaDiffEq/Lobby) Solving differential equations in Julia.
+* [JuliaDocs](https://gitter.im/juliadocs/users) Documentation-related packages for Julia.
+* [JuliaGL](https://gitter.im/JuliaGL/meta)
+* [JunoIDE](https://gitter.im/JunoLab/Juno)
 * [Julia-i18n](https://gitter.im/Julia-i18n/julia-i18n) Gitter chat room is for discussions around Julia internationalization and localization.
 * [julialang-es](https://gitter.im/JuliaLangEs/julialang-es) Gitter chat room is for discussions around the usage of Julia in the Spanish language.
 * [JuliaLangPt/julia](https://gitter.im/JuliaLangPt/julia) Gitter chat room is for discussions around the usage of Julia in the Portuguese language.
+* [JuliaML](https://gitter.im/JuliaML/chat)
+* [JuliaOpt](https://gitter.im/JuliaOpt/home)
+* [JuliaPraxis](https://gitter.im/JuliaPraxis) gitter chat rooms are for discussions around Julia best practices.
+* [JuliaQuantum](https://gitter.im/JuliaQuantum/home)
 
 ### Packages
 
-* [Gadfly.jl](https://gitter.im/dcjones/Gadfly.jl)
-* [LightGraphs.jl](https://gitter.im/JuliaGraphs/LightGraphs.jl)
-* [GR.jl](https://gitter.im/jheinen/GR.jl)
-* [FixedSizeArrays.jl](https://gitter.im/SimonDanisch/FixedSizeArrays.jl)
-* [DSGE.jl](https://gitter.im/FRBNY-DSGE/DSGE.jl)
-* [Docile.jl](https://gitter.im/MichaelHatherly/Docile.jl)
-* [Mathematica.jl](https://gitter.im/MikeInnes/Mathematica.jl)
-* [Nanopore.jl](https://gitter.im/gawbul/Nanopore.jl)
-* [GLPlot.jl](https://gitter.im/SimonDanisch/GLPlot.jl)
-* [Plots.jl](https://gitter.im/tbreloff/Plots.jl)
-* [Datetime.jl](https://gitter.im/quinnj/Datetime.jl)
-* [Lazy.jl](https://gitter.im/MikeInnes/Lazy.jl)
-* [Phylogenetics.jl](https://gitter.im/Ward9250/Phylogenetics.jl)
-* [JavaCall.jl](https://gitter.im/aviks/JavaCall.jl)
-* [ValidatedNumerics.jl](https://gitter.im/dpsanders/ValidatedNumerics.jl)
-* [ROOT.jl](https://gitter.im/jpata/ROOT.jl)
-* [Ito.jl](https://gitter.im/aviks/Ito.jl)
-* [LispSyntax.jl](https://gitter.im/swadey/LispSyntax.jl)
-* [Interact.jl](https://gitter.im/JuliaLang/Interact.jl)
-* [Escher.jl](https://gitter.im/shashi/Escher.jl)
-* [Diversity.jl](https://gitter.im/richardreeve/Diversity.jl)
 * [Control.jl](https://gitter.im/jcrist/Control.jl)
-* [Lexicon.jl](https://gitter.im/MichaelHatherly/Lexicon.jl)
-* [JuliaFem.jl](https://gitter.im/JuliaFEM/JuliaFEM.jl)
-* [Hypre.jl](https://gitter.im/jgoldfar/Hypre.jl)
 * [DataFrames.jl](https://gitter.im/JuliaLang/DataFrames.jl)
+* [Datetime.jl](https://gitter.im/quinnj/Datetime.jl)
+* [Diversity.jl](https://gitter.im/richardreeve/Diversity.jl)
+* [DSGE.jl](https://gitter.im/FRBNY-DSGE/DSGE.jl)
+* [Escher.jl](https://gitter.im/shashi/Escher.jl)
+* [Gadfly.jl](https://gitter.im/dcjones/Gadfly.jl)
+* [GLPlot.jl](https://gitter.im/SimonDanisch/GLPlot.jl)
+* [GR.jl](https://gitter.im/jheinen/GR.jl)
+* [Hypre.jl](https://gitter.im/jgoldfar/Hypre.jl)
+* [Interact.jl](https://gitter.im/JuliaLang/Interact.jl)
 * [IterativeSolvers.jl](https://gitter.im/JuliaLang/IterativeSolvers.jl)
+* [Ito.jl](https://gitter.im/aviks/Ito.jl)
+* [JavaCall.jl](https://gitter.im/aviks/JavaCall.jl)
+* [JuliaFem.jl](https://gitter.im/JuliaFEM/JuliaFEM.jl)
+* [Lazy.jl](https://gitter.im/MikeInnes/Lazy.jl)
+* [LightGraphs.jl](https://gitter.im/JuliaGraphs/LightGraphs.jl)
+* [LispSyntax.jl](https://gitter.im/swadey/LispSyntax.jl)
+* [Mathematica.jl](https://gitter.im/MikeInnes/Mathematica.jl)
+* [Phylogenetics.jl](https://gitter.im/Ward9250/Phylogenetics.jl)
+* [Plots.jl](https://gitter.im/tbreloff/Plots.jl)
+* [ROOT.jl](https://gitter.im/jpata/ROOT.jl)
+* [ValidatedNumerics.jl](https://gitter.im/dpsanders/ValidatedNumerics.jl)
 
 ## QQ groups
 
@@ -240,4 +265,4 @@ Asia
 
 [The Julia Language SubReddit](http://www.reddit.com/r/Julia/) is a collection of various blog posts and articles related to Julia.
 
-Don't see your community resourses listed here? Please submit a [pull request](https://github.com/JuliaLang/julialang.github.com/edit/master/community/index.md) so we can share them!
+Don't see your community resources listed here? Please submit a [pull request](https://github.com/JuliaLang/julialang.github.com/edit/master/community/index.md) so we can share them!
