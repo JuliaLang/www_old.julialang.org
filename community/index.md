@@ -138,9 +138,9 @@ Various Julia videos and playlists are posted on [YouTube](https://www.youtube.c
 
 ### Organizations
 
+* **[julia](https://gitter.im/JuliaLang/julia)** Gitter chat room is for discussions around the usage of Julia.
 * [BioJulia](https://gitter.im/BioJulia/home)
 * [IntelLabs](https://gitter.im/IntelLabs/home)
-* **[julia](https://gitter.im/JuliaLang/julia)** Gitter chat room is for discussions around the usage of Julia.
 * [julia-coverage](https://gitter.im/kshyatt/julia-coverage) Gitter chat room is for discussions around Julia tests coverage.
 * [JuliaCPH](https://gitter.im/JuliaCPH/chat) Julia Copenhagen Meetup.
 * [JuliaDiffEq](https://gitter.im/JuliaDiffEq/Lobby) Solving differential equations in Julia.

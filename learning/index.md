@@ -4,6 +4,9 @@ title:  Learning Julia
 ---
 # Books
 
+- [Julia: High Performance Programming](https://www.packtpub.com/application-development/julia-high-performance-programming) by Ivo Balbaert, Avik Sengupta, Malcolm Sherrington
+ (697 pages; published: November 2016; ISBN: 9781787125704) 
+   In this learning path, you will learn to use an interesting and dynamic programming language—Julia! This book is a combination and curation of the three separate books by the three authors.
 - [Julia Programming for Operations Research: A Primer on Computing](http://www.chkwon.net/julia) by Changhyun Kwon (246 pages; published: 2016-05; ISBN: 978-1533328793) 
     This book aims to teach how one can solve various optimization problems arising in operations research and management science. 
 - [Julia High Performance](https://www.packtpub.com/application-development/julia-high-performance) by Avik Sengupta (120 pages; published: 2016-05; ISBN: 9781785880919) 
@@ -51,6 +54,8 @@ title:  Learning Julia
 - [Steven Johnson's](http://math.mit.edu/~stevenj/) keynote at EuroSciPy 2014: Crossing Language Barriers with Julia, SciPy, and IPython [video](https://www.youtube.com/watch?v=jhlVHoeB05A&list=PLYx7XA2nY5GfavGAILg08spnrR7QWLimi) and [supporting material](https://github.com/stevengj/Julia-EuroSciPy14).
 
 <iframe width="400" height="225" src="https://www.youtube.com/embed/jhlVHoeB05A?list=PLYx7XA2nY5GfavGAILg08spnrR7QWLimi" frameborder="0" allowfullscreen></iframe>
+
+- [Julia Tutorial](https://www.youtube.com/watch?v=AyvyVS6u8AM) by [Chase Coleman](http://www.chasegcoleman.com/) at PyDataDC 2016. Supporting material [here](https://github.com/cc7768/PyDataDC_julia).
 
 # Videos: Special topics
 
