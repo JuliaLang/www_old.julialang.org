@@ -25,7 +25,6 @@ lists if and when they are moved.
 * [JuliaTokyo](https://groups.google.com/forum/#!forum/julia-tokyo) – discussions around the usage of Julia in the Japanese language.
 * [Julia Users Berlin](https://groups.google.com/forum/#!forum/julia-users-berlin)
 
-o
 The following lists were previously used, and are now in a read-only state for archive purposes:
 
 * [julia-users](https://groups.google.com/forum/#!forum/julia-users) – discussion around the usage of Julia. New users of Julia can ask their questions here. As a courtesy to others, do check the archives and documentation to see if a particular question is already answered.
