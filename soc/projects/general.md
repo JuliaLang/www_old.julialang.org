@@ -19,7 +19,7 @@ Possible projects are:
 
 **Recommended Skills**: General knowledge of the JuliaML project and aims, or wide knowledge of machine learning as a field, is a plus.
 
-**Mentors**: [Christof Stocker](https://github.com/Evizero), [Tom Breloff](https://github.com/tbreloff), [JuliaML Members](https://github.com/orgs/JuliaML/people)
+**Mentors**: [Christof Stocker](https://github.com/Evizero), [JuliaML Members](https://github.com/orgs/JuliaML/people)
 
 ## Standardized dataset packaging
 
@@ -75,6 +75,17 @@ The [QML.jl](https://github.com/barche/QML.jl) package provides Julia bindings f
 
 **Mentors**: [Bart Janssens](https://github.com/barche)
 
+## Data Structure Algorithm Improvements
+
+While many common data structures are encouraged to be implemented in packages, to encourage more experimentation, some are so basic they need to be in Base. There are a number of projects that could be done to improve the quality, performance, or usability of these builtin structures. Some ideas include:
+
+- Changing Base.Dict to an ordered dict representation (http://datastructuresjl.readthedocs.io/en/latest/ordered_containers.html, https://github.com/JuliaLang/julia/pull/10116)
+- Experiment with using alternative Dict hash structures (such as Robin Hood Hashing, used by [Rust](https://doc.rust-lang.org/beta/std/collections/struct.HashMap.html))
+- Implementation and tests for assorted asynchronous, threaded storage primitives and data channels
+
+**Recommended Skills**: Ability to write type-stable Julia code. Ability to find performance issues. Knowledge about data structures and related algorithms.
+
+**Mentors:** [Jameson Nash](https://github.com/vtjnash)
 
 ## Expanding the reach of Interact.jl with WebIO.jl
 
