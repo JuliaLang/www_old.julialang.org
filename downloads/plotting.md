@@ -60,4 +60,4 @@ draw(SVG("output.svg", 6inch, 3inch), plot([sin, cos], 0, 25))
 
 Gadfly's interface will be familiar to users of R's
 [ggplot2](http://ggplot2.org) package. See
-examples documentation on the [Gadfly](http://gadflyjl.org) homepage.
+examples and documentation on the [Gadfly](http://gadflyjl.org) homepage.
