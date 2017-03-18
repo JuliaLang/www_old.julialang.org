@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Paper in SIAM Review: Julia - A fresh approach to numerical computing"
+title:  "Paper in SIAM Review: Julia - A Fresh Approach to Numerical Computing"
 author: Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah
 ---
 
