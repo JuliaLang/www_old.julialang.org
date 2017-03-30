@@ -84,7 +84,7 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 # Technical computing applications
 
-[@CLLDNR17}
+[@CLLDNR17]
 
 [@HPOEPP16] Code available in [CellwiseEditingDifferentiation.jl](https://github.com/scidom/CellwiseEditingDifferentiation.jl).
 
