@@ -36,8 +36,8 @@ JuliaBox, all of these plotting packages are pre-installed.
 </tr>
 <tr>
     <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.1-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.1-linux-arm.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.1-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.1-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.0-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.0-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.0-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.0-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
