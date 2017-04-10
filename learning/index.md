@@ -24,6 +24,7 @@ title:  Learning Julia
 ## Upcoming
 
 - [Learn Julia](http://www.manning.com/voncsefalvay/) by [Chris von Csefalvay](http://www.chrisvoncsefalvay.com) - published by Manning (approx. 375 pages, in [Early Access](http://www.manning.com/about/meap.html), ISBN: 9781617292835). The companion Github repo to the book is available [here](https://github.com/chrisvoncsefalvay/juliabook).
+- [Learning Julia](https://www.packtpub.com/application-development/learning-julia) by Anshul Joshi - published by Packt Publishing (approx. 443 pages, in [Early Access](https://mapt.io/), ISBN: 9781785883279) - Learn Julia language for data science and data analytics - This title is available to pre-order now and is expected to be published in August 2017.
 
 # Tutorials
 
