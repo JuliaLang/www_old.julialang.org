@@ -23,7 +23,7 @@ title:  Learning Julia
 
 ## Upcoming
 
-- [Learn Julia](http://www.manning.com/voncsefalvay/) by [Chris von Csefalvay](http://www.chrisvoncsefalvay.com) - published by Manning (approx. 375 pages, in [Early Access](http://www.manning.com/about/meap.html), ISBN: 9781617292835). The companion Github repo to the book is available [here](https://github.com/chrisvoncsefalvay/juliabook).
+- [Learning Julia: Rapid Technical Computing and Data Analysis](http://www.manning.com/voncsefalvay/) by [Chris von Csefalvay](http://www.chrisvoncsefalvay.com) - published by Manning (approx. 375 pages, in [Early Access](http://www.manning.com/about/meap.html), ISBN: 9781617292835). The companion Github repo to the book is available [here](https://github.com/chrisvoncsefalvay/juliabook).
 
 # Tutorials
 
