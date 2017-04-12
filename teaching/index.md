@@ -7,6 +7,14 @@ title:  Using Julia in the classroom
 
 Julia is ready for the classroom. We encourage instructors to participate in the [Julia community resources](http://julialang.org/community) for questions about Julia or specific packages. This page puts together various resources that instructors may find useful. Tutorials and other learning materials are in the [learning section](http://julialang.org/learning) of the website.
 
+## MOOCs teaching Julia
+
+- Coursera, University of Cape Town
+  * [Julia Scientific Programming](https://www.coursera.org/learn/julia-programming) online course, (Dr. Juan H Klopper, Dr. Henri Laurie)
+a
+- edX MITx
+  * [15.053x](https://www.edx.org/course/optimization-methods-business-analytics-mitx-15-053x), Optimization Methods in Business Analytics MOOC (massive online open course), (Prof. [James Orlin](https://www.edx.org/bio/james-orlin))
+
 ## Classes using Julia for teaching
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
@@ -17,11 +25,7 @@ Julia is now being used in several universities and online courses. If you know 
 - University of Glasgow, School of Mathematics and Statistics, September 2017
   * An Introduction to Julia, course of Online Master of Science (MSc) in Data Analytics ([Theodore Papamarkou](http://www.gla.ac.uk/schools/mathematicsstatistics/staff/theodorepapamarkou/))
 
-- Coursera, University of Cape Town, September 2016
-  * [Julia Scientific Programming](https://www.coursera.org/learn/julia-programming) online course, (Dr. Juan H Klopper, Dr. Henri Laurie)
-
 - Massachusetts Institute of Technology (MIT)
-  * edX MITx, September 2016: [15.053x](https://www.edx.org/course/optimization-methods-business-analytics-mitx-15-053x), Optimization Methods in Business Analytics MOOC (massive online open course), (Prof. [James Orlin](https://www.edx.org/bio/james-orlin))
   * [6.251/15.081](https://stellar.mit.edu/courseguide/course/6/fa15/6.251/), Introduction to Mathematical Programming (Prof. Dimitris J. Bertsimas), Fall 2015
   * [18.06](http://web.mit.edu/18.06/www/), Linear Algebra: Fall 2015, Dr. [Alex Townsend](https://github.com/ajt60gaibb); Fall 2014, Prof. Alexander Postnikov; Fall [2013](http://stellar.mit.edu/S/course/18/fa13/18.06), Prof. Alan Edelman
   * [18.303](http://math.mit.edu/~stevenj/18.303/), Linear Partial Differential Equations: Analysis and Numerics (Prof. [Steven G. Johnson](https://github.com/stevengj)), Fall 2013–2016.
@@ -47,7 +51,7 @@ Julia is now being used in several universities and online courses. If you know 
 
 - Northeastern University, Fall 2016
   * MTH3300: Applied Probability & Statistics
-  
+
 - University of Sydney, Fall 2016
   * [MATH3076/3976](http://www.maths.usyd.edu.au/u/olver/teaching/MATH3976/), Mathematical Computing (Assoc. Prof. [Sheehan Olver](http://www.maths.usyd.edu.au/u/olver/))
 
