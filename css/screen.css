@@ -1,10 +1,11 @@
-
 /* Crimson Text */
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
 
 /* Minor third scale from http://type-scale.com/ */
 
-html {font-size: 1em;}
+html {
+  font-size: 1em;
+}
 
 body {
   background-color: white;
@@ -14,7 +15,9 @@ body {
   color: #333;
 }
 
-p {margin-bottom: 1.3em;}
+p {
+  margin-bottom: 1.3em;
+}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
@@ -28,13 +31,21 @@ h1 {
   font-weight: bold;
 }
 
-h2 {font-size: 1.728em;}
+h2 {
+  font-size: 1.728em;
+}
 
-h3 {font-size: 1.44em;}
+h3 {
+  font-size: 1.44em;
+}
 
-h4 {font-size: 1.2em;}
+h4 {
+  font-size: 1.2em;
+}
 
-small, .font_small {font-size: 0.833em;}
+small, .font_small {
+  font-size: 0.833em;
+}
 
 img {
   max-width: 100%;
@@ -63,12 +74,12 @@ img {
     padding-left: 0;
   }
   #site .links li {
-      display: inline;
-      margin-left: 0;
+    display: inline;
+    margin-left: 0;
   }
   #site .links li a.active {
-      background-color: #666;
-      color: #f1f1f1;
+    background-color: #666;
+    color: #f1f1f1;
   }
   #site .links li a {
     transition: 0.2s all ease;
@@ -76,13 +87,11 @@ img {
     border-radius: 0.2em;
     text-decoration: none;
   }
-
   #site .links li:hover a {
     background-color: #aaa;
     text-decoration: none;
     color: #fff;
   }
-
   #site .footer {
     text-align: center;
     margin-top: 32px;
@@ -91,12 +100,12 @@ img {
     padding-bottom: 32px;
     border-top: 1px solid #ddd;
   }
-    #site a {
-      color: #2779b0;
-    }
-    #site .contact a:hover {
-      color: black;
-    }
+  #site a {
+    color: #2779b0;
+  }
+  #site .contact a:hover {
+    color: black;
+  }
 
 .title {
   text-align: center;
@@ -111,10 +120,14 @@ a {
   text-decoration: none;
   color: #2749b0;
 }
-  a:visited { color: #2749b0; }
-  a:hover   {
-    text-decoration: underline;
-  }
+
+a:visited {
+  color: #2749b0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 ol {
   margin-left: 2.25em;
@@ -128,7 +141,9 @@ ul {
 .figure {
   text-align: center;
 }
-  .figure p.note { font-size: 75%; }
+  .figure p.note {
+    font-size: 75%;
+  }
 
 hr {
   margin: 40px 0 10px 0;
@@ -152,7 +167,7 @@ hr {
   }
 }
 
-/* benchmarks table */
+/* Benchmarks table */
 
 div.cs-benchmark-table {
   overflow-x: scroll;
@@ -164,7 +179,6 @@ table.benchmarks {
   border-collapse: collapse;
 }
   table.benchmarks thead {
-    /* border-top: 1px solid black; */
     border-bottom: 1px solid black;
   }
   table.benchmarks tbody {
@@ -193,7 +207,7 @@ table.benchmarks {
     padding: 0 2em 0 0;
   }
 
-/* inline code and code blocks */
+/* Inline code and code blocks */
 
 code, table.benchmarks tbody {
   font: 9pt Monaco, 'Consolas', monospace;
@@ -220,7 +234,7 @@ blockquote {
   margin: 1em 2em 1em 1em;
 }
 
-/* pages listing blog posts */
+/* Pages listing blog posts */
 
 #blogindex {
   max-width: 45em;
@@ -241,7 +255,7 @@ blockquote {
       color: #aaa;
     }
 
-/* blog post pages */
+/* Blog post pages */
 
 #blogpost {
   margin-bottom: 3em;
@@ -254,63 +268,67 @@ blockquote {
   margin-bottom: 3em;
 }
 
-/* disqus comment threads */
+/* Disqus comment threads */
 
 #disqus_thread {
   font-family: Helvetica, Arial, Clean, sans-serif;
   font-size: 85%;
 }
-  #dsq-pagination {
-    font-size: 85%;
-  }
+
+#dsq-pagination {
+  font-size: 85%;
+}
 
 .chaplink {
   font-family: Helvetica, Arial, Clean, sans-serif;
   font-size: 90%;
 }
+
 .prevlink {
   float: left;
 }
+
 .nextlink {
   float: right;
 }
 
-/* downloads page */
+/* Downloads page */
 
 .downloads {
   margin: 1% 0 0 3%;
   width: 90%;
 }
-.downloads tbody {
-  width: 100%;
-}
-.downloads td {
-  text-align: center;
-  width: 25%;
-}
-.downloads th {
-  padding: 0 5px;
-}
-.downloads td, .downloads th {
-  border: solid 1px silver;
-  padding: 1px;
-  vertical-align: middle;
-}
-.downloads a {
-  width: 100%;
-}
-.downloads a:hover {
-  background: #eee;
-}
+  .downloads tbody {
+    width: 100%;
+  }
+  .downloads td {
+    text-align: center;
+    width: 25%;
+  }
+  .downloads th {
+    padding: 0 5px;
+  }
+  .downloads td, .downloads th {
+    border: solid 1px silver;
+    padding: 1px;
+    vertical-align: middle;
+  }
+  .downloads a {
+    width: 100%;
+  }
+  .downloads a:hover {
+    background: #eee;
+  }
 
 #toc-container ol {
-    padding-left: 1em;
-    list-style: circle;
+  padding-left: 1em;
+  list-style: circle;
 }
 
 /* Utility classes */
+
 .u-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
