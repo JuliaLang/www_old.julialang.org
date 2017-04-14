@@ -332,3 +332,14 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Transifex language selector */
+
+#tx-live-lang-container {
+  width: 200px;
+}
+
+#tx-live-lang-picker {
+  max-height: calc( 100vh - 50px );
+  overflow-y: auto;
+}
