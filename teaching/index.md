@@ -180,7 +180,7 @@ spanning multiple disciplines.
 
 The [Julia manual](http://docs.julialang.org/) contains a
 complete introduction to the Julia language. It is available in
-[Chinese](http://julia-zh-cn.readthedocs.org/en/latest/), while
+[Chinese](http://julia-zh-cn.readthedocs.org/), while
 [Spanish](http://julia-es-la.readthedocs.org/) and
 [Portuguese](http://julia-pt-br.readthedocs.org/) translations are in
 the works.
