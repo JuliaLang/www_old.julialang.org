@@ -4,6 +4,10 @@ title:  "Knowing where you are: custom array indices in Julia"
 author: <a href="http://holylab.wustl.edu">Tim Holy</a>
 ---
 
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 # Introduction: Arrays and indices
 
 Arrays are a crucial component of any programming language,
@@ -311,9 +315,7 @@ used to smooth or otherwise "filter" arrays. The idea is that starting
 from an array `A`, each local neighborhood is weighted by a "kernel"
 `kern`, producing an output value according to the following formula:
 
-```math
-F[I] = \sum_J A[I+J] kern[J]
-```
+$$ F[I] = \sum_J A[I+J] kern[J] $$
 
 This is the formula for
 [correlation](https://en.wikipedia.org/wiki/Cross-correlation); the
