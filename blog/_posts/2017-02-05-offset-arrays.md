@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Now we know where we've been: custom array indices in Julia"
+title:  "Knowing where you are: custom array indices in Julia"
 author: <a href="http://holylab.wustl.edu">Tim Holy</a>
 ---
 
@@ -26,10 +26,154 @@ developers who want to write code that supports arrays with arbitrary
 indices, see
 [this documentation page](http://docs.julialang.org/en/latest/devdocs/offset-arrays.html#Arrays-with-custom-indices-1).
 
-## We know where we're going...
+## Why should we care which indices an array has?
 
-Sometimes it's convenient to refer to a whole block of an array.  In
-Julia, if we define an array
+Sometimes arrays are used as simple lists, in which case the indices
+may not matter to you. But in other cases, arrays are used as a
+discrete representation of a continuous quantity (e.g., values defined
+over space or time), and in such cases the array indices correspond to
+"location" in a way that may be meaningful.
+
+As a simple example, consider the process of rotating an image:
+
+| col | col |
+|:---:|:---:|
+| ![cameraman](/blog/_posts/offsetarrays_figures/cameraman.png) | ![cameraman_rot](/blog/_posts/offsetarrays_figures/cameraman_rotated.png) |
+
+Many languages provide functions for rotating an image; in Julia, you
+can do this with the `warp` function defined in
+[ImageTransformations](https://github.com/JuliaImages/ImageTransformations.jl).
+
+Things get a little more "interesting" when you want to compare pixels
+in the rotated image to those of the original image. How, exactly, do
+these pixels match up? In other words, for a location `img[i,j]`, what
+is the corresponding `i′,j′` location in `img_rotated`? In many languages,
+figuring out these types of geometric alignments may not be a simple
+task; it's no exaggeration to say that in complex situations (e.g., a
+three-dimensional image with a complex spatial deformation) that one
+can spend a day or more figuring out exactly how pixels/voxels in two
+images are supposed to be compared.
+
+Why is this such a hard problem? The core problem is that, in most
+cases, the language is essentially "lying" to you about the location of
+pixels: if arrays always start indexing at 1 along any given axis, the
+array indices don't really correspond to an absolute spatial location.
+An index of 1 means "first index" rather than "spatial location 1."
+
+So to fix this in Julia, starting with version 0.5 we support arrays
+with indices that don't start with 1. Let's illustrate this by
+specifying that we want the above rotation to be around a point in the
+head of the cameraman. Let's load the image:
+
+```julia
+julia> using Images, TestImages
+
+julia> img = testimage("cameraman");
+
+julia> summary(img)
+"512×512 Array{Gray{N0f8},2}"
+```
+
+`summary` shows that `img` is a grayscale image indexed over the
+ranges `1:512×1:512`. Using any of several approaches (e.g.,
+[ImageView](https://github.com/timholy/ImageView.jl) and paying
+attention to the status bar to get the mouse pointer location), we can
+learn that the point `(y=126, x=251)` is in the head of the
+cameraman. Consequently, let's define a rotation around this point:
+
+```julia
+julia> using Rotations, CoordinateTransformations
+
+julia> tfm = LinearMap(RotMatrix(-pi/6)) ∘ Translation(-125,-250)
+AffineMap([0.866025 0.5; -0.5 0.866025], [-233.253, -154.006])
+```
+
+This defines `tfm` as the composition of a translation (shifting the
+head to the origin) followed by a rotation. (You can get the
+composition operator by typing `\circ` and then hitting TAB.) If we
+apply this transformation to the image, we get an interesting result:
+
+```julia
+julia> img_rotated = warp(img, tfm);
+
+julia> summary(img_rotated)
+"-232:467×-410:289 OffsetArray{Gray{Float64},2}"
+```
+
+Perhaps surprisingly, `img_rotated` is indexed over the range
+`-232:467×-410:289`, meaning that we access the upper left corner by
+`img_rotated[-232,-410]` and the lower right corner by
+`img_rotated[467,289]`. It's not hard to see why these numbers arise,
+if we see how the corners of `img` are transformed by `tfm`:
+
+```julia
+julia> using StaticArrays
+
+julia> tfm(SVector(1,1))
+2-element StaticArrays.SVector{2,Float64}:
+ -231.887
+ -153.64
+
+julia> tfm(SVector(512,1))
+2-element StaticArrays.SVector{2,Float64}:
+  210.652
+ -409.14
+
+julia> tfm(SVector(1,512))
+2-element StaticArrays.SVector{2,Float64}:
+  23.6128
+ 288.899
+
+julia> tfm(SVector(512,512))
+2-element StaticArrays.SVector{2,Float64}:
+ 466.152
+  33.3987
+```
+
+This makes it apparent that the output's indices span the region of
+the transformed coordinates.
+
+The fact that the output preserves the coordinates makes it trivial to
+compare the images:
+
+```julia
+julia> cv = colorview(RGB, paddedviews(0, img, img_rotated, img)...)
+```
+
+`paddedviews(0, arrays...)` pads input arrays with 0, as needed, to
+give them all the same indices, and `colorview(RGB, r, g, b)` inserts
+the grayscale images `r`, `g`, and `b` into the red, green, and blue
+channels respectively.  If we visualize `cv`, we see the following:
+
+![cameraman_overlay](/blog/_posts/offsetarrays_figures/cameraman_overlay.png)
+
+which indeed confirms that the rotation is around the head. Alternatively,
+we can focus on the overlapping portions of these images like this:
+
+```julia
+julia> inds = map(intersect, indices(img), indices(img_rotated))
+(1:467, 1:289)
+
+julia> imgi = img[inds...];
+
+julia> imgri = img_rotated[inds...];
+```
+
+so that `colorview(RGB, imgi, imgri, imgi)` displays as
+
+![cameraman_interior](/blog/_posts/offsetarrays_figures/cameraman_overlay_interior.png)
+
+Since the indices of the pixels actually encode spatial location, it's
+trivial to keep track of how different pixels align.  This is true
+even if our coordinate transformation were far more complicated than a
+simple rotation.
+
+Having motivated why this might be useful, let's take a step back and
+walk through array indices a bit more systematically.
+
+## A systematic introduction to arrays with arbitrary indices
+
+In Julia, if we define an array
 
 ```julia
 julia> A = collect(reshape(1:30, 5, 6))
@@ -51,28 +195,6 @@ julia> B = A[1:3, 1:4]
  3  8  13  18
 ```
 
-We can represent the same concept graphically using images:
-
-```julia
-using TestImages, Images
-
-img = testimage("mandrill")
-imgeye = img[35:99,130:220]
-imgnose = img[331:445,145:350]
-```
-
-If we display these three images, we get the following:
-
-![mandrill](https://github.com/JuliaLang/julialang.github.com/blob/master/blog/_posts/offsetarrays_figures/mandrill.png?raw=true)
-![mandrill](https://github.com/JuliaLang/julialang.github.com/blob/master/blog/_posts/offsetarrays_figures/mandrill_eye.png?raw=true)
-![mandrill](https://github.com/JuliaLang/julialang.github.com/blob/master/blog/_posts/offsetarrays_figures/mandrill_nose.png?raw=true)
-
-In summary, it's very straightforward to pick a particular region of
-an array and extract it for further analysis.  Like the Talking Heads
-song "Road to Nowhere," we know where we're going...
-
-## ...but we don't know where we've been...
-
 For certain applications, one negative to extracting blocks is that
 there is no record indicating where the new block originated from:
 
@@ -88,22 +210,12 @@ julia> B2[1,1]
 ```
 
 So `B2[1,1]` corresponds to `A[2,1]`, despite the fact that, as
-measured by their indices, these are not the same location. Likewise,
-when snipping out regions of an image, we don't know where, relative
-to the original images, those pieces came from.  Often we may not
-care, but in other cases it's essential to pass forward both the
-snipped-out data *and* the indices used for the snipping. In complex
-cases--when you have indices of indices of indices--keeping track of
-location can make your head hurt.
+measured by their indices, these are not the same location.
 
-## ...give us time to work it out
-
-Starting with Julia 0.5, there is experimental support for a simple
-solution to such problems. In programming, one of the best ways to
-keep track of correspondences is to make sure that everything
-maintains consistent "naming," which in this case means having
-consistent indices.  We can do this using the [OffsetArrays](https://github.com/alsam/OffsetArrays.jl)
-package:
+One of the best ways to keep track of correspondences is to make sure
+that everything maintains consistent "naming," which in this case
+means having consistent indices.  One way to achieve this is with the
+[OffsetArrays](https://github.com/alsam/OffsetArrays.jl) package:
 
 ```julia
 julia> using OffsetArrays
@@ -126,11 +238,12 @@ have an element "named" `(1,1)`:
 
 ```julia
 julia> B3[1,1]
-ERROR: BoundsError: attempt to access OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4 at index [1,1]
- in throw_boundserror(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Tuple{Int64,Int64}) at ./abstractarray.jl:363
- in checkbounds at ./abstractarray.jl:292 [inlined]
- in getindex(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Int64, ::Int64) at /home/tim/.julia/v0.5/OffsetArrays/src/OffsetArrays.jl:82
- ```
+ERROR: BoundsError: attempt to access OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4 at index [1, 1]
+Stacktrace:
+ [1] throw_boundserror(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Tuple{Int64,Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Int64, ::Int64) at /home/tim/.julia/v0.6/OffsetArrays/src/OffsetArrays.jl:89
+```
 
 In this case we created `B3` by explicitly "wrapping" the extracted
 array inside a type that allows you to supply custom indices.  (You
@@ -138,9 +251,15 @@ can retrieve just the extracted portion with `parent(B3)`.)  We could
 do the same thing by adjusting the *indices* instead:
 
 ```julia
-julia> ind1, ind2 = OffsetArray(2:4, 2:4), OffsetArray(1:4, 1:4)
-([2,3,4],[1,2,3,4])
+julia> using IdentityRanges
 
+julia> ind1, ind2 = IdentityRange(2:4), IdentityRange(1:4)
+(IdentityRange(2:4), IdentityRange(1:4))
+```
+
+An [`IdentityRange`](https://github.com/JuliaArrays/IdentityRanges.jl) is a range with indices that match its values, `r[i] == i`. (Alternatively, you could create a functional equivalent with `ind1, ind2 = OffsetArray(2:4, 2:4), OffsetArray(1:4, 1:4)`.) Let's use `ind1` and `ind2` to snip out the region of the array:
+
+```julia
 julia> B4 = A[ind1, ind2]
 OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4:
  2  7  12  17
@@ -162,7 +281,7 @@ This technique can also be used to create a "view":
 
 ```julia
 julia> V = view(A, ind1, ind2)
-SubArray{Int64,2,Array{Int64,2},Tuple{OffsetArrays.OffsetArray{Int64,1,UnitRange{Int64}},OffsetArrays.OffsetArray{Int64,1,UnitRange{Int64}}},false} with indices 2:4×1:4:
+SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false} with indices 2:4×1:4:
  2  7  12  17
  3  8  13  18
  4  9  14  19
@@ -171,23 +290,26 @@ julia> V[3,4]
 18
 
 julia> V[1,1]
-ERROR: BoundsError: attempt to access SubArray{Int64,2,Array{Int64,2},Tuple{OffsetArrays.OffsetArray{Int64,1,UnitRange{Int64}},OffsetArrays.OffsetArray{Int64,1,UnitRange{Int64}}},false} with indices 2:4×1:4 at index [1,1]
-...
+ERROR: BoundsError: attempt to access SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false} with indices 2:4×1:4 at index [1, 1]
+Stacktrace:
+ [1] throw_boundserror(::SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false}, ::Tuple{Int64,Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false}, ::Int64, ::Int64) at ./subarray.jl:184
 ```
 
 Note that this object is a *conventional* `SubArray` (it's not an
-`OffsetArray`), but because it was passed `OffsetArray` indices it
+`OffsetArray`), but because it was passed `IdentityRange` indices it
 preserves the indices of the indices.
 
-# A first application: array/image filtering
+## Another application: array/image filtering (convolution)
 
-A recent release (v0.6.0) of the Images package put both the power
-and responsibility for dealing with arrays with custom indices into the
-hands of users.  One of the key functions in this package is
-`imfilter` which can be used to smooth or otherwise "filter" arrays. The
-idea is that starting from an array `A`, each local neighborhood is
-weighted by a "kernel" `kern`, producing an output value according to
-the following formula:
+As illustrated above for the image rotation example, a recent release
+(v0.6.0) of the Images package put both the power and responsibility
+for dealing with arrays with custom indices into the hands of users.
+One of the key functions in this package is `imfilter` which can be
+used to smooth or otherwise "filter" arrays. The idea is that starting
+from an array `A`, each local neighborhood is weighted by a "kernel"
+`kern`, producing an output value according to the following formula:
 
 ```math
 F[I] = \sum_J A[I+J] kern[J]
@@ -209,16 +331,17 @@ julia> using Images
 
 julia> imfilter(1:8, [1])
 WARNING: assuming that the origin is at the center of the kernel; to avoid this warning, call `centered(kernel)` or use an OffsetArray
- in depwarn(::String, ::Symbol) at ./deprecated.jl:64
- in _kernelshift at /home/tim/.julia/v0.5/ImageFiltering/src/imfilter.jl:1029 [inlined]
- in kernelshift at /home/tim/.julia/v0.5/ImageFiltering/src/imfilter.jl:1026 [inlined]
- in factorkernel at /home/tim/.julia/v0.5/ImageFiltering/src/imfilter.jl:996 [inlined]
- in imfilter at /home/tim/.julia/v0.5/ImageFiltering/src/imfilter.jl:10 [inlined]
- in imfilter(::UnitRange{Int64}, ::Array{Int64,1}) at /home/tim/.julia/v0.5/ImageFiltering/src/imfilter.jl:5
- in eval(::Module, ::Any) at ./boot.jl:234
- in eval_user_input(::Any, ::Base.REPL.REPLBackend) at ./REPL.jl:64
- in macro expansion at ./REPL.jl:95 [inlined]
- in (::Base.REPL.##3#4{Base.REPL.REPLBackend})() at ./event.jl:68
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:64
+ [2] _kernelshift at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1049 [inlined]
+ [3] kernelshift at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1046 [inlined]
+ [4] factorkernel(::Array{Int64,1}) at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1016
+ [5] imfilter at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:10 [inlined]
+ [6] imfilter(::UnitRange{Int64}, ::Array{Int64,1}) at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:5
+ [7] eval(::Module, ::Any) at ./boot.jl:235
+ [8] eval_user_input(::Any, ::Base.REPL.REPLBackend) at ./REPL.jl:66
+ [9] macro expansion at ./REPL.jl:97 [inlined]
+ [10] (::Base.REPL.##1#2{Base.REPL.REPLBackend})() at ./event.jl:73
 while loading no file, in expression starting on line 0
 8-element Array{Int64,1}:
  1
@@ -246,12 +369,16 @@ julia> kern[0]
 
 julia> kern[1]
 ERROR: BoundsError: attempt to access OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 0:0 at index [1]
-...
+Stacktrace:
+ [1] throw_boundserror(::OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}}, ::Tuple{Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}}, ::Int64) at /home/tim/.julia/v0.6/OffsetArrays/src/OffsetArrays.jl:94
 ```
 
 which clearly specifies your intended indices for `kern`.
 
 This can be used to shift an image in the following way (by default, `imfilter` returns its results over the same domain as the input):
+
 ```julia
 julia> kern2 = OffsetArray([1], 2:2)  # a delta function centered at 2
 OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 2:2:
@@ -286,12 +413,16 @@ julia> imfilter(1:8, kern3, Fill(0))
 
 These are all illustrated in the following figure:
 
-![deltafunctions]()
+![deltafunctions](/blog/_posts/offsetarrays_figures/filtering.png)
+
+In this figure, we plotted the kernel as if it were at the location
+corresponding to convolution rather than correlation.
 
 In other programming languages, when filtering with a kernel that has
 an even number of elements, it can be difficult to remember the
-convention for which of the two middle elements corresponds to an
-index of 0.  In Julia, that's not an issue:
+convention for which of the two middle elements corresponds to the
+origin.  In Julia, that's not an issue, because you can make that
+choice for yourself:
 
 ```julia
 julia> kern = OffsetArray([0.5,0.5], 0:1)
@@ -377,10 +508,10 @@ OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 2:8:
 Notice that in this case, it returned an `OffsetArray` so that the
 values in the result align properly with the original array.
 
-# Another application: Fourier transforms
+# A final example: Fourier transforms
 
 There are many more things you can do with custom indices.  As one
-further illustration, consider the
+last illustration, consider the
 [Discrete Fourier Transform](https://en.wikipedia.org/wiki/Discrete_Fourier_transform),
 which is defined on a periodic domain.  Typically, it's rather
 difficult to emulate a periodic domain with arrays, because arrays
@@ -441,7 +572,7 @@ julia> length(indices(afft,1))   # but we still know how big it is
 ```
 
 While very simple, these techniques make it surprisingly more pleasant
-to deal with what would otherwise be fairly complex index gymnastics.
+to deal with what can otherwise become fairly complex index gymnastics.
 
 # Summary: a user's perspective
 
@@ -449,17 +580,16 @@ This has only scratched the surface of what's possible with custom
 indices.  In the opinion of the author, their main advantage is that
 they can increase the clarity of code by ensuring that "names"
 (indices) can be endowed with *absolute meaning*, rather than always
-being "referenced to whatever data this particular array happens to
-encode."  We can know where we have been, where we are now, and where
-we will be in the future.
+being "referenced to whatever the first element of this particular
+array happens to encode."
 
 There is quite a lot of code that hasn't yet properly accounted for
 the possibility of custom indices---surely, some of it written by the
-author! So users should be prepared for the possibility that exploiting
-custom indices will trigger errors in base Julia or in packages.
-Rather than giving up, users are encouraged to report such errors as
-issues, as this is the only way that custom indices will, over the
-course of time, have solid support.
+author of this post! So users should be prepared for the possibility
+that exploiting custom indices will trigger errors in base Julia or in
+packages.  Rather than giving up, users are encouraged to report such
+errors as issues, as this is the only way that custom indices will,
+over the course of time, have solid support.
 
 # Summary: a developer's perspective
 
@@ -480,9 +610,10 @@ the following tendencies:
   time you wrote it, it usually requires significant investment to
   re-think the indexing, even if the end result is somewhat simpler.
 
-- writing algorithms that are "indices aware" from the beginning seems
-  to be scarcely harder than writing algorithms that implicitly
-  assume indexing starts at 1.
+- even when a specific algorithm might gain little advantage from
+  supporting arbitrary indices, writing code in an "indices aware"
+  from the beginning is often no harder than writing algorithms that
+  implicitly assume indexing starts at 1.
 
 Developers are referred to
 [Julia's documentation](http://docs.julialang.org/en/latest/devdocs/offset-arrays.html#Arrays-with-custom-indices-1)
