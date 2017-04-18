@@ -20,15 +20,23 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@BKSE12]
 
+
 # Publications relating to Julia packages
 
 ## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
 
 [@AHK16]
 
+
 ## [CauseMap.jl](https://github.com/cyrusmaher/CauseMap.jl)
 
 [@MH15]
+
+
+## [POMDPs.jl](https://github.com/JuliaPOMDP/POMDPs.jl)
+
+[@ESBWGK17]
+
 
 ## Numerical Optimization and Operations Research
 
@@ -81,6 +89,7 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 ## [FastGaussQuadrature.jl](https://github.com/ajt60gaibb/FastGaussQuadrature.jl)
 
 [@TTO14]
+
 
 # Technical computing applications
 
