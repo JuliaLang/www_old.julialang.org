@@ -149,10 +149,15 @@ give them all the same indices, and `colorview(RGB, r, g, b)` inserts
 the grayscale images `r`, `g`, and `b` into the red, green, and blue
 channels respectively.  If we visualize `cv`, we see the following:
 
-![cameraman_overlay](/blog/_posts/offsetarrays_figures/cameraman_overlay.png)
+| around image center | around head (cv) |
+|:-------------------:|:----------------:|
+| ![cameraman](/blog/_posts/offsetarrays_figures/cameraman_overlay_center.png) | ![cameraman_rot](/blog/_posts/offsetarrays_figures/cameraman_overlay.png) |
 
-which indeed confirms that the rotation is around the head. Alternatively,
-we can focus on the overlapping portions of these images like this:
+The image on the left is for reference, showing what a rotation around
+the image center would look like when properly aligned. The image on
+the right corresponds to the steps taken above, and indeed confirms
+that the rotation is around the head. Alternatively, we can focus on
+the overlapping portions of these images like this:
 
 ```julia
 julia> inds = map(intersect, indices(img), indices(img_rotated))
