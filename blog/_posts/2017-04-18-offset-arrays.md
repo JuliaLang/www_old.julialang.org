@@ -172,9 +172,10 @@ so that `colorview(RGB, imgi, imgri, imgi)` displays as
 
 ![cameraman_interior](/blog/_posts/offsetarrays_figures/cameraman_overlay_interior.png)
 
-Since the indices of the pixels actually encode spatial location, it's
-trivial to keep track of how different pixels align.  This is true
-even if our coordinate transformation were far more complicated than a
+Since the indices of the pixels encode absolute spatial location, it's
+trivial to keep track of how different pixels align: pixel `i,j` in
+one image corresponds to pixel `i,j` in the other.  This is true even
+if our coordinate transformation were far more complicated than a
 simple rotation.
 
 Having motivated why this might be useful, let's take a step back and
