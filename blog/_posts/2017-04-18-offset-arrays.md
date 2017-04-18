@@ -40,8 +40,8 @@ over space or time), and in such cases the array indices correspond to
 
 As a simple example, consider the process of rotating an image:
 
-| col | col |
-|:---:|:---:|
+| img | img_rotated |
+|:---:|:-----------:|
 | ![cameraman](/blog/_posts/offsetarrays_figures/cameraman.png) | ![cameraman_rot](/blog/_posts/offsetarrays_figures/cameraman_rotated.png) |
 
 Many languages provide functions for rotating an image; in Julia, you
