@@ -8,8 +8,6 @@ author: <a href="http://holylab.wustl.edu">Tim Holy</a>
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-# Introduction: Arrays and indices
-
 Arrays are a crucial component of any programming language,
 particularly for a data-oriented language like Julia.  Arrays store
 values according to their location: in Julia, given a two-dimensional
@@ -30,7 +28,7 @@ developers who want to write code that supports arrays with arbitrary
 indices, see
 [this documentation page](http://docs.julialang.org/en/latest/devdocs/offset-arrays.html#Arrays-with-custom-indices-1).
 
-## Why should we care which indices an array has?
+## Why should we care which indices an array has? A first example
 
 Sometimes arrays are used as simple lists, in which case the indices
 may not matter to you. But in other cases, arrays are used as a
@@ -309,7 +307,7 @@ Note that this object is a *conventional* `SubArray` (it's not an
 `OffsetArray`), but because it was passed `IdentityRange` indices it
 preserves the indices of the indices.
 
-## Another application: array/image filtering (convolution)
+## A second application: array/image filtering (convolution)
 
 As illustrated above for the image rotation example, a recent release
 (v0.6.0) of the Images package put both the power and responsibility
@@ -513,7 +511,7 @@ OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 2:8:
 Notice that in this case, it returned an `OffsetArray` so that the
 values in the result align properly with the original array.
 
-# A final example: Fourier transforms
+## A final application: Fourier transforms
 
 There are many more things you can do with custom indices.  As one
 last illustration, consider the
@@ -581,7 +579,7 @@ Given the periodicity of `afft`, the commonly-used `fftshift` function
 these techniques make it surprisingly more pleasant to deal with what
 can sometimes become complex and error-prone index gymnastics.
 
-# Summary: a user's perspective
+## Summary: a user's perspective
 
 This has only scratched the surface of what's possible with custom
 indices.  In the opinion of the author, their main advantage is that
@@ -598,7 +596,7 @@ packages.  Rather than giving up, users are encouraged to report such
 errors as issues, as this is the only way that custom indices will,
 over the course of time, have solid support.
 
-# Summary: a developer's perspective
+## Summary: a developer's perspective
 
 For some algorithms, there appears to be little reason to ever use
 arrays with anything but 1-based indices; in such cases, there may be
