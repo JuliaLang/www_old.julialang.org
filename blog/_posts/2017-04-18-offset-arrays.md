@@ -576,8 +576,10 @@ julia> length(indices(afft,1))   # but we still know how big it is
 16
 ```
 
-While very simple, these techniques make it surprisingly more pleasant
-to deal with what can otherwise become fairly complex index gymnastics.
+Given the periodicity of `afft`, the commonly-used `fftshift` function
+(e.g., `fftshift(fft(a))`) can be replaced by `afft[-8:7]`. While very simple,
+these techniques make it surprisingly more pleasant to deal with what
+can sometimes become complex and error-prone index gymnastics.
 
 # Summary: a user's perspective
 
