@@ -222,9 +222,7 @@ julia> B2[1,1]
 So `B2[1,1]` corresponds to `A[2,1]`, despite the fact that, as
 measured by their indices, these are not the same location.
 
-One of the best ways to keep track of correspondences is to make sure
-that everything maintains consistent "naming," which in this case
-means having consistent indices.  One way to achieve this is with the
+To maintain consistent "naming" of our indices, let's use the
 [OffsetArrays](https://github.com/alsam/OffsetArrays.jl) package:
 
 ```julia
@@ -267,7 +265,7 @@ julia> ind1, ind2 = IdentityRange(2:4), IdentityRange(1:4)
 (IdentityRange(2:4), IdentityRange(1:4))
 ```
 
-An [`IdentityRange`](https://github.com/JuliaArrays/IdentityRanges.jl) is a range with indices that match its values, `r[i] == i`. (Alternatively, you could create a functional equivalent with `ind1, ind2 = OffsetArray(2:4, 2:4), OffsetArray(1:4, 1:4)`.) Let's use `ind1` and `ind2` to snip out the region of the array:
+An [`IdentityRange`](https://github.com/JuliaArrays/IdentityRanges.jl) is a range with indices that match its values, `r[i] == i`. (`ind1, ind2 = OffsetArray(2:4, 2:4), OffsetArray(1:4, 1:4)` would be functionally equivalent.) Let's use `ind1` and `ind2` to snip out the region of the array:
 
 ```julia
 julia> B4 = A[ind1, ind2]
@@ -329,10 +327,10 @@ formula for another operation,
 [convolution](https://en.wikipedia.org/wiki/Convolution), is very
 similar.
 
-Let's start with a trivial example: let's filter the array `1:8` with
-a "delta function" kernel, meaning it has value `1` at
-location 0. According to the correlation formula, because `kern[J]` is
-1 at `J==0`, this should simply give us back our original array:
+Let's start with a trivial example: let's filter with a "delta
+function" kernel, meaning it has value `1` at location 0 and is zero
+everywhere else. According to the correlation formula, because `kern[J]`
+is 1 at `J==0`, this should simply give us a copy of our original array:
 
 ```julia
 julia> using Images
@@ -363,7 +361,7 @@ while loading no file, in expression starting on line 0
 ```
 
 The warning is telling you that Images decided to make a guess about
-your intention, that the kernel is centered around zero. You can
+your intention, that the kernel `[1]` was intended to be centered around zero. You can
 suppress the warning by explicitly passing the following kernel
 instead:
 
@@ -383,7 +381,7 @@ Stacktrace:
  [3] getindex(::OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}}, ::Int64) at /home/tim/.julia/v0.6/OffsetArrays/src/OffsetArrays.jl:94
 ```
 
-which clearly specifies your intended indices for `kern`.
+By using an `OffsetArray` you have clearly specified your intended indices for `kern`.
 
 This can be used to shift an image in the following way (by default, `imfilter` returns its results over the same domain as the input):
 
@@ -427,10 +425,9 @@ In this figure, we plotted the kernel as if it were at the location
 corresponding to convolution rather than correlation.
 
 In other programming languages, when filtering with a kernel that has
-an even number of elements, it can be difficult to remember the
-convention for which of the two middle elements corresponds to the
-origin.  In Julia, that's not an issue, because you can make that
-choice for yourself:
+an even number of elements, it can be difficult to remember which of
+the two middle elements corresponds to the origin.  In Julia, that's
+not an issue, because you can make that choice for yourself:
 
 ```julia
 julia> kern = OffsetArray([0.5,0.5], 0:1)
@@ -528,39 +525,39 @@ which possess periodic behavior.  Here we use the
 [FFTViews](https://github.com/JuliaArrays/FFTViews.jl) package,
 demonstrating the technique on a simple sinusoid:
 
-```
+```julia
 julia> using FFTViews
 
-julia> a = [sin(2π*x) for x in linspace(0,1,16)];
+julia> a = [sin(2π*x)+0.1 for x in linspace(0,1,16)];
 
 julia> afft = FFTView(fft(a))
 FFTViews.FFTView{Complex{Float64},1,Array{Complex{Float64},1}} with indices FFTViews.URange(0,15):
- 5.55112e-16+0.0im
-       1.498-7.53098im
-   -0.288537+0.69659im
-   -0.236488+0.35393im
-   -0.222614+0.222614im
-   -0.216932+0.14495im
-   -0.214217+0.0887316im
-   -0.212937+0.0423558im
-   -0.212557+0.0im
-   -0.212937-0.0423558im
-   -0.214217-0.0887316im
-   -0.216932-0.14495im
-   -0.222614-0.222614im
-   -0.236488-0.35393im
-   -0.288537-0.69659im
-       1.498+7.53098im
+       1.6+0.0im
+     1.498-7.53098im
+ -0.288537+0.69659im
+ -0.236488+0.35393im
+ -0.222614+0.222614im
+ -0.216932+0.14495im
+ -0.214217+0.0887316im
+ -0.212937+0.0423558im
+ -0.212557+0.0im
+ -0.212937-0.0423558im
+ -0.214217-0.0887316im
+ -0.216932-0.14495im
+ -0.222614-0.222614im
+ -0.236488-0.35393im
+ -0.288537-0.69659im
+     1.498+7.53098im
 ```
 
-Now, as every student of Fourier transforms learns, the mean value is associated with the 0-frequency bin:
+Now, as every student of Fourier transforms learns, the 0-frequency bin holds the sum of the values in `a`:
 
 ```julia
 julia> afft[0]
-5.551115123125783e-16 + 0.0im
+1.6000000000000003 + 0.0im
 ```
 
-Since the mean of a sinusoid is zero, this is (within roundoff error) zero.
+Since the mean of a sinusoid is zero, this is (within roundoff error) 16*0.1 = 1.6.
 
 We can also check the amplitude at the Fourier-peak, and explore the
 periodicity of the result:
@@ -619,7 +616,7 @@ the following tendencies:
   re-think the indexing, even if the end result is somewhat simpler.
 
 - even when a specific algorithm might gain little advantage from
-  supporting arbitrary indices, writing code in an "indices aware"
+  supporting arbitrary indices, writing code that is "indices aware"
   from the beginning is often no harder than writing algorithms that
   implicitly assume indexing starts at 1.
 
