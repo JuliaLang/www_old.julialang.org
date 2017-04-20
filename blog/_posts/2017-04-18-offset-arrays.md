@@ -417,7 +417,7 @@ julia> imfilter(1:8, kern3, Fill(0))
 
 These are all illustrated in the following figure:
 
-![deltafunctions](/blog/_posts/offsetarrays_figures/filtering.png)
+![deltafunctions](/images/blog/2017-04-18-offset-arrays/filtering.png)
 
 In this figure, we plotted the kernel as if it were at the location
 corresponding to convolution rather than correlation.
