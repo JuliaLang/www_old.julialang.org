@@ -40,7 +40,7 @@ As a simple example, consider the process of rotating an image:
 
 | img | img_rotated |
 |:---:|:-----------:|
-| ![cameraman](/blog/_posts/offsetarrays_figures/cameraman.png) | ![cameraman_rot](/blog/_posts/offsetarrays_figures/cameraman_rotated.png) |
+| ![cameraman](/images/blog/2017-04-18-offset-arrays/cameraman.png) | ![cameraman_rot](/images/blog/2017-04-18-offset-arrays/cameraman_rotated.png) |
 
 Many languages provide functions for rotating an image; in Julia, you
 can do this with the `warp` function defined in
@@ -149,7 +149,7 @@ channels respectively.  If we visualize `cv`, we see the following:
 
 | around image center | around head (cv) |
 |:-------------------:|:----------------:|
-| ![cameraman](/blog/_posts/offsetarrays_figures/cameraman_overlay_center.png) | ![cameraman_rot](/blog/_posts/offsetarrays_figures/cameraman_overlay.png) |
+| ![cameraman](/images/blog/2017-04-18-offset-arrays/cameraman_overlay_center.png) | ![cameraman_rot](/images/blog/2017-04-18-offset-arrays/cameraman_overlay.png) |
 
 The image on the left is for reference, showing what a rotation around
 the image center would look like when properly aligned. The image on
@@ -168,7 +168,7 @@ julia> imgri = img_rotated[inds...];
 
 so that `colorview(RGB, imgi, imgri, imgi)` displays as
 
-![cameraman_interior](/blog/_posts/offsetarrays_figures/cameraman_overlay_interior.png)
+![cameraman_interior](/images/blog/2017-04-18-offset-arrays/cameraman_overlay_interior.png)
 
 Since the indices of the pixels encode absolute spatial location, it's
 trivial to keep track of how different pixels align: pixel `i,j` in
