@@ -20,15 +20,23 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@BKSE12]
 
+
 # Publications relating to Julia packages
 
 ## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
 
 [@AHK16]
 
+
 ## [CauseMap.jl](https://github.com/cyrusmaher/CauseMap.jl)
 
 [@MH15]
+
+
+## [POMDPs.jl](https://github.com/JuliaPOMDP/POMDPs.jl)
+
+[@ESBWGK17]
+
 
 ## Numerical Optimization and Operations Research
 
@@ -82,6 +90,7 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@TTO14]
 
+
 # Technical computing applications
 
 [@CLLDNR17]
@@ -125,6 +134,8 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 [@BBCILSZ16] Code available in [BinaryCommitteeMachineRSGD.jl](https://github.com/carlobaldassi/BinaryCommitteeMachineRSGD.jl) and [BinaryCommitteeMachineFBP.jl](https://github.com/carlobaldassi/BinaryCommitteeMachineFBP.jl).
 
 [@B17] Code available in [RRRMC.jl](https://github.com/carlobaldassi/RRRMC.jl).
+
+[@RSL17]
 
 # Theses
 
