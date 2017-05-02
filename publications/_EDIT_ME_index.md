@@ -133,6 +133,8 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@BBCILSZ16] Code available in [BinaryCommitteeMachineRSGD.jl](https://github.com/carlobaldassi/BinaryCommitteeMachineRSGD.jl) and [BinaryCommitteeMachineFBP.jl](https://github.com/carlobaldassi/BinaryCommitteeMachineFBP.jl).
 
+[@B17] Code available in [RRRMC.jl](https://github.com/carlobaldassi/RRRMC.jl).
+
 [@RSL17]
 
 # Theses
