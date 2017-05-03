@@ -20,24 +20,19 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@BKSE12]
 
-
 # Publications relating to Julia packages
 
 ## [CauseMap.jl](https://github.com/cyrusmaher/CauseMap.jl)
 
 [@MH15]
 
-
 ## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
 
 [@AHK16]
 
-
-
 ## [POMDPs.jl](https://github.com/JuliaPOMDP/POMDPs.jl)
 
 [@ESBWGK17]
-
 
 ## Numerical Optimization and Operations Research
 
