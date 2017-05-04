@@ -27,7 +27,7 @@ JuliaBox, all of these plotting packages are pre-installed.
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.5/julia-0.5.1-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.5/julia-0.5.1-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
@@ -75,7 +75,7 @@ Most users are advised to use the latest official release version of Julia, abov
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="3"> <a href="https://status.julialang.org/download/osx10.7+">10.7+ 64-bit</a> </td>
+    <td colspan="3"> <a href="https://status.julialang.org/download/osx10.7+">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
