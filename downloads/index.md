@@ -81,12 +81,17 @@ tarball is much smaller in size, but will download dependency tarballs on demand
 </tr>
 <tr>
     <th> Mac OS X Package (.dmg) </th>
-    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.6/julia-0.6-latest-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.6/julia-0.6-latest-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
     <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.6/julia-0.6-latest-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.6/julia-0.6.0-rc1-linux-i686.tar.gz.asc">GPG</a>)</td>
     <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.6/julia-0.6-latest-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.6/julia-0.6.0-rc1-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+</tr>
+<tr>
+    <th> Linux builds for other architectures </th>
+    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.6/julia-0.6-latest-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.6/julia-0.6.0-rc1-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.6/julia-0.6-latest-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.6/julia-0.6.0-rc1-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
