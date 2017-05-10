@@ -4,7 +4,7 @@ The Julia website is generated using GitHub pages and Jekyll, as [explained here
 
 ## Running using Docker
 
-After installing [`docker`](http://docker.com/), run `make run` to build and run the website wihtin a docker container that contains all the necessary prerequisites.  Modifying files will cause the website to rebuild in real time.
+After installing [`docker`](http://docker.com/), run `make run` to build and run the website within the a container built from the [`jekyll/jekyll` image](https://hub.docker.com/r/jekyll/jekyll/) that contains all the necessary prerequisites.  Modifying files will cause the website to rebuild in real time.
 
 ## Running manually
 
