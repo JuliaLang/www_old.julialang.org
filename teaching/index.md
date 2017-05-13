@@ -25,6 +25,9 @@ Julia is now being used in several universities and online courses. If you know 
 - University of Glasgow, School of Mathematics and Statistics, September 2017
   * An Introduction to Julia, course of Online Master of Science (MSc) in Data Analytics ([Theodore Papamarkou](http://www.gla.ac.uk/schools/mathematicsstatistics/staff/theodorepapamarkou/))
 
+- Southcentral Kentucky Community and Technical College, Online, Fall 2017
+  * CIT 120 Computational Thinking (Inst. [Bryan Knowles](https://github.com/snotskie/))
+
 - Massachusetts Institute of Technology (MIT)
   * [6.251/15.081](https://stellar.mit.edu/courseguide/course/6/fa15/6.251/), Introduction to Mathematical Programming (Prof. Dimitris J. Bertsimas), Fall 2015
   * [18.06](http://web.mit.edu/18.06/www/), Linear Algebra: Fall 2015, Dr. [Alex Townsend](https://github.com/ajt60gaibb); Fall 2014, Prof. Alexander Postnikov; Fall [2013](http://stellar.mit.edu/S/course/18/fa13/18.06), Prof. Alan Edelman
