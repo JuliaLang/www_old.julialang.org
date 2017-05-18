@@ -19,6 +19,9 @@ a
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
+- University of California, Los Angeles (UCLA)
+	* [Stat M230/Biomath 280/Biostat M280](http://hua-zhou.github.io/teaching/biostatm280-2017spring/), Statistical Computing, Spring 2017 (Prof. [Hua Zhou](https://github.com/Hua-Zhou))
+
 - University of Antwerp, Faculty of Pharmaceutical, Biomedical, Veterinary Sciences, October 2016
   * Computational Neuroscience (2070FBDBMW), Master of Biomedical Sciences, of Biochemistry, of Physics ([Michele Giugliano](https://www.uantwerpen.be/popup/opleidingsonderdeel.aspx?catalognr=2070FBDBMW&taal=nl&aj=2016))
 
