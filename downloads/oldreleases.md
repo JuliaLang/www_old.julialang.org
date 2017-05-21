@@ -13,17 +13,17 @@ anymore.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x86/0.4/julia-0.4.7-win32.exe">32-bit</a> </td>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x64/0.4/julia-0.4.7-win64.exe">64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.4/julia-0.4.7-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.4/julia-0.4.7-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.4/julia-0.4.7-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.4/julia-0.4.7-osx10.7+.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.4/julia-0.4.7-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.4/julia-0.4.7-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.4/julia-0.4.7-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.4/julia-0.4.7-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
@@ -43,12 +43,12 @@ anymore.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x86/0.3/julia-0.3.12-win32.exe">32-bit</a> </td>
-    <td> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x64/0.3/julia-0.3.12-win64.exe">64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.3/julia-0.3.12-win32.exe">32-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.3/julia-0.3.12-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="2"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.3/julia-0.3.12-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="2"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.3/julia-0.3.12-osx10.7+.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Ubuntu packages (.deb) </th>
@@ -60,8 +60,8 @@ anymore.
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
-    <td> <a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.3/julia-0.3.12-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.3/julia-0.3.12-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td> <a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.3/julia-0.3.12-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.3/julia-0.3.12-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.3/julia-0.3.12-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.3/julia-0.3.12-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.3/julia-0.3.12-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.3/julia-0.3.12-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
@@ -95,13 +95,13 @@ anymore.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td> <a href="http://s3.amazonaws.com/julialang/bin/winnt/x86/0.2/julia-0.2.1-win32.exe">32-bit</a> </td>
-    <td> <a href="http://s3.amazonaws.com/julialang/bin/winnt/x64/0.2/julia-0.2.1-win64.exe">64-bit</a> </td>
+    <td> <a href="http://julialang-s3.julialang.org/bin/winnt/x86/0.2/julia-0.2.1-win32.exe">32-bit</a> </td>
+    <td> <a href="http://julialang-s3.julialang.org/bin/winnt/x64/0.2/julia-0.2.1-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.2/julia-0.2.1-osx10.6.dmg">10.6 64-bit</a> </td>
-    <td> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.2/julia-0.2.1-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.2/julia-0.2.1-osx10.6.dmg">10.6 64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.2/julia-0.2.1-osx10.7+.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Ubuntu packages (.deb) </th>
