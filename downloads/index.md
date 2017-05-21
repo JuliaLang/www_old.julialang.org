@@ -22,22 +22,22 @@ JuliaBox, all of these plotting packages are pre-installed.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x86/0.5/julia-0.5.2-win32.exe">32-bit</a> </td>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x64/0.5/julia-0.5.2-win64.exe">64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.5/julia-0.5.2-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.5/julia-0.5.2-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.5/julia-0.5.2-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.5/julia-0.5.2-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz">32-bit (X86)</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz">64-bit (X86)</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz">32-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz">64-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
@@ -48,7 +48,7 @@ JuliaBox, all of these plotting packages are pre-installed.
 </tbody></table>
 
 Please see [platform specific instructions](platform.html) if you have
-trouble installing Julia.  Checksums for this release are available in both [MD5](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.2.md5) and [SHA256](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.5.2.sha256) format.
+trouble installing Julia.  Checksums for this release are available in both [MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.5.2.md5) and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.5.2.sha256) format.
 
 If the provided download files do not work for you, please [file an
 issue in the Julia project](https://github.com/JuliaLang/julia/issues).
@@ -64,8 +64,8 @@ For Julia 0.5, only bugfixes are being supported. Releases older than 0.5 are no
 We are currently testing release candidates for the next version of Julia. Please see
 [platform](platform.html) specific instructions if you have trouble installing Julia.
 Checksums for this release are available in both
-[MD5](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.6.0-rc2.md5)
-and [SHA256](https://s3.amazonaws.com/julialang/bin/checksums/julia-0.6.0-rc2.sha256) format.
+[MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.0-rc2.md5)
+and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.0-rc2.sha256) format.
 Download the release candidate here, and please report any issues to the
 [issue tracker](https://github.com/JuliaLang/julia/issues) on GitHub.
 Full tarballs contain all dependencies bundled within the tarball alongside Julia,
@@ -76,22 +76,22 @@ tarball is much smaller in size, but will download dependency tarballs on demand
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x86/0.6/julia-0.6-latest-win32.exe">32-bit</a> </td>
-    <td colspan="3"> <a href="https://s3.amazonaws.com/julialang/bin/winnt/x64/0.6/julia-0.6-latest-win64.exe">64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.6/julia-0.6-latest-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.6/julia-0.6-latest-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> Mac OS X Package (.dmg) </th>
-    <td colspan="6"> <a href="https://s3.amazonaws.com/julialang/bin/osx/x64/0.6/julia-0.6-latest-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.6/julia-0.6-latest-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.6/julia-0.6-latest-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x86/0.6/julia-0.6.0-rc2-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.6/julia-0.6-latest-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/x64/0.6/julia-0.6.0-rc2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6-latest-linux-i686.tar.gz">32-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.0-rc2-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6-latest-linux-x86_64.tar.gz">64-bit</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-rc2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.6/julia-0.6-latest-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/arm/0.6/julia-0.6.0-rc2-linux-arm.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.6/julia-0.6-latest-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang.s3.amazonaws.com/bin/linux/ppc64le/0.6/julia-0.6.0-rc2-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6-latest-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-rc2-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.6/julia-0.6-latest-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.6/julia-0.6.0-rc2-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
