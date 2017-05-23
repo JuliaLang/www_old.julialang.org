@@ -84,6 +84,7 @@ title:  Learning Julia
 
 # Articles and blog posts
 
+- [7 Julia Gotchas and How to Handle Them](http://www.stochasticlifestyle.com/7-julia-gotchas-handle/) by [Chris Rackauckas](http://chrisrackauckas.com/)
 - [Vectorization in Julia](https://software.intel.com/en-us/articles/vectorization-in-julia) by [Arch Robison](https://github.com/ArchRobison)
 - [Graydon Hoare](http://graydon2.dreamwidth.org/) on Julia: [part 1](http://graydon2.dreamwidth.org/3186.html), [part 2](http://graydon2.dreamwidth.org/189377.html)
 - [Scientific computing’s future: Can any coding language top a 1950s behemoth?](http://arstechnica.com/science/2014/05/scientific-computings-future-can-any-coding-language-top-a-1950s-behemoth/) by Lee Phillips on ArsTechnica
