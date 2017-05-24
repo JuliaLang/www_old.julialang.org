@@ -21,7 +21,7 @@ title:  The Julia Language
         </div>
         <div>
             Julia is part of <b><a href="https://summerofcode.withgoogle.com/">Google Summer of Code 2017</a>!</b><br>
-            Check out <a href="/soc/ideas-page.html">our project ideas</a> and get involved!
+            Students are working on these <a href="https://summerofcode.withgoogle.com/organizations/5642180010967040/">18 projects</a>.
         </div>
     </div>
 </div>
