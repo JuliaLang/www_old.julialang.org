@@ -25,7 +25,21 @@ Uninstall Julia by deleting Julia.app and the packages directory in ~/.julia. Mu
 
 ## Linux
 
-It is strongly recommended that the official generic linux binaries from the downloads page be used to install Julia. The following distribution-specific packages are community contributed. They may not use the right versions of Julia dependencies or include important patches that the official binaries ship with. In general, bug reports will only be accepted if they are reproducible on the generic linux binaries on the downloads page.
+It is strongly recommended that the official generic linux binaries from the downloads page be used to install Julia. 
+
+### Generic Linux Binaries
+
+The generic linux binaries do not require any special installation steps, but you will need to ensure that your system can find the `julia` executable. To do that, you will need to extract the `.tar.gz` file downloaded from the [downloads page](index.html) to a folder on your computer, then either create a symbolic link to `julia` from a folder which is on your system `PATH` or add the `/bin` folder inside that archive to your system's `PATH` environment variable.
+
+As an example, to create a symbolic link to `julia` inside the `/usr/local/bin` folder, you can do the following:
+
+	sudo ln -s <where you extracted the julia archive>/bin/julia /usr/local/bin/julia
+
+On some linux distributions, you may need to use a folder other than `/usr/local/bin`. To check which folders are on your `PATH`, you can run `echo $PATH`. 
+
+### Linux Distribution-Specific Packages
+
+The following distribution-specific packages are community contributed. They may not use the right versions of Julia dependencies or include important patches that the official binaries ship with. In general, bug reports will only be accepted if they are reproducible on the generic linux binaries on the downloads page.
 
 Instructions will be added here as more linux distributions start including julia. If your Linux distribution is not listed here, you should still be able to run julia by building from source. See the [Julia README](https://github.com/JuliaLang/julia/blob/master/README.md) for more detailed information.
 
