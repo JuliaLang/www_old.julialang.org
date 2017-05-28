@@ -55,6 +55,9 @@ Julia is now being used in several universities and online courses. If you know 
   * [MATH0462](http://www.montefiore.ulg.ac.be/~tcuvelier/teaching/2016-2017-discrete-optimisation), Discrete Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/))
   * [MATH0461](http://progcours.ulg.ac.be/cocoon/cours/MATH0461-2.html), Introduction to Numerical Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/))
 
+- École Polytechnique Fédérale de Lausanne, Spring 2017
+  [CIVIL 557] [Decision-aid methodologies in transportation](Decision-aid methodologies in transportation) (Mor Kaspi, Virginie Lurkin)
+
 - Northeastern University, Fall 2016
   * MTH3300: Applied Probability & Statistics
 
