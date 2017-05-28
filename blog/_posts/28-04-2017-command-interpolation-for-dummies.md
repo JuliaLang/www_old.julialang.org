@@ -23,7 +23,7 @@ Let's consider the following:
 julia>flag1 = "-e 'println(\"hello world\")'"
 julia>flag2 = "println(\"hello world\")"
 julia>helloworld = "hello world"
-julia>`julia $flag1
+julia>`julia $flag1`
 `julia "-e 'println(\"hello world\")'"` # okay?! Guess strings get quotes
 julia>`julia -e 'println($helloworld)'`
 `julia -e 'println($helloworld)'` #what?
@@ -44,7 +44,7 @@ I looked more like this:
 
 Obviously this is all well thought out and what was missing is the right mental model.
 
-First of all, keep in mind that there is always a main sitting somewhere, patiently waiting for you to feed it an array of strings. 
+First of all, keep in mind that there is always a `main` sitting somewhere, patiently waiting for you to feed it an array of strings. 
 The good ol' `main(int argc,  char** argv)`!
 
 Now, what the shell does is splitting the one command string we type in by spaces in order to pass it to this main. 
