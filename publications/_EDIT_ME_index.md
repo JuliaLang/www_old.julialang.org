@@ -23,6 +23,11 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 # Publications relating to Julia packages
 
+## [ImageQuilting.jl](https://github.com/juliohm/ImageQuilting.jl)
+
+[@HSBC17]
+
+
 ## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
 
 [@AHK16]
