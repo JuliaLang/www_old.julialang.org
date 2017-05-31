@@ -19,6 +19,11 @@ a
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
+- Pontifical Catholic University of Rio de Janeiro (PUC-Rio)
+  * Programming in Julia (Prof. [Thuener Silva](https://github.com/Thuener)), Summer 2017
+  * Linear Optimization (Prof. [Alexandre Street](https://alexandrestreet.wordpress.com/)), Spring 2017
+  * Decision and Risk Analysis (Prof. [Davi Valladão](http://www.ind.puc-rio.br/es/equipe-dei/docentes/quadro-principal/davi-valladao/)), Fall 2015
+  
 - University of California, Los Angeles (UCLA)
   * [Stat M230/Biomath 280/Biostat M280](http://hua-zhou.github.io/teaching/biostatm280-2017spring/), Statistical Computing, Spring 2017 (Prof. [Hua Zhou](https://github.com/Hua-Zhou))
 
