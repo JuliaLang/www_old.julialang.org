@@ -23,6 +23,11 @@ On Mac, a `Julia-<version>.dmg` file is provided, which contains Julia.app. Inst
 
 Uninstall Julia by deleting Julia.app and the packages directory in ~/.julia. Multiple Julia.app binaries can co-exist without interfering with each other. If you would also like to remove your preferences files, remove `~/.juliarc.jl`.
 
+An alternative to installing Julia from the downloaded .dmg is by using the [Homebrew package manager](https://brew.sh/). 
+In your terminal, run
+
+    brew cask install julia
+
 ## Linux
 
 It is strongly recommended that the official generic linux binaries from the downloads page be used to install Julia. The following distribution-specific packages are community contributed. They may not use the right versions of Julia dependencies or include important patches that the official binaries ship with. In general, bug reports will only be accepted if they are reproducible on the generic linux binaries on the downloads page.
