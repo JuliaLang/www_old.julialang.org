@@ -86,6 +86,7 @@ Various Julia projects are hosted under the following umbrella organizations on 
 ## Scientific Domains
 
 * [BioJulia](https://github.com/BioJulia) – Biology
+* [EcoJulia](https://github.com/EcoJulia) – Ecology
 * [JuliaAstro](https://github.com/JuliaAstro) – Astronomy
 * [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
 * [JuliaQuant](https://github.com/JuliaQuant) – Finance
