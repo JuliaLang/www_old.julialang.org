@@ -12,7 +12,8 @@ title:  The Julia Language
         </div>
         <div>
             June 20th - June 24th 2017, Berkeley, CA. <br>
-            <a href="http://juliacon.org/2017/talks.html">Talks and workshops</a>
+            <a href="http://juliacon.org/2017/schedule">Talks and workshops.</a>
+            <a href="https://www.eventbrite.com/e/juliacon-2017-tickets-31531297961?ref=ebtnebtckt">Tickets.</a>
         </div>
     </div>
     <div style="width: 48%; text-align: center">
