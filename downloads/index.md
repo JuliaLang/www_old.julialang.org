@@ -121,14 +121,18 @@ Most users are advised to use the latest official release version of Julia, abov
     <td colspan="3"> <a href="https://status.julialang.org/download/osx10.7+">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
-    <th> Generic Linux binaries </th>
-    <td> <a href="https://status.julialang.org/download/linux-i686">32-bit (X86)</a> </td>
-    <td> <a href="https://status.julialang.org/download/linux-x86_64">64-bit (X86)</a> </td>
+    <th> Generic Linux binaries for X86 </th>
+    <td> <a href="https://status.julialang.org/download/linux-i686">32-bit</a> </td>
+    <td> <a href="https://status.julialang.org/download/linux-x86_64">64-bit</a> </td>
+</tr>
+<tr>
+    <th> Generic Linux binaries for ARM </th>
+    <td> <a href="https://status.julialang.org/download/linux-armv7l">32-bit (armv7-a hard float)</a> </td>
+    <td> <a href="https://julialangnightlies.s3.amazonaws.com/buildog/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
 </tr>
 <tr>
     <th> Linux builds for other architectures </th>
-    <td> <a href="https://status.julialang.org/download/linux-armv7l">ARMv7 32-bit hard float</a> </td>
-    <td> <a href="https://status.julialang.org/download/linux-powerpc64le">PowerPC 64 little endian</a> </td>
+    <td colspan="3"> <a href="https://status.julialang.org/download/linux-powerpc64le">PowerPC 64 little endian</a> </td>
 </tr>
 <tr>
     <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
