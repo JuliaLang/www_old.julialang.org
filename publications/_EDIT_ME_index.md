@@ -38,6 +38,11 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 [@ESBWGK17]
 
 
+## [ParallelAccelerator.jl](https://github.com/IntelLabs/ParallelAccelerator.jl)
+
+[@ALKTVS17]
+
+
 ## Numerical Optimization and Operations Research
 
 ### [Convex.jl](https://github.com/cvxgrp/Convex.jl)
