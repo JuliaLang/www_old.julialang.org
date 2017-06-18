@@ -1,20 +1,13 @@
 @article{ESBWGK17,
     author  = {Maxim Egorov and Zachary N. Sunberg and Edward Balaban and Tim A. Wheeler and Jayesh K. Gupta and Mykel J. Kochenderfer},
-    title   = {POMDPs.jl: A Framework for Sequential Decision Making under Uncertainty},
+    title   = {{POMDP}s.jl: A Framework for Sequential Decision Making under Uncertainty},
     journal = {Journal of Machine Learning Research},
     year    = {2017},
     volume  = {18},
     number  = {26},
     pages   = {1-5},
     url     = {http://jmlr.org/papers/v18/16-300.html},
-	abstract = {POMDPs.jl is an open-source framework for solving Markov decision processes (MDPs) and partially
-        observable MDPs (POMDPs). POMDPs.jl allows users to specify sequential decision making problems with minimal
-        effort without sacrificing the expressive nature of POMDPs, making this framework viable for both
-        educational and research purposes. It is written in the Julia language to allow flexible prototyping and
-        large-scale computation that leverages the high-performance nature of the language. The associated
-        JuliaPOMDP community also provides a number of state-of-the-art MDP and POMDP solvers and a rich library of
-        support tools to help with implementing new solvers and evaluating the solution results. The most recent version of
-        POMDPs.jl, the related packages, and documentation can be found at github.com/JuliaPOMDP/POMDPs.jl.},
+	abstract = {POMDPs.jl is an open-source framework for solving Markov decision processes (MDPs) and partially observable MDPs (POMDPs). POMDPs.jl allows users to specify sequential decision making problems with minimal effort without sacrificing the expressive nature of POMDPs, making this framework viable for both educational and research purposes. It is written in the Julia language to allow flexible prototyping and large-scale computation that leverages the high-performance nature of the language. The associated JuliaPOMDP community also provides a number of state-of-the-art MDP and POMDP solvers and a rich library of support tools to help with implementing new solvers and evaluating the solution results. The most recent version of POMDPs.jl, the related packages, and documentation can be found at github.com/JuliaPOMDP/POMDPs.jl.},
 }
 
 @article{CLLDNR17,
@@ -639,7 +632,41 @@ Intellectual Property (IP) model simulation for a Wireless LAN (WLAN)
 product confirm this. We augment standard SystemC High-Level Synthesis
 (HLS) tool-flow by an interactive worksheet supporting performance
 visualization and rapid design space exploration cycles. }
-} 
+}
+
+@article{RN17,
+title ={Adaptive methods for stochastic differential equations via natural embeddings and rejection sampling with memory},
+journal ={Discrete and Continuous Dynamical Systems - Series B},
+volume ={22},
+number ={5},
+pages ={13-13},
+year ={2017},
+issn ={1531-3492},
+doi ={10.3934/dcdsb.2017133},
+url ={http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=14010},
+author ={Christopher, Rackauckas and Qing, Nie},
+abstract ={Adaptive time-stepping with high-order embedded Runge-Kutta pairs
+           and rejection sampling provides efficient approaches for solving
+           differential equations. While many such methods exist for solving
+           deterministic systems, little progress has been made for stochastic
+           variants. One challenge in developing adaptive methods for stochastic
+           differential equations (SDEs) is the construction of embedded schemes
+           with direct error estimates. We present a new class of embedded
+           stochastic Runge-Kutta (SRK) methods with strong order 1.5 which
+           have a natural embedding of strong order 1.0 methods. This allows
+           for the derivation of an error estimate which requires no additional
+           function evaluations. Next we derive a general method to reject the
+           time steps without losing information about the future Brownian path
+           termed Rejection Sampling with Memory (RSwM). This method utilizes a
+           stack data structure to do rejection sampling, costing only a few
+           floating point calculations. We show numerically that the methods
+           generate statistically-correct and tolerance-controlled solutions.
+           Lastly, we show that this form of adaptivity can be applied to
+           systems of equations, and demonstrate that it solves a stiff
+           biological model 12.28x faster than common fixed timestep algorithms.
+           Our approach only requires the solution to a bridging problem and
+           thus lends itself to natural generalizations beyond SDEs.}
+}
 
 @article{RSL17,
   title = {Functional regression-based fluid permeability prediction in monodisperse sphere packings from isotropic two-point correlation functions},
@@ -648,5 +675,18 @@ visualization and rapid design space exploration cycles. }
   volume = {134},
   pages = {126--131},
   year = {2017},
-  abstract = {We study fluid permeability in random sphere packings consisting of impermeable monodisperse hard spheres. Several different pseudo-potential models are used to obtain varying degrees of microstructural heterogeneity. Systematically varying solid volume fraction and degree of heterogeneity, virtual screening of more than 10,000 material structures is performed, simulating fluid flow using a lattice Boltzmann framework and computing the permeability. We develop a well-performing functional regression model for permeability prediction based on using isotropic two-point correlation functions as microstructural descriptors. The performance is good over a large range of solid volume fractions and degrees of heterogeneity, and to our knowledge this is the first attempt at using two-point correlation functions as functional predictors in a nonparametric statistics/machine learning context for permeability prediction.},
+  abstract = {We study fluid permeability in random sphere packings consisting
+              of impermeable monodisperse hard spheres. Several different
+              pseudo-potential models are used to obtain varying degrees of
+              microstructural heterogeneity. Systematically varying solid volume
+              fraction and degree of heterogeneity, virtual screening of more than
+              10,000 material structures is performed, simulating fluid flow using
+              a lattice Boltzmann framework and computing the permeability. We
+              develop a well-performing functional regression model for permeability
+              prediction based on using isotropic two-point correlation functions
+              as microstructural descriptors. The performance is good over a large
+              range of solid volume fractions and degrees of heterogeneity, and
+              to our knowledge this is the first attempt at using two-point
+              correlation functions as functional predictors in a nonparametric
+              statistics/machine learning context for permeability prediction.}
 }

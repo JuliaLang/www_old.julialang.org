@@ -20,43 +20,31 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@BKSE12]
 
-
 # Publications relating to Julia packages
-
-## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
-
-[@AHK16]
-
 
 ## [CauseMap.jl](https://github.com/cyrusmaher/CauseMap.jl)
 
 [@MH15]
 
+## [Flows.jl](https://github.com/HaraldHofstaetter/Flows.jl)
+
+[@AHK16]
 
 ## [POMDPs.jl](https://github.com/JuliaPOMDP/POMDPs.jl)
 
 [@ESBWGK17]
 
-
 ## Numerical Optimization and Operations Research
 
-### [Convex.jl](https://github.com/cvxgrp/Convex.jl)
+[@AHK16]
 
-[@UMZHDB14]
+## Numerical Differential Equations
 
-### [StochJuMP.jl](https://github.com/joehuchette/StochJuMP.jl)
+### [DifferentialEquations.jl](https://github.com/JuliaDiffEq/DifferentialEquations.jl)
 
-[@HLP14]
+[@RN17]
 
-### [JuMP.jl](https://github.com/JuliaOpt/JuMP.jl)
-
-[@LD13]
-
-### [SwitchTimeOpt.jl](https://github.com/bstellato/SwitchTimeOpt.jl)
-
-[@SOG16]
-
-## Numerical linear algebra
+## Numerical Linear Algebra
 
 ### [ApproxFun.jl](https://github.com/ApproxFun/ApproxFun.jl)
 
@@ -72,13 +60,31 @@ requests](https://github.com/JuliaLang/julialang.github.com/).
 
 [@JS15]
 
+### [MatrixDepot.jl](https://github.com/weijianzhang/MatrixDepot.jl)
+
+[@ZH15]
+
 ### [RandomMatrices.jl](https://github.com/jiahao/RandomMatrices.jl)
 
 [@ONT14]
 
-### [MatrixDepot.jl](https://github.com/weijianzhang/MatrixDepot.jl)
+## Numerical Optimization and Operations Research
 
-[@ZH15]
+### [Convex.jl](https://github.com/cvxgrp/Convex.jl)
+
+[@UMZHDB14]
+
+### [JuMP.jl](https://github.com/JuliaOpt/JuMP.jl)
+
+[@LD13]
+
+### [StochJuMP.jl](https://github.com/joehuchette/StochJuMP.jl)
+
+[@HLP14]
+
+### [SwitchTimeOpt.jl](https://github.com/bstellato/SwitchTimeOpt.jl)
+
+[@SOG16]
 
 ## Numerical quadrature
 
