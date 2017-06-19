@@ -9,7 +9,38 @@ Old releases are available should you need to use them to run Julia
 code written for those releases.  Note that these are not actively developed
 anymore.
 
-## v0.4.7 (bugfixes only)
+## v0.5.2 (bugfixes only)
+<table class="downloads"><tbody>
+<tr>
+    <th> Windows Self-Extracting Archive (.exe) </th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.5/julia-0.5.2-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.5/julia-0.5.2-win64.exe">64-bit</a> </td>
+</tr>
+<tr>
+    <th> macOS Package (.dmg) </th>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.5/julia-0.5.2-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+</tr>
+<tr>
+    <th> Generic Linux binaries </th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz">32-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.5/julia-0.5.2-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz">64-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+</tr>
+<tr>
+    <th> Linux builds for other architectures </th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.5/julia-0.5.2-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.5/julia-0.5.2-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
+</tr>
+<tr>
+    <th> Source </th>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.2/julia-0.5.2.tar.gz">Tarball</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.2/julia-0.5.2.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.5.2/julia-0.5.2-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.5.2/julia-0.5.2-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.5.2">GitHub</a> </td>
+</tr>
+</tbody></table>
+
+---
+
+## v0.4.7 (unmaintained)
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
@@ -39,7 +70,7 @@ anymore.
 
 ---
 
-## v0.3.12 (umaintained)
+## v0.3.12 (unmaintained)
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
