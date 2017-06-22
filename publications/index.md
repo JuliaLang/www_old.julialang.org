@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Julia Publications by date
+title:  Julia Publications
 ---
 
 For citing Julia, we recommend:
