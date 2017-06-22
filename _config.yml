@@ -27,3 +27,6 @@ navigation:
     title: GSoC
   - url: "http://juliacon.org"
     title: juliacon
+collections:
+  publications:
+    permalink: /publications/:path
