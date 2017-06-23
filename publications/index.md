@@ -13,7 +13,7 @@ standard library, Julia packages, and technical computing applications
 using code written in Julia. This list is by no means complete, and
 only includes publications submitted by the authors.
 
-We welcome additions to this list in the form of [pull requests](https://github.com/JuliaLang/julialang.github.com/tree/master/_publications).
+We welcome additions to this list in the form of [pull requests](https://github.com/JuliaLang/julialang.github.com/tree/master/_publications#readme).
 
 {% assign pubs_grouped = site.publications | group_by: 'year' | sort: 'name' | reverse %}
 <ul class="publist">
