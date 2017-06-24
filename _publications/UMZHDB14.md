@@ -9,7 +9,7 @@ authors:
 - Steven Diamond
 - Stephen Boyd
 year: "2014"
-pages: "18-28"
+pages: 18--28
 booktitle: "HPTCDL'14 Proceedings of the 1st Workshop on High Performance Technical Computing in Dynamic Languages"
 publisher: "ACM"
 address: "New York"

@@ -8,7 +8,7 @@ authors:
 - Viral Shah
 - Alan Edelman
 year: "2014"
-pages: "56-61"
+pages: 56--61
 booktitle: "ARRAY'14 Proceedings of ACM SIGPLAN International Workshop on Libraries, Languages, and Compilers for Array Programming"
 publisher: "ACM"
 address: "New York, {NY}, {USA}"

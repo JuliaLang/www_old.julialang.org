@@ -7,7 +7,7 @@ authors:
 - Williams, Julian
 year: "2014"
 volume: "8533"
-pages: "233-245"
+pages: 233--245
 booktitle: "Human Aspects of Information Security, Privacy, and Trust"
 editors:
 - Tryfonas, Theo

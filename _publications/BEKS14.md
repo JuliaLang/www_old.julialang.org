@@ -10,7 +10,7 @@ year: "2017"
 journal: "SIAM Review"
 volume: "59"
 number: "1"
-pages: "65-98"
+pages: 65--98
 doi: "10.1137/141000671"
 link: "http://julialang.org/publications/julia-fresh-approach-BEKS.pdf"
 ---
