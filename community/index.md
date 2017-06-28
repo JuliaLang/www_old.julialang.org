@@ -247,7 +247,7 @@ Asia
 
 Australia
 
-* [Sydney Julia User Group](http://www.meetup.com/Sydney-Julia-User-Group/)
+* [Sydney Julia User Group](https://www.meetup.com/Sydney-Julia-Julialang-Meetup/)
 
 South America
 
