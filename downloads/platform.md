@@ -37,7 +37,7 @@ The generic Linux binaries do not require any special installation steps, but yo
 
 For example, to create a symbolic link to `julia` inside the `/usr/local/bin` folder, you can do the following:
 
-	sudo ln -s <where you extracted the julia archive>/bin/julia /usr/local/bin/julia
+    sudo ln -s <where you extracted the julia archive>/bin/julia /usr/local/bin/julia
 
 On some linux distributions, you may need to use a folder other than `/usr/local/bin`. To check which folders are on your `PATH`, you can run `echo $PATH`. 
 
