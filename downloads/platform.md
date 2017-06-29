@@ -33,7 +33,7 @@ The generic Linux binaries do not require any special installation steps, but yo
 
 * Create a symbolic link to `julia` inside a folder which is on your system `PATH`
 * Add Julia's `bin` folder to your system `PATH` environment variable
-* Invoke the `julia` executable by using it's full path, as in `<where you extracted Julia>/bin/julia`
+* Invoke the `julia` executable by using its full path, as in `<where you extracted Julia>/bin/julia`
 
 For example, to create a symbolic link to `julia` inside the `/usr/local/bin` folder, you can do the following:
 
