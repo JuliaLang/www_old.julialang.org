@@ -29,9 +29,13 @@ It is strongly recommended that the official generic linux binaries from the dow
 
 ### Generic Linux Binaries
 
-The generic linux binaries do not require any special installation steps, but you will need to ensure that your system can find the `julia` executable. To do that, you will need to extract the `.tar.gz` file downloaded from the [downloads page](index.html) to a folder on your computer, then either create a symbolic link to `julia` from a folder which is on your system `PATH` or add the `/bin` folder inside that archive to your system's `PATH` environment variable.
+The generic Linux binaries do not require any special installation steps, but you will need to ensure that your system can find the `julia` executable. First, extract the `.tar.gz` file downloaded from the [downloads page](index.html) to a folder on your computer. To run Julia, you can do any of the following:
 
-As an example, to create a symbolic link to `julia` inside the `/usr/local/bin` folder, you can do the following:
+* Create a symbolic link to `julia` inside a folder which is on your system `PATH`
+* Add Julia's `bin` folder to your system `PATH` environment variable
+* Invoke the `julia` executable by using it's full path, as in `<where you extracted Julia>/bin/julia`
+
+For example, to create a symbolic link to `julia` inside the `/usr/local/bin` folder, you can do the following:
 
 	sudo ln -s <where you extracted the julia archive>/bin/julia /usr/local/bin/julia
 
