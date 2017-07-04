@@ -21,16 +21,16 @@ JuliaBox, all of these plotting packages are pre-installed.
 ## Julia (command line version)
 <table class="downloads"><tbody>
 <tr>
-    <th> Windows Self-Extracting Archive (.exe) </th>
+    <th> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.6/julia-0.6.0-win32.exe">32-bit</a> </td>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.6/julia-0.6.0-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
-    <th> macOS Package (.dmg) </th>
+    <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
     <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.6/julia-0.6.0-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
-    <th> Generic Linux binaries </th>
+    <th> Generic Linux binaries <a href="platform.html#generic-linux-binaries">[help]</a></th>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.0-linux-i686.tar.gz">32-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.0-linux-i686.tar.gz.asc">GPG</a>)</td>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz">64-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
