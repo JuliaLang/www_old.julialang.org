@@ -208,6 +208,7 @@ To join a QQ group, search for a QQ ID in the Tencent QQ service software or app
 * [JuliaLangEs](https://www.facebook.com/groups/julialang.es/) group for discussions around the usage of Julia in the Spanish language.
 * [JuliaTokyo](https://www.facebook.com/groups/885166968160540/) group for discussions around the usage of Julia in the Japanese language.
 * [Julia Korea](https://www.facebook.com/groups/juliakorea/) group for discussions around the usage of Julia in the Korean language.
+* [Julia Taiwan](https://www.facebook.com/groups/JuliaTaiwan) group for discussions around the usage of Julia in the Traditional Chinese language.
 
 ## VK
 
@@ -244,6 +245,7 @@ Asia
 * [Bangalore Julia User Group](http://www.meetup.com/Bangalore-Julia-User-Group/)
 * [Beijing Julia User Group](https://www.meetup.com/juliacn/)
 * [JuliaDelhi](https://www.meetup.com/Juliadelhi/)
+* [Julia Taiwan](https://juliataiwan.kktix.cc/)
 
 Australia
 
