@@ -4,14 +4,14 @@ using TestImages, Images, OffsetArrays, CoordinateTransformations, Rotations
 # described in the blog post, here by translating the starting image
 # directly so that 0,0 is the center of the rotation.
 img = OffsetArray(testimage("cameraman"), (-125, -250))
-tfm = LinearMap(RotMatrix(-pi/6))
+tfm = LinearMap(RotMatrix(pi/6))
 img_rotated = warp(img, tfm)
 save("cameraman.png", img)
 save("cameraman_rotated.png", clamp01nan.(img_rotated))
 cv = colorview(RGB, paddedviews(0, img, img_rotated, img)...)
 save("cameraman_overlay.png", clamp01nan.(cv))
 pimg = parent(img)
-tfmcntr = recenter(RotMatrix(-pi/6), center(pimg))
+tfmcntr = recenter(RotMatrix(pi/6), center(pimg))
 img_rotated_cntr = warp(pimg, tfmcntr)
 cvc = colorview(RGB, paddedviews(0, pimg, img_rotated_cntr, pimg)...)
 save("cameraman_overlay_center.png", clamp01nan.(cvc))

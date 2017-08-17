@@ -86,12 +86,13 @@ cameraman. Consequently, let's define a rotation around this point:
 ```julia
 julia> using Rotations, CoordinateTransformations
 
-julia> tfm = LinearMap(RotMatrix(-pi/6)) ∘ Translation(-125,-250)
-AffineMap([0.866025 0.5; -0.5 0.866025], [-233.253, -154.006])
+julia> tfm = Translation(125,250) ∘ LinearMap(RotMatrix(pi/6)) ∘ Translation(-125,-250)
+AffineMap([0.866025 -0.5; 0.5 0.866025], [141.747, -29.0064])
 ```
 
 This defines `tfm` as the composition of a translation (shifting the
-head to the origin) followed by a rotation. (You can get the
+head to the origin) followed by a rotation, and then translating back.
+(You can get the
 composition operator by typing `\circ` and then hitting TAB.) If we
 apply this transformation to the image, we get an interesting result:
 
@@ -99,7 +100,7 @@ apply this transformation to the image, we get an interesting result:
 julia> img_rotated = warp(img, tfm);
 
 julia> summary(img_rotated)
-"-232:467×-410:289 OffsetArray{Gray{Float64},2}"
+"-107:592×-160:539 OffsetArray{Gray{N0f8},2}"
 ```
 
 Perhaps surprisingly, `img_rotated` is indexed over the range
@@ -111,25 +112,28 @@ if we see how the corners of `img` are transformed by `tfm`:
 ```julia
 julia> using StaticArrays
 
-julia> tfm(SVector(1,1))
-2-element StaticArrays.SVector{2,Float64}:
- -231.887
- -153.64
+julia> itfm = inv(tfm)
+AffineMap([0.866025 0.5; -0.5 0.866025], [-108.253, 95.9936])
 
-julia> tfm(SVector(512,1))
-2-element StaticArrays.SVector{2,Float64}:
-  210.652
- -409.14
+julia> itfm(SVector(1,1))
+2-element SVector{2,Float64}:
+ -106.887
+   96.3597
 
-julia> tfm(SVector(1,512))
-2-element StaticArrays.SVector{2,Float64}:
-  23.6128
- 288.899
+julia> itfm(SVector(512,1))
+2-element SVector{2,Float64}:
+  335.652
+ -159.14
 
-julia> tfm(SVector(512,512))
-2-element StaticArrays.SVector{2,Float64}:
- 466.152
-  33.3987
+julia> itfm(SVector(1,512))
+2-element SVector{2,Float64}:
+ 148.613
+ 538.899
+
+julia> itfm(SVector(512,512))
+2-element SVector{2,Float64}:
+ 591.152
+ 283.399
 ```
 
 This makes it apparent that the output's indices span the region of
@@ -159,7 +163,7 @@ the overlapping portions of these images like this:
 
 ```julia
 julia> inds = map(intersect, indices(img), indices(img_rotated))
-(1:467, 1:289)
+(1:512, 1:512)
 
 julia> imgi = img[inds...];
 
