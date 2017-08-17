@@ -104,9 +104,9 @@ julia> summary(img_rotated)
 ```
 
 Perhaps surprisingly, `img_rotated` is indexed over the range
-`-232:467×-410:289`, meaning that we access the upper left corner by
-`img_rotated[-232,-410]` and the lower right corner by
-`img_rotated[467,289]`. It's not hard to see why these numbers arise,
+`-107:592×-160:539`, meaning that we access the upper left corner by
+`img_rotated[-107,-160]` and the lower right corner by
+`img_rotated[592,539]`. It's not hard to see why these numbers arise,
 if we see how the corners of `img` are transformed by `tfm`:
 
 ```julia
