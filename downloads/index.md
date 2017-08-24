@@ -88,10 +88,6 @@ Most users are advised to use the latest official release version of Julia, abov
     <td> <a href="https://julialangnightlies.s3.amazonaws.com/buildog/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
 </tr>
 <tr>
-    <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://status.julialang.org/download/linux-powerpc64le">PowerPC 64 little endian</a> </td>
-</tr>
-<tr>
     <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
     <td colspan="3"> <a href="https://copr.fedoraproject.org/coprs/nalimilan/julia-nightlies/">32/64-bit</a> </td>
 </tr>
