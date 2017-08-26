@@ -26,7 +26,7 @@ Like CuArrays, GPUArrays supports functions like [broadcast](https://julialang.o
 On top of that GPUArrays wraps CU/CL-BLAS and CU/CL-FFT enabling a wide range of applications.
 
 To get an idea of where we are in terms of performance, I started writing a benchmark suite for Julia's GPU array packages including [ArrayFire](https://github.com/gaika/ArrayFire.jl).
-It can run the whole suite and print out reports automatically. We're planning to integrate it with [Julia's speed center](http://kristofferc.bitnamiapp.com/), to have an interactive website where one can explore the results. Until then, the static report [over at GPUBenchmarks.jl](https://github.com/JuliaGPU/GPUBenchmarks.jl/blob/master/results/results.md) has to do the trick.
+It can run the whole suite and print out reports automatically. We're planning to integrate it into Github and publish the results on an interactive website where one can explore the results. Until then, the static report [over at GPUBenchmarks.jl](https://github.com/JuliaGPU/GPUBenchmarks.jl/blob/master/results/results.md) has to do the trick.
 This is the first release of GPUBenchmarks, so please treat the numbers with care!
 
 For the future, we plan to continue integrating existing libraries like [CUDNN](https://github.com/JuliaGPU/CUDNN.jl) and [CUSolver](https://github.com/JuliaGPU/CUSOLVER.jl) into GPUArrays as we head for feature parity with Julia's Base Array type.
