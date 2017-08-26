@@ -34,6 +34,6 @@ This is the first release of GPUBenchmarks, so please treat the numbers with car
 For the future, we plan to continue integrate existing libraries like [CUDNN](https://github.com/JuliaGPU/CUDNN.jl) and [CUSolver](https://github.com/JuliaGPU/CUSOLVER.jl) into GPUArrays as we head for feature parity with Julia's Base Array type.
 We also hope to make the ecosystem much more stable and improve the abstractions needed to write platform independent GPU code.
 
-All in all, Julia can now finally offer single source GPU programming, much like what [SyCL](https://www.google.de/search?q=SyCL&oq=SyCL&aqs=chrome..69i57j0l5.193j0j4&sourceid=chrome&ie=UTF-8) has promised for years.
+All in all, Julia can now finally offer single source GPU programming, much like what [SyCL](https://www.khronos.org/sycl) has promised for years.
 
 I'm sure the advantages we can offer for writing GPU code will make Julia a strong player for GPU programming in the coming years!
