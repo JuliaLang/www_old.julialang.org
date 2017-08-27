@@ -17,7 +17,7 @@ It also offers a threaded Julia backend which can even utilize Xeon Phis and is 
 GPUArrays also includes abstractions over the intrinsics of the different backends and makes it possible to write GPU programs
 completely in Julia for all hardware.
 
-CuArrays is very similar to GPUArrays cudanative backend and was first supposed to be an extension of that,
+CuArrays is very similar to GPUArrays' CUDAnative backend and was first supposed to be an extension of that,
 but we decided to concentrate on CUDA support in it's own package to create a much leaner package.
 This is a fair approach for now and we plan to merge things back at some point to decrease fragmentation of the ecosystem.
 
