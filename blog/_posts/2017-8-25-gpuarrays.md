@@ -6,7 +6,7 @@ author: <a href="https://github.com/SimonDanisch">Simon Danisch</a>
 
 A lot has been happening lately in Julia's GPU ecosystem.
 
-[Tim Maleadt](https://github.com/maleadt) has put great effort into making [CUDAnative.jl](https://github.com/JuliaGPU/CUDAnative.jl/) a fully fledged compiler backend to execute Julia code on nvidia GPUs.
+[Tim Besard](https://github.com/maleadt) has put great effort into making [CUDAnative.jl](https://github.com/JuliaGPU/CUDAnative.jl/) a fully fledged compiler backend to execute Julia code on nvidia GPUs.
 
 [Mike Innes](https://github.com/MikeInnes) just published [CuArrays](https://github.com/FluxML/CuArrays.jl) along with a detailed [blog post](http://mikeinnes.github.io/2017/08/24/cudanative.html) outlining all the great features Julia brings into the world of GPU programming.
 
