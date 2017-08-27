@@ -18,10 +18,10 @@ GPUArrays also includes abstractions over the intrinsics of the different backen
 completely in Julia for all hardware.
 
 CuArrays is very similar to GPUArrays' CUDAnative backend and was first supposed to be an extension of that,
-but we decided to concentrate on CUDA support in it's own package to create a much leaner package.
+but we decided to concentrate on CUDA support in its own package to create a much leaner package.
 This is a fair approach for now and we plan to merge things back at some point to decrease fragmentation of the ecosystem.
 
-Like CuArrays, GPUArrays supports functions like [broadcast](https://julialang.org/blog/2017/01/moredots), `mapreduce`, indexing, `vcat`/`hcat` and all the functionality that comes for free from the support of these generic functions, e.g. sum, maximum, etc.
+Like CuArrays, GPUArrays supports functions like [broadcast](https://julialang.org/blog/2017/01/moredots), `mapreduce`, indexing, `vcat`/`hcat` and all the functionality that comes for free from the support of these generic functions, e.g. `sum`, `maximum`, etc.
 
 On top of that GPUArrays wraps CU/CL-BLAS and CU/CL-FFT enabling a wide range of applications.
 
@@ -32,6 +32,6 @@ This is the first release of GPUBenchmarks, so please treat the numbers with car
 For the future, we plan to continue integrating existing libraries like [CUDNN](https://github.com/JuliaGPU/CUDNN.jl) and [CUSolver](https://github.com/JuliaGPU/CUSOLVER.jl) into GPUArrays as we head for feature parity with Julia's Base Array type.
 We also hope to make the ecosystem much more stable and improve the abstractions needed to write platform independent GPU code.
 
-All in all, Julia can now finally offer single source GPU programming, much like what [SyCL](https://www.khronos.org/sycl) has been promising for years.
+All in all, Julia can now finally offer single source GPU programming, much like what [SyCL](https://www.khronos.org/sycl) is promising.
 
 I'm sure the advantages we can offer for writing GPU code will make Julia a strong player for GPU programming in the coming years!
