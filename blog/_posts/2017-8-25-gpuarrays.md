@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Julia's GPU ecosystem: A status repot"
+title: "Julia's GPU ecosystem: A status report"
 author: <a href="https://github.com/SimonDanisch">Simon Danisch</a>
 ---
 
