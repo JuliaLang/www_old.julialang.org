@@ -36,8 +36,7 @@ JuliaBox, all of these plotting packages are pre-installed.
 </tr>
 <tr>
     <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.6/julia-0.6.0-rc3-linux-ppc64le.tar.gz">PowerPC 64 little endian</a> (<a href="https://julialang-s3.julialang.org/bin/linux/ppc64le/0.6/julia-0.6.0-rc3-linux-ppc64le.tar.gz.asc">GPG</a>)</td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
@@ -86,10 +85,6 @@ Most users are advised to use the latest official release version of Julia, abov
     <th> Generic Linux binaries for ARM </th>
     <td> <a href="https://status.julialang.org/download/linux-armv7l">32-bit (armv7-a hard float)</a> </td>
     <td> <a href="https://julialangnightlies.s3.amazonaws.com/buildog/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
-</tr>
-<tr>
-    <th> Linux builds for other architectures </th>
-    <td colspan="3"> <a href="https://status.julialang.org/download/linux-powerpc64le">PowerPC 64 little endian</a> </td>
 </tr>
 <tr>
     <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
