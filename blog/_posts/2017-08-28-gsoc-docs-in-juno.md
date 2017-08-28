@@ -30,10 +30,11 @@ information by introspection) *and* on the Atom side (for presenting said inform
 
 Most of the work on the Julia side went into a new package, [DocSeeker.jl](https://github.com/pfitzseb/DocSeeker.jl),
 which implements all of the introspection necessary to get docstrings from installed packages;
-a small shim in Atom.jl then delegates any front end requests to that package.
+a small shim in Atom.jl ([Atom.jl#99](https://github.com/JunoLab/Atom.jl/pull/99)) then
+delegates any front end requests to that package.
 
-The front end work is directly included in the Juno stack ([atom-julia-client](https://github.com/JunoLab/atom-julia-client)
-and [atom-ink](https://github.com/JunoLab/atom-ink), to be precise), since it's pretty
+The front end work is directly included in the Juno stack ([atom-julia-client#377](https://github.com/JunoLab/atom-julia-client/pull/377)
+and [atom-ink#148](https://github.com/JunoLab/atom-ink/pull/148), to be precise), since it's pretty
 fundamental IDE functionality.
 
 ## Backend: DocSeeker.jl
