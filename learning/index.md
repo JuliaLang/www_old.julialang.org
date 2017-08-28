@@ -22,11 +22,6 @@ title:  Learning Julia
 - [Julia Solutions](https://www.packtpub.com/big-data-and-business-intelligence/julia-solutions-video) by Jalem Raj Rohit - A comprehensive guide to learn data science for a Julia programmer - Produced by Packt Publishing (2 hours and 52 minutes long; published: January 31, 2017; ISBN: 9781787283299)
 - [Getting Started with Julia](https://www.packtpub.com/application-development/getting-started-julia-video) by Erik Engheim - Learn the new language Julia for high performance technical computing - Produced by Packt Publishing (9 hours and 50 minutes long; published: March 31, 2017; ISBN: 9781786462978)
 
-## Upcoming
-
-- [Julia in Action](http://www.manning.com/voncsefalvay/) by [Chris von Csefalvay](http://www.chrisvoncsefalvay.com) - published by Manning (approx. 375 pages, in [Early Access](http://www.manning.com/about/meap.html), ISBN: 9781617292835). The companion Github repo to the book is available [here](https://github.com/chrisvoncsefalvay/juliabook).
-- [Learning Julia: Rapid Technical Computing and Data Analysis](http://shop.oreilly.com/product/0636920033660.do) by Spencer Russell, Avik Sengupta, Leah Hanson - published by O'Reilly Media (estim. 200 pages, Early Release Ebook, estim. print: September 2017, ISBN: 9781491903605)
-
 # Tutorials
 
 - [A Deep Introduction to Julia for Data Science and Scientific Computing](http://ucidatascienceinitiative.github.io/IntroToJulia/) by [Chris Rackauckas](http://chrisrackauckas.com/)
