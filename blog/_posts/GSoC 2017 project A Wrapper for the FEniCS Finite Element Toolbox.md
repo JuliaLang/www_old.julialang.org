@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GSoC 2017 project: A Wrapper for the FEniCS Finite Element Toolbox"
+title: "GSoC 2017 : A Wrapper for the FEniCS Finite Element Toolbox"
 authors: Yiannis Simillides,Bart Janssens, Chris Rackauckas
 ---
 
