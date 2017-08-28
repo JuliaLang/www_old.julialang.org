@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GSoC 2017: Implementing iterative solvers for numerical linear algebra"
+title:  "GSoC 2017: Iterative solvers for numerical linear algebra"
 author: Harmen Stoppels, Andreas Noack
 ---
 
