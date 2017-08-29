@@ -52,7 +52,7 @@ For instance:
 
 * Turns out Julia types aren't covariant *even when you really want them to be*. For instance, even though `VecDictVariateVal` and `SymDictVariateVal` are trivially-different subtypes of my general-purpose abstract type `DictVariateVal`,  it isn't true that `VecDictVariateVal{Float64} <: DictVariateVal{Float64}`. This is especially confusing (at least, to me as a relative beginner) because, using `where` clauses, `UnionAll` types *can* be covariant.
 
-* You can write `SomeType{<:Real}` or `SomeType{T} where T<:Real`, but never `SomeType{T<:Real} where T`; that last thing is just `SomeType{false}`, because it's a category error; the type variable itself is never a subtype of real. This seems kinda obvious in this simplified minimal example, but believe me, there cases where it was far harder to see.
+* You can write `SomeType{<:Real}` or `SomeType{T} where T<:Real`, but never `SomeType{T<:Real} where T`; that last thing is just `SomeType{false}`, because it's a category error; the type variable itself is never a subtype of real. This seems kinda obvious in this simplified minimal example, but believe me, there cases where it was far harder to see. In the coming days, I'll be posting some [Julia issues](https://www.youtube.com/watch?v=9Ke4480MicU) (youtube link, sorry) with suggestions for how to make both the syntax itself, and the error messages/warnings for when you get it wrong, better.
 
 * The Mamba control flow is a bit tough to understand. One good trick for exploring a big existing package like this I found is to run the [graphical profile browser](https://github.com/timholy/ProfileView.jl) on a working example; that gives you a useful picture of what calls what.
 
@@ -77,9 +77,11 @@ $\mu_0 = \bar{y}$
 $\tau = 2s_y$
 $\theta=\phi=.1$
 
-Here are some results:
+Here are some results for 45 simulated data points in two clusters with SD 3 and mean ±5:
 
 ![mean traceplot](MCMC_figures/mu_results.svg)
+
+As you can see, both chains spend most time with at least one cluster each around the "correct" values, but occasionally they go wrong.
 
 ## Further work
 
