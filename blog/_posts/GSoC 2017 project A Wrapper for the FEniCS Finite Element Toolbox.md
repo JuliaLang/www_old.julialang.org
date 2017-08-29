@@ -15,11 +15,11 @@ Throughout this Google Summer of Code project I, along with my mentors, aimed to
 
 # What is FEniCS?
 
-**[FEniCS](https://fenicsproject.org/)** describes itself as a popular open-source (LGPLv3) computing platform for solving partial differential equations (PDEs). FEniCS enables users to quickly translate scientific models into efficient finite element code. In layman's terms it lets us solve math problems.
+**[FEniCS](https://fenicsproject.org/)** describes itself as a popular open-source (LGPLv3) computing platform for solving partial differential equations (PDEs). FEniCS enables users to quickly translate scientific models into efficient finite element code, i.e. it allows us to describe (some) complicated mathemtical equations and solve them automatically using computer simulations. 
 
 # But, how does it work? 
 
-The finite element method is a numerical method that solves partial differential equations by discretizing the domain (breaking it up into small pieces, generally triangles called finite elements) and then solving the resulting equations (which are generally a system of algebraic equations) using calculus of variations to approximate our required solution. This is nearly impossible to do by hand, so computer software is required to aid in solving it. Our wrapper provides calls to the meshing functionality, the assembly of the stiffness matrices and the solution of the variational problems. It also provides access to various *helper* functions, that make usage easier.
+The finite element method is a numerical method that solves partial differential equations by solving the weak form of a Galerkin approximation of the function into some sparse basis. This is done by discretizing the domain (breaking it up into small pieces, generally triangles called finite elements), representing the function via the values at the nodes of the triangles. This results in a system of equations which are an interpretation of the initial partial different equations in terms of the basis of these triangles. This is nearly impossible to do by hand, so computer software is required to aid in solving it. Our wrapper provides calls to the meshing functionality, the assembly of the stiffness matrices and the solution of the variational problems. It also provides access to various *helper* functions, that make usage easier.
 
 # And, internally? 
 
@@ -91,7 +91,7 @@ I hope to be able to maintain and improve the package, using it where possibly t
 - Fixing precompilation which would provide a large performance benefit. This error is well documented, and the fix is relatively simple. At the same time it would require the rewriting of a large segment of the codebase due to the way we currently access functions and attributes. 
 - Improving plotting. We currently rely on the FEniCS plotting backend to plot the necessary functions/meshes/objects. For more detailed visualization we can use Paraview, like in FEniCS. A direct Julia plotter would be nice, as we could provide further customization to our objects.
 - Integration with JuliaDiffEq. We can currently specify and create the necessary objects for the solution of some FEM problems. We have also provided interfaces for accessing most of their attributes aswell as exporting the necessary arrays. Despite this, we currently have no automatic way of seamlessly accessing them via other packages. By providing this access, we would be able to greatly extend the packages capabilities.
-
+- FEniCS itself is a collection of different components. The FFC(FEniCS Form Compiler) takes matrix assembly expressions and compiles these to C code and then further to machine code. A more optimal way of doing this, would be to replace the whole process with Julia code
  
 
 
