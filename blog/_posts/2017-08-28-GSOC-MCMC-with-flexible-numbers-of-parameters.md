@@ -46,7 +46,7 @@ But before this project, Mamba was limited to models with fixed numbers of param
 
 I faced several unexpected hurdles in carrying out this project. Firstly, there's [this](http://i.imgur.com/VWb3OYB.jpg) (warning, blood). That's me making a silly face in the emergency room after my broken arm; it was 3 days before I got out of the hospital and another week before I was off the pain meds and could type again. All-told, that accident (the classic fool-opening-a-car-door-while-I-was-passing-on-my-bike, with a side of rainstorm) probably cost me 2 weeks of work.
 
-Also, refactoring Mamba proved to be tougher than I'd expected. My plan was to add parameters to many of the basic Mamba types, to be able to switch between storing parameters in the existing fixed-sized array structures or in my newly-designed flexible-size structures. While I was at it, I also added type parameters to loosen up the hard-coded dependence on Float64 model parameters, so as to be able to use autodifferentiation numbers for HMC. This was pretty advanced for my starting level of expertise on both Julia in general and the Mamba package in particular; it took me a lot of error messages to really get my head around some stuff.
+Also, refactoring Mamba proved to be tougher than I'd expected. My plan was to add parameters to many of the basic Mamba types, to be able to switch between storing parameters in the existing fixed-sized array structures or in my newly-designed flexible-size structures. While I was at it, I also added type parameters to loosen up the hard-coded dependence on Float64 model parameters, so as to be able to use autodifferentiation numbers for HMC. This was pretty advanced for my starting level of expertise on both Julia in general and the Mamba package in particular; it took me a lot of error messages to really get my head around some stuff. (Of course, now that I do understand it, it seems trivial; but it was a struggle, because of course the issues did not show up as cleanly as I present them below.)
 
 For instance:
 
@@ -87,13 +87,13 @@ As you can see, both chains spend most time with at least one cluster each aroun
 
 This code, while it works for the example model, is not yet ready to be checked in to the main branch of Mamba. There were several cleanup steps for which I did not ultimately have time.
 
-* The samplers which I did not use in my work are broken, using the old data structures; updating them, along the same lines as the slice and slicesimplex samplers, would be a more-or-less routine task.
+* I have updated the "slice" and "slicesimplex" samplers to work with the new data structures. However, the other samplers which I did not use in my work are currently broken in the gsocMNVP branch; they still try to use the old data structures. Updating them, along the same lines as the slice and slicesimplex samplers, would be a more-or-less routine task - an hour or so of work per sampler.
 
-* The diagnostics and plots, aside from the traceplot shown above, are also not updated. Fixing this is a less trivial task, as, due to the "labelling problem", most diagnostics need to be specialized for dirichlet models.
+* The diagnostics and plots, aside from the traceplot shown above, are also not updated. Fixing this is a less trivial task, as, due to the "labelling problem", most diagnostics need to be rethought in some way in order to apply to dirichlet models.
 
 Once that cleanup is done — a few days' work - and the merge is complete, implementing the full Crosscat model as in the original plan should not be too difficult. Optimistically, I feel it would take 1-2 weeks... which means that realistically, probably 4-6 is more realistic. In any case, the new data structures I've implemented would make this job primarily a matter of just implementing the statistical algorithms; the data and model infrastructure is all well in place.
 
-With a combination of NUTS and discrete capabilities, I believe that Mamba will begin to actually be superior to Stan for some tasks. It has a long way to go to catch up to Stan's maturity, but in solving the "two language problem", it gives an incentive for me and others to continue on this work.
+With a combination of NUTS and discrete capabilities, I believe that Mamba will begin to actually be superior to Stan for some tasks. It has a long way to go to catch up to Stan's maturity, but in solving the "two language problem", it gives a strong incentive for me and others to continue on this work.
 
 ## Acknowledgements
 
