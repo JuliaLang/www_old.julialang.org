@@ -171,10 +171,10 @@ sample, tuned_sampler = NUTS_tune_and_mcmc(RNG, fgw, 5000; q = θ₀)
 
 The following graphs show the results for the parameters:
 
-![rho_plot](C:\Users\Dorisz\Documents\Pic\rho_plot.png)
+![](C:\Users\Dorisz\Documents\Pic\rho_plot.png)
 
 
-![sigma_plot](C:\Users\Dorisz\Documents\Pic\sigma_plot.png)
+![](C:\Users\Dorisz\Documents\Pic\sigma_plot.png)
 
 Analysing the graphs above, we can say that the posterior values are in rather close to the true values. Also worth mentioning that the priors do not affect the posterior values.
 
