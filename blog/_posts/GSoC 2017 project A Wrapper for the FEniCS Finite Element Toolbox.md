@@ -15,7 +15,7 @@ Throughout this Google Summer of Code project I, along with my mentors, aimed to
 
 # What is FEniCS?
 
-**[FEniCS](https://fenicsproject.org/)** describes itself as a popular open-source (LGPLv3) computing platform for solving partial differential equations (PDEs). FEniCS enables users to quickly translate scientific models into efficient finite element code, i.e. it allows us to describe (some) complicated mathemtical equations and solve them automatically using computer simulations. 
+**[FEniCS](https://fenicsproject.org/)** describes itself as a popular open-source (LGPLv3) computing platform for solving partial differential equations (PDEs). FEniCS enables users to quickly translate scientific models into efficient finite element code, i.e. it allows us to describe (some) complicated mathematical equations and solve them automatically using computer simulations. 
 
 # But, how does it work? 
 
@@ -73,22 +73,22 @@ FEniCS.Plot(mesh)
 
 ```
 
-![alt text](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/result.png "Solution")
- 
 ![alt text](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/mesh.png "Square Mesh")
 
+![alt text](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/result.png "Solution")
+ 
 
 
 
 # Challenges 
 
-Due to the nature of this project, which relied on FEniCS, we faced various challenges throughout the summer. These included, but where not limited to build errors, where various parts of the package failed to compile, to unexpected errors in the usability of the code. Chris and Bart where very helpful, in both pointing these out, and in assisting in fixing them. In some parts the documentation was slightly patchy which also complicated parts of the project as some functions where ambiguous towards their intended use. 
+Due to the nature of this project, which relied on FEniCS, we faced various challenges throughout the summer. These included, but where not limited to build errors, where various parts of the package failed to compile, to unexpected errors in the usability of the code. Chris and Bart were very helpful, in both pointing these out, and in assisting in fixing them. In some parts the documentation was slightly patchy which also complicated parts of the project as some functions where ambiguous towards their intended use. 
 
 # Further Improvements
 
 I hope to be able to maintain and improve the package, using it where possibly throughout my further studies. Some identifiable improvements, in order of difficulty are : 
 
-- Fixing precompilation which would provide a large performance benefit. This error is well documented, and the fix is relatively simple. At the same time it would require the rewriting of a large segment of the codebase due to the way we currently access functions and attributes. 
+- [Fixing precompilation](https://github.com/JuliaDiffEq/FEniCS.jl/issues/28) which would provide a large performance benefit. This error is well documented, and the fix is relatively simple. At the same time it would require the rewriting of a large segment of the codebase due to the way we currently access functions and attributes. 
 - Improving plotting. We currently rely on the FEniCS plotting backend to plot the necessary functions/meshes/objects. For more detailed visualization we can use Paraview, like in FEniCS. A direct Julia plotter would be nice, as we could provide further customization to our objects.
 - Integration with JuliaDiffEq. We can currently specify and create the necessary objects for the solution of some FEM problems. We have also provided interfaces for accessing most of their attributes aswell as exporting the necessary arrays. Despite this, we currently have no automatic way of seamlessly accessing them via other packages. By providing this access, we would be able to greatly extend the packages capabilities.
 - FEniCS itself is a collection of different components. The FFC(FEniCS Form Compiler) takes matrix assembly expressions and compiles these to C code and then further to machine code. A more optimal way of doing this, would be to replace the whole process with Julia code
