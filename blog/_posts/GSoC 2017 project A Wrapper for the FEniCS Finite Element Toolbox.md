@@ -68,8 +68,8 @@ variational_matrix = get_array(a)
 We can also plot the solution (this relies on FEniCS backend for plotting) :
 
 ```julia
-FEniCS.Plot(U)
 FEniCS.Plot(mesh)
+FEniCS.Plot(U)
 
 ```
 
