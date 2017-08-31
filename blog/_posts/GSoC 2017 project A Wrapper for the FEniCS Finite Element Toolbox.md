@@ -21,7 +21,7 @@ Throughout this Google Summer of Code project I, along with my mentors, aimed to
 
 The finite element method is a numerical method that solves partial differential equations by solving the weak form of a Galerkin approximation of the function into some sparse basis. This is done by discretizing the domain (breaking it up into small pieces, generally triangles called finite elements), representing the function via the values at the nodes of the triangles. This results in a system of equations which are an interpretation of the initial partial different equations in terms of the basis of these triangles. This is nearly impossible to do by hand, so computer software is required to aid in solving it. Our wrapper provides calls to the meshing functionality, the assembly of the stiffness matrices and the solution of the variational problems. It also provides access to various *helper* functions, that make usage easier. Some example meshes can be demonstrated below : 
 
-![dolphin mesh](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/dolphin_mesh.svg "dolphin mesh") ![circle mesh](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/circle_mesh.png "circle mesh")
+![dolphin mesh](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/dolfinmesh.png "dolphin mesh") ![circle mesh](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/circle_mesh.png "circle mesh")
 
 # And, internally? 
 
