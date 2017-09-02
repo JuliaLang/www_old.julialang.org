@@ -1,13 +1,28 @@
 ---
-layout: post
-title: "GSoC 2017 : A Wrapper for the FEniCS Finite Element Toolbox"
-authors: Yiannis Simillides,Bart Janssens, Chris Rackauckas
+layout:  post
+title:   "GSoC 2017 : A Wrapper for the FEniCS Finite Element Toolbox"
+authors: Yiannis Simillides, Bart Janssens, Chris Rackauckas
 ---
 
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true,
+processEnvironments: true
+},
+// Center justify equations in code and markdown cells. Elsewhere
+// we use CSS to left justify single line equations in code cells.
+displayAlign: 'center',
+"HTML-CSS": {
+styles: {'.MathJax_Display': {"margin": 0}},
+linebreaks: { automatic: true }
+}
+});
+</script>
 
 # Introduction
 
@@ -32,12 +47,12 @@ We currently provide macros to create Julia types from FEniCS classes to assist 
 Below is a small demonstration of how a user would use our code to solve the Poisson equation with Dirichlet conditions. This directly mirrors one of the **[tutorials](https://github.com/hplgit/fenics-tutorial/blob/master/pub/python/vol1/ft01_poisson.py)** FEniCS provides 
 
   $-\bigtriangleup(u) = f$    in the unit square
-  
-            $u = u_D$  on the boundary
-            
+
+  $u = u_D$  on the boundary
+
   $u_D$ $=$ $1 + x^2 + 2y^2$
-  
-   $f = -6$
+
+  $f = -6$
 
 ```julia
 using FEniCS
@@ -55,7 +70,7 @@ lvsolve(a,L,U,bc1) #linear variational solver
 errornorm(u_D, U, norm="L2")
 get_array(L) #this returns an array for the stiffness matrix
 get_array(U) #this returns an array for the solution values
-vtkfile = File('poisson/solution.pvd')
+vtkfile = File("poisson/solution.pvd")
 vtkfile << U.pyobject #exports the solution to a vtkfile
 
 ```
@@ -76,9 +91,9 @@ FEniCS.Plot(U)
 
 ```
 
-![alt text](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/mesh.png "Square Mesh")
+![Square Mesh](/images/blog/2017-09-01-gsoc-fenics/mesh.png "Square Mesh")
 
-![alt text](https://github.com/ysimillides/FEniCS.jl/blob/master/examples/result.png "Solution")
+![Solution](/images/blog/2017-09-01-gsoc-fenics/result.png "Solution")
  
 
 
