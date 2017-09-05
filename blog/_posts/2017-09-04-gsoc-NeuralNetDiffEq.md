@@ -167,6 +167,14 @@ plot(sol2)
 ```
 ![Plot_sode2](/images/blog/2017-09-04-gsoc-NeuralNetDiffEq/plot_sode2.png "Plot 2")
 
+To show that the solver with current settings and hyper-parameters does not work for a larger domain (Eg 0-10) `lotka_volterra` here is a graph.
+
+```julia
+prob_ode_lotkavoltera = ODEProblem(lotka_volterra,Float32[1.0,1.0],(Float32(0.0),Float32(5.0)))
+sol3 = solve(prob_ode_lotkavoltera,nnode([10,50]),dt=0.2,iterations=1000)
+plot(sol3)
+```
+![Plot_sode3](/images/blog/2017-09-04-gsoc-NeuralNetDiffEq/plot_sode3.png "Plot 3")
 
 To see more examples and experiment results you can check out my Jupyter notebooks [here](http://nbviewer.jupyter.org/gist/akaysh/43c9db281b0bd3224114084c44263c13).
 
