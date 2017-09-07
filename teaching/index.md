@@ -19,6 +19,9 @@ a
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
+- Federal Rural University of Rio de Janeiro (UFRRJ)
+  * TM429, Introduction to Recommender Systems (Prof. [Filipe Braida](https://github.com/filipebraida)), Fall 2016, Spring 2017
+
 - Pontifical Catholic University of Rio de Janeiro (PUC-Rio)
   * Programming in Julia (Prof. [Thuener Silva](https://github.com/Thuener)), Summer 2017
   * Linear Optimization (Prof. [Alexandre Street](https://alexandrestreet.wordpress.com/)), Spring 2017
