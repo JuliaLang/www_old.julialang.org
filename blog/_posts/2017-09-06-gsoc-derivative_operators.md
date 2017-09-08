@@ -115,14 +115,14 @@ Now solving equation as an ODE we have:-
         # try to plot the solution at different time points using
         julia> plot(x, [sol1(i) for i in 0:1:10])
 
-![Residual norm](/images/blog/2017-09-06-gsoc-derivative_operators/heat_eqn_D1.png)
+![Heat Equation](/images/blog/2017-09-06-gsoc-derivative_operators/heat_eqn_D1.png)
 
 
 ## Where do central derivatives fail?
 
 Not all PDEs can be solved with central derivatives, for example the **KdV wave equation**. After a few iterations of the ODE solver the wave begins to split ie. it becomes unstable very quickly.
 
-> insert image of KdV gone wrong
+![KdV using central derivatives](/images/blog/2017-09-06-gsoc-derivative_operators/kdv_derivative.png)
 
 
 For these very cases the [upwind scheme](https://en.wikipedia.org/wiki/Upwind_scheme) has been devised. It denote a class of numerical discretization methods for solving hyperbolic PDEs. They attempt to discretize hyperbolic PDEs by using differencing biased in the direction determined by the sign of the characteristic speeds. For example the 1D linear advection equation
@@ -144,7 +144,7 @@ $u_i^{n+1} = u_i^n - \Delta t[a^{+}u_x^{-} + a^{-}u_x^{+}]$
 
 The solution of the **KdV equation** using upwind operator looks better.
 
-> insert image of KdV solved with upwind operators
+![KdV solved using Upwind operators](/images/blog/2017-09-06-gsoc-derivative_operators/kdv_upwind.png)
 
 ## Future Work
 Although vanilla `DerivativeOperators` and the `UpwindOperators` form the major part of DiffEqOperators there is still a lot to be done. A major functionality which is half implemented is application of DiffEqOperators on high dimensional spaces. Currently we support mixed and normal derivatives on 2D spaces only. There are open [issues](https://github.com/JuliaDiffEq/DiffEqOperators.jl/issues/20) and implementation [ideas](https://github.com/JuliaDiffEq/DiffEqOperators.jl/issues/21) on the issues page.
