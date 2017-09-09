@@ -99,7 +99,7 @@ sol3 = solve(prob3,nnode(10),dt=0.2,iterations=1000)
         Any[0.574705]
 
 
-### SODE Examples
+### System of ODEs Examples
 #### Example 1  ODE 2D Linear
 
 
