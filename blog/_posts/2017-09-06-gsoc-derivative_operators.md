@@ -87,11 +87,63 @@ It would look something like:-
       dx[end] = -1*x[end-1] + 2*x[end]
     end
 
-So to convert the PDE into an ODE, we discritize the equation in space but not in time. Then this ODE can be solved efficiently by the existing solvers. Our heat equations transforms to the following ODE.
-$u_i' = A_{h}u_i + f(t,u_i)$
-Where A is a linear operator and not the transformation matrix. Thus we will have to make the ODE solvers of DiffEq.jl compatible with linear operators also.
+This function acts on the vector in an optimal $\mathcal{O}(n)$ time as compared to the inefficient $\mathcal{O}(n^2)$ time taken by matrix multiplication while still avoiding the overheads of sparse matrices.
 
-Although it is tedious to compute the Taylor coefficients by hand, Fornberg gave an [algorithm](https://amath.colorado.edu/faculty/fornberg/Docs/MathComp_88_FD_formulas.pdf) to compute them efficiently for any derivative and approximation order. These stencils can efficiently compute derivatives at any point by taking appropriately weighted sums of neighboring points. For example, $[-1, 2, -1]$ is the second order stencil for calculating the 2nd derivative at a point.
+So to convert the PDE into an ODE, we discritize the equation in space but not in time. Then this ODE can be solved efficiently by the existing solvers. Our semi-linear  heat equation also known as the reaction-diffusion equation transforms to the following ODE.
+$u_i' = A_{h}u_i + f(t,u_i)$
+Where $A$ is a linear operator and not the transformation matrix. Thus we will have to make the ODE solvers of **DiffEq.jl** compatible with linear operators also.
+
+Since it is tedious to compute the Taylor coefficients by hand, Fornberg gave an [algorithm](https://amath.colorado.edu/faculty/fornberg/Docs/MathComp_88_FD_formulas.pdf) to compute them efficiently for any derivative and approximation order. These stencils can efficiently compute derivatives at any point by taking appropriately weighted sums of neighboring points. For example, $[-1, 2, -1]$ is the second order stencil for calculating the 2nd derivative at a point.
+
+In **DiffEqOperators.jl** we can easily extract stencils of any derivative and approximation order from an operator. For eg.
+
+    # Define A as a DerivativeOperator of 4th order and of 2nd order of accuracy
+
+    julia> A = DerivativeOperator{Float64}(4,2,1.0,10,:Dirichlet0,:Dirichlet0)
+    julia> B.stencil_coefs
+    7-element SVector{7,Float64}:
+      -0.166667
+       2.0     
+      -6.5     
+       9.33333 
+      -6.5     
+       2.0     
+      -0.166667
+
+If we want to apply the operator as a matrix multiplication (sparse or dense) we can easily do so by extracting the *matrix of transformation* of the linear operator which looks like:-
+
+    julia> full(A)
+    10×10 Array{Float64,2}:
+     9.33333   -6.5        2.0       …   0.0        0.0        0.0     
+    -6.5        9.33333   -6.5           0.0        0.0        0.0     
+     2.0       -6.5        9.33333       0.0        0.0        0.0     
+    -0.166667   2.0       -6.5           0.0        0.0        0.0     
+     0.0       -0.166667   2.0          -0.166667   0.0        0.0     
+     0.0        0.0       -0.166667  …   2.0       -0.166667   0.0     
+     0.0        0.0        0.0          -6.5        2.0       -0.166667
+     0.0        0.0        0.0           9.33333   -6.5        2.0     
+     0.0        0.0        0.0          -6.5        9.33333   -6.5     
+     0.0        0.0        0.0           2.0       -6.5        9.33333
+
+     julia> sparse(A)
+     10×10 SparseMatrixCSC{Float64,Int64} with 58 stored entries:
+       [1 ,  1]  =  9.33333
+       [2 ,  1]  =  -6.5
+       [3 ,  1]  =  2.0
+       [4 ,  1]  =  -0.166667
+       [1 ,  2]  =  -6.5
+       [2 ,  2]  =  9.33333
+       [3 ,  2]  =  -6.5
+       ⋮
+       [7 ,  9]  =  2.0
+       [8 ,  9]  =  -6.5
+       [9 ,  9]  =  9.33333
+       [10,  9]  =  -6.5
+       [7 , 10]  =  -0.166667
+       [8 , 10]  =  2.0
+       [9 , 10]  =  -6.5
+       [10, 10]  =  9.33333
+
 
 Stencil multiplications are **embarrassingly parallel** and this have been taken cared of **DiffEqOperators.jl**.
 
@@ -104,9 +156,13 @@ $$\frac{\partial u}{\partial t} - \frac{{\partial}^2 u}{\partial x^2} = 0$$
 For this example we consider a Dirichlet boundary condition with the initial distribution being parabolic. Since we have fixed the value at boundaries (in this case equal), after a long time we expect the 1D rod to be heated in a linear manner.
 
         julia> using DiffEqOperators, DifferentialEquations, Plots
-        julia> x = collect(-pi : 2pi/511 : pi);
+        julia> x = -pi : 2pi/511 : pi;
         julia> u0 = -(x - 0.5).^2 + 1/12;
         julia> A = DerivativeOperator{Float64}(2,2,2pi/511,512,:Dirichlet,:Dirichlet;BC=(u0[1],u0[end]));
+
+This is the code to set-up the problem. First we define the domain which is just a plane line divided up into `512` segments. Then we define the initial condition, which is a parabolic function of the x-coordinate.
+
+Finally we initialize the `DerivativeOperator` of 2nd derivative order and 2nd approximation order. We tell the grid step value, total length of the domain and the boundary conditions at both the ends. Notice that since we are applying the Dirichlet boundary condition here, we need to tell the value at boundaries which is given in the form of a tuple as the last parameter.
 
 Now solving equation as an ODE we have:-
     
@@ -117,6 +173,7 @@ Now solving equation as an ODE we have:-
 
 ![Heat Equation](/images/blog/2017-09-06-gsoc-derivative_operators/heat_eqn_D1.png)
 
+Notice how the heat distribution 'flattens' out with time as expected and finally tends to increase linearly from left to right end.
 
 ## Where do central derivatives fail?
 
@@ -149,8 +206,10 @@ The solution of the **KdV equation** using upwind operator looks better.
 ## Future Work
 Although vanilla `DerivativeOperators` and the `UpwindOperators` form the major part of DiffEqOperators there is still a lot to be done. A major functionality which is half implemented is application of DiffEqOperators on high dimensional spaces. Currently we support mixed and normal derivatives on 2D spaces only. There are open [issues](https://github.com/JuliaDiffEq/DiffEqOperators.jl/issues/20) and implementation [ideas](https://github.com/JuliaDiffEq/DiffEqOperators.jl/issues/21) on the issues page.
 
+We are also working on the Robin boundary conditions for `DerivativeOperators` which are currently not as accurate as they [should](https://gist.github.com/shivin9/124ed1e5ea96792fc8666e0caf32715c) be.
+
 Another avenue for work is the lazy implementations of `expm` and  `expmv` for `DerivativeOperators`.   
 
 ## Acknowledgments 
 
-I would like to first of all thank my mentors Chris and @dextorious for their immense support before and throughout the project.
+I would like to thank my mentors Christopher Rackauckas and [@dextorious](https://github.com/dextorious) for their immense support before and throughout the project.
