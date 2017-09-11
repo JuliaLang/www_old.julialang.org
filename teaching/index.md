@@ -19,6 +19,10 @@ a
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
+- SGH Warsaw School of Economics, Poland
+  * 223490-0286, Statistical Learning Methods ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
+  * 234900-0286, Agent-Based Modeling ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
+
 - Federal Rural University of Rio de Janeiro (UFRRJ)
   * TM429, Introduction to Recommender Systems (Prof. [Filipe Braida](https://github.com/filipebraida)), Fall 2016, Spring 2017
 
