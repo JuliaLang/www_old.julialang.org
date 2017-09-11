@@ -151,7 +151,7 @@ Stencil multiplications are **embarrassingly parallel** and this have been taken
 
 Now let us solve the solve the famous heat equation using the explicit discretization on a 2D `space x time` grid. The heat equation is:-
         
-$$\frac{\partial u}{\partial t} - \frac{{\partial}^2 u}{\partial x^2} = 0$$
+$$\frac{\partial u}{\partial t} - \frac{\partial^2 u}{\partial x^2} = 0$$
 
 For this example we consider a Dirichlet boundary condition with the initial distribution being parabolic. Since we have fixed the value at boundaries (in this case equal), after a long time we expect the 1D rod to be heated in a linear manner.
 
