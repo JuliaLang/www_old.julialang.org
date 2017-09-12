@@ -91,7 +91,7 @@ This function acts on the vector in an optimal $\mathcal{O}(n)$ time as compared
 
 So to convert the PDE into an ODE, we discritize the equation in space but not in time. Then this ODE can be solved efficiently by the existing solvers. Our semi-linear  heat equation also known as the reaction-diffusion equation transforms to the following ODE.
 $u_i' = A_{h}u_i + f(t,u_i)$
-Where $A$ is a linear operator and not the transformation matrix. Thus we will have to make the ODE solvers of **DiffEq.jl** compatible with linear operators also.
+Where $A$ is a linear operator and not the transformation matrix. Thus we will have to make the ODE solvers of **DifferentialEquations.jl** compatible with linear operators also.
 
 Since it is tedious to compute the Taylor coefficients by hand, Fornberg gave an [algorithm](https://amath.colorado.edu/faculty/fornberg/Docs/MathComp_88_FD_formulas.pdf) to compute them efficiently for any derivative and approximation order. These stencils can efficiently compute derivatives at any point by taking appropriately weighted sums of neighboring points. For example, $[-1, 2, -1]$ is the second order stencil for calculating the 2nd derivative at a point.
 
@@ -100,7 +100,7 @@ In **DiffEqOperators.jl** we can easily extract stencils of any derivative and a
     # Define A as a DerivativeOperator of 4th order and of 2nd order of accuracy
 
     julia> A = DerivativeOperator{Float64}(4,2,1.0,10,:Dirichlet0,:Dirichlet0)
-    julia> B.stencil_coefs
+    julia> A.stencil_coefs
     7-element SVector{7,Float64}:
       -0.166667
        2.0     
