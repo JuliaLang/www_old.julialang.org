@@ -4,7 +4,7 @@ title:  The Julia Language
 ---
 <link rel="canonical" href="http://julialang.org">
 
-<div style="display: flex; flex-direction: row; align-items:center; margin-bottom: 32px">
+<!--<div style="display: flex; flex-direction: row; align-items:center; margin-bottom: 32px">
     <div style="width: 48%; text-align: center">
         <div style="justify-content:center; margin-bottom: 16px; display: flex; flex-direction: row; align-items:center">
             <a href="http://juliacon.org"><img src="/images/juliacon2017.svg" style="width:200px; height: auto"></a>
@@ -25,7 +25,7 @@ title:  The Julia Language
             Students are working on these <a href="https://summerofcode.withgoogle.com/organizations/5642180010967040/">18 projects</a>.
         </div>
     </div>
-</div>
+</div>-->
 
 [Julia](http://julialang.org) is a high-level, high-performance dynamic programming language for numerical computing.
 It provides a sophisticated compiler, [distributed parallel execution](http://docs.julialang.org/en/stable/manual/parallel-computing/), numerical accuracy, and an [extensive mathematical function library](https://docs.julialang.org/en/latest/#Standard-Library-1).
