@@ -1,4 +1,4 @@
----
+--
 layout: default
 title:  Julia Community
 ---
@@ -239,6 +239,7 @@ Europe
 * [Vienna Julia Meetup](http://www.meetup.com/Vienna-Julia-Meetup/)
 * [Julia Users Berlin](https://www.meetup.com/Julia-Users-Group/), see also our [news site](http://julia-users-berlin.github.io/)
 * [Warszawskie Forum Julia](https://www.meetup.com/Warszawskie-Forum-Julia/)
+* [Barcelona Julia Meetup](https://www.meetup.com/Barcelona-Julia-Meetup/)
 
 Asia
 
@@ -246,6 +247,7 @@ Asia
 * [Beijing Julia User Group](https://www.meetup.com/juliacn/)
 * [JuliaDelhi](https://www.meetup.com/Juliadelhi/)
 * [Julia Taiwan](https://juliataiwan.kktix.cc/)
+* [Singapore Julia User Group](https://www.meetup.com/Singapore-Julia-User-Group/)
 
 Australia
 
