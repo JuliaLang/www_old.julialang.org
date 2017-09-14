@@ -46,7 +46,7 @@ For a more in-depth discussion of the rationale and advantages of Julia over oth
 
 JuliaCon 2016, the annual conference on Julia was held during June 21st - 25th at MIT. Below is a random video from our youtube playlist of the talks. Click on the playlist icon to check out the other videos.
 
-{% include juliacon-player-2016.html %}
+{% include juliacon-player-2017.html %}
 
 # A Summary of Features
 
