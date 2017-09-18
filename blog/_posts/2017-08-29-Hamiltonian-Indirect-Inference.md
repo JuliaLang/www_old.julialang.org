@@ -45,9 +45,9 @@ Usually when we face an intractable likelihood or a likelihood that would be ext
 
 First the data is generated, once we have the data, we can estimate the parameters of the auxiliary model. Then, the estimated parameters are put into the auxiliary likelihood with the observed/generated data. Afterwards we can use this likelihood in our chosen Bayesian method i.e. MCMC.
 
-To summarize the method, first we have the parameter vector θ and the observed data y. We would like to calculate the likelihood of $\ell(\theta|y)$, but it is intractable or costly to compute. In this case, with pdBIL we have to find an auxiliary model (A) that we use to approximate the true likelihood in the following way:
+To summarize the method, first we have the parameter vector $\theta$ and the observed data y. We would like to calculate the likelihood of $\ell(\theta|y)$, but it is intractable or costly to compute. In this case, with pdBIL we have to find an auxiliary model (A) that we use to approximate the true likelihood in the following way:
 * First we have to generate points, denote with **x\*** from the data generating process with the previously proposed parameters $\theta$.
-* Then we compute the MLE of the auxiliary likelihood under **x** to get the parameters denoted by ϕ. \
+* Then we compute the MLE of the auxiliary likelihood under **x** to get the parameters denoted by $\phi$. \
 $$\phi(x^{\star}) = argmax_{\phi} (x^{\star}|\phi)$$
 
 * Under these parameters \phi, we can now compute the likelihood of $\ell_{A}(y|\phi). It is desirable to have the auxiliary likelihood as close to the true likelihood as possible, in the sense of capturing relevant aspects of the model and the
@@ -75,7 +75,7 @@ The discrete-time version of the Ornstein-Ulenbeck Stochastic - volatility model
     $$y_{t} = x_{t} + \epsilon_{t} where \epsilon_{t} ∼ \Chi^{2}(1)$$
     $$x_{t} = \rho * x_{t-1} + \sigma * \nu_{t}  where \nu_{t} ∼ N(0, 1)$$
 
-The discrete-time version was used as the data-generating process. Where yₜ denotes the logarithm of return, x_{t} is the logarithm of variance, while \epsilon_{t} and \nu_{t} are unobserved noise terms.
+The discrete-time version was used as the data-generating process. Where yₜ denotes the logarithm of return, $x_{t}$ is the logarithm of variance, while $\epsilon_{t}$ and $\nu_{t}$ are unobserved noise terms.
 
 
 For the auxiliary model, we used two regressions. The first regression was an AR(2) process on the first differences, the second was also an AR(2) process on the original variables in order to capture the levels.
