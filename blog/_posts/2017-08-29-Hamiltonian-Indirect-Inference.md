@@ -1,3 +1,30 @@
+---
+layout: post
+title:  "GSoC 2017 Project: Hamiltonian Indirect Inference"
+author: Dorisz Albrecht
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true,
+processEnvironments: true
+},
+// Center justify equations in code and markdown cells. Elsewhere
+// we use CSS to left justify single line equations in code cells.
+displayAlign: 'center',
+"HTML-CSS": {
+styles: {'.MathJax_Display': {"margin": 0}},
+linebreaks: { automatic: true }
+}
+});
+</script>
+
+
 # Bayesian_Examples.jl
 This is a writeup of my project for the Google Summer of Code 2017. The
 associated repository contains examples of estimating various models. In
@@ -18,12 +45,12 @@ Usually when we face an intractable likelihood or a likelihood that would be ext
 
 First the data is generated, once we have the data, we can estimate the parameters of the auxiliary model. Then, the estimated parameters are put into the auxiliary likelihood with the observed/generated data. Afterwards we can use this likelihood in our chosen Bayesian method i.e. MCMC.
 
-To summarize the method, first we have the parameter vector θ and the observed data y. We would like to calculate the likelihood of ℓ(θ|y), but it is intractable or costly to compute. In this case, with pdBIL we have to find an auxiliary model (A) that we use to approximate the true likelihood in the following way:
-* First we have to generate points, denote with **x\*** from the data generating process with the previously proposed parameters θ.
+To summarize the method, first we have the parameter vector θ and the observed data y. We would like to calculate the likelihood of $\ell(\theta|y)$, but it is intractable or costly to compute. In this case, with pdBIL we have to find an auxiliary model (A) that we use to approximate the true likelihood in the following way:
+* First we have to generate points, denote with **x\*** from the data generating process with the previously proposed parameters $\theta$.
 * Then we compute the MLE of the auxiliary likelihood under **x** to get the parameters denoted by ϕ. \
-ϕ(x⋆) = argmax₋ϕ (x⋆|ϕ)
+$$\phi(x^{\star}) = argmax_{\phi} (x^{\star}|\phi)$$
 
-* Under these parameters ϕ, we can now compute the likelihood of ℓₐ(y|ϕ). It is desirable to have the auxiliary likelihood as close to the true likelihood as possible, in the sense of capturing relevant aspects of the model and the
+* Under these parameters \phi, we can now compute the likelihood of $\ell_{A}(y|\phi). It is desirable to have the auxiliary likelihood as close to the true likelihood as possible, in the sense of capturing relevant aspects of the model and the
 generated data.
 
 # First stage of my project
@@ -45,10 +72,10 @@ The continuous-time version of the Ornstein-Ulenbeck Stochastic - volatiltiy mod
 
 The discrete-time version of the Ornstein-Ulenbeck Stochastic - volatility model:
 
-    yₜ = xₜ + ϵₜ where ϵₜ ∼ χ²(1)
-    xₜ = ρ * xₜ₋₁ + σ * νₜ  where νₜ ∼ N(0, 1)
+    $$y_{t} = x_{t} + \epsilon_{t} where \epsilon_{t} ∼ \Chi^{2}(1)$$
+    $$x_{t} = \rho * x_{t-1} + \sigma * \nu_{t}  where \nu_{t} ∼ N(0, 1)$$
 
-The discrete-time version was used as the data-generating process. Where yₜ denotes the logarithm of return, xₜ is the logarithm of variance, while ϵₜ and νₜ are unobserved noise terms.
+The discrete-time version was used as the data-generating process. Where yₜ denotes the logarithm of return, x_{t} is the logarithm of variance, while \epsilon_{t} and \nu_{t} are unobserved noise terms.
 
 
 For the auxiliary model, we used two regressions. The first regression was an AR(2) process on the first differences, the second was also an AR(2) process on the original variables in order to capture the levels.
@@ -81,7 +108,7 @@ end
 The AR(2) process of the first differences can be summarized by: \
 Given a series Y, it is the first difference of the first difference. The so called "change in the change" of Y at time t. The second difference of a discrete function can be interpreted as the second derivative of a continuous function, which is the "acceleration" of the function at a point in time t. In this model, we want to capture the "acceleration" of the logarithm of return.
 
-The AR(2) process of the original variables is needed to capture the effect of ρ. It turned out that the impact of ρ was rather weak in the AR(2) process of the first differences . That is why we need a second auxiliary model.
+The AR(2) process of the original variables is needed to capture the effect of $\rho$. It turned out that the impact of ρ was rather weak in the AR(2) process of the first differences . That is why we need a second auxiliary model.
 
 
 I will now describe the required steps for the estimation of the parameters of interest in the stochastic volatility model with the Dynamic Hamiltonian Monte Carlo method. First we need a callable Julia object which gives back the logdensity and the gradient in DiffResult type. After that, we write a function that computes the density, then we calculate its gradient using the ForwardDiff package in a wrapper function.
@@ -146,9 +173,9 @@ function (pp::StochasticVolatility)(θ)
     logprior + log_likelihood1 + log_likelihood2 + logjac(transformation, θ)
 end
 ```
-We need the transformations because the parameters are in the proper subset of ℝⁿ, but we want to use ℝⁿ. The ContinuousTransformation package is used for the transformations. We save the transformations such that the callable object stays type-stable which makes the process faster.
+We need the transformations because the parameters are in the proper subset of $\Re^{n}$, but we want to use $\Re^{n}$. The ContinuousTransformation package is used for the transformations. We save the transformations such that the callable object stays type-stable which makes the process faster.
 
-ν and ϵ are are random variables which we use after the transformation to simulate observation points. This way the simulated variables are continuous in the parameters and the posterior is differentiable.
+$\nu$ and $\epsilon$ are random variables which we use after the transformation to simulate observation points. This way the simulated variables are continuous in the parameters and the posterior is differentiable.
 
 Given the defined functions, we can now start the estimation and sampling process:
 
@@ -171,10 +198,10 @@ sample, tuned_sampler = NUTS_tune_and_mcmc(RNG, fgw, 5000; q = θ₀)
 
 The following graphs show the results for the parameters:
 
-![rho_plot](https://user-images.githubusercontent.com/26724827/29598603-dd6d1ae2-8797-11e7-9837-5373c03c4ceb.png)
+![rho_plot](/images/blog/2017-08-29-Hamiltonian-Indirect-Inference/rho_plot.png)
 
 
-![sigma_plot](https://user-images.githubusercontent.com/26724827/29598635-0e84b9aa-8798-11e7-9218-bc62347407ae.png)
+![sigma_plot](/images/blog/2017-08-29-Hamiltonian-Indirect-Inference/sigma_plot.png)
 
 Analysing the graphs above, we can say that the posterior values are in rather close to the true values. Also worth mentioning that the priors do not affect the posterior values.
 
@@ -187,7 +214,7 @@ Analysing the graphs above, we can say that the posterior values are in rather c
 
 We faced serious problems with this model. \
 First of all, I coded the MLE of the finite component normal mixture model, which computes the means, variances and weights of the normals given the observed data and the desired number of mixtures.
-With the g-and-k quantile function, I experienced the so called "isolation", which means that one observation point is an outlier getting weight 1, the other observed points get weigth 0, which results in variance equal to 0. There are ways to disentangle the problem of isolation, but the parameters of interests still did not converge to the true values. There is work to be done with this model.
+With the g-and-k quantile function, I experienced the so called "isolation", which means that one observation point is an outlier getting weight 1, the other observed points get weight $\theta$, which results in variance equal to $\theta$. There are ways to disentangle the problem of isolation, but the parameters of interests still did not converge to the true values. There is work to be done with this model.
 
 2) **Type-stability issues**
 
