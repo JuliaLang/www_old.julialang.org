@@ -73,6 +73,7 @@ The continuous-time version of the Ornstein-Ulenbeck Stochastic - volatiltiy mod
 The discrete-time version of the Ornstein-Ulenbeck Stochastic - volatility model:
 
 $$y_{t} = x_{t} + \epsilon_{t} where \epsilon_{t} ∼ \Chi^{2}(1)$$
+
 $$x_{t} = \rho * x_{t-1} + \sigma * \nu_{t}  where \nu_{t} ∼ N(0, 1)$$
 
 The discrete-time version was used as the data-generating process. Where yₜ denotes the logarithm of return, $x_{t}$ is the logarithm of variance, while $\epsilon_{t}$ and $\nu_{t}$ are unobserved noise terms.
