@@ -19,6 +19,9 @@ a
 
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
+- [Federal University of Alagoas](http://www.ufal.edu.br) (_Universidade Federal de Alagoas_, UFAL)
+  * COMP272, Distributed Systems ([Prof. André Lage-Freitas](https://sites.google.com/a/ic.ufal.br/andrelage)): 2015, 2016, and 2017
+
 - SGH Warsaw School of Economics, Poland
   * 223490-0286, Statistical Learning Methods ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
   * 234900-0286, Agent-Based Modeling ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
