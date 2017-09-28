@@ -5,10 +5,13 @@ authors:
 - Stellato, B.
 - Ober-Blöbaum, S.
 - Goulart, P. J.
-year: "2016"
-month: "August"
+year: "2017"
+month: "October"
 doi: 10.1109/TAC.2017.2697681
-arxiv: 1608.08597
+journal: "IEEE Transactions on Automatic Control"
+volume: "62"
+issue: "10"
+pages: "5407--5414"
 packages:
   SwitchTimeOpt.jl: https://github.com/oxfordcontrol/SwitchTimeOpt.jl
 ---
