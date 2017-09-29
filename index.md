@@ -162,7 +162,7 @@ end
 
 This computation is automatically distributed across all available compute nodes, and the result, reduced by summation (`+`), is returned at the calling node.
 
-Here is a screenshot of a web-based interactive [IJulia Notebook](https://github.com/JuliaLang/IJulia.jl) session, using [Gadfly](https://github.com/dcjones/Gadfly.jl). [JuliaBox](http://www.juliabox.org) provides a way to run IJulia notebooks in your browser on Docker sandboxed containers provisioned on demand.
+Here is a screenshot of a web-based interactive [IJulia Notebook](https://github.com/JuliaLang/IJulia.jl) session, using [Gadfly](https://github.com/dcjones/Gadfly.jl). [JuliaBox](http://www.juliabox.com) provides a way to run IJulia notebooks in your browser on Docker sandboxed containers provisioned on demand.
 
 <a href="/images/ijulia.png" target="_blank"><img class="u-center" src="/images/ijulia.png" width="90%" /></a>
 
