@@ -37,7 +37,17 @@ For casual conversation and quick, informal questions, we have an
 To join, please visit [slackinvite.julialang.org](https://slackinvite.julialang.org)
 to agree to the community code of conduct and receive an invitation.
 
+### YouTube
+
+All the [JuliaCon](http://juliacon.org) videos and other videos of
+general interest in the community are uploaded to the [Julia Language YouTube
+channel](https://www.youtube.com/user/JuliaLanguage).
+
+
 ## Other channels
+
+On Twitter, tweet with the
+[#julialang](https://twitter.com/search?q=%23julialang) hashtag.
 
 Julia also has a presence on Stack Overflow under the
 [julia-lang](http://stackoverflow.com/questions/tagged/julia-lang) tag, and on Stack
