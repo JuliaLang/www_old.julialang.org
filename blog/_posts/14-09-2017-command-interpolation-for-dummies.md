@@ -68,7 +68,7 @@ So this actually works:
 ```Julia
 run(Cmd(["julia", "-e", "println(\"hello world\")"]))
 ```
-Not the above is equivalent to:
+Note that the above is equivalent to:
 ```Julia
 run(`julia $(["-e", """println("hello world")"""])`)
 ```
