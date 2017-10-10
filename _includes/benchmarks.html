@@ -1,30 +1,30 @@
 <table class="benchmarks">
 <colgroup>
-<col class="name">
-<col class="relative" span="11">
+<col class="name"></col>
+<col class="relative" span="11"></col>
 </colgroup>
 <thead>
-<tr><td></td><th class="system">Fortran</th><th class="system">Julia</th><th class="system">Python</th><th class="system">R</th><th class="system">Matlab</th><th class="system">Octave</th><th class="system">Mathe-matica</th><th class="system">JavaScript</th><th class="system">Go</th><th class="system">LuaJIT</th><th class="system">Java</th></tr>
-<tr><td></td><td class="version">gcc 5.1.1
-</td><td class="version">0.4.0
-</td><td class="version">3.4.3
-</td><td class="version">3.2.2
-</td><td class="version">R2015b
-</td><td class="version">4.0.0
-</td><td class="version">10.2.0
-</td><td class="version">V8 3.28.71.19
-</td><td class="version">go1.5
-</td><td class="version">gsl-shell 2.3.1
-</td><td class="version">1.8.0_45
+<tr><td></td><th class="system">C</th><th class="system">Julia</th><th class="system">LuaJIT</th><th class="system">Fortran</th><th class="system">Java</th><th class="system">JavaScript</th><th class="system">Matlab</th><th class="system">Python</th><th class="system">Mathe-matica</th><th class="system">R</th><th class="system">Octave</th></tr>
+<tr><td></td><td class="version">gcc 4.8.5
+</td><td class="version">0.6.0
+</td><td class="version">scilua v1.0.0-b12</td><td class="version">gcc 4.8.5
+</td><td class="version">1.8.0_14
+</td><td class="version">V8 4.5.103.47
+</td><td class="version">R    '2017a'
+</td><td class="version">3.4.6
+</td><td class="version">11.1.1
+</td><td class="version">3.3.1
+</td><td class="version">4.0.3
 </td></tr>
 </thead>
 <tbody>
-<tr><th>fib</th><td class="data">0.70</td><td class="data">2.11</td><td class="data">77.76</td><td class="data">533.52</td><td class="data">26.89</td><td class="data">9324.35</td><td class="data">118.53</td><td class="data">3.36</td><td class="data">1.86</td><td class="data">1.71</td><td class="data">1.21</td></tr>
-<tr><th>parse_int</th><td class="data">5.05</td><td class="data">1.45</td><td class="data">17.02</td><td class="data">45.73</td><td class="data">802.52</td><td class="data">9581.44</td><td class="data">15.02</td><td class="data">6.06</td><td class="data">1.20</td><td class="data">5.77</td><td class="data">3.35</td></tr>
-<tr><th>quicksort</th><td class="data">1.31</td><td class="data">1.15</td><td class="data">32.89</td><td class="data">264.54</td><td class="data">4.92</td><td class="data">1866.01</td><td class="data">43.23</td><td class="data">2.70</td><td class="data">1.29</td><td class="data">2.03</td><td class="data">2.60</td></tr>
-<tr><th>mandel</th><td class="data">0.81</td><td class="data">0.79</td><td class="data">15.32</td><td class="data">53.16</td><td class="data">7.58</td><td class="data">451.81</td><td class="data">5.13</td><td class="data">0.66</td><td class="data">1.11</td><td class="data">0.67</td><td class="data">1.35</td></tr>
-<tr><th>pi_sum</th><td class="data">1.00</td><td class="data">1.00</td><td class="data">21.99</td><td class="data">9.56</td><td class="data">1.00</td><td class="data">299.31</td><td class="data">1.69</td><td class="data">1.01</td><td class="data">1.00</td><td class="data">1.00</td><td class="data">1.00</td></tr>
-<tr><th>rand_mat_stat</th><td class="data">1.45</td><td class="data">1.66</td><td class="data">17.93</td><td class="data">14.56</td><td class="data">14.52</td><td class="data">30.93</td><td class="data">5.95</td><td class="data">2.30</td><td class="data">2.96</td><td class="data">3.27</td><td class="data">3.92</td></tr>
-<tr><th>rand_mat_mul</th><td class="data">3.48</td><td class="data">1.02</td><td class="data">1.14</td><td class="data">1.57</td><td class="data">1.12</td><td class="data">1.12</td><td class="data">1.30</td><td class="data">15.07</td><td class="data">1.42</td><td class="data">1.16</td><td class="data">2.36</td></tr>
+<tr><th>iteration_mandelbrot</th><td class="data">1.00</td><td class="data">0.63</td><td class="data">0.39</td><td class="data">0.90</td><td class="data">0.36</td><td class="data">0.32</td><td class="data">5.01</td><td class="data">11.32</td><td class="data">5.48</td><td class="data">41.70</td><td class="data">628.86</td></tr>
+<tr><th>iteration_pi_sum</th><td class="data">1.00</td><td class="data">0.85</td><td class="data">0.85</td><td class="data">1.00</td><td class="data">0.91</td><td class="data">0.85</td><td class="data">0.85</td><td class="data">17.11</td><td class="data">1.31</td><td class="data">7.60</td><td class="data">430.44</td></tr>
+<tr><th>recursion_fibonacci</th><td class="data">1.00</td><td class="data">1.67</td><td class="data">1.08</td><td class="data">0.52</td><td class="data">1.53</td><td class="data">3.41</td><td class="data">18.48</td><td class="data">89.82</td><td class="data">126.56</td><td class="data">539.96</td><td class="data">17619.46</td></tr>
+<tr><th>recursion_quicksort</th><td class="data">1.00</td><td class="data">0.93</td><td class="data">1.50</td><td class="data">1.30</td><td class="data">2.54</td><td class="data">2.86</td><td class="data">3.05</td><td class="data">36.74</td><td class="data">44.57</td><td class="data">264.00</td><td class="data">3660.14</td></tr>
+<tr><th>parse_integers</th><td class="data">1.00</td><td class="data">1.36</td><td class="data">1.01</td><td class="data">5.43</td><td class="data">3.77</td><td class="data">6.68</td><td class="data">244.33</td><td class="data">19.07</td><td class="data">14.79</td><td class="data">51.35</td><td class="data">4138.85</td></tr>
+<tr><th>print_to_file</th><td class="data">1.00</td><td class="data">0.67</td><td class="data">0.56</td><td class="data">3.49</td><td class="data">6.08</td><td class="data">967.94</td><td class="data">117.46</td><td class="data">1.41</td><td class="data">62.95</td><td class="data">137.65</td><td class="data">218.77</td></tr>
+<tr><th>matrix_statistics</th><td class="data">1.00</td><td class="data">1.88</td><td class="data">1.73</td><td class="data">1.99</td><td class="data">5.97</td><td class="data">3.17</td><td class="data">18.71</td><td class="data">16.35</td><td class="data">7.86</td><td class="data">21.15</td><td class="data">62.69</td></tr>
+<tr><th>matrix_multiply</th><td class="data">1.00</td><td class="data">0.95</td><td class="data">1.08</td><td class="data">1.24</td><td class="data">8.66</td><td class="data">24.23</td><td class="data">1.14</td><td class="data">1.14</td><td class="data">1.16</td><td class="data">8.47</td><td class="data">1.17</td></tr>
 </tbody>
 </table>
