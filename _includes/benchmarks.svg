@@ -9,156 +9,621 @@
      stroke-width="0.3"
      font-size="3.88"
 >
-<g class="plotroot yscalable" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-1">
-  <g class="guide xlabels" font-size="2.82" font-family="Georgia" fill="#6C606B" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-2">
-    <text x="19.31" y="116.76" text-anchor="middle" dy="0.6em">Fortran</text>
-    <text x="34.04" y="116.76" text-anchor="middle" dy="0.6em">Go</text>
-    <text x="48.77" y="116.76" text-anchor="middle" dy="0.6em">Java</text>
-    <text x="63.51" y="116.76" text-anchor="middle" dy="0.6em">JavaScript</text>
-    <text x="78.24" y="116.76" text-anchor="middle" dy="0.6em">Julia</text>
-    <text x="92.97" y="116.76" text-anchor="middle" dy="0.6em">Lua</text>
-    <text x="107.7" y="116.76" text-anchor="middle" dy="0.6em">Mathematica</text>
-    <text x="122.44" y="116.76" text-anchor="middle" dy="0.6em">Matlab</text>
-    <text x="137.17" y="116.76" text-anchor="middle" dy="0.6em">Octave</text>
-    <text x="151.9" y="116.76" text-anchor="middle" dy="0.6em">Python</text>
-    <text x="166.64" y="116.76" text-anchor="middle" dy="0.6em">R</text>
+<g class="plotroot yscalable" id="img-dcd7a901-1">
+  <g class="guide xlabels" font-size="2.82" font-family="Georgia" fill="#6C606B" id="img-dcd7a901-2">
+    <text x="19.44" y="116.95" text-anchor="middle" dy="0.6em">C</text>
+    <text x="33.03" y="116.95" text-anchor="middle" dy="0.6em">Lua</text>
+    <text x="46.63" y="116.95" text-anchor="middle" dy="0.6em">Julia</text>
+    <text x="60.22" y="116.95" text-anchor="middle" dy="0.6em">Fortran</text>
+    <text x="73.82" y="116.95" text-anchor="middle" dy="0.6em">Java</text>
+    <text x="87.41" y="116.95" text-anchor="middle" dy="0.6em">Javascript</text>
+    <text x="101.01" y="116.95" text-anchor="middle" dy="0.6em">Matlab</text>
+    <text x="114.61" y="116.95" text-anchor="middle" dy="0.6em">Python</text>
+    <text x="128.2" y="116.95" text-anchor="middle" dy="0.6em">Mathematica</text>
+    <text x="141.8" y="116.95" text-anchor="middle" dy="0.6em">R</text>
+    <text x="155.39" y="116.95" text-anchor="middle" dy="0.6em">Octave</text>
   </g>
-  <g class="guide colorkey" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-3">
-    <g fill="#4C404B" font-size="2.82" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-4">
-      <text x="178.09" y="49.94" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-5" class="color_mandel">mandel</text>
-      <text x="178.09" y="54.12" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-6" class="color_parse_int">parse_int</text>
-      <text x="178.09" y="58.29" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-7" class="color_pi_sum">pi_sum</text>
-      <text x="178.09" y="62.47" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-8" class="color_printfd">printfd</text>
-      <text x="178.09" y="66.64" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-9" class="color_quicksort">quicksort</text>
-      <text x="178.09" y="70.82" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-10" class="color_rand_mat_mul">rand_mat_mul</text>
-      <text x="178.09" y="74.99" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-11" class="color_rand_mat_stat">rand_mat_stat</text>
+  <g class="guide colorkey" id="img-dcd7a901-3">
+    <g fill="#4C404B" font-size="2.82" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-dcd7a901-4">
+      <text x="172.8" y="49.6" dy="0.35em" id="img-dcd7a901-5" class="color_iteration_mandelbrot">iteration_mandelbrot</text>
+      <text x="172.8" y="53.22" dy="0.35em" id="img-dcd7a901-6" class="color_iteration_pi_sum">iteration_pi_sum</text>
+      <text x="172.8" y="56.85" dy="0.35em" id="img-dcd7a901-7" class="color_matrix_multiply">matrix_multiply</text>
+      <text x="172.8" y="60.48" dy="0.35em" id="img-dcd7a901-8" class="color_matrix_statistics">matrix_statistics</text>
+      <text x="172.8" y="64.1" dy="0.35em" id="img-dcd7a901-9" class="color_parse_integers">parse_integers</text>
+      <text x="172.8" y="67.73" dy="0.35em" id="img-dcd7a901-10" class="color_print_to_file">print_to_file</text>
+      <text x="172.8" y="71.36" dy="0.35em" id="img-dcd7a901-11" class="color_recursion_fibonacci">recursion_fibonacci</text>
+      <text x="172.8" y="74.98" dy="0.35em" id="img-dcd7a901-12" class="color_recursion_quicksort">recursion_quicksort</text>
     </g>
-    <g stroke="#000000" stroke-opacity="0.000" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-12">
-      <circle cx="176.09" cy="49.94" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-13" class="color_mandel" fill="#00BFFF"/>
-      <circle cx="176.09" cy="54.12" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-14" class="color_parse_int" fill="#D4CA3A"/>
-      <circle cx="176.09" cy="58.29" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-15" class="color_pi_sum" fill="#FF5EA0"/>
-      <circle cx="176.09" cy="62.47" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-16" class="color_printfd" fill="#00E5B2"/>
-      <circle cx="176.09" cy="66.64" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-17" class="color_quicksort" fill="#F6A6FF"/>
-      <circle cx="176.09" cy="70.82" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-18" class="color_rand_mat_mul" fill="#9E9E9E"/>
-      <circle cx="176.09" cy="74.99" r="1.04" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-19" class="color_rand_mat_stat" fill="#FF928B"/>
+    <g stroke="#000000" stroke-opacity="0.000" id="img-dcd7a901-13">
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="49.6" id="img-dcd7a901-15" class="color_iteration_mandelbrot" fill="#00BFFF"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="53.22" id="img-dcd7a901-16" class="color_iteration_pi_sum" fill="#D4CA3A"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="56.85" id="img-dcd7a901-17" class="color_matrix_multiply" fill="#FF6DAE"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="60.48" id="img-dcd7a901-18" class="color_matrix_statistics" fill="#00B78D"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="64.1" id="img-dcd7a901-19" class="color_parse_integers" fill="#BEA9FF"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="67.73" id="img-dcd7a901-20" class="color_print_to_file" fill="#FF6765"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="71.36" id="img-dcd7a901-21" class="color_recursion_fibonacci" fill="#C6C6C6"/>
+      <use xlink:href="#img-dcd7a901-14" x="170.8" y="74.98" id="img-dcd7a901-22" class="color_recursion_quicksort" fill="#63DF75"/>
     </g>
-    <g fill="#362A35" font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="#000000" stroke-opacity="0.000" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-20">
-      <text x="175" y="45.18" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-21">benchmark</text>
+    <g fill="#362A35" font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="#000000" stroke-opacity="0.000" id="img-dcd7a901-23">
+      <text x="169.99" y="45.77" id="img-dcd7a901-24">benchmark</text>
     </g>
   </g>
-  <g clip-path="url(#fig-b6289bc40c39448a9b5b5024f1330d7f-element-23)" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-22">
-    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-24">
-      <rect x="11.94" y="5" width="162.07" height="110.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-25"/>
+<g clip-path="url(#img-dcd7a901-25)">
+  <g id="img-dcd7a901-26">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-dcd7a901-27">
+      <rect x="12.64" y="5" width="156.35" height="110.95" id="img-dcd7a901-28"/>
     </g>
-    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-26">
-      <path fill="none" d="M11.94,113.76 L 174 113.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-27"/>
-      <path fill="none" d="M11.94,92.41 L 174 92.41" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-28"/>
-      <path fill="none" d="M11.94,71.06 L 174 71.06" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-29"/>
-      <path fill="none" d="M11.94,49.7 L 174 49.7" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-30"/>
-      <path fill="none" d="M11.94,28.35 L 174 28.35" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-31"/>
-      <path fill="none" d="M11.94,7 L 174 7" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-32"/>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-dcd7a901-29">
+      <path fill="none" d="M12.64,113.95 L 168.99 113.95" id="img-dcd7a901-30"/>
+      <path fill="none" d="M12.64,92.56 L 168.99 92.56" id="img-dcd7a901-31"/>
+      <path fill="none" d="M12.64,71.17 L 168.99 71.17" id="img-dcd7a901-32"/>
+      <path fill="none" d="M12.64,49.78 L 168.99 49.78" id="img-dcd7a901-33"/>
+      <path fill="none" d="M12.64,28.39 L 168.99 28.39" id="img-dcd7a901-34"/>
+      <path fill="none" d="M12.64,7 L 168.99 7" id="img-dcd7a901-35"/>
     </g>
-    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-33">
-      <path fill="none" d="M26.67,5 L 26.67 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-34"/>
-      <path fill="none" d="M41.41,5 L 41.41 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-35"/>
-      <path fill="none" d="M56.14,5 L 56.14 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-36"/>
-      <path fill="none" d="M70.87,5 L 70.87 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-37"/>
-      <path fill="none" d="M85.6,5 L 85.6 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-38"/>
-      <path fill="none" d="M100.34,5 L 100.34 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-39"/>
-      <path fill="none" d="M115.07,5 L 115.07 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-40"/>
-      <path fill="none" d="M129.8,5 L 129.8 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-41"/>
-      <path fill="none" d="M144.54,5 L 144.54 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-42"/>
-      <path fill="none" d="M159.27,5 L 159.27 115.76" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-43"/>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-dcd7a901-36">
+      <path fill="none" d="M26.24,5 L 26.24 115.95" id="img-dcd7a901-37"/>
+      <path fill="none" d="M39.83,5 L 39.83 115.95" id="img-dcd7a901-38"/>
+      <path fill="none" d="M53.43,5 L 53.43 115.95" id="img-dcd7a901-39"/>
+      <path fill="none" d="M67.02,5 L 67.02 115.95" id="img-dcd7a901-40"/>
+      <path fill="none" d="M80.62,5 L 80.62 115.95" id="img-dcd7a901-41"/>
+      <path fill="none" d="M94.21,5 L 94.21 115.95" id="img-dcd7a901-42"/>
+      <path fill="none" d="M107.81,5 L 107.81 115.95" id="img-dcd7a901-43"/>
+      <path fill="none" d="M121.4,5 L 121.4 115.95" id="img-dcd7a901-44"/>
+      <path fill="none" d="M135,5 L 135 115.95" id="img-dcd7a901-45"/>
+      <path fill="none" d="M148.59,5 L 148.59 115.95" id="img-dcd7a901-46"/>
     </g>
-    <g class="plotpanel" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-44">
-      <g class="geometry" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-45">
-        <g stroke-width="0.3" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-46">
-          <circle cx="19.31" cy="94.37" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-47" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="34.04" cy="91.46" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-48" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="48.77" cy="89.61" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-49" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="63.51" cy="96.28" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-50" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="78.24" cy="94.57" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-51" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="92.97" cy="96.12" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-52" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="107.7" cy="77.25" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-53" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="122.44" cy="73.63" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-54" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="137.17" cy="35.72" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-55" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="151.9" cy="67.1" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-56" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="166.64" cy="55.56" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-57" stroke="#FFFFFF" class="color_mandel" fill="#00BFFF"/>
-          <circle cx="19.31" cy="77.39" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-58" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="34.04" cy="90.75" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-59" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="48.77" cy="81.2" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-60" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="63.51" cy="75.7" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-61" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="78.24" cy="88.97" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-62" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="92.97" cy="76.16" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-63" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="107.7" cy="67.29" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-64" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="122.44" cy="30.39" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-65" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="137.17" cy="7.4" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-66" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="151.9" cy="66.12" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-67" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="166.64" cy="56.96" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-68" stroke="#FFFFFF" class="color_parse_int" fill="#D4CA3A"/>
-          <circle cx="19.31" cy="92.41" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-69" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="34.04" cy="92.41" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-70" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="48.77" cy="92.39" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-71" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="63.51" cy="92.35" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-72" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="78.24" cy="92.41" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-73" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="92.97" cy="92.4" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-74" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="107.7" cy="87.55" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-75" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="122.44" cy="92.4" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-76" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="137.17" cy="39.54" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-77" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="151.9" cy="63.75" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-78" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="166.64" cy="71.48" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-79" stroke="#FFFFFF" class="color_pi_sum" fill="#FF5EA0"/>
-          <circle cx="48.77" cy="76.39" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-80" stroke="#FFFFFF" class="color_printfd" fill="#00E5B2"/>
-          <circle cx="78.24" cy="85.56" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-81" stroke="#FFFFFF" class="color_printfd" fill="#00E5B2"/>
-          <circle cx="122.44" cy="50.36" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-82" stroke="#FFFFFF" class="color_printfd" fill="#00E5B2"/>
-          <circle cx="137.17" cy="47.68" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-83" stroke="#FFFFFF" class="color_printfd" fill="#00E5B2"/>
-          <circle cx="19.31" cy="89.94" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-84" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="34.04" cy="90.02" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-85" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="48.77" cy="83.53" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-86" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="63.51" cy="83.22" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-87" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="78.24" cy="91.13" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-88" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="92.97" cy="85.85" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-89" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="107.7" cy="57.48" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-90" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="122.44" cy="77.63" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-91" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="137.17" cy="22.57" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-92" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="151.9" cy="60.02" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-93" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="166.64" cy="40.68" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-94" stroke="#FFFFFF" class="color_quicksort" fill="#F6A6FF"/>
-          <circle cx="19.31" cy="80.84" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-95" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="34.04" cy="89.15" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-96" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="48.77" cy="84.43" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-97" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="63.51" cy="67.25" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-98" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="78.24" cy="92.19" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-99" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="92.97" cy="91.02" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-100" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="107.7" cy="89.95" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-101" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="122.44" cy="91.37" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-102" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="137.17" cy="91.32" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-103" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="151.9" cy="91.22" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-104" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="166.64" cy="88.24" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-105" stroke="#FFFFFF" class="color_rand_mat_mul" fill="#9E9E9E"/>
-          <circle cx="19.31" cy="88.99" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-106" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="34.04" cy="82.35" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-107" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="48.77" cy="79.73" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-108" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="63.51" cy="84.7" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-109" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="78.24" cy="87.7" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-110" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="92.97" cy="81.42" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-111" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="107.7" cy="75.87" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-112" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="122.44" cy="67.6" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-113" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="137.17" cy="60.59" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-114" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="151.9" cy="65.64" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-115" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
-          <circle cx="166.64" cy="67.57" r="1" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-116" stroke="#FFFFFF" class="color_rand_mat_stat" fill="#FF928B"/>
+    <g class="plotpanel" id="img-dcd7a901-47">
+      <g class="geometry" id="img-dcd7a901-48">
+        <g stroke-width="0.3" id="img-dcd7a901-49">
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-50">
+            <use xlink:href="#img-dcd7a901-51" x="155.39" y="16.34" id="img-dcd7a901-52"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-53">
+            <use xlink:href="#img-dcd7a901-54" x="141.8" y="40.76" id="img-dcd7a901-55"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-56">
+            <use xlink:href="#img-dcd7a901-57" x="128.2" y="57.29" id="img-dcd7a901-58"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-59">
+            <use xlink:href="#img-dcd7a901-60" x="114.61" y="59.08" id="img-dcd7a901-61"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-62">
+            <use xlink:href="#img-dcd7a901-63" x="101.01" y="82.22" id="img-dcd7a901-64"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-65">
+            <use xlink:href="#img-dcd7a901-66" x="87.41" y="82.79" id="img-dcd7a901-67"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-68">
+            <use xlink:href="#img-dcd7a901-69" x="73.82" y="83.92" id="img-dcd7a901-70"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-71">
+            <use xlink:href="#img-dcd7a901-72" x="60.22" y="90.11" id="img-dcd7a901-73"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-74">
+            <use xlink:href="#img-dcd7a901-75" x="46.63" y="93.24" id="img-dcd7a901-76"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-77">
+            <use xlink:href="#img-dcd7a901-78" x="33.03" y="88.8" id="img-dcd7a901-79"/>
+          </g>
+          <g class="color_recursion_quicksort" stroke="#FFFFFF" fill="#63DF75" id="img-dcd7a901-80">
+            <use xlink:href="#img-dcd7a901-81" x="19.44" y="92.56" id="img-dcd7a901-82"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-83">
+            <use xlink:href="#img-dcd7a901-84" x="155.39" y="1.74" id="img-dcd7a901-85"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-86">
+            <use xlink:href="#img-dcd7a901-87" x="141.8" y="34.12" id="img-dcd7a901-88"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-89">
+            <use xlink:href="#img-dcd7a901-90" x="128.2" y="47.59" id="img-dcd7a901-91"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-92">
+            <use xlink:href="#img-dcd7a901-93" x="114.61" y="50.78" id="img-dcd7a901-94"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-95">
+            <use xlink:href="#img-dcd7a901-96" x="101.01" y="65.46" id="img-dcd7a901-97"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-98">
+            <use xlink:href="#img-dcd7a901-99" x="87.41" y="81.18" id="img-dcd7a901-100"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-101">
+            <use xlink:href="#img-dcd7a901-102" x="73.82" y="88.63" id="img-dcd7a901-103"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-104">
+            <use xlink:href="#img-dcd7a901-105" x="60.22" y="98.64" id="img-dcd7a901-106"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-107">
+            <use xlink:href="#img-dcd7a901-108" x="46.63" y="87.78" id="img-dcd7a901-109"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-110">
+            <use xlink:href="#img-dcd7a901-111" x="33.03" y="91.85" id="img-dcd7a901-112"/>
+          </g>
+          <g class="color_recursion_fibonacci" stroke="#FFFFFF" fill="#C6C6C6" id="img-dcd7a901-113">
+            <use xlink:href="#img-dcd7a901-114" x="19.44" y="92.56" id="img-dcd7a901-115"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-116">
+            <use xlink:href="#img-dcd7a901-117" x="155.39" y="42.51" id="img-dcd7a901-118"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-119">
+            <use xlink:href="#img-dcd7a901-120" x="141.8" y="46.81" id="img-dcd7a901-121"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-122">
+            <use xlink:href="#img-dcd7a901-123" x="128.2" y="54.08" id="img-dcd7a901-124"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-125">
+            <use xlink:href="#img-dcd7a901-126" x="114.61" y="89.34" id="img-dcd7a901-127"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-128">
+            <use xlink:href="#img-dcd7a901-129" x="101.01" y="48.29" id="img-dcd7a901-130"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-131">
+            <use xlink:href="#img-dcd7a901-132" x="87.41" y="-14.09" id="img-dcd7a901-133"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-134">
+            <use xlink:href="#img-dcd7a901-135" x="73.82" y="75.79" id="img-dcd7a901-136"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-137">
+            <use xlink:href="#img-dcd7a901-138" x="60.22" y="80.94" id="img-dcd7a901-139"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-140">
+            <use xlink:href="#img-dcd7a901-141" x="46.63" y="96.27" id="img-dcd7a901-142"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-143">
+            <use xlink:href="#img-dcd7a901-144" x="33.03" y="97.89" id="img-dcd7a901-145"/>
+          </g>
+          <g class="color_print_to_file" stroke="#FFFFFF" fill="#FF6765" id="img-dcd7a901-146">
+            <use xlink:href="#img-dcd7a901-147" x="19.44" y="92.56" id="img-dcd7a901-148"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-149">
+            <use xlink:href="#img-dcd7a901-150" x="155.39" y="15.2" id="img-dcd7a901-151"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-152">
+            <use xlink:href="#img-dcd7a901-153" x="141.8" y="55.97" id="img-dcd7a901-154"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-155">
+            <use xlink:href="#img-dcd7a901-156" x="128.2" y="67.54" id="img-dcd7a901-157"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-158">
+            <use xlink:href="#img-dcd7a901-159" x="114.61" y="65.17" id="img-dcd7a901-160"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-161">
+            <use xlink:href="#img-dcd7a901-162" x="101.01" y="41.48" id="img-dcd7a901-163"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-164">
+            <use xlink:href="#img-dcd7a901-165" x="87.41" y="74.92" id="img-dcd7a901-166"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-167">
+            <use xlink:href="#img-dcd7a901-168" x="73.82" y="80.22" id="img-dcd7a901-169"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-170">
+            <use xlink:href="#img-dcd7a901-171" x="60.22" y="76.84" id="img-dcd7a901-172"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-173">
+            <use xlink:href="#img-dcd7a901-174" x="46.63" y="89.68" id="img-dcd7a901-175"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-176">
+            <use xlink:href="#img-dcd7a901-177" x="33.03" y="92.5" id="img-dcd7a901-178"/>
+          </g>
+          <g class="color_parse_integers" stroke="#FFFFFF" fill="#BEA9FF" id="img-dcd7a901-179">
+            <use xlink:href="#img-dcd7a901-180" x="19.44" y="92.56" id="img-dcd7a901-181"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-182">
+            <use xlink:href="#img-dcd7a901-183" x="155.39" y="54.12" id="img-dcd7a901-184"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-185">
+            <use xlink:href="#img-dcd7a901-186" x="141.8" y="64.21" id="img-dcd7a901-187"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-188">
+            <use xlink:href="#img-dcd7a901-189" x="128.2" y="73.4" id="img-dcd7a901-190"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-191">
+            <use xlink:href="#img-dcd7a901-192" x="114.61" y="66.61" id="img-dcd7a901-193"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-194">
+            <use xlink:href="#img-dcd7a901-195" x="101.01" y="65.35" id="img-dcd7a901-196"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-197">
+            <use xlink:href="#img-dcd7a901-198" x="87.41" y="81.83" id="img-dcd7a901-199"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-200">
+            <use xlink:href="#img-dcd7a901-201" x="73.82" y="75.96" id="img-dcd7a901-202"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-203">
+            <use xlink:href="#img-dcd7a901-204" x="60.22" y="86.18" id="img-dcd7a901-205"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-206">
+            <use xlink:href="#img-dcd7a901-207" x="46.63" y="86.7" id="img-dcd7a901-208"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-209">
+            <use xlink:href="#img-dcd7a901-210" x="33.03" y="87.49" id="img-dcd7a901-211"/>
+          </g>
+          <g class="color_matrix_statistics" stroke="#FFFFFF" fill="#00B78D" id="img-dcd7a901-212">
+            <use xlink:href="#img-dcd7a901-213" x="19.44" y="92.56" id="img-dcd7a901-214"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-215">
+            <use xlink:href="#img-dcd7a901-216" x="155.39" y="91.07" id="img-dcd7a901-217"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-218">
+            <use xlink:href="#img-dcd7a901-219" x="141.8" y="72.71" id="img-dcd7a901-220"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-221">
+            <use xlink:href="#img-dcd7a901-222" x="128.2" y="91.18" id="img-dcd7a901-223"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-224">
+            <use xlink:href="#img-dcd7a901-225" x="114.61" y="91.38" id="img-dcd7a901-226"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-227">
+            <use xlink:href="#img-dcd7a901-228" x="101.01" y="91.33" id="img-dcd7a901-229"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-230">
+            <use xlink:href="#img-dcd7a901-231" x="87.41" y="62.95" id="img-dcd7a901-232"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-233">
+            <use xlink:href="#img-dcd7a901-234" x="73.82" y="72.5" id="img-dcd7a901-235"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-236">
+            <use xlink:href="#img-dcd7a901-237" x="60.22" y="90.57" id="img-dcd7a901-238"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-239">
+            <use xlink:href="#img-dcd7a901-240" x="46.63" y="93.05" id="img-dcd7a901-241"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-242">
+            <use xlink:href="#img-dcd7a901-243" x="33.03" y="91.89" id="img-dcd7a901-244"/>
+          </g>
+          <g class="color_matrix_multiply" stroke="#FFFFFF" fill="#FF6DAE" id="img-dcd7a901-245">
+            <use xlink:href="#img-dcd7a901-246" x="19.44" y="92.56" id="img-dcd7a901-247"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-248">
+            <use xlink:href="#img-dcd7a901-249" x="155.39" y="36.22" id="img-dcd7a901-250"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-251">
+            <use xlink:href="#img-dcd7a901-252" x="141.8" y="73.71" id="img-dcd7a901-253"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-254">
+            <use xlink:href="#img-dcd7a901-255" x="128.2" y="90.07" id="img-dcd7a901-256"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-257">
+            <use xlink:href="#img-dcd7a901-258" x="114.61" y="66.18" id="img-dcd7a901-259"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-260">
+            <use xlink:href="#img-dcd7a901-261" x="101.01" y="94.11" id="img-dcd7a901-262"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-263">
+            <use xlink:href="#img-dcd7a901-264" x="87.41" y="94.07" id="img-dcd7a901-265"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-266">
+            <use xlink:href="#img-dcd7a901-267" x="73.82" y="93.47" id="img-dcd7a901-268"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-269">
+            <use xlink:href="#img-dcd7a901-270" x="60.22" y="92.56" id="img-dcd7a901-271"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-272">
+            <use xlink:href="#img-dcd7a901-273" x="46.63" y="94.11" id="img-dcd7a901-274"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-275">
+            <use xlink:href="#img-dcd7a901-276" x="33.03" y="94.11" id="img-dcd7a901-277"/>
+          </g>
+          <g class="color_iteration_pi_sum" stroke="#FFFFFF" fill="#D4CA3A" id="img-dcd7a901-278">
+            <use xlink:href="#img-dcd7a901-279" x="19.44" y="92.56" id="img-dcd7a901-280"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-281">
+            <use xlink:href="#img-dcd7a901-282" x="155.39" y="32.7" id="img-dcd7a901-283"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-284">
+            <use xlink:href="#img-dcd7a901-285" x="141.8" y="57.91" id="img-dcd7a901-286"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-287">
+            <use xlink:href="#img-dcd7a901-288" x="128.2" y="76.76" id="img-dcd7a901-289"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-290">
+            <use xlink:href="#img-dcd7a901-291" x="114.61" y="70.02" id="img-dcd7a901-292"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-293">
+            <use xlink:href="#img-dcd7a901-294" x="101.01" y="77.6" id="img-dcd7a901-295"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-296">
+            <use xlink:href="#img-dcd7a901-297" x="87.41" y="103.08" id="img-dcd7a901-298"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-299">
+            <use xlink:href="#img-dcd7a901-300" x="73.82" y="102" id="img-dcd7a901-301"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-302">
+            <use xlink:href="#img-dcd7a901-303" x="60.22" y="93.54" id="img-dcd7a901-304"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-305">
+            <use xlink:href="#img-dcd7a901-306" x="46.63" y="96.8" id="img-dcd7a901-307"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-308">
+            <use xlink:href="#img-dcd7a901-309" x="33.03" y="101.21" id="img-dcd7a901-310"/>
+          </g>
+          <g class="color_iteration_mandelbrot" stroke="#FFFFFF" fill="#00BFFF" id="img-dcd7a901-311">
+            <use xlink:href="#img-dcd7a901-312" x="19.44" y="92.56" id="img-dcd7a901-313"/>
+          </g>
         </g>
       </g>
     </g>
   </g>
-  <g class="guide ylabels" font-size="2.82" font-family="Georgia" fill="#6C606B" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-117">
-    <text x="10.94" y="113.76" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-118">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">-1</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
-    <text x="10.94" y="92.41" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-119">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">0</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
-    <text x="10.94" y="71.06" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-120">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">1</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
-    <text x="10.94" y="49.7" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-121">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">2</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
-    <text x="10.94" y="28.35" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-122">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">3</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
-    <text x="10.94" y="7" text-anchor="end" dy="0.35em" id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-123">10<tspan style="dominant-baseline:inherit" dy="-1.7225" font-size="83.3333%">4</tspan><tspan style="dominant-baseline:inherit" dy="1.4355"></tspan></text>
+</g>
+  <g class="guide ylabels" font-size="2.82" font-family="Georgia" fill="#6C606B" id="img-dcd7a901-314">
+    <text x="11.64" y="113.95" text-anchor="end" dy="0.35em" id="img-dcd7a901-315">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">-1</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="11.64" y="92.56" text-anchor="end" dy="0.35em" id="img-dcd7a901-316">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">0</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="11.64" y="71.17" text-anchor="end" dy="0.35em" id="img-dcd7a901-317">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">1</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="11.64" y="49.78" text-anchor="end" dy="0.35em" id="img-dcd7a901-318">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">2</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="11.64" y="28.39" text-anchor="end" dy="0.35em" id="img-dcd7a901-319">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">3</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="11.64" y="7" text-anchor="end" dy="0.35em" id="img-dcd7a901-320">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">4</tspan><tspan dy="0.498000em"></tspan></text>
   </g>
 </g>
 <defs>
-<clipPath id="fig-b6289bc40c39448a9b5b5024f1330d7f-element-23">
-  <path d="M11.94,5 L 174 5 174 115.76 11.94 115.76" />
-</clipPath
-></defs>
+  <clipPath id="img-dcd7a901-25">
+  <path d="M12.64,5 L 168.99 5 168.99 115.95 12.64 115.95" />
+</clipPath>
+  <g id="img-dcd7a901-14">
+    <circle cx="0" cy="0" r="0.91" id="img-dcd7a901-321"/>
+  </g>
+  <g id="img-dcd7a901-51">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-322"/>
+  </g>
+  <g id="img-dcd7a901-54">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-323"/>
+  </g>
+  <g id="img-dcd7a901-57">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-324"/>
+  </g>
+  <g id="img-dcd7a901-60">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-325"/>
+  </g>
+  <g id="img-dcd7a901-63">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-326"/>
+  </g>
+  <g id="img-dcd7a901-66">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-327"/>
+  </g>
+  <g id="img-dcd7a901-69">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-328"/>
+  </g>
+  <g id="img-dcd7a901-72">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-329"/>
+  </g>
+  <g id="img-dcd7a901-75">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-330"/>
+  </g>
+  <g id="img-dcd7a901-78">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-331"/>
+  </g>
+  <g id="img-dcd7a901-81">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-332"/>
+  </g>
+  <g id="img-dcd7a901-84">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-333"/>
+  </g>
+  <g id="img-dcd7a901-87">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-334"/>
+  </g>
+  <g id="img-dcd7a901-90">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-335"/>
+  </g>
+  <g id="img-dcd7a901-93">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-336"/>
+  </g>
+  <g id="img-dcd7a901-96">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-337"/>
+  </g>
+  <g id="img-dcd7a901-99">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-338"/>
+  </g>
+  <g id="img-dcd7a901-102">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-339"/>
+  </g>
+  <g id="img-dcd7a901-105">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-340"/>
+  </g>
+  <g id="img-dcd7a901-108">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-341"/>
+  </g>
+  <g id="img-dcd7a901-111">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-342"/>
+  </g>
+  <g id="img-dcd7a901-114">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-343"/>
+  </g>
+  <g id="img-dcd7a901-117">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-344"/>
+  </g>
+  <g id="img-dcd7a901-120">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-345"/>
+  </g>
+  <g id="img-dcd7a901-123">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-346"/>
+  </g>
+  <g id="img-dcd7a901-126">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-347"/>
+  </g>
+  <g id="img-dcd7a901-129">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-348"/>
+  </g>
+  <g id="img-dcd7a901-132">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-349"/>
+  </g>
+  <g id="img-dcd7a901-135">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-350"/>
+  </g>
+  <g id="img-dcd7a901-138">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-351"/>
+  </g>
+  <g id="img-dcd7a901-141">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-352"/>
+  </g>
+  <g id="img-dcd7a901-144">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-353"/>
+  </g>
+  <g id="img-dcd7a901-147">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-354"/>
+  </g>
+  <g id="img-dcd7a901-150">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-355"/>
+  </g>
+  <g id="img-dcd7a901-153">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-356"/>
+  </g>
+  <g id="img-dcd7a901-156">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-357"/>
+  </g>
+  <g id="img-dcd7a901-159">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-358"/>
+  </g>
+  <g id="img-dcd7a901-162">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-359"/>
+  </g>
+  <g id="img-dcd7a901-165">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-360"/>
+  </g>
+  <g id="img-dcd7a901-168">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-361"/>
+  </g>
+  <g id="img-dcd7a901-171">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-362"/>
+  </g>
+  <g id="img-dcd7a901-174">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-363"/>
+  </g>
+  <g id="img-dcd7a901-177">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-364"/>
+  </g>
+  <g id="img-dcd7a901-180">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-365"/>
+  </g>
+  <g id="img-dcd7a901-183">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-366"/>
+  </g>
+  <g id="img-dcd7a901-186">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-367"/>
+  </g>
+  <g id="img-dcd7a901-189">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-368"/>
+  </g>
+  <g id="img-dcd7a901-192">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-369"/>
+  </g>
+  <g id="img-dcd7a901-195">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-370"/>
+  </g>
+  <g id="img-dcd7a901-198">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-371"/>
+  </g>
+  <g id="img-dcd7a901-201">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-372"/>
+  </g>
+  <g id="img-dcd7a901-204">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-373"/>
+  </g>
+  <g id="img-dcd7a901-207">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-374"/>
+  </g>
+  <g id="img-dcd7a901-210">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-375"/>
+  </g>
+  <g id="img-dcd7a901-213">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-376"/>
+  </g>
+  <g id="img-dcd7a901-216">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-377"/>
+  </g>
+  <g id="img-dcd7a901-219">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-378"/>
+  </g>
+  <g id="img-dcd7a901-222">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-379"/>
+  </g>
+  <g id="img-dcd7a901-225">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-380"/>
+  </g>
+  <g id="img-dcd7a901-228">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-381"/>
+  </g>
+  <g id="img-dcd7a901-231">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-382"/>
+  </g>
+  <g id="img-dcd7a901-234">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-383"/>
+  </g>
+  <g id="img-dcd7a901-237">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-384"/>
+  </g>
+  <g id="img-dcd7a901-240">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-385"/>
+  </g>
+  <g id="img-dcd7a901-243">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-386"/>
+  </g>
+  <g id="img-dcd7a901-246">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-387"/>
+  </g>
+  <g id="img-dcd7a901-249">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-388"/>
+  </g>
+  <g id="img-dcd7a901-252">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-389"/>
+  </g>
+  <g id="img-dcd7a901-255">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-390"/>
+  </g>
+  <g id="img-dcd7a901-258">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-391"/>
+  </g>
+  <g id="img-dcd7a901-261">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-392"/>
+  </g>
+  <g id="img-dcd7a901-264">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-393"/>
+  </g>
+  <g id="img-dcd7a901-267">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-394"/>
+  </g>
+  <g id="img-dcd7a901-270">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-395"/>
+  </g>
+  <g id="img-dcd7a901-273">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-396"/>
+  </g>
+  <g id="img-dcd7a901-276">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-397"/>
+  </g>
+  <g id="img-dcd7a901-279">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-398"/>
+  </g>
+  <g id="img-dcd7a901-282">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-399"/>
+  </g>
+  <g id="img-dcd7a901-285">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-400"/>
+  </g>
+  <g id="img-dcd7a901-288">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-401"/>
+  </g>
+  <g id="img-dcd7a901-291">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-402"/>
+  </g>
+  <g id="img-dcd7a901-294">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-403"/>
+  </g>
+  <g id="img-dcd7a901-297">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-404"/>
+  </g>
+  <g id="img-dcd7a901-300">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-405"/>
+  </g>
+  <g id="img-dcd7a901-303">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-406"/>
+  </g>
+  <g id="img-dcd7a901-306">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-407"/>
+  </g>
+  <g id="img-dcd7a901-309">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-408"/>
+  </g>
+  <g id="img-dcd7a901-312">
+    <circle cx="0" cy="0" r="0.9" id="img-dcd7a901-409"/>
+  </g>
+</defs>
 </svg>
