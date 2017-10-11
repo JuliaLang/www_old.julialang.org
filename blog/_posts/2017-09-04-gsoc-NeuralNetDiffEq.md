@@ -4,7 +4,7 @@ title: "NeuralNetDiffEq.jl: A Neural Network solver for Ordinary Differential Eq
 author: Akshay Sharma
 ---
 
-My GSoC 2007 [project](https://summerofcode.withgoogle.com/projects/#5850956641075200) was to implement a package for Julia to solve Ordinary Differential Equations using Neural Networks.
+My GSoC 2017 [project](https://summerofcode.withgoogle.com/projects/#5850956641075200) was to implement a package for Julia to solve Ordinary Differential Equations using Neural Networks.
 The purpose of the project was to provide an additional DE solver using Neural Networks which has parallelism in time as the key advantage over other solvers which are iterative in nature. The project was based on research paper of [Lagaris et al. 2997](https://arxiv.org/pdf/physics/9705023.pdf) which proposed the function approximation capabilities of Neural Networks for solving differential equations. The project was a mixture of research as well as implementation aspects and still has a few parts left to work upon.
 I chose to work on this project as I have interest in Mathematics and Machine Learning and it involved concepts of both the fields. The package uses [DifferentialEquations.jl](https://github.com/JuliaDiffEq/DifferentialEquations.jl) for the solver interface and [KNet.jl](https://github.com/denizyuret/Knet.jl) for NN solver implementation.
 
