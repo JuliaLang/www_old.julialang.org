@@ -9,20 +9,19 @@ The purpose of the project was to provide an additional DE solver using Neural N
 I chose to work on this project as I have interest in mathematics and machine learning and it involved concepts of both the fields. The package uses [DifferentialEquations.jl](https://github.com/JuliaDiffEq/DifferentialEquations.jl) for the solver interface and [KNet.jl](https://github.com/denizyuret/Knet.jl) for NN solver implementation.
 
 ## How to use Neural Network for solving Differential Equations?
-The concept of this solver is based on the UAT (Universal Approximation Theorem) which says that a Neural Network with at least one hidden can approximate any continuous function. The neural network is made to minimize a loss function, defined as the difference between the NN's derivative and the derivative of the differential equation, which then results in the convergence of our trial solution towards the actual (analytical) solution. To know more about UAT [click here](http://neuralnetworksanddeeplearning.com/chap4.html).
+The concept of this solver is based on the UAT (Universal Approximation Theorem) which says that a NN with at least one hidden layer can approximate any continuous function. The neural network is made to minimize a loss function, defined as the difference between the NN's derivative and the derivative of the differential equation, which then results in the convergence of our trial solution towards the actual (analytical) solution of the differential equation. To know more about UAT [click here](http://neuralnetworksanddeeplearning.com/chap4.html).
 
 ## Research aspect of the project and the challenge
-The research paper we referred on the topic is quite old and understanding the examples as well as explanations was quite challenging. Not much research has been done on using Neural Networks for this purpose and thus we were not able to get much help from the research papers related to the topic.
-The initial task was to read and understand the mathematics behind solving differential equations. Also the computational methods used to solve differential equations on computers are quite different from the ones we use on paper so it took quite some time to get familiar with them. The structure and type of NN to be used so that the solver advantages are retained without compromising the performance was a research subdomain as well was a challenge.
+The research paper we referred to on the topic is quite old and understanding the examples as well as explanations was quite challenging. Not much research has been done on using NNs for this purpose and thus we were not able to get much help from the research papers related to the topic.
+The initial task was to read and understand the mathematics behind solving differential equations. Also the computational methods used to solve differential equations on computers are quite different from the ones we use on paper so it took quite some time to get familiar with them. The structure and type of NN to be used so that the solver advantages (parallelism in time) are retained without compromising the performance was a research subdomain as well was a challenge.
 
 
-Also after implementing the solver for ODEs (Ordinary Differential Equations) and systems of ODEs the difficult part was to make the Neural Network converge, especially for the system of ODEs.
+After implementing the solver for ODEs (Ordinary Differential Equations) and systems of ODEs, the difficult part was to make the NN converge for the systems of ODEs on longer time domains.
 As there are a lot of factors involved in neural networks, like hidden layer width, number of hidden neurons, activations, weights etc., I relied on my machine learning background as well as the help from my mentors to experiment with most of the feasible settings of NN hyper-parameters and recording the accuracy of convergence and performance of the solver.
-
 Making the NNs converge for systems of ODEs is not as easy as it seems and took up most of the time for experimentation and tuning. Predicting the system of DEs solution with larger domain is still a challenge which needs to be worked upon.
 
 ## Implementation and Work
-The implementation involved integration of mathematical and machine learning aspects to build a neural net solver for ODEs. The [DiffEqBase library](https://github.com/JuliaDiffEq/DiffEqBase.jl) is used as a base to extend the Algorithm and solver interface. The work done till now can be seen on the [github repository](https://github.com/JuliaDiffEq/NeuralNetDiffEq.jl) primarily in [this branch](https://github.com/JuliaDiffEq/NeuralNetDiffEq.jl/tree/SingleNN_Approach).
+The implementation involved integration of mathematical and machine learning aspects to build a neural net solver for ODEs. The [DiffEqBase library](https://github.com/JuliaDiffEq/DiffEqBase.jl) is used as a base to extend the algorithm and solver interface while the neural network was developed using the [Knet.jl library](https://github.com/denizyuret/Knet.jl). The work done till now can be seen on the [NeuralNetDiffEq.jl github repository](https://github.com/JuliaDiffEq/NeuralNetDiffEq.jl), primarily in [this branch](https://github.com/JuliaDiffEq/NeuralNetDiffEq.jl/tree/SingleNN_Approach).
 This work involves implementing a Neural Network solver for ODEs with customized interpolation based on NN prediction. 
 
 ### How does it work?
@@ -172,7 +171,7 @@ plot(sol2)
 ```
 ![Plot_sode2](/images/blog/2017-09-04-gsoc-NeuralNetDiffEq/plot_sode2.png "Plot 2")
 
-To show that the solver with current settings and hyper-parameters does not work for a larger domain (Eg 0-10) `lotka_volterra` here is a graph.
+To show that the solver with current settings and hyper-parameters does not work for a larger domain (Eg 0-10) `lotka_volterra` here is a graph:
 
 ```julia
 prob_ode_lotkavoltera = ODEProblem(lotka_volterra,Float32[1.0,1.0],(Float32(0.0),Float32(5.0)))
@@ -181,10 +180,11 @@ plot(sol3)
 ```
 ![Plot_sode3](/images/blog/2017-09-04-gsoc-NeuralNetDiffEq/plot_sode3.png "Plot 3")
 
+However, the [true solution should be oscillatory, indicating that the NN did not properly converge](http://app.juliadiffeq.org/ode;settings=eyJkaWZmRXFUZXh0IjoiZHggPSBhKnggLSBiKngqeVxuZHkgPSAtYyp5ICsgZCp4KnkiLCJwYXJhbWV0ZXJzIjoiYT0xLjUsIGI9MSwgYz0zLCBkPTEiLCJ0aW1lU3BhbiI6WzAsMTBdLCJpbml0aWFsQ29uZGl0aW9ucyI6IjEuMCwgMS4wIiwic29sdmVyIjoiVHNpdDUiLCJ2YXJzIjoiWzp4LCA6eV0iLCJ0aXRsZSI6IlRoZSBMb3RrYS1Wb2x0ZXJyYSBFcXVhdGlvbnM6IE1vZGVsIG9mIFJhYmJpdHMgYW5kIFdvbHZlcyJ9).
 To see more examples and experiment results you can check out my Jupyter notebooks [here](http://nbviewer.jupyter.org/gist/akaysh/43c9db281b0bd3224114084c44263c13).
 
 ## Future Work
-A bit more of research on the NN used as how it can be optimized for speed and better convergence. For systems of ODEs with larger domains the current Neural Network fails to converge and would require further optimization. An optimization algorithm can be used for one time NN hyperparameter optimization so that it can work better for systems of ODEs. We tried many approaches like biasing the cost function to prioritize earlier timepoints but this failed as well. Similar problems were found in an [alternative implementation using TensorFlow (TensorFlowDiffEq.jl)](https://github.com/JuliaDiffEq/TensorFlowDiffEq.jl), which suggests this may just be a problem with the method.
+More of research on how to optimize the NN for speed and better convergence is required. For systems of ODEs with larger domains the current Neural Network fails to converge. An optimization algorithm can be used for one time NN hyperparameter optimization so that it can work better for systems of ODEs. We tried many approaches like biasing the cost function to prioritize earlier timepoints but this failed as well. Similar problems were found in an [alternative implementation using TensorFlow (TensorFlowDiffEq.jl)](https://github.com/JuliaDiffEq/TensorFlowDiffEq.jl), which suggests this may just be a problem with the solving method.
 
 ## Acknowledgements
 
