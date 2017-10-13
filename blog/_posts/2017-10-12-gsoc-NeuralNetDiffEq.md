@@ -25,10 +25,7 @@ The implementation involved integration of mathematical and machine learning asp
 This work involves implementing a Neural Network solver for ODEs with customized interpolation based on NN prediction. 
 
 ### How does it work?
-We construct a trial solution for our differential equation in terms of the NN output which should also satisfy the DE boundary conditions.
-We define a loss function for the neural net which is the difference between the derivative of the neural net solution and the true derivative defined by the ODE.
-This loss function is minimized (by equating the derivative difference to zero) using the NN (closer to 0 better convergence) with the trial solution substituted in it in place of the original function (or the solution to the DE). The Neural Network uses Adam optimization algorithm for backpropagation to tune its weights.
-
+We construct a trial solution for our differential equation in terms of the NN output which should also satisfy the DE boundary conditions. We define a loss function for the neural net which is the difference between the derivative of the neural net solution with regards to its input and the true derivative defined by the ODE. This is an unusual loss function, in that in includes the gradient of the network itself. It is almost unseen elsewhere in other ML applications This loss function is minimized (by equating the derivative difference to zero) using the NN (closer to 0 better convergence) with the trial solution substituted in it in place of the original function (or the solution to the DE). The neural network tunes its weights using the Adam optimization algorithm on the backpropagated gradients from that loss function.
 
 For parallel implementation in time we use KnetArray (the array type used in [KNet.jl](https://github.com/denizyuret/Knet.jl)) which uses CPU by default but GPU usage is also supported for parallelism but requires CUDNN driver installed to access GPU hardware.
 
