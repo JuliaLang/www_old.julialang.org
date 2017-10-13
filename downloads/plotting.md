@@ -23,11 +23,11 @@ pyplot() # Switch to using the PyPlot.jl backend
 plot(rand(5,5),linewidth=2,title="My Plot") # The same plotting command works
 {% endhighlight %}
 
-A guide to the available backends can be found [in the manual](https://juliaplots.github.io/backends/).
-Additionally, many Julia packages add plotting functionality through its [recipe system](https://juliaplots.github.io/recipes/).
+A guide to the available backends can be found [in the manual](http://docs.juliaplots.org/latest/backends/).
+Additionally, many Julia packages add plotting functionality through its [recipe system](http://docs.juliaplots.org/latest/recipes/).
 These can be used to do tasks like creating a default visualization
 for Julia types and create entirely new types of plots.
-[An examples page](https://juliaplots.github.io/ecosystem/) shows some
+[The ecosystems page](http://docs.juliaplots.org/latest/ecosystem/) shows some
 visualizations the extension packages have added to Plots.jl.
 
 ## PyPlot
