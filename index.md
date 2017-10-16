@@ -44,7 +44,7 @@ Julia programs are organized around [multiple dispatch](http://docs.julialang.or
 For a more in-depth discussion of the rationale and advantages of Julia over other systems, see the following highlights or read the [introduction](http://docs.julialang.org/en/stable/manual/introduction/) in the [online manual](http://docs.julialang.org).
 
 
-JuliaCon 2016, the annual conference on Julia was held during June 21st - 25th at MIT. Below is a random video from our youtube playlist of the talks. Click on the playlist icon to check out the other videos.
+JuliaCon 2017, the annual conference on Julia was held during June 20st - 24th at the University of California, Berkeley. Below is a random video from our youtube playlist of the talks. Click on the playlist icon to check out the other videos.
 
 {% include juliacon-player-2017.html %}
 
