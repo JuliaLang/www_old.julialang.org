@@ -83,29 +83,34 @@ To get a sense of relative performance of Julia compared to other languages that
 We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
 The following micro-benchmark results were obtained on a single core (serial execution) on an Intel(R) Core(TM) i7-3960X 3.30GHz CPU with 64GB of 1600MHz DDR3 RAM, running openSUSE LEAP 42.2 Linux:
 
-<div class="figure">
-<div class="cs-benchmark-table">
-{% include benchmarks.html %}
-</div>
+<center>
+<div class="figure" style="align: center; width: 77%">
+{% include benchmarks.svg %}
 <p class="caption"><b>Figure:</b>
 benchmark times relative to C (smaller is better, C performance = 1.0).
 </p>
 <p class="note">
 C and Fortran compiled by gcc 4.8.9, taking best timing from all optimization levels (-O0 through -O3).
-C, Fortran, Julia, Python, and Octave use <a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a> v0.2.19
-for matrix operations. 
+C, Fortran, Go, Julia, Lua, Python, and Octave use <a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a> v0.2.19
+for matrix operations; Mathematica uses Intel(R) MKL. 
 The Python environment is <a href="https://anaconda.org/anaconda/python">Anaconda Python</a> v3.5.4.
 The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use <a href="http://www.numpy.org/">NumPy</a> v1.13.1 and OpenBLAS v0.2.19
-functions; the rest are pure Python implementations. Benchmarks can also be seen 
-<a href="/benchmarks/">here as a plot</a> created with <a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a>.
+functions; the rest are pure Python implementations. Plot created with 
+<a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a> and 
+<a href="https://github.com/JuliaLang/IJulia.jl">IJulia</a> from 
+<a href="http://nbviewer.ipython.org/url/julialang.org/benchmarks.ipynb">this notebook</a>.
+A table of the benchmark data <a href="/benchmarks/">is provided here</a>.
+
+
 </p>
 </div>
+</center>
 
 These benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, and array operations.
-It is important to note that these benchmark implementations are not written for absolute maximal performance (the fastest code to compute `recursion_fibonacci(20)` is the constant literal `6765`).
-Rather, all of the benchmarks are written to test the performance of specific algorithms implemented in each language.
-In particular, all languages use the same algorithm: the Fibonacci benchmarks are all recursive while the pi summation benchmarks are all iterative; the "algorithm" for matrix multiplication is to call the most obvious built-in/standard random-number and matmul routines (or to directly call BLAS if the language does not provide a high-level matmul), except where a matmul/BLAS call is not possible (such as in JavaScript).
-The point of these benchmarks is to compare the performance of specific *algorithms* across language implementations, not to compare the fastest means of computing a result, which in most high-level languages relies on calling C code.
+It is important to note that the benchmark codes are not written for absolute maximal performance (the fastest code to compute `recursion_fibonacci(20)` is the constant literal `6765`).
+Instead, the benchmarks are written to test the performance of *identical algorithms and code patterns* implemented in each language.
+For example, the Fibonacci benchmarks all use the same (inefficient) doubly-recursive algorithm, and the pi summation benchmarks use the same for-loop. 
+The "algorithm" for matrix multiplication is to call the most obvious built-in/standard random-number and matmul routines (or to directly call BLAS if the language does not provide a high-level matmul), except where a matmul/BLAS call is not possible (such as in JavaScript). 
 Raw benchmark numbers in CSV format are available [here](/benchmarks.csv).
 
 
@@ -116,7 +121,7 @@ function mandel(z)
     c = z
     maxiter = 80
     for n = 1:maxiter
-        if abs(z) > 2
+        if abs2(z) > 4
             return n-1
         end
         z = z^2 + c

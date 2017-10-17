@@ -1,30 +1,31 @@
 <table class="benchmarks">
 <colgroup>
-<col class="name">
-<col class="relative" span="11">
+<col class="name"></col>
+<col class="relative" span="12"></col>
 </colgroup>
 <thead>
-<tr><td></td><th class="system">C</th><th class="system">Julia</th><th class="system">LuaJIT</th><th class="system">Fortran</th><th class="system">Java</th><th class="system">JavaScript</th><th class="system">Matlab</th><th class="system">Python</th><th class="system">Mathe-matica</th><th class="system">R</th><th class="system">Octave</th></tr>
+<tr><td></td><th class="system">C</th><th class="system">Julia</th><th class="system">LuaJIT</th><th class="system">Go</th><th class="system">Fortran</th><th class="system">Java</th><th class="system">JavaScript</th><th class="system">Mathe-matica</th><th class="system">Python</th><th class="system">Matlab</th><th class="system">R</th><th class="system">Octave</th></tr>
 <tr><td></td><td class="version">gcc 4.8.5
 </td><td class="version">0.6.0
-</td><td class="version">scilua v1.0.0-b12</td><td class="version">gcc 4.8.5
+</td><td class="version">scilua v1.0.0-b12</td><td class="version">go1.7.5
+</td><td class="version">gcc 4.8.5
 </td><td class="version">1.8.0_14
 </td><td class="version">V8 4.5.103.47
-</td><td class="version">R    '2017a'
-</td><td class="version">3.4.6
 </td><td class="version">11.1.1
+</td><td class="version">3.4.6
+</td><td class="version">R    '2017a'
 </td><td class="version">3.3.1
 </td><td class="version">4.0.3
 </td></tr>
 </thead>
 <tbody>
-<tr><th>iteration_mandelbrot</th><td class="data">1.00</td><td class="data">0.63</td><td class="data">0.39</td><td class="data">0.90</td><td class="data">0.36</td><td class="data">0.32</td><td class="data">5.01</td><td class="data">11.32</td><td class="data">5.48</td><td class="data">41.70</td><td class="data">628.86</td></tr>
-<tr><th>iteration_pi_sum</th><td class="data">1.00</td><td class="data">0.85</td><td class="data">0.85</td><td class="data">1.00</td><td class="data">0.91</td><td class="data">0.85</td><td class="data">0.85</td><td class="data">17.11</td><td class="data">1.31</td><td class="data">7.60</td><td class="data">430.44</td></tr>
-<tr><th>recursion_fibonacci</th><td class="data">1.00</td><td class="data">1.67</td><td class="data">1.08</td><td class="data">0.52</td><td class="data">1.53</td><td class="data">3.41</td><td class="data">18.48</td><td class="data">89.82</td><td class="data">126.56</td><td class="data">539.96</td><td class="data">17619.46</td></tr>
-<tr><th>recursion_quicksort</th><td class="data">1.00</td><td class="data">0.93</td><td class="data">1.50</td><td class="data">1.30</td><td class="data">2.54</td><td class="data">2.86</td><td class="data">3.05</td><td class="data">36.74</td><td class="data">44.57</td><td class="data">264.00</td><td class="data">3660.14</td></tr>
-<tr><th>parse_integers</th><td class="data">1.00</td><td class="data">1.36</td><td class="data">1.01</td><td class="data">5.43</td><td class="data">3.77</td><td class="data">6.68</td><td class="data">244.33</td><td class="data">19.07</td><td class="data">14.79</td><td class="data">51.35</td><td class="data">4138.85</td></tr>
-<tr><th>print_to_file</th><td class="data">1.00</td><td class="data">0.67</td><td class="data">0.56</td><td class="data">3.49</td><td class="data">6.08</td><td class="data">967.94</td><td class="data">117.46</td><td class="data">1.41</td><td class="data">62.95</td><td class="data">137.65</td><td class="data">218.77</td></tr>
-<tr><th>matrix_statistics</th><td class="data">1.00</td><td class="data">1.88</td><td class="data">1.73</td><td class="data">1.99</td><td class="data">5.97</td><td class="data">3.17</td><td class="data">18.71</td><td class="data">16.35</td><td class="data">7.86</td><td class="data">21.15</td><td class="data">62.69</td></tr>
-<tr><th>matrix_multiply</th><td class="data">1.00</td><td class="data">0.95</td><td class="data">1.08</td><td class="data">1.24</td><td class="data">8.66</td><td class="data">24.23</td><td class="data">1.14</td><td class="data">1.14</td><td class="data">1.16</td><td class="data">8.47</td><td class="data">1.17</td></tr>
+<tr><th>iteration_pi_sum</th><td class="data">1.00</td><td class="data">0.85</td><td class="data">0.85</td><td class="data">0.86</td><td class="data">1.00</td><td class="data">0.88</td><td class="data">0.85</td><td class="data">1.31</td><td class="data">17.11</td><td class="data">0.85</td><td class="data">7.54</td><td class="data">379.15</td></tr>
+<tr><th>recursion_fibonacci</th><td class="data">1.00</td><td class="data">1.68</td><td class="data">1.09</td><td class="data">1.69</td><td class="data">0.54</td><td class="data">1.53</td><td class="data">3.42</td><td class="data">127.21</td><td class="data">88.87</td><td class="data">18.41</td><td class="data">584.48</td><td class="data">15986.10</td></tr>
+<tr><th>recursion_quicksort</th><td class="data">1.00</td><td class="data">0.93</td><td class="data">1.54</td><td class="data">1.23</td><td class="data">1.30</td><td class="data">2.33</td><td class="data">2.86</td><td class="data">44.55</td><td class="data">36.63</td><td class="data">3.06</td><td class="data">256.57</td><td class="data">3198.31</td></tr>
+<tr><th>parse_integers</th><td class="data">1.00</td><td class="data">1.37</td><td class="data">1.00</td><td class="data">1.01</td><td class="data">5.36</td><td class="data">2.85</td><td class="data">6.50</td><td class="data">14.86</td><td class="data">19.74</td><td class="data">238.51</td><td class="data">51.55</td><td class="data">3804.90</td></tr>
+<tr><th>print_to_file</th><td class="data">1.00</td><td class="data">0.67</td><td class="data">0.57</td><td class="data">2.00</td><td class="data">3.48</td><td class="data">6.16</td><td class="data">0.00</td><td class="data">61.70</td><td class="data">1.42</td><td class="data">116.26</td><td class="data">134.09</td><td class="data">197.88</td></tr>
+<tr><th>matrix_statistics</th><td class="data">1.00</td><td class="data">1.90</td><td class="data">1.73</td><td class="data">6.08</td><td class="data">1.96</td><td class="data">4.89</td><td class="data">3.43</td><td class="data">7.91</td><td class="data">18.63</td><td class="data">18.62</td><td class="data">20.70</td><td class="data">58.75</td></tr>
+<tr><th>matrix_multiply</th><td class="data">1.00</td><td class="data">0.98</td><td class="data">1.11</td><td class="data">1.24</td><td class="data">1.27</td><td class="data">8.06</td><td class="data">24.91</td><td class="data">1.19</td><td class="data">1.17</td><td class="data">1.18</td><td class="data">8.75</td><td class="data">1.22</td></tr>
+<tr><th>userfunc_mandelbrot</th><td class="data">1.00</td><td class="data">0.83</td><td class="data">1.13</td><td class="data">0.89</td><td class="data">0.75</td><td class="data">1.24</td><td class="data">1.17</td><td class="data">21.09</td><td class="data">158.06</td><td class="data">6845.12</td><td class="data">366.95</td><td class="data">13585.56</td></tr>
 </tbody>
 </table>
