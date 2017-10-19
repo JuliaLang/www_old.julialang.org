@@ -17,4 +17,3 @@ The Python environment is <a href="https://anaconda.org/anaconda/python">Anacond
 The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use <a href="http://www.numpy.org/">NumPy</a> v1.13.1 and OpenBLAS v0.2.19 functions; the rest are pure Python implementations. 
 </p>
 </div>
-</center>
