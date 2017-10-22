@@ -11,7 +11,7 @@ title:  Tooling Projects – Summer of Code
 
 The [Juno](http://junolab.org) is open to general project ideas (from here or not); feel free to get in contact via the [forum](http://discourse.julialang.org/) to discuss!
 
-## Progress Metre Improvements
+## Progress Meter Improvements
 
 Right now Juno's progress metre works well but is fairly basic. In particular, it could be improved by:
 
@@ -27,18 +27,6 @@ These issues prevent package authors from using `@progress` over loops without m
 **Recommended Skills**: Some experience with Julia and Juno is good, but only general programming skills are required.
 
 **Mentors**: [Mike Innes](https://github.com/mikeinnes)
-
-## Documentation search & navigation
-
-We'd like to make finding and viewing relevant documentation a core part of the Juno/Julia experience. As well as viewing docs for a particular function, it'd be great to take advantage of the extensive Markdown docs provided by packages for other purposes. For example, a basic doc search engine could allow users to find relevant functionality even when they don't know the names of the functions involved. (This could even be extended to searching across all packages!)
-
-Initially this project could be built as a package or as an extension to the Atom.jl package. Eventually, we'd also like to integrate the functionality with a nice UI inside of Juno, and this could serve as extension work for an enterprising student.
-
-**Expected Results**: Tools in Julia for collating and working with package documentation, as well as a plan for how this can become part of the IDE or other tooling.
-
-**Recommended Skills**: The Julia-side parts of this could be done by anyone with programming experience. For Juno integration, familiarity with javascript or Atom development is a big plus.
-
-**Mentors**: [Mike Innes](https://github.com/mikeinnes), [Michael Hatherly](https://github.com/michaelhatherly)
 
 ## Package installation UI
 

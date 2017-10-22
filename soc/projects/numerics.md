@@ -21,16 +21,6 @@ Iterative methods for solving numerical linear algebraic problems are crucial fo
 
 **Mentors:** [Jiahao Chen](https://jiahao.github.io/)
 
-## Native usage of LinearMaps in iterative solvers
-
-While one normally thinks of solving the linear equation Ax=b with A being a matrix, this concept is more generally applied to A being a linear map. In many domains of science, this idea of directly using a linear map instead of a matrix allows for one to solve the equation in a more efficient manner. Iterative methods for linear solving only require the ability compute `A*x` in order solve the system, and thus these methods can be extended to use more general linear maps. By restructuring IterativeSolvers.jl to use `LinearMap` types from [LinearMaps.jl](https://github.com/Jutho/LinearMaps.jl), these applications can be directly supported in the library.
-
-**Recommended Skills**: Strong linear algebra background. Familiarity with numerical linear algebra.
-
-**Expected Results**: The ability to use more general LinearMaps in the IterativeSolvers.jl methods.
-
-**Mentors:** [Jiahao Chen](https://jiahao.github.io/)
-
 ## PETSc integration for scalable technical computing
 
 [PETSc](http://www.mcs.anl.gov/petsc) is a widely used framework of data structures and computational routines suitable for massively scaling scientific computations. Many of these algorithms are also ideally suited for big data applications such as computing principal components of very large sparse matrices and solving complicated forecasting models with distributed methods for solving partial differential equations.

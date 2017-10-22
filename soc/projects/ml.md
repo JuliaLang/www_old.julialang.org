@@ -35,24 +35,6 @@ It would be useful to load existing trained models created with other frameworks
 
 **Mentors**: Mike Innes
 
-## GPUArrays
-
-### Integration with existing GPU libraries
-
-In GPUArrays we don't want to reinvent the wheel and leverage the great power of CU/CL - BLAS ( or even CU/CL - FFT).
-Fortunately, Julia's abstract array interface makes it fairly straightforward to integrate these libraries in a natural way, since Julia already has OpenBLAS deeply integrated in the base array abstraction.
-We have a basic strategy laid out for the integration and can mentor someone who is willing to write the it!
-
-### JIT compiling GPU Code
-
-GPUArrays heavily relies on just in time compilation of high performance kernels on the arrays. 
-The foundation for this is already part of GPUArrays in form of a basic map/reduce/broadcast implementation, using a Transpiler and CUDAnative.
-What we now need is a lot of tests, improvements to the compiler/transpiler, benchmarks and fine tuning the performance of our kernels.
-Someone who is more experienced in writing GPU kernels is also welcome to enrich GPUArrays with the implementation of more advanced kernels, e.g.
-tiled iterations, filtering primitives, moving windows, etc.
-
-**Mentors**: Simon Danisch
-
 ## Standardized dataset packaging
 
 Scientific and technical computing often makes use of publicly available datasets. Often, there's a lot of overhead to finding these data sets and coercing them into a usable format. Packages like [RDatasets.jl](https://github.com/johnmyleswhite/RDatasets.jl/) and [MNIST.jl](https://github.com/johnmyleswhite/MNIST.jl) attempt to make this easier by downloading data automatically and providing it as a Julia data structure.
@@ -64,3 +46,22 @@ This project involves building a "[BinDeps.jl](https://github.com/JuliaLang/BinD
 **Recommended Skills**: Only standard programming skills are needed for this project. Familiarity with Julia is a plus.
 
 **Mentors**: [JuliaML Members](https://github.com/orgs/JuliaML/people)
+
+## Machine learning tools for classification of qualitative traits of differential equation models
+
+Machine learning has become a popular tool for understanding data, but scientists
+typically want to use this data to better understand their differential
+equation-based models. Differential equations usually have parameters which are
+unknown but when changed can cause qualitative differences to the results. By
+pairing machine learning tooling with data generation from differential equation
+models, tools can be developed which can classify when behaviors are to be
+expected in the solution.
+
+**Recommended Skills**: Background knowledge of standard machine learning
+techniques. It's recommended but not required that one has basic knowledge of
+differential equations and DifferentialEquations.jl.
+
+**Expected Results**: Tools for easily classifying parameters using machine
+learning tooling for users inexperienced with machine learning.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
