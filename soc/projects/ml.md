@@ -5,26 +5,6 @@ title: Machine Learning General Projects – Summer of Code
 
 {% include toc.html %}
 
-## Torch.jl
-
-The [Torch](https://github.com/torch/torch7) library provides a fast implementation of N-dimensional arrays which can run on the CPU or GPU. This has been used to build popular machine learning libraries in Lua (torch itself) and Python (via [PyTorch](http://pytorch.org/)). Wrapping Torch in Julia would be a great way to get general GPU acceleration of Julia code, and could also be integrated with higher-level Julia ML libraries like Knet, ReverseDiff and Flux.
-
-**Expected Results**: A Julia package wrapping the Torch C library.
-
-**Recommended Skills**: Knowledge of Julia's C FFI and calling C code.
-
-**Mentors**: Mike Innes, Pontus Stenetorp
-
-## Data loading and training processes for Flux.jl
-
-Currently [Flux](https://github.com/MikeInnes/Flux.jl) best supports a basic (stochastic) gradient descent training process. This project would involve implementing other optimisers like ADAM in the library, as well as extending the training processes to carry out user-configurable analysis or reporting during training.
-
-**Expected Results**: New optimisers for the Flux library.
-
-**Recommended Skills**: Familiarity with neural networks.
-
-**Mentors**: Mike Innes
-
 ## Model Loading for Flux.jl
 
 It would be useful to load existing trained models created with other frameworks – say Caffe, TensorFlow or MXNet – into Flux. This project would involve investigating the model formats and building readers so that those models can be run in native Julia.
