@@ -69,22 +69,22 @@ Most users are advised to use the latest official release version of Julia, abov
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
-    <td> <a href="https://status.julialang.org/download/win32">32-bit</a> </td>
-    <td colspan="2"> <a href="https://status.julialang.org/download/win64">64-bit</a> </td>
+    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/winnt/x86/julia-latest-win32.exe">32-bit</a> </td>
+    <td colspan="2"> <a href="https://julialangnightlies-s3.julialang.org/bin/winnt/x64/julia-latest-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="3"> <a href="https://status.julialang.org/download/osx10.7+">10.8+ 64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialangnightlies-s3.julialang.org/bin/mac/x64/julia-latest-mac64.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries for X86 </th>
-    <td> <a href="https://status.julialang.org/download/linux-i686">32-bit</a> </td>
-    <td> <a href="https://status.julialang.org/download/linux-x86_64">64-bit</a> </td>
+    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/x86/julia-latest-linux32.tar.gz">32-bit</a> </td>
+    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/x64/julia-latest-linux64.tar.gz">64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries for ARM </th>
-    <td> <a href="https://status.julialang.org/download/linux-armv7l">32-bit (armv7-a hard float)</a> </td>
-    <td> <a href="https://julialangnightlies.s3.amazonaws.com/buildog/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
+    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/armv7l/julia-latest-linuxarmv7l.tar.gz">32-bit (armv7-a hard float)</a> </td>
+    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
 </tr>
 <tr>
     <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
