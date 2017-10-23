@@ -50,6 +50,27 @@ linear algebra, and the ability to write fast code.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
+## Tooling for molecular dynamics and N-body simulations
+
+Molecular dynamics simulations are large N-body problems which predict the
+properties of materials. While in theory anyone with an ODE solver can write
+the ODE to be solved, in practice these problems can be very large and thus
+very difficult to specify. The purpose of this project is to expand on the
+tooling of [DiffEqPhysics.jl](https://github.com/JuliaDiffEq/DiffEqPhysics.jl)
+to build methods for these types of simulations. Extensions to force-field
+simulators which allow for constant temperature or use Lennard-Jones potentials,
+along with tools for easily calculating system properties like temperature and
+pressure, would make the Julia ecosystem much friendlier to these forms of
+modeling.
+
+**Recommended Skills**: Background knowledge in physics.
+
+**Expected Results**: Tools for performing molecular dynamics simulations and
+examples which show the usage of such tools.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas),
+[David Sanders](https://github.com/dpsanders)
+
 ## Tools for global and adjoint sensitivity analysis
 
 Global Sensitivity Analysis is a popular tool to assess the affect that parameters
