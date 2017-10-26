@@ -3,7 +3,7 @@ layout: default
 title:  Julia Downloads
 ---
 
-# Current Release (v0.6.0)
+# Current Release (v0.6.1)
 
 We provide several ways for you to run Julia:
 
@@ -22,32 +22,39 @@ JuliaBox, all of these plotting packages are pre-installed.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.6/julia-0.6.0-win32.exe">32-bit</a> </td>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.6/julia-0.6.0-win64.exe">64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.6/julia-0.6.1-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.6/julia-0.6.1-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.6/julia-0.6.0-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.6/julia-0.6.1-osx10.7+.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
-    <th> Generic Linux binaries <a href="platform.html#generic-linux-binaries">[help]</a></th>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.0-linux-i686.tar.gz">32-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.0-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz">64-bit (X86)</a> (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <th> Generic Linux Binaries for x86 <a href="platform.html#generic-linux-binaries">[help]</a></th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.1-linux-i686.tar.gz">32-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.1-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.1-linux-x86_64.tar.gz">64-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.1-linux-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
-    <th> Linux builds for other architectures </th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz">ARMv7 32-bit hard float</a> (<a href="https://julialang-s3.julialang.org/bin/linux/arm/0.6/julia-0.6.0-linux-arm.tar.gz.asc">GPG</a>)</td>
+    <th> Generic Linux Binaries for ARM </th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/armv7l/0.6/julia-0.6.1-linux-armv7l.tar.gz">32-bit (armv7-a hard float)</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/armv7l/0.6/julia-0.6.1-linux-armv7l.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/aarch64/0.6/julia-0.6.1-linux-aarch64.tar.gz">64-bit (armv8-a)</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/aarch64/0.6/julia-0.6.1-linux-aarch64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.6.0/julia-0.6.0.tar.gz">Tarball</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.6.0/julia-0.6.0.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.6.0/julia-0.6.0-full.tar.gz">Tarball with dependencies</a> (<a href="https://github.com/JuliaLang/julia/releases/download/v0.6.0/julia-0.6.0-full.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.6.0">GitHub</a> </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.6.1/julia-0.6.1.tar.gz">Tarball</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.6.1/julia-0.6.1.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.6.1/julia-0.6.1-full.tar.gz">Tarball with dependencies</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.6.1/julia-0.6.1-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.6.1">GitHub</a> </td>
 </tr>
 </tbody></table>
 
 Please see [platform specific instructions](platform.html) if you have
-trouble installing Julia.  Checksums for this release are available in both [MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.0.md5) and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.0.sha256) format.
+trouble installing Julia.  Checksums for this release are available in both [MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.1.md5) and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.6.1.sha256) format.
 
 If the provided download files do not work for you, please [file an
 issue in the Julia project](https://github.com/JuliaLang/julia/issues).
