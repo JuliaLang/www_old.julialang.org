@@ -27,7 +27,7 @@ JuliaBox, all of these plotting packages are pre-installed.
 </tr>
 <tr>
     <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.6/julia-0.6.1-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.6/julia-0.6.1-mac64.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux Binaries for x86 <a href="platform.html#generic-linux-binaries">[help]</a></th>
