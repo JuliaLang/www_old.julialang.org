@@ -149,13 +149,13 @@ anymore.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Archive (.zip) </th>
-    <td> <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/julialang/julia0.1.2-WINNT-i686+Git.zip">32-bit</a> </td>
+    <td> <a href="http://julialang-s3.julialang.org/bin/winnt/x86/0.1/julia0.1.2-WINNT-i686+Git.zip">32-bit</a> </td>
     <td> 64-bit (Unavailable) </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
     <td>32-bit (Unavailable)</td>
-    <td> <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/julialang/Julia-0.1.2.dmg">64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.1/julia-0.1.2-mac64.dmg">64-bit</a> </td>
 </tr>
 <tr>
     <th> Source </th>
