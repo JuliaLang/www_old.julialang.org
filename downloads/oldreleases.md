@@ -18,7 +18,7 @@ anymore.
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.5/julia-0.5.2-osx10.7+.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.5/julia-0.5.2-mac64.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
@@ -49,7 +49,7 @@ anymore.
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.4/julia-0.4.7-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.4/julia-0.4.7-mac64.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux binaries </th>
@@ -79,7 +79,7 @@ anymore.
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td colspan="2"> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.3/julia-0.3.12-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td colspan="2"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.3/julia-0.3.12-mac64.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Ubuntu packages (.deb) </th>
@@ -131,8 +131,7 @@ anymore.
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
-    <td> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.2/julia-0.2.1-osx10.6.dmg">10.6 64-bit</a> </td>
-    <td> <a href="https://julialang-s3.julialang.org/bin/osx/x64/0.2/julia-0.2.1-osx10.7+.dmg">10.7+ 64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.2/julia-0.2.1-mac64.dmg">10.7+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Ubuntu packages (.deb) </th>
@@ -150,13 +149,13 @@ anymore.
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Archive (.zip) </th>
-    <td> <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/julialang/julia0.1.2-WINNT-i686+Git.zip">32-bit</a> </td>
+    <td> <a href="http://julialang-s3.julialang.org/bin/winnt/x86/0.1/julia0.1.2-WINNT-i686+Git.zip">32-bit</a> </td>
     <td> 64-bit (Unavailable) </td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) </th>
     <td>32-bit (Unavailable)</td>
-    <td> <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/julialang/Julia-0.1.2.dmg">64-bit</a> </td>
+    <td> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.1/julia-0.1.2-mac64.dmg">64-bit</a> </td>
 </tr>
 <tr>
     <th> Source </th>
