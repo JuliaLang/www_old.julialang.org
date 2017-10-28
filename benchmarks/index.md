@@ -30,6 +30,7 @@ this IJulia benchmarks notebook</a>.
 benchmark times relative to C (smaller is better, C performance = 1.0).
 </p>
 </div>
+</div>
 
 C and Fortran compiled with gcc 4.8.9, taking best timing from all
 optimization levels (-O0 through -O3).  C, Fortran, Go, Julia, Lua,
