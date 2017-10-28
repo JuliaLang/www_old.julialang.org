@@ -81,38 +81,22 @@ To get a sense of relative performance of Julia compared to other languages that
 [Lua](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.lua),
 [Mathematica](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.nb).
 We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
-The following micro-benchmark results were obtained on a single core (serial execution) on an Intel(R) Core(TM) i7-3960X 3.30GHz CPU with 64GB of 1600MHz DDR3 RAM, running openSUSE LEAP 42.2 Linux:
 
 <center>
 <div class="figure" style="align: center; width: 77%">
 {% include benchmarks.svg %}
 <p class="caption"><b>Figure:</b>
-benchmark times relative to C (smaller is better, C performance = 1.0).
+Benchmark times relative to C (smaller is better, C performance = 1.0). Plot created with
+<a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a> and
+<a href="https://github.com/JuliaLang/IJulia.jl">IJulia</a> from
+<a href="http://nbviewer.ipython.org/url/julialang.org/benchmarks/benchmarks.ipynb">this notebook</a>.
+See the <a href="/benchmarks/">benchmarks page</a> for more information.
 </p>
-<p class="note">
-C and Fortran compiled by gcc 4.8.9, taking best timing from all optimization levels (-O0 through -O3).
-C, Fortran, Go, Julia, Lua, Python, and Octave use <a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a> v0.2.19
-for matrix operations; Mathematica uses Intel(R) MKL. 
-The Python environment is <a href="https://anaconda.org/anaconda/python">Anaconda Python</a> v3.5.4.
-The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use <a href="http://www.numpy.org/">NumPy</a> v1.13.1 and OpenBLAS v0.2.19
-functions; the rest are pure Python implementations. Plot created with 
-<a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a> and 
-<a href="https://github.com/JuliaLang/IJulia.jl">IJulia</a> from 
-<a href="http://nbviewer.ipython.org/url/julialang.org/benchmarks.ipynb">this notebook</a>.
-A table of the benchmark data <a href="/benchmarks/">is provided here</a>.
 
-
-</p>
 </div>
 </center>
 
-These benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, and array operations.
-It is important to note that the benchmark codes are not written for absolute maximal performance (the fastest code to compute `recursion_fibonacci(20)` is the constant literal `6765`).
-Instead, the benchmarks are written to test the performance of *identical algorithms and code patterns* implemented in each language.
-For example, the Fibonacci benchmarks all use the same (inefficient) doubly-recursive algorithm, and the pi summation benchmarks use the same for-loop. 
-The "algorithm" for matrix multiplication is to call the most obvious built-in/standard random-number and matmul routines (or to directly call BLAS if the language does not provide a high-level matmul), except where a matmul/BLAS call is not possible (such as in JavaScript). 
-Raw benchmark numbers in CSV format are available [here](/benchmarks.csv).
-
+# A quick taste of Julia
 
 To give a quick taste of what Julia looks like, here is the code used in the Mandelbrot and random matrix statistics benchmarks:
 
@@ -147,10 +131,18 @@ function randmatstat(t)
 end
 {% endhighlight %}
 
-The code above is quite clear, and should feel familiar to anyone who has programmed in other mathematical languages.
-The Julia implementation of `randmatstat` is considerably simpler than the equivalent [C implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126), without giving up much performance. Planned compiler optimizations will close this performance gap in the future.
-By design, Julia allows you to range from tight low-level loops, up to a high-level programming style, while sacrificing some performance, but gaining the ability to express complex algorithms easily.
-This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the language.
+The code above is quite clear, and should feel familiar to anyone who
+has programmed in other mathematical languages.  The Julia
+implementation of `randmatstat` is considerably simpler than the
+equivalent [C
+implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126),
+without giving up much performance. Planned compiler optimizations
+will close this performance gap in the future.  By design, Julia
+allows you to range from tight low-level loops, up to a high-level
+programming style, while sacrificing some performance, but gaining the
+ability to express complex algorithms easily. This continuous spectrum
+of programming levels is a hallmark of the Julia approach to
+programming and is very much an intentional feature of the language.
 
 # Designed for Parallelism and Cloud Computing
 
@@ -173,7 +165,7 @@ Here is a screenshot of a web-based interactive [IJulia Notebook](https://github
 This paves the way for fully cloud-based operation, including data management, code editing and sharing, execution, debugging, collaboration, analysis, data exploration, and visualization.
 The eventual goal is to let people stop worrying about administering machines and managing data and get straight to the real problem.
 
-[Gadfly](https://github.com/dcjones/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaLang/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
+[Gadfly](https://github.com/GiovineItalia/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaGizmos/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
 
 <a href="/images/gadfly-demo.png" target="_blank"><img src="/images/gadfly-demo.png" width="100%" /></a>
 
