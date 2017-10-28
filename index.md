@@ -96,11 +96,7 @@ See the <a href="/benchmarks/">benchmarks page</a> for more information.
 </div>
 </center>
 
-These benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, and array operations.
-It is important to note that the benchmark codes are not written for absolute maximal performance (the fastest code to compute `recursion_fibonacci(20)` is the constant literal `6765`).
-Instead, the benchmarks are written to test the performance of *identical algorithms and code patterns* implemented in each language.
-For example, the Fibonacci benchmarks all use the same (inefficient) doubly-recursive algorithm, and the pi summation benchmarks use the same for-loop.
-The "algorithm" for matrix multiplication is to call the most obvious built-in/standard random-number and matmul routines (or to directly call BLAS if the language does not provide a high-level matmul), except where a matmul/BLAS call is not possible (such as in JavaScript).
+# A quick taste of Julia
 
 To give a quick taste of what Julia looks like, here is the code used in the Mandelbrot and random matrix statistics benchmarks:
 
@@ -135,10 +131,18 @@ function randmatstat(t)
 end
 {% endhighlight %}
 
-The code above is quite clear, and should feel familiar to anyone who has programmed in other mathematical languages.
-The Julia implementation of `randmatstat` is considerably simpler than the equivalent [C implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126), without giving up much performance. Planned compiler optimizations will close this performance gap in the future.
-By design, Julia allows you to range from tight low-level loops, up to a high-level programming style, while sacrificing some performance, but gaining the ability to express complex algorithms easily.
-This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the language.
+The code above is quite clear, and should feel familiar to anyone who
+has programmed in other mathematical languages.  The Julia
+implementation of `randmatstat` is considerably simpler than the
+equivalent [C
+implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126),
+without giving up much performance. Planned compiler optimizations
+will close this performance gap in the future.  By design, Julia
+allows you to range from tight low-level loops, up to a high-level
+programming style, while sacrificing some performance, but gaining the
+ability to express complex algorithms easily. This continuous spectrum
+of programming levels is a hallmark of the Julia approach to
+programming and is very much an intentional feature of the language.
 
 # Designed for Parallelism and Cloud Computing
 
@@ -161,7 +165,7 @@ Here is a screenshot of a web-based interactive [IJulia Notebook](https://github
 This paves the way for fully cloud-based operation, including data management, code editing and sharing, execution, debugging, collaboration, analysis, data exploration, and visualization.
 The eventual goal is to let people stop worrying about administering machines and managing data and get straight to the real problem.
 
-[Gadfly](https://github.com/dcjones/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaLang/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
+[Gadfly](https://github.com/GiovineItalia/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaGizmos/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
 
 <a href="/images/gadfly-demo.png" target="_blank"><img src="/images/gadfly-demo.png" width="100%" /></a>
 
