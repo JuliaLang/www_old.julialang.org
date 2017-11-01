@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NeuralNetDiffEq.jl: A Neural Network solver for Ordinary Differential Equations"
+title: "NeuralNetDiffEq.jl: A Neural Network solver for ODEs"
 author: Akshay Sharma
 ---
 
