@@ -10,14 +10,14 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 ## International Localisation Efforts & Resources
 
-* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language ([Mailing-list(https://groups.google.com/forum/#!forum/julialanges)], [Twitter](https://twitter.com/JuliaLangsEs), [Discord](https://discord.me/julialang-es), [facebook](https://www.facebook.com/groups/julialang.es/), [WhatsApp](https://chat.whatsapp.com/invite/J9T033nZO8MLn96wWjlnHb))
+* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language ([Mailing-list](https://groups.google.com/forum/#!forum/julialanges)], [Twitter](https://twitter.com/JuliaLangsEs), [Discord](https://discord.me/julialang-es), [facebook](https://www.facebook.com/groups/julialang.es/), [WhatsApp](https://chat.whatsapp.com/invite/J9T033nZO8MLn96wWjlnHb))
 * [JuliaLangPt](https://github.com/JuliaLangPt) – Site for translation of Julia documentation, etc. to Portuguese ([Gitter](https://gitter.im/JuliaLangPt/julia))
 * [JuliaCN](https://github.com/JuliaCN) – An open-source organization for Julia localization in Chinese (QQ ID 188374671, )
 * [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language ([Mailing-list](https://groups.google.com/forum/#!forum/julia-tokyo), [twitter](https://twitter.com/JuliaLangJa), [Slack](https://juliatokyo.slack.com),[Slack invite](https://julia-tokyo-inviter.herokuapp.com/), [facebook](https://www.facebook.com/groups/885166968160540/))
 
 ## General
 
-* [JuliaDocs](https://github.com/juliadocs) – Documentation-related packages for Julia ((Gitter)[https://gitter.im/juliadocs/users])
+* [JuliaDocs](https://github.com/juliadocs) – Documentation-related packages for Julia ([Gitter](https://gitter.im/juliadocs/users))
 * [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians ([twitter](https://twitter.com/julia_i18n), [Gitter](https://gitter.im/Julia-i18n/julia-i18n) )
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
 * [JuliaText](https://github.com/JuliaText)
