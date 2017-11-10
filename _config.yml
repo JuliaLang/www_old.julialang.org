@@ -17,6 +17,8 @@ navigation:
     title: blog
   - url: "/community/"
     title: community
+  - url: "/ecosystems"
+    title: ecosystems
   - url: "/learning/"
     title: learning
   - url: "/teaching/"
