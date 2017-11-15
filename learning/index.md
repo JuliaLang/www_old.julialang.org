@@ -40,6 +40,7 @@ title:  Learning Julia
 
 - [A Julia cheat sheet](http://math.mit.edu/~stevenj/Julia-cheatsheet.pdf) by [Steve Johnson](http://math.mit.edu/~stevenj/)
 - [Julia.jl - Curated list of Julia resources and packages](https://github.com/svaksha/Julia.jl#index) by [Svaksha](http://svaksha.com/pages/Bio)
+- [Julia Observer - A website for browsing Julia packages](https://juliaobserver.com/) by [Dan Segal](http://seg.al/)
 - [Why your next project should use Julia](https://speakerdeck.com/eford/why-your-next-project-should-use-julia) slides from seminar by [Eric Ford](http://www.personal.psu.edu/~ebf11/) 
 
 # Videos: Tutorials
