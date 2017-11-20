@@ -51,10 +51,11 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 * [BioJulia](https://github.com/BioJulia) – Biology ([Gitter](https://gitter.im/BioJulia/home))
 * [EcoJulia](https://github.com/EcoJulia) – Ecology
-* [JuliaAstro](https://github.com/JuliaAstro) – Astronomy
+* [JuliaAstro](https://github.com/JuliaAstro) – [Astronomy](https://juliaastro.github.io/) ([Gitter](https://gitter.im/JuliaAstro/home))
 * [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
 * [JuliaQuant](https://github.com/JuliaQuant) – Finance
 * [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/) ([Gitter](https://gitter.im/JuliaQuantum/home))
+* [JuliaQuant](https://github.com/JuliaPhysics) – Physics
 
 ## Data Science
 * [JuliaML](https://github.com/JuliaML) – [Machine Learning](https://juliaml.github.io/)  ([JuliaML](https://gitter.im/JuliaML/chat))
