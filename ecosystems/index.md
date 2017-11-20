@@ -58,7 +58,7 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 ## Data Science
 * [JuliaML](https://github.com/JuliaML) – [Machine Learning](https://juliaml.github.io/)  ([JuliaML](https://gitter.im/JuliaML/chat))
-* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://www.juliastats.org/)
+* [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://juliastats.github.io/)
 * [JuliaImages](https://github.com/JuliaImages) – Image Processing
 * [JuliaText](https://github.com/JuliaText) – Natural Language Processing (NLP), Computational Linguistics  and (textual) Information Retrieval
 * [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
