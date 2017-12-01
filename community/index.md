@@ -92,6 +92,7 @@ leading these efforts include:
 * [JuliaCN](https://julialang.cn) (Chinese)
 * [JuliaLangEs](https://github.com/JuliaLangEs) (Spanish)
 * [JuliaLangPt](https://github.com/JuliaLangPt) (Portuguese)
+* [JuliaKorea](https://juliakorea.github.io/ko/) (Korea)
 
 Please let us know if you have another organization dedicated to these efforts.
 
