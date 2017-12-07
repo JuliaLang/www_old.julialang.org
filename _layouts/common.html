@@ -33,6 +33,22 @@
       <a href="https://github.com/JuliaLang/julialang.github.com/edit/master/{{ page.path }}">Edit this page on GitHub.</a>
     </div>
 
+    <!-- Add "contribute" link to the Transifex language dropdown -->
+    <script>
+      // Create a link element for the translation prompt
+      var txPromptLink = document.createElement( "a" );
+      txPromptLink.href = "https://www.transifex.com/julialang-i18n/julialang-web/";
+      txPromptLink.appendChild( document.createTextNode( "Add your language!" ) );
+      txPromptLink.style.fontWeight = "bold";
+
+      // Wrap the translation prompt link in a list item element
+      var txPrompt = document.createElement( "li" );
+      txPrompt.appendChild( txPromptLink );
+
+      // Add the translation prompt list item to the list of languages
+      document.getElementById( "tx-live-lang-picker" ).appendChild( txPrompt );
+    </script>
+
 <!--Flipcause Integration v3.0// Flipcause Integration Instructions:
     Install the following code block once in the website Header (after <head> tag) -->
 
