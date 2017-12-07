@@ -382,4 +382,7 @@ blockquote {
 #tx-live-lang-picker {
   max-height: calc( 100vh - 50px );
   overflow-y: auto;
+  top: 36px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
