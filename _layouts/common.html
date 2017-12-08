@@ -45,8 +45,26 @@
       var txPrompt = document.createElement( "li" );
       txPrompt.appendChild( txPromptLink );
 
-      // Add the translation prompt list item to the list of languages
-      document.getElementById( "tx-live-lang-picker" ).appendChild( txPrompt );
+      // Callback function to execute when mutations are observed
+      var callback = function(mutationsList, observer) {
+        for(var mutation of mutationsList) {
+          if (mutation.addedNodes.length >= 1) {
+            var addedNode = mutation.addedNodes[0];
+            if (addedNode.nodeType == Node.ELEMENT_NODE && addedNode.id == "tx-live-lang-picker") {
+              // Add the translation prompt list item to the list of languages
+              addedNode.appendChild( txPrompt );
+              // Stop observing the body element for mutations
+              observer.disconnect();
+            }
+          }
+        }
+      };
+
+      // Create an observer instance linked to the callback function
+      var observer = new MutationObserver(callback);
+
+      // Start observing the body element for adding and removal of child elements
+      observer.observe(document.body, { childList: true });
     </script>
 
 <!--Flipcause Integration v3.0// Flipcause Integration Instructions:
