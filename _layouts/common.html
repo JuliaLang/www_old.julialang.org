@@ -45,6 +45,11 @@
       var txPrompt = document.createElement( "li" );
       txPrompt.appendChild( txPromptLink );
 
+      // The Transifex dropdown is created dynamically,
+      // so we need to use the DOM MutationObserver API
+      // (https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+      // to know when the menu is ready so we can add our element to it.
+
       // Callback function to execute when mutations are observed
       var callback = function(mutationsList, observer) {
         for(var mutation of mutationsList) {
