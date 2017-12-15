@@ -5,12 +5,12 @@ title:  Learning Julia
 # Books
 
 - [Julia: High Performance Programming](https://www.packtpub.com/application-development/julia-high-performance-programming) by Ivo Balbaert, Avik Sengupta, Malcolm Sherrington
- (697 pages; published: November 2016; ISBN: 9781787125704) 
+ (697 pages; published: November 2016; ISBN: 9781787125704)
    In this learning path, you will learn to use an interesting and dynamic programming language—Julia! This book is a combination and curation of the three separate books by the three authors.
-- [Julia Programming for Operations Research: A Primer on Computing](http://www.chkwon.net/julia) by Changhyun Kwon (246 pages; published: 2016-05; ISBN: 978-1533328793) 
-    This book aims to teach how one can solve various optimization problems arising in operations research and management science. 
-- [Julia High Performance](https://www.packtpub.com/application-development/julia-high-performance) by Avik Sengupta (120 pages; published: 2016-05; ISBN: 9781785880919) 
-    This is a book about performance optimisation of Julia programs, showing how to design and write Julia code that fully realises the potential speed of the language and its libraries. 
+- [Julia Programming for Operations Research: A Primer on Computing](http://www.chkwon.net/julia) by Changhyun Kwon (246 pages; published: 2016-05; ISBN: 978-1533328793)
+    This book aims to teach how one can solve various optimization problems arising in operations research and management science.
+- [Julia High Performance](https://www.packtpub.com/application-development/julia-high-performance) by Avik Sengupta (120 pages; published: 2016-05; ISBN: 9781785880919)
+    This is a book about performance optimisation of Julia programs, showing how to design and write Julia code that fully realises the potential speed of the language and its libraries.
 - [Mastering Julia](https://www.packtpub.com/application-development/mastering-julia) by Malcolm Sherrington - published by Packt Publishing (410 pages; published: 2015-07; ISBN: 9781783553310)
 - [Getting Started with Julia Programming](https://www.packtpub.com/application-development/getting-started-julia-programming/) by Ivo Balbaert - published by Packt Publishing (214 pages; published: 2015-02-28; ISBN: 9781783284795)
 - [Seven More Languages in Seven Weeks](https://pragprog.com/book/7lang/seven-more-languages-in-seven-weeks) by Bruce Tate, Fred Daoud, Jack Moffit and Ian Dees - published by The Pragmatic Programmers (350 pages; published: 2014-11-15; ISBN: 978-1-94122-215-7)
@@ -39,10 +39,11 @@ title:  Learning Julia
 
 # Resources
 
+- [A Fast Track to Julia: A Quick and Dirty Overview (Cheatsheet)](https://brakmic.github.io/Julia-Cheat-Sheet/)
 - [A Julia cheat sheet](https://github.com/stevengj/1806/blob/master/julia/Julia-cheatsheet.pdf) by [Steven Johnson](http://math.mit.edu/~stevenj/)
 - [Julia.jl - Curated list of Julia resources and packages](https://github.com/svaksha/Julia.jl#index) by [Svaksha](http://svaksha.com/pages/Bio)
 - [Julia Observer - A website for browsing Julia packages](https://juliaobserver.com/) by [Dan Segal](http://seg.al/)
-- [Why your next project should use Julia](https://speakerdeck.com/eford/why-your-next-project-should-use-julia) slides from seminar by [Eric Ford](http://www.personal.psu.edu/~ebf11/) 
+- [Why your next project should use Julia](https://speakerdeck.com/eford/why-your-next-project-should-use-julia) slides from seminar by [Eric Ford](http://www.personal.psu.edu/~ebf11/)
 
 # Videos: Tutorials
 
