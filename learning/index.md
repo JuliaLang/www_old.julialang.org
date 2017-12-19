@@ -39,7 +39,7 @@ title:  Learning Julia
 
 # Resources
 
-- [A Fast Track to Julia: A Quick and Dirty Overview (Cheatsheet)](https://brakmic.github.io/Julia-Cheat-Sheet/)
+- [A Fast Track to Julia: A Quick and Dirty Overview (Cheatsheet)](https://juliadocs.github.io/Julia-Cheat-Sheet/)
 - [A Julia cheat sheet](https://github.com/stevengj/1806/blob/master/julia/Julia-cheatsheet.pdf) by [Steven Johnson](http://math.mit.edu/~stevenj/)
 - [Julia.jl - Curated list of Julia resources and packages](https://github.com/svaksha/Julia.jl#index) by [Svaksha](http://svaksha.com/pages/Bio)
 - [Julia Observer - A website for browsing Julia packages](https://juliaobserver.com/) by [Dan Segal](http://seg.al/)
