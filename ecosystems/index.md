@@ -20,9 +20,9 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 * [JuliaDocs](https://github.com/juliadocs) – Documentation-related packages for Julia ([Gitter](https://gitter.im/juliadocs/users))
 * [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians ([twitter](https://twitter.com/julia_i18n), [Gitter](https://gitter.im/Julia-i18n/julia-i18n) )
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
-* [JuliaPraxis](https://github.com/JuliaPraxis) - Best practices ([Gitter](https://gitter.im/JuliaPraxis))
+* [JuliaPraxis](https://github.com/JuliaPraxis) – Best practices ([Gitter](https://gitter.im/JuliaPraxis))
 * [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
-* [Juno](https://github.com/JunoLab/Juno) - The Juno IDE for Atom [Gitter](https://gitter.im/JunoLab/Juno)
+* [Juno](https://github.com/JunoLab/Juno) – The Juno IDE for Atom [Gitter](https://gitter.im/JunoLab/Juno)
 
 ## Computing
 
@@ -40,7 +40,7 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 * [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
 * [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/), ([Gitter](https://gitter.im/JuliaDiffEq/Lobby))
-* [JuliaGeometry](https://github.com/JuliaGeometry) - Computational Geometry
+* [JuliaGeometry](https://github.com/JuliaGeometry) – Computational Geometry
 * [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
 * [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
 * [JuliaOpt](https://github.com/JuliaOpt) – [Optimization](http://www.juliaopt.org/) ([Gitter](https://gitter.im/JuliaOpt/home))
@@ -51,10 +51,11 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 * [BioJulia](https://github.com/BioJulia) – Biology ([Gitter](https://gitter.im/BioJulia/home))
 * [EcoJulia](https://github.com/EcoJulia) – Ecology
-* [JuliaAstro](https://github.com/JuliaAstro) – Astronomy
+* [JuliaAstro](https://github.com/JuliaAstro) – [Astronomy](https://juliaastro.github.io/) ([Gitter](https://gitter.im/JuliaAstro/home))
 * [JuliaDSP](https://github.com/JuliaDSP) – Digital signal processing
 * [JuliaQuant](https://github.com/JuliaQuant) – Finance
 * [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/) ([Gitter](https://gitter.im/JuliaQuantum/home))
+* [JuliaQuant](https://github.com/JuliaPhysics) – Physics
 
 ## Data Science
 * [JuliaML](https://github.com/JuliaML) – [Machine Learning](https://juliaml.github.io/)  ([JuliaML](https://gitter.im/JuliaML/chat))
@@ -68,5 +69,5 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 * [GiovineItalia](https://github.com/GiovineItalia) – Plotting (with [Gadfly](https://github.com/GiovineItalia/Gadfly.jl))
 * [JuliaPlots](https://github.com/JuliaPlots) – [Data visualization](https://juliaplots.github.io/)
-* [JuliaGL](https://github.com/JuliaGL) - OpenGL API and ecosystem ([Gitter](https://gitter.im/JuliaGL/meta))
+* [JuliaGL](https://github.com/JuliaGL) – OpenGL API and ecosystem ([Gitter](https://gitter.im/JuliaGL/meta))
 * [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs
