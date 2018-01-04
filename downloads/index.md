@@ -63,7 +63,7 @@ issue in the Julia project](https://github.com/JuliaLang/julia/issues).
 
 Older releases of Julia for all platforms are available on the [Older releases page](http://julialang.org/downloads/oldreleases.html).
 
-For Julia 0.5, only bugfixes are being supported. Releases older than 0.5 are now unmaintained.
+Releases older than 0.6 are now unmaintained.
 
 # Nightly builds
 
