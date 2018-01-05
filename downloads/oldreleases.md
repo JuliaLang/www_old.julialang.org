@@ -9,7 +9,7 @@ Old releases are available should you need to use them to run Julia
 code written for those releases.  Note that these are not actively developed
 nor maintained anymore.
 
-## v0.5.2 (bugfixes only)
+## v0.5.2 (unmaintained)
 <table class="downloads"><tbody>
 <tr>
     <th> Windows Self-Extracting Archive (.exe) </th>
