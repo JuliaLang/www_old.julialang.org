@@ -7,7 +7,7 @@ title:  Julia Downloads (Old releases)
 
 Old releases are available should you need to use them to run Julia
 code written for those releases.  Note that these are not actively developed
-anymore.
+nor maintained anymore.
 
 ## v0.5.2 (bugfixes only)
 <table class="downloads"><tbody>
