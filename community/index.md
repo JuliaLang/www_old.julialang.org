@@ -89,7 +89,7 @@ and localize documentation and other resources. A few such groups that are
 leading these efforts include:
 
 * [JuliaTokyo](http://julia.tokyo) (Japanese)
-* [JuliaCN](https://julialang.cn) (Chinese)
+* [JulialangOrgCN](http://julialang.org.cn) (Chinese Simplified)
 * [JuliaLangEs](https://github.com/JuliaLangEs) (Spanish)
 * [JuliaLangPt](https://github.com/JuliaLangPt) (Portuguese)
 * [JuliaKorea](https://juliakorea.github.io/ko/) (Korean)
