@@ -27,21 +27,42 @@ This project involves building a "[BinDeps.jl](https://github.com/JuliaLang/BinD
 
 **Mentors**: [JuliaML Members](https://github.com/orgs/JuliaML/people)
 
-## Machine learning tools for classification of qualitative traits of differential equation models
+## Parameter estimation for nonlinear dynamical models
 
 Machine learning has become a popular tool for understanding data, but scientists
-typically want to use this data to better understand their differential
-equation-based models. Differential equations usually have parameters which are
-unknown but when changed can cause qualitative differences to the results. By
-pairing machine learning tooling with data generation from differential equation
-models, tools can be developed which can classify when behaviors are to be
-expected in the solution.
+typically understand the world through the lens of physical laws and their
+resulting dynamical models. These models are generally differential equations
+given by physical first principles, where the constants in the equations such
+as chemical reaction rates and planetary masses determine the overall dynamics.
+The inverse problem to simulation, known as parameter estimation, is the process
+of utilizing data to determine these model parameters.
 
-**Recommended Skills**: Background knowledge of standard machine learning
-techniques. It's recommended but not required that one has basic knowledge of
-differential equations and DifferentialEquations.jl.
+The purpose of this project is to utilize the growing array of statistical,
+optimization, and machine learning tools in the Julia ecosystem to build
+library functions that make it easy for scientists to perform this parameter
+estimation with the most high-powered and robust methodologies. Possible projects
+include investigating methods for Bayesian estimation of parameters via Stan.jl
+and Julia-based libraries like Turing.jl, or global optimization-based approaches.
+Novel techniques like classifying model outcomes via support vector machines
+and deep neural networks is can also be considered. Research and benchmarking
+to attempt to find the most robust methods will take place in this project.
 
-**Expected Results**: Tools for easily classifying parameters using machine
-learning tooling for users inexperienced with machine learning.
+Some work in this area can be found in
+[DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl)
+and [DiffEqBayes.jl](https://github.com/JuliaDiffEq/DiffEqBayes.jl). Examples
+can be found [in the DifferentialEquations.jl documentation](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation.html).
+
+**Recommended Skills**: Background knowledge of standard machine learning,
+statistical, or optimization techniques. It's recommended but not required that
+one has basic knowledge of differential equations and DifferentialEquations.jl.
+Using the differential equation solver to get outputs from parameters can
+be learned on the job, but you should already be familiar (but not necessarily
+an expert) with the estimation techniques you are looking to employ.
+
+**Expected Results**: Library functions for performing parameter estimation
+and inferring properties of differential equation solutions from parameters.
+Notebooks containing benchmarks determining the effectiveness of various methods
+and classifying when specific approaches are appropriate will be developed
+simultaneously.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
