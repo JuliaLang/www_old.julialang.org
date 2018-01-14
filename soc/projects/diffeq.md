@@ -13,10 +13,10 @@ Stiffness is a phenomena in differential equations which requires implicit metho
 in order to be efficiently solved. However, implicit methods are inherently
 more costly and thus inefficient when they are not needed. This is an issue
 because many problems are not always stiff, and instead switch from stiff
-and nonstiff modes. The purpose of this project would be to develop functionality
+and non-stiff modes. The purpose of this project would be to develop functionality
 for detecting stiffness during integration and testing algorithms for automatic
 switching between appropriate algorithms. These would not only be more efficient
-on a large class of problems, but also decrease the cognative burden on the
+on a large class of problems, but also decrease the cognitive burden on the
 user by being efficient for a large class of algorithms and likely become the
 new default methods.
 

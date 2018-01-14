@@ -47,6 +47,11 @@ Novel techniques like classifying model outcomes via support vector machines
 and deep neural networks is can also be considered. Research and benchmarking
 to attempt to find the most robust methods will take place in this project.
 
+Some work in this area can be found in
+[DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl)
+and [DiffEqBayes.jl](https://github.com/JuliaDiffEq/DiffEqBayes.jl). Examples
+can be found [in the DifferentialEquations.jl documentation](http://docs.juliadiffeq.org/latest/analysis/parameter_estimation.html).
+
 **Recommended Skills**: Background knowledge of standard machine learning,
 statistical, or optimization techniques. It's recommended but not required that
 one has basic knowledge of differential equations and DifferentialEquations.jl.
