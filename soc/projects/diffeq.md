@@ -41,10 +41,16 @@ built for the common interface, seamlessly integrating with the other available
 methods. Possible families of methods to implement are:
 
 - High Order Exponential Runge-Kutta Methods, including efficient expmv methods
-- Implicit-Explicit (IMEX) Runge-Kutta Methods
+- Implicit-Explicit (IMEX) Methods
+- Parallel ODE Methods
+- Runge-Kutta-Chebyschev Methods
+
+These methods are the basis of high-efficiency partial differential equation (PDE)
+solvers and are thus important to many communities like computational fluid
+dynamics, mathematical biology, and quantum mechanics. A
 
 **Recommended Skills**: Background knowledge in numerical analysis, numerical
-linear algebra, and the ability to write fast code.
+linear algebra, and the ability (or eagerness to learn) to write fast code.
 
 **Expected Results**: Contributions of production-quality ODE/DAE solver methods.
 
@@ -70,6 +76,27 @@ examples which show the usage of such tools.
 
 **Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas),
 [David Sanders](https://github.com/dpsanders)
+
+## Parallelization of the Sundials Solver Library
+
+The Sundials set of solvers is a popular library for performing the time stepping
+portion of large-scale partial differential equation (PDE) solvers. This library
+has the ability to be internally parallelized, supporting threading, multi-node
+distributed parallelism, and GPUs. The Julia package
+[Sundials.jl](https://github.com/JuliaDiffEq/Sundials.jl) is a wrapper for the
+Sundials library which is almost feature-complete with the wrapped code. However,
+the functionality that it does not make use of is the parallelization. The purpose
+of this project is to build the tooling to be able to utilize the parallelization
+parts from within Julia, and benchmarking their effectiveness on large PDEs.
+
+**Recommended Skills**: Background knowledge in C++. Some knowledge of parallel
+computing is preferred.
+
+**Expected Results**: Examples showing how to utilize the direct wrappers to
+perform calculations in parallel and the ability to "flip a switch" to turn on
+parallelism in high-level APIs.
+
+**Mentors**: [Chris Rackauckas](https://github.com/ChrisRackauckas)
 
 ## Tools for global and adjoint sensitivity analysis
 
