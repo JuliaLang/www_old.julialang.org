@@ -67,41 +67,11 @@ Releases older than 0.6 are now unmaintained.
 
 # Nightly builds
 
-These are bleeding-edge binaries of the latest version of Julia under
-development, which you can use to get a preview of the latest work.
-The nightly builds are for developer previews and not intended for
-normal use. You can expect many packages not to work with this version.
-Most users are advised to use the latest official release version of Julia, above.
-
-<table class="downloads"><tbody>
-<tr>
-    <th> Windows Self-Extracting Archive (.exe) </th>
-    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/winnt/x86/julia-latest-win32.exe">32-bit</a> </td>
-    <td colspan="2"> <a href="https://julialangnightlies-s3.julialang.org/bin/winnt/x64/julia-latest-win64.exe">64-bit</a> </td>
-</tr>
-<tr>
-    <th> macOS Package (.dmg) </th>
-    <td colspan="3"> <a href="https://julialangnightlies-s3.julialang.org/bin/mac/x64/julia-latest-mac64.dmg">10.8+ 64-bit</a> </td>
-</tr>
-<tr>
-    <th> Generic Linux binaries for X86 </th>
-    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/x86/julia-latest-linux32.tar.gz">32-bit</a> </td>
-    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/x64/julia-latest-linux64.tar.gz">64-bit</a> </td>
-</tr>
-<tr>
-    <th> Generic Linux binaries for ARM </th>
-    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/armv7l/julia-latest-linuxarmv7l.tar.gz">32-bit (armv7-a hard float)</a> </td>
-    <td> <a href="https://julialangnightlies-s3.julialang.org/bin/linux/aarch64/julia-latest-linuxaarch64.tar.gz">64-bit (armv8-a)</a> </td>
-</tr>
-<tr>
-    <th> Fedora/RHEL/CentOS/SL packages (.rpm) </th>
-    <td colspan="3"> <a href="https://copr.fedoraproject.org/coprs/nalimilan/julia-nightlies/">32/64-bit</a> </td>
-</tr>
-<tr>
-    <th> Source </th>
-    <td colspan="3"> <a href="https://github.com/JuliaLang/julia">GitHub</a> </td>
-</tr>
-</tbody></table>
+Nightly builds of the current unstable development version of Julia are available on the
+[nightlies page](https://julialang.org/downloads/nightlies.html).
+These are intended as developer previews into the latest work and are not intended for
+normal use.
+Most users are advised to use the current release version of Julia, above.
 
 ---
 
