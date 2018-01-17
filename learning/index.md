@@ -2,6 +2,19 @@
 layout: default
 title:  Learning Julia
 ---
+
+# Online tutorials
+## Upcoming
+### [Intro to Julia](https://www.youtube.com/watch?v=cc_NlwopIPM)
+by Jane Herriman (January 18, 8PM PST/January 19, 9:30AM IST/January 19, 3PM AEDT)
+
+No prior knowledge of Julia is needed as we will start with the basics. Our aim is that you will feel confident starting to use Julia in your own work by the end of the tutorial!
+
+Topics will include the package ecosystem, linear algebra, and multiple dispatch. You can follow along and interact with tutorial materials without installing anything at https://next.juliabox.com/
+
+## Past
+* [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017)
+
 # Books
 
 - [Julia: High Performance Programming](https://www.packtpub.com/application-development/julia-high-performance-programming) by Ivo Balbaert, Avik Sengupta, Malcolm Sherrington
