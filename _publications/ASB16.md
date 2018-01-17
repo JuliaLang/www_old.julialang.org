@@ -2,11 +2,12 @@
 type: "article"
 title: "A Comparison of Programming Languages in Economics"
 authors:
-- Aruoba, S. Boragan
-- Fernandez-Villaverde, Jesus
+- "Aruoba, S. Boragan"
+- "Fernandez-Villaverde, Jesus"
 year: "2014"
-publisher: "National Bureau of Economic Research
+publisher: "National Bureau of Economic Research"
 type : "working paper"
+doi: 10.3386/w20263
 ---
 
 We solve the stochastic neoclassical growth model, the workhorse of modern
