@@ -14,7 +14,7 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 * [JuliaLangPt](https://github.com/JuliaLangPt) – Site for translation of Julia documentation, etc. to Portuguese ([Gitter](https://gitter.im/JuliaLangPt/julia))
 * [JuliaCN](https://github.com/JuliaCN) – An open-source organization for Julia localization in Chinese (QQ ID 188374671, )
 * [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language ([Mailing-list](https://groups.google.com/forum/#!forum/julia-tokyo), [twitter](https://twitter.com/JuliaLangJa), [Slack](https://juliatokyo.slack.com),[Slack invite](https://julia-tokyo-inviter.herokuapp.com/), [facebook](https://www.facebook.com/groups/885166968160540/))
-* [JuliaGerman](https://github.com/JuliaLangGerman) – german manual for the Julia language
+* [JuliaGerman](https://github.com/JuliaLangGerman) – german manual for the Julia language ([manual](https://github.com/JuliaLangGerman/Julia_Handbuch_Deutsch))
 
 ## General
 
