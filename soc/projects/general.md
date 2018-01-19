@@ -53,7 +53,7 @@ The [QML.jl](https://github.com/barche/QML.jl) package provides Julia bindings f
 
 While many common data structures are encouraged to be implemented in packages, to encourage more experimentation, some are so basic they need to be in Base. There are a number of projects that could be done to improve the quality, performance, or usability of these builtin structures. Some ideas include:
 
-- Changing Base.Dict to an ordered dict representation (http://datastructuresjl.readthedocs.io/en/latest/ordered_containers.html, https://github.com/JuliaLang/julia/pull/10116)
+- Changing Base.Dict to an ordered dict representation (http://juliacollections.github.io/DataStructures.jl/latest/ordered_containers.html, https://github.com/JuliaLang/julia/pull/10116)
 - Experiment with using alternative Dict hash structures (such as Robin Hood Hashing, used by [Rust](https://doc.rust-lang.org/beta/std/collections/struct.HashMap.html))
 - Implementation and tests for assorted asynchronous, threaded storage primitives and data channels
 
