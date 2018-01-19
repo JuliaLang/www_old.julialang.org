@@ -20,7 +20,7 @@ a
 Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
 
 - [TU Dortmund / SFB 823](https://www.statistik.tu-dortmund.de/sfb823.html), Germany
-  * One week introductory course into Julia with applications in statistics and economics ([Tileman Conring])(https://www.statistik.tu-dortmund.de/conring.html): Spring 2018
+  * One week introductory course into Julia with applications in statistics and economics ([Tileman Conring](https://www.statistik.tu-dortmund.de/conring.html)): Spring 2018
 
 - [Federal University of Alagoas](http://www.ufal.edu.br) (_Universidade Federal de Alagoas_, UFAL)
   * COMP272, Distributed Systems ([Prof. André Lage-Freitas](https://sites.google.com/a/ic.ufal.br/andrelage)): 2015, 2016, and 2017
