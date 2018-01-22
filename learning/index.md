@@ -5,7 +5,7 @@ title:  Learning Julia
 
 # Online tutorials
 ## Upcoming
-### [Intro to Julia](https://www.youtube.com/watch?v=cc_NlwopIPM)
+### [Intro to Julia](https://www.youtube.com/watch?v=eFM7T6icHUs)
 by Jane Herriman (January 25, 8PM PST/January 26, 9:30AM IST/January 26, 3PM AEDT)
 
 No prior knowledge of Julia is needed as we will start with the basics. Our aim is that you will feel confident starting to use Julia in your own work by the end of the tutorial!
