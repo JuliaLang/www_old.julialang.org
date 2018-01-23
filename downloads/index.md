@@ -59,6 +59,12 @@ trouble installing Julia.  Checksums for this release are available in both [MD5
 If the provided download files do not work for you, please [file an
 issue in the Julia project](https://github.com/JuliaLang/julia/issues).
 
+The binaries are built to be compatible with most machines. You can turn on all possible compiler optimizations by [building the Julia system image](https://docs.julialang.org/en/latest/devdocs/sysimg/) [for your machine](http://www.stochasticlifestyle.com/7-julia-gotchas-handle/). To do so, type at the Julia REPL:
+
+```julia
+julia> include(joinpath(dirname(JULIA_HOME),"share","julia","build_sysimg.jl")); build_sysimg(force=true)
+```
+
 # Older Releases
 
 Older releases of Julia for all platforms are available on the [Older releases page](http://julialang.org/downloads/oldreleases.html).
