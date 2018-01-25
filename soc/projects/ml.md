@@ -5,15 +5,70 @@ title: Data Science and Machine Learning Projects – Summer of Code
 
 {% include toc.html %}
 
-## Model Loading for Flux.jl
+## Model Zoo Examples
 
-It would be useful to load existing trained models created with other frameworks – say Caffe, TensorFlow or MXNet – into Flux. This project would involve investigating the model formats and building readers so that those models can be run in native Julia.
+[Flux](https://github.com/FluxML/Flux.jl)'s [model zoo](https://github.com/FluxML/model-zoo/) contains examples of a wide range of deep learning models and techniques. This project would involve adding new models, showing how to recreate state-of-the-art results (e.g. AlphaGo) or interesting and unusual model architectures (e.g. transformer networks).
 
-**Expected Results**: A package which can load external model files into Flux data structures.
+Some experience with implementing deep learning models would be ideal for this project, but is not essential for a student willing to pick up the skills and read ML papers.
 
-**Recommended Skills**: Familiarity with neural network libraries.
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/)
 
-**Mentors**: Mike Innes
+## Flux.JS demos
+
+[Flux.JS](https://github.com/FluxML/FluxJS.jl) enables export of [Flux](https://github.com/FluxML/Flux.jl) models to the browser. However, just porting a numerical function to JavaScript is rarely exciting on its own; you need to build an interface to give input to the model (say, via a webcam) and see output (say, by displaying an annotated image) in order to see what the model is thinking.
+
+This project would involve creating new demos that show interesting models running in the browser. Examples could include:
+
+* An MNIST digit classify running on hand-drawn images;
+* An autoencoder that allows moving sliders to generate images, and explore "digit space";
+* A Chess or Go AI that plays against the user;
+* A language analysis tool that classifies user-written text.
+
+The possibilities are pretty much endless here. This project will require a pretty solid handle on web technologies, and we'd expect much of the components created to be reusable between demos.
+
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/), [Shashi Gowda](https://github.com/shashi).
+
+## Model Import and Export
+
+Sharing models with other frameworks would enables us to both export models (say to JavaScript for the browser, or TensorFlow Lite for mobile, or NNVM for optimised training) and to take advantage of the large set of [trained models in the wild](https://github.com/BVLC/caffe/wiki/Model-Zoo) in Julia code.
+
+This involves several stages, some or all of which could be tackled over the course of a project.
+
+* Reading and writing the raw model formats. For formats like [ONNX](https://github.com/onnx/onnx) this should be relatively easy, as one can use the [ProtoBuf.jl](https://github.com/JuliaIO/ProtoBuf.jl) library.
+* For model import:
+  * Converting the raw model format to a more general graph format, such as a [DataFlow.jl](https://github.com/MikeInnes/DataFlow.jl) graph.
+  * Dumping the model graph as Julia code.
+* For model export:
+  * Converting a general graph format to the raw model constructs.
+  * Tracing Julia code to produce a dataflow graph, as in [FluxJS.jl](https://github.com/FluxML/FluxJS.jl).
+
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/)
+
+## Benchmarks
+
+A benchmark suite would help us to keep Julia's performance for ML models in shape, as well as revealing opportunities for improvement. Like the model-zoo project, this would involve contributing standard models that exercise common ML use case (images, text etc) and profiles them. The project could extend to include improving performance where possible, or creating a "benchmarking CI" like Julia's own [nanosoldier](https://github.com/JuliaCI/Nanosoldier.jl).
+
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/)
+
+## Compiler Optimisations
+
+Julia opens up many interesting opportunities for applying new optimisations to ML models, and exploring [language design for ML](https://julialang.org/blog/2017/12/ml&pl). As part of this project you'd help us apply novel optimisation strategies to Julia code, with immediate benefits to Flux and other Julia users.
+
+Possible projects could include:
+
+* Auto-parallelisation and vectorisation in the vain of [DyNet autobatch](http://dynet.readthedocs.io/en/latest/tutorials_notebooks/Autobatching.html), [TensorFlow Fold](https://github.com/tensorflow/fold) and [Matchbox](https://github.com/jekbradbury/Minibatch.jl).
+* Using [Cassette](https://github.com/jrevels/Cassette.jl/) and techniques similar to [Flux.JS](https://github.com/FluxML/FluxJS.jl) to extract dataflow computation graphs from imperative Julia code.
+* Applying optimisations to computation graphs, such as eliding memory allocations, reusing memory and fusing operations, or enabling model parallelism.
+* Applying [Halide](http://halide-lang.org/) or [Futhark](https://futhark-lang.org/)-like optimisations to array expressions, as in [Tokamak](https://github.com/MikeInnes/Tokamak)
+* Improving Julia's GPU support, including tuning memory management and supporting CUDA streams.
+
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/)
+
+## Sparse GPU and ML support
+
+While Julia supports dense GPU arrays well via [CuArrays](https://github.com/JuliaGPU/CUSPARSE.jl), we lack up-to-date wrappers for sparse operations. This project would involve wrapping CUDA's sparse support, with [CUSPARSE.jl](https://github.com/JuliaGPU/CUSPARSE.jl) as a starting point, adding them to CuArrays.jl, and perhaps demonstrating their use via a sparse machine learning model.
+
+**Mentors**: [Mike Innes](https://github.com/MikeInnes/)
 
 ## Making Aquiring Open-Data Easy
 
