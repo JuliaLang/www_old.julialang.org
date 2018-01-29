@@ -22,6 +22,7 @@ You can follow along and interact with tutorial materials without installing any
 
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4igzy3bGVkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 * Intro to Julia, by Jane Herriman (January 25, 2018)
 
 Get jupyter notebooks for "Intro to Julia" [here](https://github.com/xorJane/Introduction_to_Julia_tutorials)!
