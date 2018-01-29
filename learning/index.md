@@ -5,12 +5,6 @@ title:  Learning Julia
 
 # Online tutorials
 ## Upcoming
-### [Intro to Julia](https://www.youtube.com/watch?v=eFM7T6icHUs)
-by Jane Herriman (January 25, 8PM PST/January 26, 9:30AM IST/January 26, 3PM AEDT)
-
-No prior knowledge of Julia is needed as we will start with the basics. Our aim is that you will feel confident starting to use Julia in your own work by the end of the tutorial!
-
-Topics will include the package ecosystem, linear algebra, and multiple dispatch. You can follow along and interact with tutorial materials without installing anything at [juliabox.com](https://next.juliabox.com/).
 
 ### [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
 by Chris Rackauckas (February 6 10AM PST/1 PM EST/19:00 CET)
@@ -27,7 +21,10 @@ Julia Computing will give an introductory tutorial on JuliaDB. This tutorial wil
 You can follow along and interact with tutorial materials without installing anything at [juliabox.com](https://next.juliabox.com/).
 
 ## Past
-* [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017)
+* [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
+* Intro to Julia, by Jane Herriman (January 25, 2018)
+
+Get jupyter notebooks for "Intro to Julia" [here](https://github.com/xorJane/Introduction_to_Julia_tutorials)!
 
 # Books
 
