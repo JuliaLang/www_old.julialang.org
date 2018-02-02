@@ -64,6 +64,7 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 * [JuliaImages](https://github.com/JuliaImages) – Image Processing
 * [JuliaText](https://github.com/JuliaText) – Natural Language Processing (NLP), Computational Linguistics  and (textual) Information Retrieval
 * [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
+* [JuliaData](https://github.com/JuliaData) – Data manipulation, storage, and I/O in Julia
 
 
 ## Visualization
