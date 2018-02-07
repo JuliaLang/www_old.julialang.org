@@ -6,13 +6,6 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-### [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
-by Chris Rackauckas (February 6 10AM PST/1 PM EST/19:00 CET)
-
-Chris Rackauckas will give an introductory tutorial on solving differential equations in Julia. This tutorial will target new Julia users and will go over the Julia package DifferentialEquations.jl.
-
-You can follow along and interact with tutorial materials without installing anything at [juliabox.com](https://next.juliabox.com/). 
-
 ### [Intro to Julia](https://www.youtube.com/watch?v=zJ_d3oWuogw)
 by Jane Herriman (February 15 9AM PST/12 PM EST/18:00 CET/10:30PM IST)
 
@@ -33,6 +26,9 @@ You can follow along and interact with tutorial materials without installing any
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4igzy3bGVkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 * Intro to Julia, by Jane Herriman (January 25, 2018)
+* [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
+by Chris Rackauckas (February 6, 2018)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KPEqYtEd-zY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Get jupyter notebooks for "Intro to Julia" [here](https://github.com/xorJane/Introduction_to_Julia_tutorials) in English and Spanish!
 
