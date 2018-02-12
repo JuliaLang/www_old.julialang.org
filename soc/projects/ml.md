@@ -147,45 +147,18 @@ simultaneously.
 
 ## Artificial Intelligence Library Package based on Artificial Intelligence - A Modern Approach (AIMA)
 
-AIMA is a seminal text on representation of agents that can aid solve a problem for 
-an environment of varying complexity. Contributed by industry and academicians in 
-general has enriched its content over past two decades and many of the proposed 
-architectures are vetted time and again. The book has updated several times and each 
-revision kind of presents itself as a significant rewrite with all modern content. 
-The book is almost read by every AI engineer as a text for their graduation studies.
-So most people can connect to the content very easily. An AI framework developed 
-around the examples will provide a good foundation to design one's problem that can 
-utilize various non-ML or ML based solvers. 
+AIMA is a seminal text on representation of agents to solve AI problems. Most packages 
+available today as AI libraries tend to focus on ML only and not the architectural
+aspect of AI. The scope of the project is to create a library with a clean API 
+(following AIMA) to easily allow the application of core algorithms to AI problems. 
+The student will implement a package that brings together implementations of algorithms 
+like depth-first search and simulated annealing, both from other Julia packages and 
+from sample code in the AIMA book, and build sample programs to demonstrate AI 
+applications. Starter code can be found at AIMACore along with AIMASamples.
 
-Most packages available today as AI libraries tend to focus on ML only and not the
-architectural aspect of AI. Very few will talk about representational aspects of AI. 
-Julia with abstracted type systems and multiple dispatch interfaces provide an ideal 
-language to represent the problem abstractions best as strategy patterns of software 
-engineering. So you can write the AIMA algorithms very easily as method with no side 
-effects in generic form. Julia provides connectivity to other languages for using their 
-libraries. Thus makes an ideal choice to represent the framework while can use solvers 
-from other languages. While AIMA authors have developed the sample code, their focus 
-is more towards developing sample code for teaching and learning and not professional 
-usage of algorithms.
+**Recommended Skills**: Previous experience with AI or the ability to quickly pick up on 
+the AI algorithms in AIMA
 
-**Deliverables**
-
-The scope of the project is to create a library of core algorithms and sample programs 
-separated out neatly such that core algorithms can be used by practitioners for abstract
-problem representations. 
-
-An attempt has been made: [AIMACore](https://github.com/sambitdash/AIMACore.jl) and 
-[AIMASamples](https://github.com/sambitdash/AIMASamples.jl). `AIMACore` can easily be 
-used by a practitioner in their production projects while `AIMASample` can provide examples
-or testcases for the `AIMACore`. The current code has tried to address all the search 
-problems cases. There is a need to extend it to the rest of AIMA sample code. 
-
-**Skillset**
-
-1. A person should be knowledgable in Julia programming or ready to learn it quickly. 
-2. Should have appreciation for software engineering principles. A framework requires a 
-lot on architectural skills.
-3. Ideally, has either undergone a course in AI or wants to invest time in reading and 
-applying AIMA. 
+**Expected Results**: A well-documented library of functions derived from the AIMA book.
 
 **Mentors** [Sambit Kumar Dash](https://github.com/sambitdash). 
