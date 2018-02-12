@@ -147,27 +147,7 @@ simultaneously.
 
 ## Artificial Intelligence Library Package based on Artificial Intelligence - A Modern Approach (AIMA)
 
-Often AI and ML are considered synonymous fields, while in most cases the scope 
-and focus is entirely different. AI is a field of identification of intelligent 
-problems and developing representational frameworks which can aid arriving at a 
-solution better. AI establishes or ensures you set up the problem domain properly.
-Apply disparate solution schemes using existing technologies based on determistic 
-methods or non-deterministic methods to arrive at a solution. The scope of AI is 
-establishing the architecture for solution and ML is to actually solve the problem.
-Not all problems can be solved by all ML techniques known. For someone to be able 
-to try out various schemes to the similar problems may end up rearchitect the 
-problem again for new algorithm. Two examples below can provide concrete 
-visualization to the claims. 
-
-**Information Extraction** - Using ML to identify text extraction pattern is well
-researched problem in the domain. However, many simple structured text can be 
-extracted by regular expressions itself. More non-deterministic cases should be 
-passed onto a ML based system. However, it's important to model the code in a manner
-such that both the solutions can be applied on the same problem abstractions. Text
-architectures like GATE provide interesting architectural reprentations for such 
-cases. 
-
-**Search Problems** - What is similarity between a traveling sales person problem,
+What is similarity between a traveling sales person problem,
 a N-queens placement puzzle and a tic-tac-toe problem? They all seem like graph 
 theory problems. You can apply breadth fast, depth fast, A* or many similar classical 
 graph search algorithms to it. Can you apply genetic algorithm to solve the problems?
@@ -180,20 +160,23 @@ systems like Genetic Algorithms or Simulated Annealing or even some form of Neur
 Networks. If you have abstractions well defined you could try many of the standard
 solvers and use the one which meets your needs best. AI scientists spend enormous 
 amount of energy in trying one solution over the the other till they get the best fit.
-And a good problem architecture makes that plug-play trial easier. 
+And a good problem architecture makes that plug-play trial easier. In short, AI 
+establishes architectural framework for the problem domain while classic computational
+approaches or ML provides solvers to address those problems. 
 
-**Why AIMA?** - Following are a few reasons I can think of:
+**Why AIMA?** - To develop a basis of a foundation AI framework around AIMA following 
+are some of the beneficial aspects:
 
 1. AIMA is a seminal text on representation of agents that can aid solve a problem for 
 an environment of varying complexity. 
 2. Contributed by industry and academicians in general has enriched its content over 
-past two decades and may of the proposed architectures are vetted time and again. The
+past two decades and many of the proposed architectures are vetted time and again. The
 book has updated several times and each revision kind of presents itself as a 
 significant rewrite with all modern content. 
 3. The book is almost read by every AI engineer as a text for their graduation studies.
 So most people can connect to the content very easily. 
 
-**Why it's relevant to Julia?** - Here are some of the reasons I can think of
+**Why it's relevant to Julia?** - Here are some of the advantages of Julia:
 1. Most packages available today as AI packages focus on  the ML solvers as AI. If you 
 search the internet on the AI packages you will only get details of ML approaches used 
 today. Very few will talk about representational aspects of AI. 
@@ -212,13 +195,11 @@ The scope of the project is to create a library of core algorithms and sample pr
 separated out neatly such that core algorithms can be used by practitioners for abstract
 problem representation. 
 
-An attempt has been made by me: [AIMACore](https://github.com/sambitdash/AIMACore.jl) and 
+An attempt has been made: [AIMACore](https://github.com/sambitdash/AIMACore.jl) and 
 [AIMASamples](https://github.com/sambitdash/AIMASamples.jl). `AIMACore` can easily be 
 used by a practitioner in their production projects while `AIMASample` can provide examples
 or testcases for the `AIMACore`. The current code has tried to address all the search 
 problems cases. There is a need to extend it to the rest of AIMA sample code. 
-
-Since, it's an already known problem set it's fairly straight forward in definition. 
 
 **Skillset**
 
@@ -228,4 +209,4 @@ lot on architectural skills.
 3. Ideally, has either undergone a course in AI or wants to invest time in reading and 
 applying AIMA. 
 
-
+**Mentors** [Sambit Kumar Dash](https://github.com/sambitdash). 
