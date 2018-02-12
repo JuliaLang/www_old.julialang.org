@@ -43,9 +43,9 @@ There are many remaining components that need to be updated to use thread-safe a
 
 ## C Linter
 
-Memory errors in Julia's underlying C code are sometimes difficult to trace, and missing garbage-collector "roots" (GC roots) can lead to segfaults and other problems. One potential way to make it easier to find such errors would be to write a package that checks Julia's `src/` directory for missing GC roots. A Julia-based solution might leverage the [Clang.jl](https://github.com/ihnorton/Clang.jl) package to parse the C code, determine which call chains can trigger garbage collection, and then look for objects that lack GC root protection. Alternatively, the same strategy might be implemented in C++ by writing a plugin for [Clang's static analyzer](http://clang-analyzer.llvm.org/). Another attractive approach is to leverage [coccinelle](http://coccinelle.lip6.fr/).
+Memory errors in Julia's underlying C code are sometimes difficult to trace, and missing garbage-collector "roots" (GC roots) can lead to segfaults and other problems. One way to find such errors is to check Julia's `src/` directory for missing GC roots by determining which call chains can trigger garbage collection, and then looking for objects that lack GC root protection. Toward this end, a tool called [ClangSA.jl](https://github.com/Keno/ClangSA.jl) was developed using [Clang's static analyzer](http://clang-analyzer.llvm.org/) (as well as the [Cxx](https://github.com/Keno/Cxx.jl) package) and has been used to find some GC bugs. (alternatively, [coccinelle](http://coccinelle.lip6.fr/) could be investigated)
 
-**Expected Results**: A tool that, when run against Julia's `src/` directory, highlights lines that need to have additional GC roots added.
+**Expected Results**: Expand and improve the ClangSA tool; potentially provide continuous integration support (for example, a [Nanosoldier](https://github.com/JuliaCI/Nanosoldier.jl) command).
 
 **Required Skills**: Familiarity with C, runtimes, and experience with (or interest in) static analysis.
 
