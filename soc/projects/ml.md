@@ -147,53 +147,32 @@ simultaneously.
 
 ## Artificial Intelligence Library Package based on Artificial Intelligence - A Modern Approach (AIMA)
 
-What is similarity between a traveling sales person problem,
-a N-queens placement puzzle and a tic-tac-toe problem? They all seem like graph 
-theory problems. You can apply breadth fast, depth fast, A* or many similar classical 
-graph search algorithms to it. Can you apply genetic algorithm to solve the problems?
-Does that mean you have to completely redesign your problem based on every solution 
-framework you have in mind? If you have to solve N-queens by mere recursive search
-you have to specifically write code for it in a nifty way. One such implementation is 
-in Julia as a sample test code. In AI all these are classified under search problems. 
-Solution frameworks are solvers, may it be classic graph theoretic approaches or ML
-systems like Genetic Algorithms or Simulated Annealing or even some form of Neural 
-Networks. If you have abstractions well defined you could try many of the standard
-solvers and use the one which meets your needs best. AI scientists spend enormous 
-amount of energy in trying one solution over the the other till they get the best fit.
-And a good problem architecture makes that plug-play trial easier. In short, AI 
-establishes architectural framework for the problem domain while classic computational
-approaches or ML provides solvers to address those problems. 
+AIMA is a seminal text on representation of agents that can aid solve a problem for 
+an environment of varying complexity. Contributed by industry and academicians in 
+general has enriched its content over past two decades and many of the proposed 
+architectures are vetted time and again. The book has updated several times and each 
+revision kind of presents itself as a significant rewrite with all modern content. 
+The book is almost read by every AI engineer as a text for their graduation studies.
+So most people can connect to the content very easily. An AI framework developed 
+around the examples will provide a good foundation to design one's problem that can 
+utilize various non-ML or ML based solvers. 
 
-**Why AIMA?** - To develop a basis of a foundation AI framework around AIMA following 
-are some of the beneficial aspects:
-
-1. AIMA is a seminal text on representation of agents that can aid solve a problem for 
-an environment of varying complexity. 
-2. Contributed by industry and academicians in general has enriched its content over 
-past two decades and many of the proposed architectures are vetted time and again. The
-book has updated several times and each revision kind of presents itself as a 
-significant rewrite with all modern content. 
-3. The book is almost read by every AI engineer as a text for their graduation studies.
-So most people can connect to the content very easily. 
-
-**Why it's relevant to Julia?** - Here are some of the advantages of Julia:
-1. Most packages available today as AI packages focus on  the ML solvers as AI. If you 
-search the internet on the AI packages you will only get details of ML approaches used 
-today. Very few will talk about representational aspects of AI. 
-2. Julia with abstracted type systems and multiple dispatch interfaces provide an ideal 
+Most packages available today as AI libraries tend to focus on ML only and not the
+architectural aspect of AI. Very few will talk about representational aspects of AI. 
+Julia with abstracted type systems and multiple dispatch interfaces provide an ideal 
 language to represent the problem abstractions best as strategy patterns of software 
 engineering. So you can write the AIMA algorithms very easily as method with no side 
-effects in generic form. 
-3. Julia provides connectivity to other languages for using their libraries. Thus makes
-an ideal choice to represent the framework while can use solvers from other languages. 
-4. While AIMA authors have developed the sample code, their focus is more towards 
-developing sample code for teaching and learning and not professional usage of algorithms.
+effects in generic form. Julia provides connectivity to other languages for using their 
+libraries. Thus makes an ideal choice to represent the framework while can use solvers 
+from other languages. While AIMA authors have developed the sample code, their focus 
+is more towards developing sample code for teaching and learning and not professional 
+usage of algorithms.
 
 **Deliverables**
 
 The scope of the project is to create a library of core algorithms and sample programs 
 separated out neatly such that core algorithms can be used by practitioners for abstract
-problem representation. 
+problem representations. 
 
 An attempt has been made: [AIMACore](https://github.com/sambitdash/AIMACore.jl) and 
 [AIMASamples](https://github.com/sambitdash/AIMASamples.jl). `AIMACore` can easily be 
