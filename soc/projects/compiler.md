@@ -21,16 +21,6 @@ Currently the quality (performance) of generated code does not degrade particula
 
 **Mentors**: [Jameson Nash](https://github.com/vtjnash)
 
-## Better Nullables
-
-The starting point should likely be https://github.com/JuliaLang/Juleps/pull/21. This will need further elaboration and study to identify any areas that are likely to be problematic under the new approach. Also will require new code and testing to demonstrate the performance and usability of the new code patterns; and to begin deprecation and replacement of the existing code pattern with Nullables.
-
-**Expected Results**: Initiate replacement of the `Nullable{T}` with an implementation based around `Union{T, Void}` and `Union{Some{T}, Void}`.
-
-**Recommended Skills**: Experience with performance testing and Julia. Experience with data analysis involving missing values also a big advantage.
-
-**Mentors**: [Jameson Nash](https://github.com/vtjnash)
-
 ## Thread-safety
 
 There are many remaining components that need to be updated to use thread-safe algorithms before Julia's threading will be stable for general usage. Some basic data-structures (such as the TypeMap) are missing correct RCU and memory barriers to ensure race-free answers. IO is also currently unavailable for multi-threaded code. The `realloc` operation for arrays (i.e. `resize!`) may be more reliable if it was implemented using RCU `malloc` (delaying the free until a gc-safepoint has been reached on all threads).
