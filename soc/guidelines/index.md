@@ -8,8 +8,9 @@ redirect_from:
 # Before the Application
 
 Before you apply, it's a good idea to get in touch with the Julia community.
-[Join the Julia Slack](https://slackinvite.julialang.org/) to get connected with
-potential mentors to help find interesting projects. The channel `#gsoc` is
+Ask questions on [Discourse](https://discourse.julialang.org) or [join the
+Julia Slack](https://slackinvite.julialang.org/) to get connected with
+potential mentors to help find interesting projects. The Slack channel `#jsoc` is
 dedicated to helping students get the help they need. Additionally, you should
 make use of these connections to start making some small contributions and
 progress on your project early on. While PRs before the applications are not
@@ -20,12 +21,12 @@ commitment, the better.
 
 GSoC applications must be submitted to https://summerofcode.withgoogle.com. We
 recommend having a mentor to help you with the application process. Please feel
-free to share your draft applications in the `#gsoc` channel of the Slack to
+free to share your draft applications in the `#jsoc` channel of the Slack to
 receive feedback.
 
 Our organization does not have page or formatting requirements, but we recommend
 building a formal PDF document of less than 10 pages which is formatted using
-Word or LaTeX. If you have any questions, contact the Julialang GSoC administrators
+Word or LaTeX. If you have any questions, contact the Julia GSoC administrators
 at summerofcode@julialang.org.
 
 # Application Guidelines
