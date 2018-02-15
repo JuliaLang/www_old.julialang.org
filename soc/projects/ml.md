@@ -154,7 +154,9 @@ aspect of AI. The scope of the project is to create a library with a clean API
 The student will implement a package that brings together implementations of algorithms 
 like depth-first search and simulated annealing, both from other Julia packages and 
 from sample code in the AIMA book, and build sample programs to demonstrate AI 
-applications. Starter code can be found at AIMACore along with AIMASamples.
+applications. Starter code can be found at [AIMACore]
+(https://github.com/sambitdash/AIMACore.jl) along with [AIMASamples]
+(https://github.com/sambitdash/AIMASamples.jl).
 
 **Recommended Skills**: Previous experience with AI or the ability to quickly pick up on 
 the AI algorithms in AIMA
