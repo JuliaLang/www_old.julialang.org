@@ -44,10 +44,11 @@ methods. Possible families of methods to implement are:
 - Implicit-Explicit (IMEX) Methods
 - Parallel ODE Methods
 - Runge-Kutta-Chebyschev Methods
+- Boundary value problem (BVP) solvers like MIRK and collocation methods
 
 These methods are the basis of high-efficiency partial differential equation (PDE)
 solvers and are thus important to many communities like computational fluid
-dynamics, mathematical biology, and quantum mechanics. A
+dynamics, mathematical biology, and quantum mechanics.
 
 **Recommended Skills**: Background knowledge in numerical analysis, numerical
 linear algebra, and the ability (or eagerness to learn) to write fast code.
