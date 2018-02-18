@@ -11,15 +11,27 @@ For all of these projects, potential mentors are [Steven Johnson](https://github
 
 # Numerical Linear Algebra
 
-## Native Julia implementations of iterative solvers for numerical linear algebra
+## Implementing eigenvalue problem solvers for sparse matrices
 
-Iterative methods for solving numerical linear algebraic problems are crucial for big data applications, which often involve matrices that are too large to store in memory or even to compute its matrix elements explicitly. Iterative Krylov methods such as conjugate gradients (CG) and the generalized minimal residual (GMRES) methods have proven to be particular valuable for a wide variety of applications such as eigenvalue finding, convex optimization, and even systems control. This project proposes to implement a comprehensive suite of iterative solver algorithms in Julia's native [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package, as described in the [implementation roadmap](https://github.com/JuliaLang/IterativeSolvers.jl/issues/1). Students will be encouraged to refactor the codebase to better expose the mathematical structure of the underlying Arnoldi and Lanczos iterations, thus promoting code composability without sacrificing performance.
+The [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package is lacking iterative methods for the (generalized) eigenvalue problem Ax = λBx. The goal of this project is to implement the Arnoldi or Lanczos method as a solver for the eigenvalue problem and to compare its performance with the `eigs` function.
+
+For instance, the student can start by implementing the Arnoldi method for non-Hermitian eigenvalue problems Ax = λx. The method should then be improved with the implicit restart procedure (IRAM) and finally extended to the generalized eigenvalue problem Ax = λBx.
+
+**Recommended Skills**: familiarity with numerical linear algebra.
+
+**Expected Results**: a fast and native eigenvalue problem solver.
+
+**Mentors:** [Harmen Stoppels](https://github.com/haampie/)
+
+## Implementing iterative methods for linear systems of equations
+
+High-dimensional linear systems of equations Ax = b need often to be solved by preconditioned iterative methods, simply because direct methods are too expensive. The [IterativeSolvers.jl](https://github.com/JuliaLang/IterativeSolvers.jl) package provides a variety of these iterative methods already, such as GMRES, BiCGStab and Conjugate Gradients. There are still methods to be implemented, including (variations of) QMR and Conjugate Residuals. Furthermore, the package itself can be improved by: solving the issue of the return types of solvers ([#6](https://github.com/JuliaMath/IterativeSolvers.jl/issues/6), [#185](https://github.com/JuliaMath/IterativeSolvers.jl/issues/185)) and allowing custom array types.
 
 **Recommended Skills**: Strong linear algebra background. Familiarity with numerical linear algebra.
 
-**Expected Results**: New high-performance backend native iterative solvers.
+**Expected Results**: New iterative methods and an improved API of the IterativeSolvers.jl package.
 
-**Mentors:** [Jiahao Chen](https://jiahao.github.io/)
+**Mentors:** [Harmen Stoppels](https://github.com/haampie/)
 
 ## PETSc integration for scalable technical computing
 
