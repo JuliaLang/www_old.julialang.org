@@ -27,6 +27,23 @@ Julia could be a great replacement for C in Python projects, where it can be use
 
 **Mentors**: [Steven Johnson](https://github.com/stevengj)
 
+## Calling Julia shared libraries from Python
+
+Similar to the above, but involving [PackageCompiler](https://github.com/JuliaLang/PackageCompiler.jl) to remove JIT overhead.
+The successful candidate will start off from the [prototype](https://github.com/JuliaLang/PackageCompiler.jl/pull/26)
+and will make sure that linking a shared Julia library to Python works on all platforms.
+If there is still time after this, the project can be extended to make the interaction
+between Python and Julia work smoothly.
+We will need to make sure that all functions can be called with rich
+python datatypes, and that conversions to common Julia datatypes happens automatically.
+If the conversion can't happen automatically, we need to make sure that there are easy ways
+to convert a Python object to the correct Julia object.
+
+**Recommended skills**: This project will require strong knowledge about compiling and linking binaries.
+**Expected Results**: An easy way to call into static julia libraries without JIT overhead and with automatic type conversions.
+
+**Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
+
 ## Middlewares for common web application chores in Mux.jl
 
 Implementation of mid-level features - specifically routing, load-balancing, cookie/session handling, and authentication - in [Mux.jl](https://github.com/JuliaWeb/Mux.jl).  The implementation should be extensible enough to allow easy interfacing with different kinds of caching, databases or authentication backends. (See [Clojure/Ring](https://github.com/ring-clojure/ring/wiki/Why-Use-Ring%3F) for inspiration).
@@ -84,9 +101,9 @@ While these are all interesting questions to consider, the scope of this package
 
 ## WebAssembly
 
-[WebAssembly](http://webassembly.org/) is a new standard for running compiled code in a web browser. If Julia can generate WebAssembly, it opens up many opportunities to embed Julia "apps" in web interfaces. Julia is well positioned here because Julia can already compile efficient LLVM bitcode. LLVM bitcode can be translated into WebAssembly by [Emscripten](http://emscripten.org/) or with a direct LLVM [backend](https://github.com/llvm-mirror/llvm/tree/master/lib/Target/WebAssembly). 
+[WebAssembly](http://webassembly.org/) is a new standard for running compiled code in a web browser. If Julia can generate WebAssembly, it opens up many opportunities to embed Julia "apps" in web interfaces. Julia is well positioned here because Julia can already compile efficient LLVM bitcode. LLVM bitcode can be translated into WebAssembly by [Emscripten](http://emscripten.org/) or with a direct LLVM [backend](https://github.com/llvm-mirror/llvm/tree/master/lib/Target/WebAssembly).
 
-The two most promising approaches to generate WebAssembly are outlined as follows. 
+The two most promising approaches to generate WebAssembly are outlined as follows.
 
 1. **Extended CUDAnative approach** –  The experimental [ExportWebAssembly package](https://github.com/tshort/ExportWebAssembly.jl/) uses code from the [CUDAnative package](https://github.com/JuliaGPU/CUDAnative.jl) to produce LLVM bitcode on the fly. It works great for simple code (type stable code with no use of libjulia or other C functions). Math code that uses immutable structs and/or StaticArrays works well with this approach. The main downside is that it is so limited–-no arrays, no strings, no IO, etc. The main work with this approach is to substitute out libjulia-type functions with equivalents that work in JavaScript/WebAssembly. For example, [this](https://github.com/tshort/ExportWebAssembly.jl/blob/master/examples/crude-array.jl) crude example shows a custom array type that could work with WebAssembly. The main steps in this approach are: (1) write a package to create WebAssembly-friendly versions of basic Julia types and operations (Dicts, Strings, Arrays, and printing) and (2) use the [Cassette package](https://github.com/jrevels/Cassette.jl) or another approach to replace standard Julia dispatches involving these basic types with the WebAssembly-friendly versions.
 
@@ -94,6 +111,28 @@ The two most promising approaches to generate WebAssembly are outlined as follow
 
 **Expected Results**: An upgraded version of the ExportWebAssembly package that supports a wider range of Julia code.
 
-**Recommended skills**: Familiarity with (or willingness to learn) LLVM IR helps when interpreting Julia output before it is converted to WebAssembly; for the CodeGen approach, familiarity with C++ helps to interpret the C++ code in Julia that does code generation 
+**Recommended skills**: Familiarity with (or willingness to learn) LLVM IR helps when interpreting Julia output before it is converted to WebAssembly; for the CodeGen approach, familiarity with C++ helps to interpret the C++ code in Julia that does code generation
 
 **Mentors**: [Tom Short](https://github.com/tshort)
+
+
+# Develop new, IR transformation API + 0.7 support
+
+Improve the new [MacroTools](https://github.com/MikeInnes/MacroTools.jl/) based IR rewriting capabilities in [Sugar.jl](https://github.com/SimonDanisch/Sugar.jl).
+
+There are 2 ways to match IR and rewrite the matching expressions in Sugar right now:
+
+1) match with function, e.g. rewrite all expressions for which is_goto(::Expr)::Bool returns true.
+
+2) MacroTools based form, which uses [Julia expressions](https://github.com/SimonDanisch/Sugar.jl/blob/sd/07/src/patterns.jl#L175) to define what to match
+
+Those capabilities are already fairly evolved on the branch [sd/07](https://github.com/SimonDanisch/Sugar.jl/tree/sd/07),
+but they need thorough tests.
+After making sure they work reliably, the project will be about refactoring Sugar
+to use the new infrastructure to offer generic passes over the Julia IR, to e.g.
+remove goto labels and replace them by the correct control flow statements,
+passes for boundcheck elimination, or simple passes to replace a set of functions.
+
+**Expected Results**: Release a new version of Sugar including 0.7 compatibility and the new API
+**Recommended skills**: Knowledge of Julia's AST, IR and MacroTools would be great
+**Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
