@@ -65,3 +65,17 @@ be put into writing tests and porting the packages that rely on GLAbstraction to
 **Expected Results**: finishing the PR and making sure it works with dependant packages
 **Recommended skills**: Requirement is a good understanding of OpenGL
 **Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
+
+
+# Port GLVisualize Shaders and improve API of WebVisualize
+
+This project is about turning the current [WebVisualize prototype](https://github.com/SimonDanisch/WebVisualize.jl) into a fully featured webgl 
+drawing API.
+To make things simple, we're using [ThreeJS](https://threejs.org/) made accessible from within Julia with [WebIO](https://github.com/JuliaGizmos/WebIO.jl).
+The goal is to port most [GLVisualize](https://github.com/JuliaGL/GLVisualize.jl) shaders so that we can offer exactly the same functionality.
+We want to use [Transpiler](https://github.com/SimonDanisch/Transpiler.jl) to transpile the Julia shaders in [Visualize.jl](https://github.com/SimonDanisch/Visualize.jl/tree/master/src/shader) across platforms.
+This will enable us to generate webgl shaders and opengl shaders from the same Julia functions, which is crucial to keep maintenance low.
+
+**Expected Results**: Turn the current prototype into a functioning package
+**Recommended skills**: Some OpenGL and Web (specifically ThreeJS) knowledge will be required.
+**Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
