@@ -43,3 +43,25 @@ that all the recipes that are spread around the Julia plotting community work!
 **Expected Results**: porting and testing as many recipes as possible
 **Recommended skills**: Experience with Plots.jl would be great
 **Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
+
+
+## Refactor the GLAbstraction API
+
+We are working on deep refactor of [GLAbstraction](https://github.com/JuliaGL/GLAbstraction.jl), to finally make a fully fledged,
+general purpose layer above OpenGL.
+
+The work happens at this [PR](https://github.com/JuliaGL/GLAbstraction.jl/pull/88) and has the following goals:
+
+* getting rid of Reactive/Color/ and other not strictly opengl related packages. Instead offer overloadable APIs to do the job
+* Introduce leaner VertexArray buffer, integrating nicely with view(buffer, faces). A mesh is then basically just view(vertices::Vector{Point3f0}, indices::Vector{GLTriangle})
+* Introduce UniformBuffers to hold state in shaders independent of executing the shader
+* Introduce lean RenderObject, that doesn't hold any data, besides information on the shader layout - data will get transferred via calling the object with new data. When uniformbuffers are used, data can also be updated in place
+* remove GLVisualize specific code, that was basically just parked here because I didn't had a better place to put it
+* Transpiler integration - make it the main way to create shaders, instead of having ugly templated shader that nobody understands
+
+Besides Transpiler integration, a lot of those goals have been achieved and now effort needs to
+be put into writing tests and porting the packages that rely on GLAbstraction to work with the new API.
+
+**Expected Results**: finishing the PR and making sure it works with dependant packages
+**Recommended skills**: Requirement is a good understanding of OpenGL
+**Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
