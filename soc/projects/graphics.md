@@ -38,7 +38,7 @@ gaps and making sure all tests pass for the new backend.
 
 [Plots.jl](https://github.com/tbreloff/Plots.jl) offers a lot of [recipes](http://docs.juliaplots.org/latest/recipes/).
 In Makie, we will need to make sure that they are available and work correctly.
-This project will involve writing a compatibility layer for (PlotRecipes.jl)[https://github.com/JuliaPlots/PlotRecipes.jl] and then making sure
+This project will involve writing a compatibility layer for [PlotRecipes.jl](https://github.com/JuliaPlots/PlotRecipes.jl) and then making sure
 that all the recipes that are spread around the Julia plotting community work!
 **Expected Results**: porting and testing as many recipes as possible
 **Recommended skills**: Experience with Plots.jl would be great
@@ -69,7 +69,7 @@ be put into writing tests and porting the packages that rely on GLAbstraction to
 
 # Port GLVisualize Shaders and improve API of WebVisualize
 
-This project is about turning the current [WebVisualize prototype](https://github.com/SimonDanisch/WebVisualize.jl) into a fully featured webgl 
+This project is about turning the current [WebVisualize prototype](https://github.com/SimonDanisch/WebVisualize.jl) into a fully featured webgl
 drawing API.
 To make things simple, we're using [ThreeJS](https://threejs.org/) made accessible from within Julia with [WebIO](https://github.com/JuliaGizmos/WebIO.jl).
 The goal is to port most [GLVisualize](https://github.com/JuliaGL/GLVisualize.jl) shaders so that we can offer exactly the same functionality.
