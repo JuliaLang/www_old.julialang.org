@@ -114,3 +114,25 @@ The two most promising approaches to generate WebAssembly are outlined as follow
 **Recommended skills**: Familiarity with (or willingness to learn) LLVM IR helps when interpreting Julia output before it is converted to WebAssembly; for the CodeGen approach, familiarity with C++ helps to interpret the C++ code in Julia that does code generation
 
 **Mentors**: [Tom Short](https://github.com/tshort)
+
+
+# Develop new, IR transformation API + 0.7 support
+
+Improve the new [MacroTools](https://github.com/MikeInnes/MacroTools.jl/) based IR rewriting capabilities in [Sugar.jl](https://github.com/SimonDanisch/Sugar.jl).
+
+There are 2 ways to match IR and rewrite the matching expressions in Sugar right now:
+
+1) match with function, e.g. rewrite all expressions for which is_goto(::Expr)::Bool returns true.
+
+2) MacroTools based form, which uses [Julia expressions](https://github.com/SimonDanisch/Sugar.jl/blob/sd/07/src/patterns.jl#L175) to define what to match
+
+Those capabilities are already fairly evolved on the branch [sd/07](https://github.com/SimonDanisch/Sugar.jl/tree/sd/07),
+but they need thorough tests.
+After making sure they work reliably, the project will be about refactoring Sugar
+to use the new infrastructure to offer generic passes over the Julia IR, to e.g.
+remove goto labels and replace them by the correct control flow statements,
+passes for boundcheck elimination, or simple passes to replace a set of functions.
+
+**Expected Results**: Release a new version of Sugar including 0.7 compatibility and the new API
+**Recommended skills**: Knowledge of Julia's AST, IR and MacroTools would be great
+**Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
