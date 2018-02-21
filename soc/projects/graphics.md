@@ -7,7 +7,9 @@ title:  Graphic Projects – Summer of Code
 
 {% include toc.html %}
 
-## Makie 1): Improve Documentation + add Examples
+## Makie 
+
+### Improve Documentation + add Examples
 
 [Makie](https://github.com/JuliaPlots/Makie.jl) is a new plotting library in need of tests and documentation.
 
@@ -22,7 +24,7 @@ for the example database.
 **Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
 
 
-## Makie 2): Develop a Cairo/GR/WebVisualize backend
+### Develop a Cairo/GR/WebVisualize backend
 
 This project involves overloading the [Makie API](https://github.com/JuliaPlots/Makie.jl/tree/master/src/atomics)
 for backends to draw all the different plot types.
@@ -34,7 +36,7 @@ gaps and making sure all tests pass for the new backend.
 **Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
 
 
-## Makie 3): Port Recipes
+### Port Recipes
 
 [Plots.jl](https://github.com/tbreloff/Plots.jl) offers a lot of [recipes](http://docs.juliaplots.org/latest/recipes/).
 In Makie, we will need to make sure that they are available and work correctly.
@@ -67,7 +69,7 @@ be put into writing tests and porting the packages that rely on GLAbstraction to
 **Mentors**: [Simon Danisch](https://github.com/SimonDanisch/)
 
 
-# Port GLVisualize Shaders and improve API of WebVisualize
+## Port GLVisualize Shaders and improve API of WebVisualize
 
 This project is about turning the current [WebVisualize prototype](https://github.com/SimonDanisch/WebVisualize.jl) into a fully featured webgl
 drawing API.
