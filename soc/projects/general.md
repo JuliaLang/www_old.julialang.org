@@ -116,7 +116,7 @@ The two most promising approaches to generate WebAssembly are outlined as follow
 **Mentors**: [Tom Short](https://github.com/tshort)
 
 
-# Develop new, IR transformation API + 0.7 support
+# Improve IR transformation API + 0.7 support for Sugar
 
 Improve the new [MacroTools](https://github.com/MikeInnes/MacroTools.jl/) based IR rewriting capabilities in [Sugar.jl](https://github.com/SimonDanisch/Sugar.jl).
 
