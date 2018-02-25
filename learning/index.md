@@ -6,15 +6,6 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-### [Intro to Julia](https://www.youtube.com/watch?v=zJ_d3oWuogw)
-by Jane Herriman (February 15 9AM PST/12 PM EST/18:00 CET/10:30PM IST)
-
-This is a repeat of our (monthly) intro to Julia tutorial on February 15 that will show you some of Julia's awesome features and teach you that high-level code and performance are not mutually exclusive.
-
-No prior knowledge of Julia is needed as we will start with the basics. Our aim is that you will feel confident starting to use Julia in your own work by the end of the tutorial!
-
-You can follow along and interact with tutorial materials without installing anything at [juliabox.com](https://juliabox.com/).
-
 ### [Intro to JuliaDB, a package for working with large persistent data sets](https://www.youtube.com/watch?v=d5SzUh2_ono)
 by Josh Day and Shashi Gowda (February 28 10AM EST/16:00 CET/8:30PM IST)
 
@@ -25,10 +16,11 @@ You can follow along and interact with tutorial materials without installing any
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4igzy3bGVkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-* Intro to Julia, by Jane Herriman (January 25, 2018)
+* Intro to Julia by Jane Herriman (January 25, 2018)
 * [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
 by Chris Rackauckas (February 6, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KPEqYtEd-zY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Intro to Julia by Jane Herriman (February 15)
 
 Get jupyter notebooks for "Intro to Julia" [here](https://github.com/xorJane/Introduction_to_Julia_tutorials) in English and Spanish!
 
