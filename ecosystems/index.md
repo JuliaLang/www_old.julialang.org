@@ -4,22 +4,22 @@ title:  Julia Ecosystems
 ---
 
 Julia has a wide ecosystem of packages, maintained by a wide variety of people.
-In the best of academic ideals, julia users from across the world come together to create mutually compatable and supporting packages for their domains.
+In the best of academic ideals, Julia users from across the world come together to create mutually compatible and supporting packages for their domains.
 To manage these collections of packages they often use GitHub organisations and various other communication channels,
-Most also have channels on the main Julia slack, and sub-forums on the main Julia discourse (See [Community](../community)).
+Most also have channels on the main Julia Slack channel, and sub-forums on the main Julia Discourse forum (see [Community](../community).)
 
 ## International Localisation Efforts & Resources
 
-* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language ([Mailing-list](https://groups.google.com/forum/#!forum/julialanges)], [Twitter](https://twitter.com/JuliaLangsEs), [Discord](https://discord.me/julialang-es), [facebook](https://www.facebook.com/groups/julialang.es/), [WhatsApp](https://chat.whatsapp.com/invite/J9T033nZO8MLn96wWjlnHb))
+* [JuliaLangEs](https://github.com/JuliaLangEs) – Julia resources in the Spanish language ([Mailing-list](https://groups.google.com/forum/#!forum/julialanges)], [Twitter](https://twitter.com/JuliaLangsEs), [Discord](https://discord.me/julialang-es), [Facebook](https://www.facebook.com/groups/julialang.es/), [WhatsApp](https://chat.whatsapp.com/invite/J9T033nZO8MLn96wWjlnHb))
 * [JuliaLangPt](https://github.com/JuliaLangPt) – Site for translation of Julia documentation, etc. to Portuguese ([Gitter](https://gitter.im/JuliaLangPt/julia))
 * [JuliaCN](https://github.com/JuliaCN) – An open-source organization for Julia localization in Chinese (QQ ID 188374671, )
-* [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language ([Mailing-list](https://groups.google.com/forum/#!forum/julia-tokyo), [twitter](https://twitter.com/JuliaLangJa), [Slack](https://juliatokyo.slack.com),[Slack invite](https://julia-tokyo-inviter.herokuapp.com/), [facebook](https://www.facebook.com/groups/885166968160540/))
-* [JuliaGerman](https://github.com/JuliaLangGerman) – german manual for the Julia language ([manual](https://github.com/JuliaLangGerman/Julia_Handbuch_Deutsch))
+* [JuliaTokyo](https://github.com/JuliaTokyo) – Julia resources in the Japanese language ([Mailing-list](https://groups.google.com/forum/#!forum/julia-tokyo), [Twitter](https://twitter.com/JuliaLangJa), [Slack](https://juliatokyo.slack.com), [Slack invite](https://julia-tokyo-inviter.herokuapp.com/), [Facebook](https://www.facebook.com/groups/885166968160540/))
+* [JuliaGerman](https://github.com/JuliaLangGerman) – German manual for the Julia language ([manual](https://github.com/JuliaLangGerman/Julia_Handbuch_Deutsch))
 
 ## General
 
 * [JuliaDocs](https://github.com/juliadocs) – Documentation-related packages for Julia ([Gitter](https://gitter.im/juliadocs/users))
-* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (l10n) for Julians ([twitter](https://twitter.com/julia_i18n), [Gitter](https://gitter.im/Julia-i18n/julia-i18n) )
+* [Julia-i18n](https://github.com/Julia-i18n) – Internationalization (i18n) and localization (L10n) for Julians ([Twitter](https://twitter.com/julia_i18n), [Gitter](https://gitter.im/Julia-i18n/julia-i18n) )
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
 * [JuliaPraxis](https://github.com/JuliaPraxis) – Best practices ([Gitter](https://gitter.im/JuliaPraxis))
 * [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
@@ -27,11 +27,11 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 
 ## Computing
 
-* [JuliaArrays](https://github.com/JuliaArrays)
+* [JuliaArrays](https://github.com/JuliaArrays) – Custom array types (and utilities for building array types) 
 * [JuliaBerry](https://github.com/JuliaBerry) – [Julia resources for the Raspberry Pi](https://juliaberry.github.io/)
 * [JuliaCI](https://github.com/JuliaCI) – Continuous Integration Support for Julia packages
 * [JuliaGPU](https://github.com/JuliaGPU) – GPU computing
-* [JuliaInterop](https://github.com/JuliaInterop) – Easy interoperability between Julia and not Julia
+* [JuliaInterop](https://github.com/JuliaInterop) – Easy interoperability between Julia and not-Julia
 * [JuliaIO](https://github.com/JuliaIO) – IO-related functionality, such as serialization
 * [JuliaParallel](https://github.com/JuliaParallel) – [Parallel programming in Julia](http://juliaparallel.github.io/)
 * [JuliaWeb](https://github.com/JuliaWeb) – Web stack
@@ -40,7 +40,7 @@ Most also have channels on the main Julia slack, and sub-forums on the main Juli
 ## Mathematics
 
 * [JuliaDiff](https://github.com/JuliaDiff/) – [Differentiation tools](http://www.juliadiff.org/)
-* [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/), ([Gitter](https://gitter.im/JuliaDiffEq/Lobby))
+* [JuliaDiffEq](https://github.com/JuliaDiffEq) – [Differential equation solving and analysis](https://juliadiffeq.github.io/) ([Gitter](https://gitter.im/JuliaDiffEq/Lobby))
 * [JuliaGeometry](https://github.com/JuliaGeometry) – Computational Geometry
 * [JuliaGraphs](https://github.com/JuliaGraphs) – Graph Theory and Implementation
 * [JuliaMath](https://github.com/JuliaMath) – Mathematics made easy in Julia
