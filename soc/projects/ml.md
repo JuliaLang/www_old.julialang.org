@@ -20,6 +20,8 @@ Some experience with implementing deep learning models would be ideal for this p
 This project would involve creating new demos that show interesting models running in the browser. Examples could include:
 
 * An MNIST digit classify running on hand-drawn images;
+* [Handwriting generation](https://www.cs.toronto.edu/~graves/handwriting.html);
+* Live speech recognition or production;
 * An autoencoder that allows moving sliders to generate images, and explore "digit space";
 * A Chess or Go AI that plays against the user;
 * A language analysis tool that classifies user-written text.
