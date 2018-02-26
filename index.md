@@ -40,17 +40,15 @@ This keynote talk by Stefan Karpinski at [ODSC Boston](https://www.odsc.com/bost
 </div>
 -->
 
-Julia programs are organized around [multiple dispatch](http://docs.julialang.org/en/stable/manual/methods/#man-methods); by defining functions and overloading them for different combinations of argument types, which can also be user-defined.
-For a more in-depth discussion of the rationale and advantages of Julia over other systems, see the following highlights or read the [introduction](http://docs.julialang.org/en/stable/manual/introduction/) in the [online manual](http://docs.julialang.org).
+Julia programs are organized around [multiple dispatch](http://docs.julialang.org/en/stable/manual/methods/#man-methods), which allows built-in and user-defined functions to be [overloaded](https://en.wikipedia.org/wiki/Function_overloading) for different combinations of argument types. For a more in-depth discussion of the rationale and advantages of Julia over other systems, see the following highlights or read the [introduction](http://docs.julialang.org/en/stable/manual/introduction/) in the [online manual](http://docs.julialang.org).
 
-
-JuliaCon 2017, the annual conference on Julia was held from June 20th to June 24th at the University of California, Berkeley. Below is a random video from our youtube playlist of the talks. Click on the playlist icon to check out the other videos.
+JuliaCon 2017, the annual conference on Julia, was held from June 20th to June 24th at the University of California, Berkeley. Below is a random video from our YouTube playlist of the talks. Click on the playlist icon to check out the other videos.
 
 {% include juliacon-player-2017.html %}
 
 # A Summary of Features
 
-* [Multiple dispatch](http://en.wikipedia.org/wiki/Multiple_dispatch): providing ability to define function behavior across many combinations of argument types
+* [Multiple dispatch](http://en.wikipedia.org/wiki/Multiple_dispatch): providing the ability to define function behavior across many combinations of argument types
 * Dynamic type system: types for documentation, optimization, and dispatch
 * Good performance, approaching that of statically-compiled languages like C
 * Built-in package manager
@@ -69,7 +67,7 @@ JuliaCon 2017, the annual conference on Julia was held from June 20th to June 24
 # High-Performance JIT Compiler
 
 Julia's LLVM-based just-in-time (JIT) compiler combined with the language's design allow it to approach and often match the performance of C.
-To get a sense of relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we've written a small set of micro-benchmarks in a variety of languages:
+To get a sense of the relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we've written a small set of micro-benchmarks in a variety of languages:
 [C](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c),
 [Fortran](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.f90),
 [Julia](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.jl),
@@ -80,7 +78,7 @@ To get a sense of relative performance of Julia compared to other languages that
 [Java](https://github.com/JuliaLang/julia/tree/master/test/perf/micro/java/src/main/java),
 [Lua](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.lua),
 [Mathematica](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.nb).
-We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
+We encourage you to skim the code to get a sense for how easy or difficult it is to do numerical programming in each language.
 
 <center>
 <div class="figure" style="align: center; width: 77%">
