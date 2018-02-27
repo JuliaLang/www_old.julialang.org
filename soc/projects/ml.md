@@ -72,6 +72,42 @@ While Julia supports dense GPU arrays well via [CuArrays](https://github.com/Jul
 
 **Mentors**: [Mike Innes](https://github.com/MikeInnes/)
 
+
+
+## Parquet.jl enhancements
+
+Efficient storage of tabular data is an important component of the data analysis story in the ecosystem. Julia has many options here -- JLD, JuliaDB’s built-in serialization, CSV.write. These either suffer from lack of performance or lack of standardization. Parquet is a format for efficient storage of tabular data used in the Hadoop world. It has compression techniques which reduce disk usage as well as speed up reads. A well-rounded Parquet implementation in Julia will solve the current issues with storage formats and let Julia interoperate with software from the Hadoop world.
+
+Parquet.jl currently contains a reader for Parquet files. This project involves implementing the writer for Parquet files, as well as some enhancements to the reading functionality.
+
+**Deliverables:**
+
+_Reader enhancements:_
+
+Read a file as a NamedTuple of vectors (using NamedTuples.jl on Julia 0.6). This is on similar lines, but different from the current cursor-based reader. Probably as an implementation of `AbstractBuilder` that returns NamedTuple of column vectors, combined with a new iterator/cursor that returns a bunch of records instead of individual records.
+
+_Writer support:_
+
+- Write a table (in the form of a NamedTuple of vectors) to disk.
+  Note: we will use NamedTuple of vectors as a minimal table which can be converted back into DataFrames or IndexedTables
+- Implement the compression features provided in the Parquet spec-
+Optionally auto detect compression scheme based on the data.
+
+**Mentors**: [Tanmay Mohapatra](https://github.com/tanmaykm)
+
+## GPU support in JuliaDB
+
+JuliaDB is a distributed analytical database. It uses Julia’s multi-processing for parallelism at the moment. GPU implementations of some operations may allow relational algebra with low latency. In this project, you will be required to add basic GPU support in JuliaDB.
+
+- Copy a table to GPU -- this may be as simple as converting every column into a CuArray or GPUArray
+- `map`, `reduce` and `filter` operation -- apply simple functions on a large table that is on the GPU
+  - Ensure that columnar storage format is made use of in the lower level code generated.
+- The `groupby` and `join` operations may involve first implementing an efficient [`sortperm`](https://docs.julialang.org/en/stable/stdlib/sort/#Base.sortperm) that utilize the GPU, or an efficient hash table on the GPU
+- `groupby` kernel on GPU
+- `join` kernel on GPU (stretch goal)
+
+**Mentors**: [Shashi Gowda](https://shashi.github.io), [Mike Innes](http://mikeinnes.github.io/)
+
 ## Making Aquiring Open-Data Easy
 
 Goverments and Universities are releasing huge amounts of data under Open Data policies.
