@@ -13,6 +13,8 @@ Julia is available for Windows 7 and later, both 32 bit and 64 bit.
 2. Run the downloaded program to extract julia
 3. Double-click the julia shortcut in the unpacked folder to start julia
 
+Windows 7/Windows Server 2012 users will also need to install the [TLS easy_fix](https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in) for the package manager to work, see [this Discourse thread](https://discourse.julialang.org/t/errors-for-git-pkg/9351) for more details.
+
 The [Windows README](https://github.com/JuliaLang/julia/blob/master/README.windows.md) contains information on dependencies.
 
 Uninstallation is performed by deleting the extracted directory and the packages directory in `%HOME%/.julia`. If you would also like to remove your preferences files, remove `%HOME%/.juliarc.jl` and `%HOME%/.julia_history`.

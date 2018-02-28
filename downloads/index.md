@@ -24,9 +24,12 @@ JuliaBox, all of these plotting packages are pre-installed.
 ## Julia (command line version)
 <table class="downloads"><tbody>
 <tr>
-    <th> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
+    <th rowspan="2"> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.6/julia-0.6.2-win32.exe">32-bit</a> </td>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.6/julia-0.6.2-win64.exe">64-bit</a> </td>
+</tr>
+<tr>
+    <td colspan="6">Windows 7/Windows Server 2012 users also require <a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in">TLS "Easy Fix" update</a></td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
