@@ -6,12 +6,7 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-### [Intro to JuliaDB, a package for working with large persistent data sets](https://www.youtube.com/watch?v=d5SzUh2_ono)
-by Josh Day and Shashi Gowda (February 28 10AM EST/16:00 CET/8:30PM IST)
-
-Julia Computing will give an introductory tutorial on JuliaDB. This tutorial will target new Julia users as it explores a great tool for working with large, multi-dimensional data sets.
-
-You can follow along and interact with tutorial materials without installing anything at [juliabox.com](https://next.juliabox.com/).
+To be announced!
 
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
@@ -20,7 +15,9 @@ You can follow along and interact with tutorial materials without installing any
 * [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
 by Chris Rackauckas (February 6, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KPEqYtEd-zY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-* Intro to Julia by Jane Herriman (February 15)
+* Intro to Julia by Jane Herriman (February 15, 2018)
+* [Intro to JuliaDB, a package for working with large persistent data sets](https://www.youtube.com/watch?v=d5SzUh2_ono) by Josh Day and Shashi Gowda (February 28, 2018)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d5SzUh2_ono" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Get jupyter notebooks for "Intro to Julia" [here](https://github.com/xorJane/Introduction_to_Julia_tutorials) in English and Spanish!
 
