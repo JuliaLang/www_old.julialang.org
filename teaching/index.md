@@ -26,8 +26,9 @@ Julia is now being used in several universities and online courses. If you know 
   * COMP272, Distributed Systems ([Prof. André Lage-Freitas](https://sites.google.com/a/ic.ufal.br/andrelage)): 2015, 2016, and 2017
 
 - SGH Warsaw School of Economics, Poland
-  * 223490-0286, Statistical Learning Methods ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
-  * 234900-0286, Agent-Based Modeling ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017
+  * 223490-0286, Statistical Learning Methods ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017, Spring 2018
+  * 234900-0286, Agent-Based Modeling ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Fall 2017, Spring 2018
+  * 239420-0553, *Introduction to Deep Learning* module ([Bogumił Kamiński](http://bogumilkaminski.pl/about/)): Spring 2018
 
 - Federal Rural University of Rio de Janeiro (UFRRJ)
   * TM429, Introduction to Recommender Systems (Prof. [Filipe Braida](https://github.com/filipebraida)), Fall 2016, Spring 2017
