@@ -126,23 +126,46 @@ This project proposes to achieve compliance of this package with the [IEEE 1788-
 
 **Expected results**: A library that fulfills the IEEE 1788-2015 standard.
 
+**Mentors:** [David P. Sanders](https://github.com/dpsanders)
+
+
+## Guaranteed root finding with intervals
+
+Interval arithmetic provides a way to perform computations with continuous sets of real  numbers or vectors, for example to bound the range of a function over a given set.
+
+This can be used to find roots (zeros) of functions in a *guaranteed* way, by excluding regions where there are no roots and zooming in on roots, but always within a given interval.
+
+A basic branch-and-prune algorithm has been implemented in  [`IntervalRootFinding.jl`](https://github.com/JuliaIntervals/IntervalRootFinding.jl).
+
+This project proposes to significantly improve these methods using techniques found in the interval arithmetic literature.
+
+**Recommended skills**: Multivariable calculus and linear algebra; a basic understanding of floating-point arithmetic.
+
+**Expected results**: A state-of-the-art root finding library in pure Julia.
+
 **Mentors:** [David P. Sanders](https://github.com/dpsanders), [Luis Benet](https://github.com/lbenet)
-## Inverse (or "backward") functions and contractors for interval constraint propagation
 
-One important application of interval arithmetic is to the characterization of sets that satisfy certain inequalities ("set inversion"), as used, for example, in optimization, robotics, and the proof of mathematical theorems via rigorous numerical calculation. The state-of-the-art technique for this is interval constraint propagation, in particular the concept of "contractors".
-The package [`IntervalConstraintProgramming.jl`](https://github.com/dpsanders/IntervalConstraintProgramming.jl) contains basic interval constraint propagation tools for polynomials.
 
-This project will develop a package `IntervalContractors.jl` to refactor out the part of the package dealing with contractors and inverse functions, which will enable the inversion of functions involving transcendental functions such as `sin` and `exp`.
+## Global optimization with intervals
 
-To do so, it will be necessary to implement inverse functions for the standard functions, such as `sin`, `exp`, etc, as well as the corresponding contractors. These inverse functions return sets, expressed as intervals, that contain the inverse image of a given set. Two versions of these functions will be produced: one that returns an interval, and the other that may return the union of several disjoint intervals.
+Interval arithmetic provides a way to perform computations with continuous sets of real  numbers or vectors, for example to bound the range of a function over a given set.
 
-**Recommended Skills**: Mathematical background including basic set theory.
+This can be used to do global optimization of functions in a deterministic way, that is, find the global minimum of a non-convex, nonlinear function $f:\mathbb{R}^n \to \mathbb{R}$.
+Interval methods for global optimization provide a guaranteed bound for the global optimum, and sets that contain the optimizers.
 
-**Expected results**: A library of interval contractors for interval constraint propagation.
+A basic branch-and-bound algorithm has already been implemented in  [`IntervalOptimization.jl`](https://github.com/JuliaIntervals/IntervalOptimization.jl), but it can be significantly improved.
 
-**Mentors:** [David P. Sanders](https://github.com/dpsanders), [Luis Benet](https://github.com/lbenet)
+This project proposes to develop a state-of-the-art global optimization routine in Julia, by applying techniques found in the interval arithmetic and global optimization literature.
+This may involve developing code for McCormick relaxations and/or affine arithmetic.
 
-## Native Bignums
+**Recommended skills**: Multivariable calculus and linear algebra; a basic understanding of floating-point arithmetic.
+
+**Expected results**: A state-of-the-art global optimization library in pure Julia.
+
+**Mentors:** [David P. Sanders](https://github.com/dpsanders)
+
+
+# Native Bignums
 
 Julia currently supports big integers, rationals and floats, making use of the GMP and MPFR libraries. However, the current implementation is very basic, performance is far from optimal compared to hand-written GMP code, and the GMP license is GPL 3.
 
