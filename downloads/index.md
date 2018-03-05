@@ -4,7 +4,7 @@ title:  Julia Downloads
 ---
 
 If you like Julia, please consider starring us on GitHub and spreading the word!
-<iframe src="https://ghbtns.com/github-btn.html?user=JuliaLang&repo=julia&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+<a class="github-button" href="https://github.com/JuliaLang/julia" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star JuliaLang/julia on GitHub">Star</a>
 
 # Current Release (v0.6.2)
 
@@ -87,3 +87,5 @@ operating system platform.  macOS and Windows releases are codesigned by certifi
 verified by the operating system before installation.  Generic Linux tarballs and source tarballs
 are signed via GPG using [this key](../juliareleases.asc).  Ubuntu and Fedora/RHEL/CentOS/SL
 releases are signed by their own keys that are verified by the package managers when installing.
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
