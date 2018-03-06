@@ -4,7 +4,8 @@ title:  Julia Downloads
 ---
 
 If you like Julia, please consider starring us on GitHub and spreading the word!
-<a class="github-button" href="https://github.com/JuliaLang/julia" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star JuliaLang/julia on GitHub">Star</a>
+<br>
+<a class="github-button" href="https://github.com/JuliaLang/julia" data-size="large" data-show-count="true" aria-label="Star JuliaLang/julia on GitHub">Star</a>
 
 # Current Release (v0.6.2)
 
