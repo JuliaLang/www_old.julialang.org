@@ -204,3 +204,41 @@ the AI algorithms in AIMA
 **Expected Results**: A well-documented library of functions derived from the AIMA book.
 
 **Mentors** [Sambit Kumar Dash](https://github.com/sambitdash). 
+
+## A SQL backend for Query.jl
+
+[Query.jl](https://github.com/davidanthoff/Query.jl) is designed to work
+with multiple backends. This project would add a SQL backend, so that queries
+that are formulated with the query commands in [Query.jl](https://github.com/davidanthoff/Query.jl)
+get translated into an equivalent SQL query that can be run within a
+SQL database engine. Both LINQ and dplyr support a similar feature set,
+and this project would enable the same scenario for julia. There is also
+a small academic literature on this topic that we need to understand and
+incorporate.
+
+**Recommended Skills**: Very strong database and SQL skills, previous
+experience with compilers (this project is essentially a compiler that
+translates a query AST into SQL) and a strong familiarity with the julia
+data stack.
+
+**Expected Results**: A new version of [Query.jl](https://github.com/davidanthoff/Query.jl)
+that runs queries as SQL in a database.
+
+**Mentors**: [David Anthoff](https://github.com/davidanthoff)
+
+## Tabular file IO
+
+The Queryverse has a large number of file IO packages: [CSVFiles.jl](https://github.com/davidanthoff/CSVFiles.jl),
+[ExcelFiles.jl](https://github.com/davidanthoff/ExcelFiles.jl), [FeatherFiles.jl](https://github.com/davidanthoff/FeatherFiles.jl),
+[StatFiles.jl](https://github.com/davidanthoff/StatFiles.jl), [ParquetFiles](https://github.com/davidanthoff/ParquetFiles.jl)
+and [FstFiles.jl](https://github.com/davidanthoff/FstFiles.jl). This project
+will a) do serious performance work across all of the existing packages and
+b) add write capabilities  to a number of them.
+
+**Recommended Skills**: Experience with file formats, writing performant
+julia code.
+
+**Expected Results**: Write capabilities across the packages listed above,
+competitive performance for all the packages listed above.
+
+**Mentors**: [David Anthoff](https://github.com/davidanthoff)
