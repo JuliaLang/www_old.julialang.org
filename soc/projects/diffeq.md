@@ -133,17 +133,17 @@ of numerical PDE methods, or one can build "full-stop" PDE solvers for specific
 PDEs. There are many different ways solving PDEs could be approached, and here
 are some ideas for potential projects:
 
-1) Enhancement of existing tools for discretizing PDEs. The finite differencing
+1. Enhancement of existing tools for discretizing PDEs. The finite differencing
    (FDM) library [DiffEqOperators.jl](https://github.com/JuliaDiffEq/DiffEqOperators.jl)
    could be enahnced to allow non-uniform grids or composition of operators. The
    finite element method (FEM) library [FEniCS.jl](https://github.com/JuliaDiffEq/FEniCS.jl)
    could wrap more of the FEniCS library.
-2) Full stop solvers of common fluid dynamical equations, such as diffusion-advection-
+2. Full stop solvers of common fluid dynamical equations, such as diffusion-advection-
    convection equations, or of hyperbolic PDEs such as the Hamilton-Jacobi-Bellman
    equations would be useful to many users.
-3) Using stochastic differential equation (SDE) solvers to efficiently (and
+3. Using stochastic differential equation (SDE) solvers to efficiently (and
    highly parallel) approximate certain PDEs.
-4) Development of ODE solvers for more efficiently solving specific types of
+4. Development of ODE solvers for more efficiently solving specific types of
    PDE discretizations. See the "Native Julia solvers for ordinary differential
    equations" project.
 
