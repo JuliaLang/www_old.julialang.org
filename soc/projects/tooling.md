@@ -9,6 +9,8 @@ title:  Tooling Projects – Summer of Code
 
 # Tooling
 
+## IDE Tooling
+
 The [Juno](http://junolab.org) is open to general project ideas (from here or not); feel free to get in contact via the [forum](http://discourse.julialang.org/) to discuss!
 
 ## Progress Meter Improvements
@@ -65,3 +67,17 @@ While static analysis has long been used as a tool for understanding and finding
 **Required Skills:** Some familiarity with Julia, but more importantly javascript and/or Atom development.
 
 **Mentors**: [Mike Innes](https://github.com/MikeInnes)
+
+## Interactive UI libraries and tooling
+
+[WebIO.jl](https://github.com/JuliaGizmos/WebIO.jl) is an exciting new library that enables two-way interaction between julia and web technologies (html/css/js). We are looking for project proposals in, possibly a combination of the following areas:
+
+- Tools for building dashboards, and easily deploying them to the web, ala R's Shiny, and Plotly's dash
+- Wrapping js libraries such as D3, interact.js, Plotly's dash?
+- Reliability/Testing - (tools to) enable browser based automated tests for WebIO, InteractNext, and other projects built on WebIO
+
+We're open to your project ideas. Join us on the [#gizmos slack channel](https://julialang.slack.com/messages/gizmos/) to discuss or ping `@shashi` or `@JobJob` in a [discourse post](http://discourse.julialang.org/).
+
+**Required Skills**: Experience with JavaScript front-end development, some familiarity with Julia
+
+**Mentors**: [Shashi Gowda](https://github.com/shashi), [Joel Mason](https://github.com/JobJob)
