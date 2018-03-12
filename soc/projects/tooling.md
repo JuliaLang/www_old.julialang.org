@@ -81,3 +81,28 @@ We're open to your project ideas. Join us on the [#gizmos slack channel](https:/
 **Required Skills**: Experience with JavaScript front-end development, some familiarity with Julia
 
 **Mentors**: [Shashi Gowda](https://github.com/shashi), [Joel Mason](https://github.com/JobJob)
+
+## Live editing for Weave files in VS Code
+
+This project would add an interactive UI for [Weave.jl](https://github.com/mpastell/Weave.jl)
+documents to the [julia VS Code extension](https://github.com/JuliaEditorSupport/julia-vscode).
+
+**Required Skills**: Good understanding of TypeScript, web UI development,
+strong general julia skills.
+
+**Expected Results**: A highly interactive UI for julia markdown files in
+VS Code.
+
+**Mentors**: [David Anthoff](https://github.com/davidanthoff)
+
+## VS Code extension
+
+We are generally looking for folks that want to help with the [julia VS Code extension](https://github.com/JuliaEditorSupport/julia-vscode).
+We have a long list of open issues, and some of them amount to significant
+projects.
+
+**Required Skills**: TypeScript, julia, web development.
+
+**Expected Results**: Depends on the specific projects we would agree on.
+
+**Mentors**: [David Anthoff](https://github.com/davidanthoff)
