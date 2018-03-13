@@ -68,16 +68,16 @@ JuliaCon 2017, the annual conference on Julia, was held from June 20th to June 2
 
 Julia's LLVM-based just-in-time (JIT) compiler combined with the language's design allow it to approach and often match the performance of C.
 To get a sense of the relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we've written a small set of micro-benchmarks in a variety of languages:
-[C](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c),
-[Fortran](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.f90),
-[Julia](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.jl),
-[Python](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.py),
-[Matlab/Octave](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.m),
-[R](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.R),
-[JavaScript](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.js),
-[Java](https://github.com/JuliaLang/julia/tree/master/test/perf/micro/java/src/main/java),
-[Lua](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.lua),
-[Mathematica](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.nb).
+[C](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.c),
+[Fortran](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.f90),
+[Julia](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.jl),
+[Python](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.py),
+[Matlab/Octave](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.m),
+[R](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.R),
+[JavaScript](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.js),
+[Java](https://github.com/JuliaLang/Microbenchmarks/tree/master/java/src/main/java),
+[Lua](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.lua),
+[Mathematica](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.nb).
 We encourage you to skim the code to get a sense for how easy or difficult it is to do numerical programming in each language.
 
 <center>
@@ -133,7 +133,7 @@ The code above is quite clear, and should feel familiar to anyone who
 has programmed in other mathematical languages.  The Julia
 implementation of `randmatstat` is considerably simpler than the
 equivalent [C
-implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126),
+implementation](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.c#L135),
 without giving up much performance. Planned compiler optimizations
 will close this performance gap in the future.  By design, Julia
 allows you to range from tight low-level loops, up to a high-level
@@ -149,8 +149,8 @@ Instead, it provides a number of [key building blocks for distributed computatio
 The following simple example demonstrates how to count the number of heads in a large number of coin tosses in parallel.
 
 {% highlight julia %}
-nheads = @parallel (+) for i=1:100000000
-  rand(Bool)
+nheads = @parallel (+) for i = 1:100000000
+    rand(Bool)
 end
 {% endhighlight %}
 
