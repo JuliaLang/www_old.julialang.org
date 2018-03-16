@@ -3,7 +3,7 @@ layout: default
 title:  Julia Downloads
 ---
 
-If you like Julia, please consider starring us on GitHub and spreading the word!
+If you like Julia, please consider starring us [on GitHub](https://github.com/JuliaLang/julia) and spreading the word!
 <br>
 <a class="github-button" href="https://github.com/JuliaLang/julia" data-size="large" data-show-count="true" aria-label="Star JuliaLang/julia on GitHub">Star</a>
 
