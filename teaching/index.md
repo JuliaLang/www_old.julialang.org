@@ -83,8 +83,11 @@ Julia is now being used in several universities and online courses. If you know 
 - University of Sydney, Fall 2016
   * [MATH3076/3976](http://www.maths.usyd.edu.au/u/olver/teaching/MATH3976/), Mathematical Computing (Assoc. Prof. [Sheehan Olver](http://www.maths.usyd.edu.au/u/olver/))
 
-- University of Cologne, Institute for Theoretical Physics, Summer 2016
-  * [Computational Physics](http://www.thp.uni-koeln.de/trebst/Lectures/2016-CompPhys.shtml), (Prof. Simon Trebst)
+- University of Cologne, Institute for Theoretical Physics
+  * [Computational Physics](http://www.thp.uni-koeln.de/trebst/Lectures/2016-CompPhys.shtml) (Prof. Simon Trebst), Summer 2016
+  * [Computational Physics](http://www.thp.uni-koeln.de/~bulla/cp-ss17.html) (Prof. Ralf Bulla), Summer 2017
+  * [Statistical Physics](http://www.thp.uni-koeln.de/trebst/Lectures/2017-StatPhys.shtml) (Prof. Simon Trebst), Winter 2017
+  * [Computational Many-Body Physics](http://www.thp.uni-koeln.de/trebst/Lectures/2018-CompManyBody.shtml) (Prof. Simon Trebst), Summer 2018
 
 - [Óbuda University](https://www.uni-obuda.hu), [John von Neumann Faculty of Informatics, Institute of Applied Mathematics](http://nik.uni-obuda.hu)
   * [Intelligent Development Tools (Hungarian)]
