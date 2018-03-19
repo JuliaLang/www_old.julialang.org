@@ -6,7 +6,9 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-To be announced!
+* [Intro to Julia](https://www.youtube.com/watch?v=JserqX6hbYw), by Jane Herriman on April 6, 2018 at 10AM PDT/1PM EDT/19:00 CET/10:30PM IST
+* [Intro to Julia](https://www.youtube.com/watch?v=OlXQBSngtJo), by Jane Herriman on May 4, 2018 at 10AM PDT/1PM EDT/19:00 CET/10:30PM IST
+* [Intro to Julia Data Frames](https://www.youtube.com/watch?v=0-Xsts_s5Wc), by Bogumił Kamiński on May 24, 2018 at 9AM PDT/12PM EDT/18:00 CET/9:30PM IST
 
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (Dec 19, 2017) 
