@@ -17,7 +17,7 @@ a
 
 ## Classes using Julia for teaching
 
-Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please [submit a pull request](https://github.com/JuliaLang/julialang.github.com/pulls) to update this list.
+Julia is now being used in several universities and online courses. If you know of other classes using Julia for teaching, please consider [updating this list](https://github.com/JuliaLang/julialang.github.com/edit/master/teaching/index.md).
 
 - [TU Dortmund / SFB 823](https://www.statistik.tu-dortmund.de/sfb823.html), Germany
   * One week introductory course into Julia with applications in statistics and economics ([Tileman Conring](https://www.statistik.tu-dortmund.de/conring.html)): Spring 2018
