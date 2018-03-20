@@ -68,20 +68,6 @@ While static analysis has long been used as a tool for understanding and finding
 
 **Mentors**: [Mike Innes](https://github.com/MikeInnes)
 
-## Interactive UI libraries and tooling
-
-[WebIO.jl](https://github.com/JuliaGizmos/WebIO.jl) is an exciting new library that enables two-way interaction between julia and web technologies (html/css/js). We are looking for project proposals in, possibly a combination of the following areas:
-
-- Tools for building dashboards, and easily deploying them to the web, ala R's Shiny, and Plotly's dash
-- Wrapping js libraries such as D3, interact.js, Plotly's dash?
-- Reliability/Testing - (tools to) enable browser based automated tests for WebIO, InteractNext, and other projects built on WebIO
-
-We're open to your project ideas. Join us on the [#gizmos slack channel](https://julialang.slack.com/messages/gizmos/) to discuss or ping `@shashi` or `@JobJob` in a [discourse post](http://discourse.julialang.org/).
-
-**Required Skills**: Experience with JavaScript front-end development, some familiarity with Julia
-
-**Mentors**: [Shashi Gowda](https://github.com/shashi), [Joel Mason](https://github.com/JobJob)
-
 ## Live editing for Weave files in VS Code
 
 This project would add an interactive UI for [Weave.jl](https://github.com/mpastell/Weave.jl)
@@ -106,3 +92,31 @@ projects.
 **Expected Results**: Depends on the specific projects we would agree on.
 
 **Mentors**: [David Anthoff](https://github.com/davidanthoff)
+
+# Graphical user interfaces
+
+## Interactive UI libraries and tooling
+
+[WebIO.jl](https://github.com/JuliaGizmos/WebIO.jl) is an exciting new library that enables two-way interaction between julia and web technologies (html/css/js). We are looking for project proposals in, possibly a combination of the following areas:
+
+- Tools for building dashboards, and easily deploying them to the web, ala R's Shiny, and Plotly's dash
+- Wrapping js libraries such as D3, interact.js, Plotly's dash?
+- Reliability/Testing - (tools to) enable browser based automated tests for WebIO, InteractNext, and other projects built on WebIO
+
+We're open to your project ideas. Join us on the [#gizmos slack channel](https://julialang.slack.com/messages/gizmos/) to discuss or ping `@shashi` or `@JobJob` in a [discourse post](http://discourse.julialang.org/).
+
+**Required Skills**: Experience with JavaScript front-end development, some familiarity with Julia
+
+**Mentors**: [Shashi Gowda](https://github.com/shashi), [Joel Mason](https://github.com/JobJob)
+
+## GUI library integration
+
+[QML.jl](https://github.com/barche/QML.jl) provides an interface to connect a [QML](https://doc.qt.io/qt-5.10/qmlapplications.html) GUI to a Julia backend. Some ideas for improvement here are:
+* Use [Observables.jl](https://github.com/JuliaGizmos/Observables.jl) to provide a more "Julian" way to pass data between the GUI and Julia. Work on this has already started on the [observables branch](https://github.com/barche/QML.jl/tree/observables) in QML.jl. Discussion: https://github.com/barche/QML.jl/issues/43
+* Support [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl) directly for creating an editable TableView. Inspiration: https://discourse.julialang.org/t/visual-workflow-tool-for-julia-lets-build-one/9384/4
+* Make one [Plots.jl](https://github.com/JuliaPlots/Plots.jl) GUI to rule them all. Inspiration: https://discourse.julialang.org/t/best-plot-package/7458 and https://discourse.julialang.org/t/where-is-actual-development-in-plotting/6224
+* Build QmlReactive (but using Observables maybe). Inspiration: https://github.com/JuliaGizmos/GtkReactive.jl
+
+**Required Skills**: Some familarity with Julia, prior QML experience would also help.
+
+**Mentors**: [Bart Janssens](https://github.com/barche), [Shashi Gowda](https://github.com/shashi) for the Observables part
