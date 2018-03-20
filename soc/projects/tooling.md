@@ -119,4 +119,4 @@ We're open to your project ideas. Join us on the [#gizmos slack channel](https:/
 
 **Required Skills**: Some familarity with Julia, prior QML experience would also help.
 
-**Mentors**: [Bart Janssens](https://github.com/barche)
+**Mentors**: [Bart Janssens](https://github.com/barche), [Shashi Gowda](https://github.com/shashi) for the Observables part
