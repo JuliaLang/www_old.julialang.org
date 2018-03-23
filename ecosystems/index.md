@@ -23,7 +23,7 @@ Most also have channels on the main Julia Slack channel, and sub-forums on the m
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
 * [JuliaPraxis](https://github.com/JuliaPraxis) – Best practices ([Gitter](https://gitter.im/JuliaPraxis))
 * [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
-* [Juno](https://github.com/JunoLab/Juno) – The Juno IDE for Atom [Gitter](https://gitter.im/JunoLab/Juno)
+* [Juno](https://github.com/JunoLab) – The Juno IDE for Atom [Gitter](https://gitter.im/JunoLab/Juno)
 
 ## Computing
 
@@ -64,7 +64,7 @@ Most also have channels on the main Julia Slack channel, and sub-forums on the m
 * [JuliaStats](https://github.com/JuliaStats) – [Statistics](http://juliastats.github.io/)
 * [JuliaImages](https://github.com/JuliaImages) – Image Processing
 * [JuliaText](https://github.com/JuliaText) – Natural Language Processing (NLP), Computational Linguistics  and (textual) Information Retrieval
-* [JuliaDB](https://github.com/JuliaDB) – Various database drivers for Julia
+* [JuliaDatabases](https://github.com/JuliaDatabases) – Various database drivers for Julia
 * [JuliaData](https://github.com/JuliaData) – Data manipulation, storage, and I/O in Julia
 
 
