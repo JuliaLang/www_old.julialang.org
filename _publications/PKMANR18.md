@@ -1,6 +1,6 @@
 ---
 type: "article"
-title: "Optim: A mathematical optimization package for {Julia}"
+title: "Optim: A mathematical optimization package for Julia"
 journal: "Journal of Open Source Software"
 authors:
 - Patrick Kofod Mogensen
@@ -14,4 +14,3 @@ packages:
   Optim.jl: https://github.com/JuliaNLSolvers/Optim.jl
   LineSearches.jl: https://github.com/JuliaNLSolvers/LineSearches.jl
 ---
-
