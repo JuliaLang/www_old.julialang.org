@@ -12,7 +12,7 @@ authors:
 year: "2018"
 pages: "41--50"
 doi: "10.1145/3178126.3178128"
-arxiv: https://arxiv.org/abs/1801.09526
+arxiv: 1801.09526
 packages:
   LazySets.jl: https://github.com/JuliaReach/LazySets.jl
   Reachability.jl: https://github.com/JuliaReach/Reachability.jl
