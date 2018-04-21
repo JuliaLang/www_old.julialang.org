@@ -173,6 +173,12 @@ Julia is now being used in several universities and online courses. If you know 
   * [MATH0461](http://progcours.ulg.ac.be/cocoon/cours/MATH0461-2.html), Introduction to Numerical Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/)), Fall 2016
   * [MATH0462](http://www.montefiore.ulg.ac.be/~tcuvelier/teaching/2015-2016-discrete-optimisation), Discrete Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/)), Fall 2015
 
+- Université de Montréal, Montréal <!--45.5268737,-73.7086164-->
+  * [IFT1575](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-1575/), Modèles de recherche opérationnelle (Prof. [Bernard Gendron](https://www.iro.umontreal.ca/~gendron/)), Fall 2017
+  * [IFT3245](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-3245/), Simulation et modèles (Prof. [Fabian Bastin](https://www.iro.umontreal.ca/~bastin/)), Fall 2017
+  * [IFT3515](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-3515/), Optimisation non linéaire (Prof. [Fabian Bastin](https://www.iro.umontreal.ca/~bastin/)), Winter 2017-2018
+  * [IFT6512](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-6512/), Programmation stochastique (Prof. [Fabian Bastin](https://www.iro.umontreal.ca/~bastin/)), Winter 2018
+
 - Western University Canada <!--43.00535865,-81.2748046243065-->
   * [CS 2101A](http://www.csd.uwo.ca/~moreno/cs2101a_moreno/index.html), Foundations of Programming for High Performance Computing. (Prof. Marc Moreno Maza), Fall 2013
 
