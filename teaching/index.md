@@ -173,7 +173,7 @@ Julia is now being used in several universities and online courses. If you know 
   * [MATH0461](http://progcours.ulg.ac.be/cocoon/cours/MATH0461-2.html), Introduction to Numerical Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/)), Fall 2016
   * [MATH0462](http://www.montefiore.ulg.ac.be/~tcuvelier/teaching/2015-2016-discrete-optimisation), Discrete Optimization (Prof. [Quentin Louveaux](http://www.montefiore.ulg.ac.be/~louveaux/)), Fall 2015
 
-- Université de Montréal, Montréal <!--45.5268737,-73.7086164-->
+- Université de Montréal <!--45.5268737,-73.7086164-->
   * [IFT1575](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-1575/), Modèles de recherche opérationnelle (Prof. [Bernard Gendron](https://www.iro.umontreal.ca/~gendron/)), Fall 2017
   * [IFT3245](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-3245/), Simulation et modèles (Prof. [Fabian Bastin](https://www.iro.umontreal.ca/~bastin/)), Fall 2017
   * [IFT3515](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-3515/), Optimisation non linéaire (Prof. [Fabian Bastin](https://www.iro.umontreal.ca/~bastin/)), Winter 2017-2018
