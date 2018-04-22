@@ -46,7 +46,9 @@ Python</a> v3.6.3.  The Python implementations of
 <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt> use <a
 href="http://www.numpy.org/">NumPy</a> v1.13.1 and OpenBLAS v0.2.19
 functions; the rest are pure Python implementations. Raw benchmark
-numbers in CSV format are available [here](benchmarks.csv).
+numbers in CSV format are available [here](benchmarks.csv) and the
+benchmark source code for each language can be found in the <tt>perf.*</tt>
+files listed <a href="https://github.com/JuliaLang/Microbenchmarks">here</a>.
 
 These micro-benchmark results were obtained on a single core (serial
 execution) on an Intel(R) Core(TM) i7-3960X 3.30GHz CPU with 64GB of
