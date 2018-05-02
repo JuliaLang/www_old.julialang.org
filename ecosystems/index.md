@@ -23,7 +23,7 @@ Most also have channels on the main Julia Slack channel, and sub-forums on the m
 * [JuliaTime](https://github.com/JuliaTime) – Date and time libraries
 * [JuliaPraxis](https://github.com/JuliaPraxis) – Best practices ([Gitter](https://gitter.im/JuliaPraxis))
 * [JuliaEditorSupport](https://github.com/JuliaEditorSupport) – Extensions/Plugins for text editors and IDEs
-* [Juno](https://github.com/JunoLab) – The Juno IDE for Atom [Gitter](https://gitter.im/JunoLab/Juno)
+* [Juno](https://github.com/JunoLab) – The Juno IDE for Atom ([Gitter](https://gitter.im/JunoLab/Juno))
 
 ## Computing
 
