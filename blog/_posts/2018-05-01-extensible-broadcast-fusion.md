@@ -129,7 +129,7 @@ libraries alone, this means:
 
 * Finally, broadcasting at the global scope is now pre-compilable, and you can use
   dot-broadcast inside generated functions. This wasn't a huge limitation in the past, but
-  it did cause surprise to folks timing `@time y .*= 2` and seeing allocations:
+  it did cause surprise to folks timing an in-place broadcast like `@time y .*= 2` and seeing thousands of allocations:
 
     ```julia
 	# Previously:
@@ -199,7 +199,7 @@ implement all those new features mentioned above:
 
 ### Looking to the future
 
-Of course, this is all documented and available to packages. There's no secret sauce that
+Of course, this is all [documented and available to packages][]. There's no secret sauce that
 we're hoarding for ourselves. It'll be exciting to see how the many creative minds in the
 package ecosystem manage to take advantage of all this new functionality. Some of the places
 where I see this yielding a significant benefit include machine learning applications and
@@ -224,3 +224,4 @@ array in an expression like `sum(X.^2 .+ Y.^2)`.
 [Broadcasting]: https://docs.julialang.org/en/latest/manual/arrays/#Broadcasting-1 "Julia documentation for Broadcasting"
 ["fusing"]: https://julialang.org/blog/2017/01/moredots "More Dots: Syntactic Loop Fusion in Julia"
 [hacks]: https://github.com/MikeInnes/TakingBroadcastSeriously.jl "TakingBroadcastSeriously.jl"
+[documented and available to packages]: https://docs.julialang.org/en/latest/manual/interfaces/#man-interfaces-broadcasting-1 "Julia manual: Customizing broadcast"
