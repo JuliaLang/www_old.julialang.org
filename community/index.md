@@ -96,8 +96,49 @@ leading these efforts include:
 
 Please let us know if you have another organization dedicated to these efforts.
 
-### Meetups
+### User groups and meetups
 
-Julia has local user groups in Europe, North and South America, Asia, and
-Australia. Find one near you or start a new one at
-[julia.meetup.com](http://julia.meetup.com).
+Julia has local user groups around the world, including:
+
+#### Asia
+* [Bangalore Julia User Group](https://www.meetup.com/Bangalore-Julia-User-Group/)
+* [Julia Delhi](https://www.meetup.com/Juliadelhi/)
+* [Singapore Julia User Group](https://www.meetup.com/Singapore-Julia-User-Group/)
+
+#### Europe
+* [Barcelona Julia Meetup](https://www.meetup.com/Barcelona-Julia-Meetup/)
+* [Berlin Julia Users Group](https://julia-users-berlin.github.io/)
+* [JuliaCPH (Copenhagen)](https://www.meetup.com/JuliaCPH/)
+* [Dublin Julia Users Group](https://www.meetup.com/Dublin-Julia-Users-Group/)
+* [JuliaStanbul](https://www.meetup.com/JuliaStanbul/)
+* [London Julia User Group](https://www.meetup.com/London-Julia-User-Group/)
+* [BeNeLux Julia User Group](https://www.meetup.com/BeNeLux-Julia-User-Group/)
+* [Vienna Julia Meetup](https://www.meetup.com/Vienna-Julia-Meetup/)
+* [Warszawskie Forum Julia](https://www.meetup.com/Warszawskie-Forum-Julia/)
+* [Zurich Julia Users Group](https://www.meetup.com/Zurich-Julia-User-Group/)
+
+#### North America
+* [Cambridge Area Julia Users Network (CAJUN)](https://www.meetup.com/julia-cajun/)
+* [Midwest Julia Users](https://www.meetup.com/Midwest-Julia-Users/)
+* [Greater Cleveland Python/Julia/R Data Science Group](https://www.meetup.com/Greater-Cleveland-SciPy-Julia-R-Data-Science-Group/)
+* [SE-Michigan Julia Language Meetup](https://www.meetup.com/SE-Michigan-Julia-Language-Meetup/)
+* [León Julia Meetup](https://www.meetup.com/LeonJuliaMeetup/)
+* [Southern California Julia Users](https://www.meetup.com/Southern-California-Julia-Users/)
+* [JuliaLangEs - CDMX (Mexico City)](https://www.meetup.com/julialanges-cdmx/)
+* [Montréal Julia Programming Language Meetup](https://www.meetup.com/Montreal-Julia-Programming-Language-Meetup/)
+* [Nashville Conda, R, Julia Users Group](https://www.meetup.com/Nashville-R-Users-Group/)
+* [New York City Julia User Group](https://www.meetup.com/julia-nyc/)
+* [Pleasonton CA: Machine Learning - Python + Julia](https://www.meetup.com/Machine-Deep-Learning-an-Introduction/)
+* [Triangle Julia Users (Raleigh, NC)](https://www.meetup.com/Triangle-Julia-Users/)
+* [Bay Area Julia Users](https://www.meetup.com/Bay-Area-Julia-Users/)
+* [Vancouver Julia Users](https://www.meetup.com/Vancouver-Julia-Users/)
+
+#### Oceania
+* [Julia (JuliaLang) Sydney](https://www.meetup.com/Sydney-Julia-Julialang-Meetup/)
+
+#### South America
+* [Julia Lang BSB (Brasilia)](https://www.meetup.com/Julia-lang-bsb/)
+* [Campinas Julia Language Meetup](https://www.meetup.com/Campinas-Julia-Language-Meetup/)
+* [Rio de Janeiro Julia Meetup](https://www.meetup.com/Julia-Rio-de-Janeiro/)
+* [Julia Rosario](https://www.meetup.com/Julia-Rosario/)
+* [Julia Meetup São Paulo](https://www.meetup.com/Julia-Sao-Paulo/)
