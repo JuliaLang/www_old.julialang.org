@@ -110,7 +110,7 @@ Julia has local user groups around the world, including:
 * [Berlin Julia Users Group](https://julia-users-berlin.github.io/)
 * [JuliaCPH (Copenhagen)](https://www.meetup.com/JuliaCPH/)
 * [Dublin Julia Users Group](https://www.meetup.com/Dublin-Julia-Users-Group/)
-* [JuliaStanbul](https://www.meetup.com/JuliaStanbul/)
+* [JuliaStanbul (Istanbul)](https://www.meetup.com/JuliaStanbul/)
 * [London Julia User Group](https://www.meetup.com/London-Julia-User-Group/)
 * [BeNeLux Julia User Group](https://www.meetup.com/BeNeLux-Julia-User-Group/)
 * [Vienna Julia Meetup](https://www.meetup.com/Vienna-Julia-Meetup/)
