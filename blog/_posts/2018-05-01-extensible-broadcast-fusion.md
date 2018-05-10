@@ -43,7 +43,7 @@ expression before executing it. If you're not a package developer this may not m
 much to you, but you'll still reap the many rewards. In Base Julia and its standard
 libraries alone, this means:
 
-* `BitArray`s can identify cases where they can operate on 64 boolean elements at once,
+* [`BitArray`s][] can identify cases where they can operate on 64 boolean elements at once,
   yielding huge performance gains — often two orders of magnitude or more! For an easy
   example, I'll just use random data with a simple `A` and not `B` predicate:
 
@@ -84,19 +84,20 @@ libraries alone, this means:
 
 	That's upwards of a **450x performance gain**.
 
-* Ranges can now compute the result of a broadcast in terms of a new range if it is
-  possible. For example, the expression `((1:10000) .+ 20) .* 7` doesn't need to allocate a
-  vector for 10,000 elements — it doesn't even need to do 10,000 computations. It can
-  instead operate in terms of the start, stop, and step and return a new range that
-  represents the result: `147:7:70140`. This new feature allows them to **transform $O(N)$
-  computations into $O(1)$**. On version 0.6, ranges were in this strange place where
-  `(1:10000) + 20` implemented the fast $O(1)$ computation of a new range, but all other
-  array types had deprecated addition with numbers in favor of explicit `.+` broadcasting
-  for clearer semantics and improved performance. Thanks to this new API, ranges can now
-  fully support broadcasting in an efficient manner.
+* Broadcasted operations over ranges can now simply re-compute a new range instead of
+  working element-wise if it's possible. For example, the expression `((1:10000) .+ 20) .* 7`
+  doesn't need to allocate a vector for 10,000 elements — it doesn't even need to do 10,000
+  computations. It can instead operate in terms of the start, stop, and step and return a
+  new range that represents the result: `147:7:70140`. This new feature allows them to
+  **transform $O(N)$ computations into $O(1)$**. On version 0.6, ranges were in this strange
+  place where `(1:10000) + 20` implemented the fast $O(1)$ computation of a new range, but
+  all other array types had deprecated addition with numbers in favor of explicit `.+`
+  broadcasting for clearer semantics and improved performance. Thanks to this new API,
+  ranges can now identify these cases and fully support broadcasting in an efficient manner.
 
-* LinearAlgebra's structured matrices no longer return sparse arrays — they’ll either
-  maintain an appropriate structure or return a dense array. For example:
+* The [structured matrices][] in the [`LinearAlgebra` standard library][] no longer return
+  sparse arrays as the result of a broadcasted operation. They'll now either maintain an
+  appropriate structure or return a dense array. For example:
 
     ```julia
 	julia> using LinearAlgebra
@@ -125,11 +126,11 @@ libraries alone, this means:
 	 100.575  100.129  103.839
     ```
 
-	Previously, Julia 0.6 would have returned a SparseMatrixCSC for `d ./ 10` and an `Array` for `d .+ LowerTriangular(rand(3,3))`.
+	Previously, Julia 0.6 would have returned a `SparseMatrixCSC` for `d ./ 10` and an `Array` for `d .+ LowerTriangular(rand(3,3))`.
 
 * Finally, broadcasting at the global scope is now pre-compilable, and you can use
   dot-broadcast inside generated functions. This wasn't a huge limitation in the past, but
-  it did cause surprise to folks timing an in-place broadcast like `@time y .*= 2` and seeing thousands of allocations:
+  it did surprise folks timing an in-place broadcast like `@time y .*= 2` and seeing thousands of allocations:
 
     ```julia
 	# Previously:
@@ -155,7 +156,7 @@ I'll now dive deeper into exactly how this new API works.
 
 ### The representation of a fused broadcast
 
-You can see precisely how a fused broadcast is represented with `Meta.@lower`, but in
+You can see precisely how a fused broadcast is represented with [`Meta.@lower`][], but in
 simpler terms the expression `([1, 2, 3] .+ [10 20 30 40]) ./ 10` is effectively a syntax
 transformation for:
 
@@ -188,7 +189,7 @@ implement all those new features mentioned above:
   methods that immediately return those re-computed ranges. This means that they do not fuse
   multiple operations at all, but in exchange they get an $O(1)$ algorithm.
 
-* When LinearAlgebra's structured matrices are asked to allocate the result, their
+* When `LinearAlgebra`'s structured matrices are asked to allocate the result, their
   specialized `broadcast_similar` methods can walk through the `Broadcasted` expression tree
   and identify if any structure will remain.
 
@@ -225,3 +226,7 @@ array in an expression like `sum(X.^2 .+ Y.^2)`.
 ["fusing"]: https://julialang.org/blog/2017/01/moredots "More Dots: Syntactic Loop Fusion in Julia"
 [hacks]: https://github.com/MikeInnes/TakingBroadcastSeriously.jl "TakingBroadcastSeriously.jl"
 [documented and available to packages]: https://docs.julialang.org/en/latest/manual/interfaces/#man-interfaces-broadcasting-1 "Julia manual: Customizing broadcast"
+[`BitArray`s]: https://docs.julialang.org/en/latest/base/arrays/#Base.BitArray "Julia documentation for BitArray"
+[`LinearAlgebra` standard library]: https://docs.julialang.org/en/latest/stdlib/LinearAlgebra/#Linear-Algebra-1 "Julia documentation for LinearAlgebra"
+[structured matrices]: https://docs.julialang.org/en/latest/stdlib/LinearAlgebra/#Special-matrices-1 "Special matrices in LinearAlgebra"
+[`Meta.@lower`]: https://docs.julialang.org/en/latest/base/base/#Base.Meta.@lower "Julia documentation: `Meta.@lower`"
