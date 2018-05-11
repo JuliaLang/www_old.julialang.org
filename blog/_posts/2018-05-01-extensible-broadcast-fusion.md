@@ -89,8 +89,8 @@ libraries alone, this means:
   doesn't need to allocate a vector for 10,000 elements — it doesn't even need to do 10,000
   computations. It can instead operate in terms of the start, stop, and step and return a
   new range that represents the result: `147:7:70140`. This new feature allows them to
-  **transform $O(N)$ computations into $O(1)$**. On version 0.6, ranges were in this strange
-  place where `(1:10000) + 20` implemented the fast $O(1)$ computation of a new range, but
+  **transform _O(N)_ computations into _O(1)_**. On version 0.6, ranges were in this strange
+  place where `(1:10000) + 20` implemented the fast _O(1)_ computation of a new range, but
   all other array types had deprecated addition with numbers in favor of explicit `.+`
   broadcasting for clearer semantics and improved performance. Thanks to this new API,
   ranges can now identify these cases and fully support broadcasting in an efficient manner.
@@ -187,7 +187,7 @@ implement all those new features mentioned above:
 
 * Ranges are able to "opt-out" of fusion by defining specialized `Broadcast.broadcasted`
   methods that immediately return those re-computed ranges. This means that they do not fuse
-  multiple operations at all, but in exchange they get an $O(1)$ algorithm.
+  multiple operations at all, but in exchange they get an _O(1)_ algorithm.
 
 * When `LinearAlgebra`'s structured matrices are asked to allocate the result, their
   specialized `broadcast_similar` methods can walk through the `Broadcasted` expression tree
