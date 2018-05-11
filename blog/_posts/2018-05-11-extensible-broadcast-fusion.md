@@ -1,8 +1,8 @@
-+---
- +layout: post
- +title:  "Extensible broadcast fusion"
- +author: <a href="https://github.com/mbauman">Matt Bauman (Julia Computing)</a>
- +---
+---
+layout: post
+title:  "Extensible broadcast fusion"
+author: <a href="https://github.com/mbauman">Matt Bauman (Julia Computing)</a>
+---
 
 Julia version 0.7 brings with it an exciting new feature: the ability to customize broadcast
 fusion! This recently-merged change is the culmination of a long iterative design process
