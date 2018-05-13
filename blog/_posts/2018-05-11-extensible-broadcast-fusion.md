@@ -206,8 +206,8 @@ package ecosystem manage to take advantage of all this new functionality. Some o
 where I see this yielding a significant benefit include machine learning applications and
 computation on GPUs.
 
-Some of the machine learning libraries have put in place [hacks][] to allow their arrays to
-opt-out of fusion. This API allows them to opt-out of fusion with a first-class and fully
+Historically, some of the machine learning libraries have put in place [hacks][] to allow their arrays to
+opt-out of fusion. The new broadcasting API instead allows them to opt-out of fusion with a first-class and fully
 supported mechanism that is much simpler to implement. Further, many deep learning
 techniques are heavily dependent upon differentiation; in some cases introspecting a
 broadcasted kernel will allow them to use an exact analytical result instead of computing
