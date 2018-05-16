@@ -6,22 +6,26 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-* [Intro to Julia](https://www.youtube.com/watch?v=OlXQBSngtJo), by Jane Herriman on May 4, 2018 at 10AM PDT/1PM EDT/19:00 CET/10:30PM IST
-* [Intro to dynamical systems in Julia](https://www.youtube.com/watch?v=13hqE_1a158), by George Datseris on May 10, 2018 at 9AM PDT/12PM EDT/18:00 CET/9:30PM IST
 * [Intro to Julia Data Frames](https://www.youtube.com/watch?v=0-Xsts_s5Wc), by Bogumił Kamiński on May 24, 2018 at 9AM PDT/12PM EDT/18:00 CET/9:30PM IST
+* [Intro to Julia](https://www.youtube.com/watch?v=o6GOc6Sxy9Q), by Jane Herriman on June 8, 2018 at 10AM PDT/1PM EDT/19:00CET
+* [Intro to the Queryverse, a Julia data science stack](https://www.youtube.com/watch?v=OFPNph-WxLM), by David Anthoff on June 14, 2018 9:30AM PDT/12:30PM EDT/18:30 CET/10:00PM IST
 
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (December 19, 2017) 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4igzy3bGVkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 * Intro to Julia by Jane Herriman (January 25, 2018)
-* [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY)
+* [Intro to solving differential equations in Julia](https://www.youtube.com/watch?v=KPEqYtEd-zY),
 by Chris Rackauckas (February 6, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KPEqYtEd-zY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-* Intro to Julia by Jane Herriman (February 15, 2018)
+* Intro to Julia, by Jane Herriman (February 15, 2018)
 * [Intro to JuliaDB, a package for working with large persistent data sets](https://www.youtube.com/watch?v=d5SzUh2_ono) by Josh Day and Shashi Gowda (February 28, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d5SzUh2_ono" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 * Intro to Julia, by Jane Herriman (April 6, 2018)
 * [Introducción a Julia en español](https://youtu.be/LbTbs-0pOuc), by Miguel Raz Guzmán (April 7, 2018)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LbTbs-0pOuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Intro to Julia, by Jane Herriman (May 4, 2018)
+* [Intro to dynamical systems in Julia](https://www.youtube.com/watch?v=13hqE_1a158), by George Datseris (May 10, 2018)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/13hqE_1a158" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Get jupyter notebooks for all past tutorials [here](https://github.com/JuliaComputing/JuliaBoxTutorials)!
 
