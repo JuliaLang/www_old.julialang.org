@@ -37,7 +37,7 @@ JuliaBox, all of these plotting packages are pre-installed.
     <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.6/julia-0.6.3-mac64.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
-    <th> Generic Linux Binaries for x86 <a href="platform.html#generic-linux-binaries">[help]</a></th>
+    <th> Generic Linux Binaries for x86 <a href="platform.html#generic-binaries">[help]</a></th>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.3-linux-i686.tar.gz">32-bit</a>
         (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.6/julia-0.6.3-linux-i686.tar.gz.asc">GPG</a>)</td>
     <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.3-linux-x86_64.tar.gz">64-bit</a>
@@ -51,7 +51,7 @@ JuliaBox, all of these plotting packages are pre-installed.
         (<a href="https://julialang-s3.julialang.org/bin/linux/aarch64/0.6/julia-0.6.3-linux-aarch64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
-    <th> Generic FreeBSD Binaries for x86 <a href="platform.html#generic-freebsd-binaries">[help]</a></th>
+    <th> Generic FreeBSD Binaries for x86 <a href="platform.html#generic-binaries">[help]</a></th>
     <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.6/julia-0.6.3-freebsd-x86_64.tar.gz">64-bit</a>
         (<a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.6/julia-0.6.3-freebsd-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
