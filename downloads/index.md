@@ -71,6 +71,48 @@ trouble installing Julia.  Checksums for this release are available in both [MD5
 If the provided download files do not work for you, please [file an
 issue in the Julia project](https://github.com/JuliaLang/julia/issues).
 
+# Upcoming Release (v0.7.0-alpha)
+
+We are currently testing an alpha version for the next release of Julia, v0.7.0.
+Please see [platform](platform.html) specific instructions if you have trouble installing Julia.
+As with the latest stable release, checksums for this release are available in both
+[MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-alpha.md5)
+and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-alpha.sha256) format.
+Download the alpha version here, and please report any issues to the
+[issue tracker](https://github.com/JuliaLang/julia/issues) on Github.
+
+<table class="downloads">
+<tbody>
+<tr>
+    <th rowspan="2"> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.7/julia-0.7.0-alpha-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.7/julia-0.7.0-alpha-win64.exe">64-bit</a> </td>
+</tr>
+<tr>
+    <td colspan="6">Windows 7/Windows Server 2012 users also require <a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in">TLS "Easy Fix" update</a>, and <a href="https://docs.microsoft.com/en-us/powershell/wmf/readme">Windows Management Framework 3.0 or later</a></td>
+</tr>
+<tr>
+    <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.7/julia-0.7.0-alpha-mac64.dmg">10.8+ 64-bit</a> </td>
+</tr>
+<tr>
+    <th> Generic Linux Binaries for x86 <a href="platform.html#generic-binaries">[help]</a></th>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-alpha-linux-i686.tar.gz">32-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-alpha-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-alpha-linux-x86_64.tar.gz">64-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-alpha-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+</tr>
+<tr>
+    <th> Source </th>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-alpha/julia-0.7.0-alpha.tar.gz">Tarball</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-alpha/julia-0.7.0-alpha.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-alpha/julia-0.7.0-alpha-full.tar.gz">Tarball with dependencies</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-alpha/julia-0.7.0-alpha-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.7.0-alpha">GitHub</a> </td>
+</tr>
+</tbody>
+</table>
+
 # Older Releases
 
 Older releases of Julia for all platforms are available on the [Older releases page](http://julialang.org/downloads/oldreleases.html).
