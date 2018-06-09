@@ -59,6 +59,7 @@ Most also have channels on the main Julia Slack channel, and sub-forums on the m
 * [JuliaQuantum](https://github.com/JuliaQuantum) – [Julia libraries for quantum science and technology](http://juliaquantum.github.io/) ([Gitter](https://gitter.im/JuliaQuantum/home))
 * [JuliaPhysics](https://github.com/JuliaPhysics) – Physics
 * [JuliaDynamics](https://github.com/JuliaDynamics) - [Dynamical systems](https://juliadynamics.github.io/DynamicalSystems.jl/latest/), nonlinear dynamics and chaos.
+* [JuliaGeo](https://github.com/JuliaGeo) – Earth science, geospatial data processing
 
 ## Data Science
 * [JuliaML](https://github.com/JuliaML) – [Machine Learning](https://juliaml.github.io/)  ([Gitter](https://gitter.im/JuliaML/chat))
