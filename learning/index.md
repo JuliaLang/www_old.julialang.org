@@ -6,8 +6,8 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-* [Intro to Julia](https://www.youtube.com/watch?v=o6GOc6Sxy9Q), by Jane Herriman on June 8, 2018 at 10AM PDT/1PM EDT/19:00CET
-* [Intro to the Queryverse, a Julia data science stack](https://www.youtube.com/watch?v=OFPNph-WxLM), by David Anthoff on June 14, 2018 9:30AM PDT/12:30PM EDT/18:30 CET/10:00PM IST
+* Intro to Julia, by Jane Herriman on July 20, 2018 at 10AM PDT/1PM EDT/19:00CET
+* Intro to Julia for data science, by Huda Nassar, date TBD
 
 ## Past
 * [Intro to Julia](https://www.youtube.com/watch?v=4igzy3bGVkQ), by Jane Herriman (December 19, 2017) 
@@ -27,9 +27,11 @@ by Chris Rackauckas (February 6, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/13hqE_1a158" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 * [Intro to Julia Data Frames](https://www.youtube.com/watch?v=0-Xsts_s5Wc), by Bogumił Kamiński (May 24, 2018)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0-Xsts_s5Wc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+* Intro to Julia,  by Jane Herriman (June 8, 2018)
+* [Intro to the Queryverse, a Julia data science stack](https://www.youtube.com/watch?v=OFPNph-WxLM), by David Anthoff (June 14, 2018)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OFPNph-WxLM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
-Get jupyter notebooks for all past tutorials [here](https://github.com/JuliaComputing/JuliaBoxTutorials)!
+Get jupyter notebooks for all past tutorials [here](https://github.com/JuliaComputing/JuliaBoxTutorials) or run them directly on [JuliaBox](JuliaBox.com)!
 
 # Books
 
