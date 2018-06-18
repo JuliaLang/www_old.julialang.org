@@ -6,7 +6,7 @@ title:  Learning Julia
 # Online tutorials
 ## Upcoming
 
-* Intro to Julia, by Jane Herriman on July 20, 2018 at 10AM PDT/1PM EDT/19:00CET
+* [Intro to Julia](https://www.youtube.com/watch?v=BYW2J2WWkj8), by Jane Herriman on July 20, 2018 at 10AM PDT/1PM EDT/19:00CET
 * Intro to Julia for data science, by Huda Nassar, date TBD
 
 ## Past
