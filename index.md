@@ -2,9 +2,33 @@
 layout: default
 title:  The Julia Language
 ---
+<link rel="canonical" href="http://julialang.org">
 
-Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments.
-It provides a sophisticated compiler, [distributed parallel execution](http://docs.julialang.org/en/stable/manual/parallel-computing/), numerical accuracy, and an [extensive mathematical function library](http://docs.julialang.org/en/stable/stdlib/).
+<!--<div style="display: flex; flex-direction: row; align-items:center; margin-bottom: 32px">
+    <div style="width: 48%; text-align: center">
+        <div style="justify-content:center; margin-bottom: 16px; display: flex; flex-direction: row; align-items:center">
+            <a href="http://juliacon.org"><img src="/images/juliacon2017.svg" style="width:200px; height: auto"></a>
+            <div style="margin-left: 16px; margin-top: 16px; font-weight: bold; font-size: 2.5em">2017</div>
+        </div>
+        <div>
+            June 20th - June 24th 2017, Berkeley, CA. <br>
+            <a href="http://juliacon.org/2017/schedule">Talks and workshops.</a>
+            <a href="https://www.eventbrite.com/e/juliacon-2017-tickets-31531297961?ref=ebtnebtckt">Tickets.</a>
+        </div>
+    </div>
+    <div style="width: 48%; text-align: center">
+        <div style="justify-content:center; margin-bottom: 16px; display: flex; flex-direction: row; align-items:center">
+            <a href="/soc/ideas-page.html"><img src="/images/juliasock.png" style="width:88px; height: auto"></a>
+        </div>
+        <div>
+            Julia is part of <b><a href="https://summerofcode.withgoogle.com/">Google Summer of Code 2017</a>!</b><br>
+            Students are working on these <a href="https://summerofcode.withgoogle.com/organizations/5642180010967040/">18 projects</a>.
+        </div>
+    </div>
+</div>-->
+
+[Julia](http://julialang.org) is a high-level, high-performance dynamic programming language for numerical computing.
+It provides a sophisticated compiler, [distributed parallel execution](http://docs.julialang.org/en/stable/manual/parallel-computing/), numerical accuracy, and an [extensive mathematical function library](https://docs.julialang.org/en/latest/#Standard-Library-1).
 Julia's Base library, largely written in Julia itself, also integrates mature, best-of-breed open source C and Fortran libraries for [linear algebra](http://docs.julialang.org/en/stable/stdlib/linalg/), [random number generation](http://docs.julialang.org/en/stable/stdlib/numbers/#random-numbers), [signal processing](http://docs.julialang.org/en/stable/stdlib/math/#signal-processing), and [string processing](http://docs.julialang.org/en/stable/stdlib/strings/#strings).
 In addition, the Julia developer community is contributing a number of [external packages](http://pkg.julialang.org) through Julia's built-in package manager at a rapid pace. [IJulia](https://github.com/JuliaLang/IJulia.jl), a collaboration between the [Jupyter](http://jupyter.org) and Julia communities, provides a powerful browser-based graphical notebook interface to Julia.
 
@@ -16,17 +40,15 @@ This keynote talk by Stefan Karpinski at [ODSC Boston](https://www.odsc.com/bost
 </div>
 -->
 
-Julia programs are organized around [multiple dispatch](http://docs.julialang.org/en/stable/manual/methods/#man-methods); by defining functions and overloading them for different combinations of argument types, which can also be user-defined.
-For a more in-depth discussion of the rationale and advantages of Julia over other systems, see the following highlights or read the [introduction](http://docs.julialang.org/en/stable/manual/introduction/) in the [online manual](http://docs.julialang.org).
+Julia programs are organized around [multiple dispatch](http://docs.julialang.org/en/stable/manual/methods/#man-methods), which allows built-in and user-defined functions to be [overloaded](https://en.wikipedia.org/wiki/Function_overloading) for different combinations of argument types. For a more in-depth discussion of the rationale and advantages of Julia over other systems, see the following highlights or read the [introduction](http://docs.julialang.org/en/stable/manual/introduction/) in the [online manual](http://docs.julialang.org).
 
+JuliaCon 2017, the annual conference on Julia, was held from June 20th to June 24th at the University of California, Berkeley. Below is a random video from our YouTube playlist of the talks. Click on the playlist icon to check out the other videos.
 
-JuliaCon 2016, the annual conference on Julia was held during June 21st - 25th at MIT. Below is a random video from our youtube playlist of the talks. Click on the playlist icon to check out the other videos.
-
-{% include juliacon-player-2016.html %}
+{% include juliacon-player-2017.html %}
 
 # A Summary of Features
 
-* [Multiple dispatch](http://en.wikipedia.org/wiki/Multiple_dispatch): providing ability to define function behavior across many combinations of argument types
+* [Multiple dispatch](http://en.wikipedia.org/wiki/Multiple_dispatch): providing the ability to define function behavior across many combinations of argument types
 * Dynamic type system: types for documentation, optimization, and dispatch
 * Good performance, approaching that of statically-compiled languages like C
 * Built-in package manager
@@ -45,46 +67,34 @@ JuliaCon 2016, the annual conference on Julia was held during June 21st - 25th a
 # High-Performance JIT Compiler
 
 Julia's LLVM-based just-in-time (JIT) compiler combined with the language's design allow it to approach and often match the performance of C.
-To get a sense of relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we've written a small set of micro-benchmarks in a variety of languages:
-[C](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c),
-[Fortran](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.f90),
-[Julia](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.jl),
-[Python](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.py),
-[Matlab/Octave](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.m),
-[R](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.R),
-[JavaScript](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.js),
-[Java](https://github.com/JuliaLang/julia/tree/master/test/perf/micro/java/src/main/java),
-[Lua](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.lua),
-[Go](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.go), and
-[Mathematica](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.nb).
-We encourage you to skim the code to get a sense for how easy or difficult numerical programming in each language is.
-The following micro-benchmark results were obtained on a single core (serial execution) on an Intel(R) Xeon(R) CPU E7-8850 2.00GHz CPU with 1TB of 1067MHz DDR3 RAM, running Linux:
+To get a sense of the relative performance of Julia compared to other languages that can or could be used for numerical and scientific computing, we've written a small set of micro-benchmarks in a variety of languages:
+[C](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.c),
+[Fortran](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.f90),
+[Julia](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.jl),
+[Python](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.py),
+[Matlab/Octave](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.m),
+[R](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.R),
+[JavaScript](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.js),
+[Java](https://github.com/JuliaLang/Microbenchmarks/tree/master/java/src/main/java),
+[Lua](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.lua),
+[Mathematica](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.nb).
+We encourage you to skim the code to get a sense for how easy or difficult it is to do numerical programming in each language.
 
-<div class="figure">
-<div class="cs-benchmark-table">
-{% include benchmarks.html %}
-</div>
+<center>
+<div class="figure" style="align: center; width: 77%">
+{% include benchmarks.svg %}
 <p class="caption"><b>Figure:</b>
-benchmark times relative to C (smaller is better, C performance = 1.0).
+Benchmark times relative to C (smaller is better, C performance = 1.0). Plot created with
+<a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a> and
+<a href="https://github.com/JuliaLang/IJulia.jl">IJulia</a> from
+<a href="http://nbviewer.ipython.org/url/julialang.org/benchmarks/benchmarks.ipynb">this notebook</a>.
+See the <a href="/benchmarks/">benchmarks page</a> for more information.
 </p>
-<p class="note">
-C and Fortran compiled by gcc 5.1.1, taking best timing from all optimization levels (-O0 through -O3).
-C, Fortran, Go, and Julia use <a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a> v0.2.14.
-Python 3 was installed from the <a href="https://www.continuum.io/downloads">Anaconda distribution</a>.
-The Python implementations of <tt>rand_mat_stat</tt> and <tt>rand_mat_mul</tt>
-use NumPy (v1.9.2) functions; the rest are pure Python implementations.<br/>
-Benchmarks can also be seen <a href="/benchmarks/">here as a plot</a> created
-with <a href="https://github.com/dcjones/Gadfly.jl">Gadfly</a>.
-</p>
+
 </div>
+</center>
 
-These benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, and array operations.
-It is important to note that these benchmark implementations are not written for absolute maximal performance (the fastest code to compute `fib(20)` is the constant literal `6765`).
-Rather, all of the benchmarks are written to test the performance of specific algorithms implemented in each language.
-In particular, all languages use the same algorithm: the Fibonacci benchmarks are all recursive while the pi summation benchmarks are all iterative; the "algorithm" for random matrix multiplication is to call the most obvious built-in/standard random-number and matmul routines (or to directly call BLAS if the language does not provide a high-level matmul), except where a matmul/BLAS call is not possible (such as in JavaScript).
-The point of these benchmarks is to compare the performance of specific *algorithms* across language implementations, not to compare the fastest means of computing a result, which in most high-level languages relies on calling C code.
-Raw benchmark numbers in CSV format are available [here](/benchmarks.csv).
-
+# A quick taste of Julia
 
 To give a quick taste of what Julia looks like, here is the code used in the Mandelbrot and random matrix statistics benchmarks:
 
@@ -93,7 +103,7 @@ function mandel(z)
     c = z
     maxiter = 80
     for n = 1:maxiter
-        if abs(z) > 2
+        if abs2(z) > 4
             return n-1
         end
         z = z^2 + c
@@ -119,33 +129,41 @@ function randmatstat(t)
 end
 {% endhighlight %}
 
-The code above is quite clear, and should feel familiar to anyone who has programmed in other mathematical languages.
-The Julia implementation of `randmatstat` is considerably simpler than the equivalent [C implementation](https://github.com/JuliaLang/julia/blob/master/test/perf/micro/perf.c#L126), without giving up much performance. Planned compiler optimizations will close this performance gap in the future.
-By design, Julia allows you to range from tight low-level loops, up to a high-level programming style, while sacrificing some performance, but gaining the ability to express complex algorithms easily.
-This continuous spectrum of programming levels is a hallmark of the Julia approach to programming and is very much an intentional feature of the language.
+The code above is quite clear, and should feel familiar to anyone who
+has programmed in other mathematical languages.  The Julia
+implementation of `randmatstat` is considerably simpler than the
+equivalent [C
+implementation](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.c#L135),
+without giving up much performance. Planned compiler optimizations
+will close this performance gap in the future.  By design, Julia
+allows you to range from tight low-level loops, up to a high-level
+programming style, while sacrificing some performance, but gaining the
+ability to express complex algorithms easily. This continuous spectrum
+of programming levels is a hallmark of the Julia approach to
+programming and is very much an intentional feature of the language.
 
 # Designed for Parallelism and Cloud Computing
 
 Julia does not impose any particular style of parallelism on the user.
-Instead, it provides a number of [key building blocks for distributed computation](/manual/parallel-computing), making it flexible enough to support a number of styles of parallelism, and allowing users to add more.
+Instead, it provides a number of [key building blocks for distributed computation](http://docs.julialang.org/en/stable/manual/parallel-computing), making it flexible enough to support a number of styles of parallelism, and allowing users to add more.
 The following simple example demonstrates how to count the number of heads in a large number of coin tosses in parallel.
 
 {% highlight julia %}
-nheads = @parallel (+) for i=1:100000000
-  rand(Bool)
+nheads = @parallel (+) for i = 1:100000000
+    rand(Bool)
 end
 {% endhighlight %}
 
 This computation is automatically distributed across all available compute nodes, and the result, reduced by summation (`+`), is returned at the calling node.
 
-Here is a screenshot of a web-based interactive [IJulia Notebook](https://github.com/JuliaLang/IJulia.jl) session, using [Gadfly](https://github.com/dcjones/Gadfly.jl). [JuliaBox](http://www.juliabox.org) provides a way to run IJulia notebooks in your browser on Docker sandboxed containers provisioned on demand.
+Here is a screenshot of a web-based interactive [IJulia Notebook](https://github.com/JuliaLang/IJulia.jl) session, using [Gadfly](https://github.com/dcjones/Gadfly.jl). [JuliaBox](http://www.juliabox.com) provides a way to run IJulia notebooks in your browser on Docker sandboxed containers provisioned on demand.
 
 <a href="/images/ijulia.png" target="_blank"><img class="u-center" src="/images/ijulia.png" width="90%" /></a>
 
 This paves the way for fully cloud-based operation, including data management, code editing and sharing, execution, debugging, collaboration, analysis, data exploration, and visualization.
 The eventual goal is to let people stop worrying about administering machines and managing data and get straight to the real problem.
 
-[Gadfly](https://github.com/dcjones/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaLang/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
+[Gadfly](https://github.com/GiovineItalia/Gadfly.jl) can produce various plots with various rendering backends in the browser (SVG, PDF, PNG and various other backends are also supported). Interactivity can be added to graphs and plots with the [Interact.jl](https://github.com/JuliaGizmos/Interact.jl) package. A small sampling of the capabilities of Gadfly is presented below.
 
 <a href="/images/gadfly-demo.png" target="_blank"><img src="/images/gadfly-demo.png" width="100%" /></a>
 
