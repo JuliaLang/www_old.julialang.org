@@ -35,6 +35,7 @@ Most also have channels on the main Julia Slack channel, and sub-forums on the m
 * [JuliaIO](https://github.com/JuliaIO) – IO-related functionality, such as serialization
 * [JuliaParallel](https://github.com/JuliaParallel) – [Parallel programming in Julia](http://juliaparallel.github.io/)
 * [JuliaWeb](https://github.com/JuliaWeb) – Web stack
+* [JuliaCloud](https://github.com/juliacloud) - Cloud providers
 
 
 ## Mathematics
