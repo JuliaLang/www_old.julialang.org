@@ -56,6 +56,10 @@ Julia is now being used in several universities and online courses. If you know 
 - [Federal University of Alagoas](http://www.ufal.edu.br) (_Universidade Federal de Alagoas_, UFAL) <!---9.555682,-35.777877-->
   * COMP272, Distributed Systems ([Prof. André Lage-Freitas](https://sites.google.com/a/ic.ufal.br/andrelage)): 2015, 2016, and 2017
 
+- [Federal University of Paraná](http://www.ufpr.br/) (_Universidade Federal do Paraná_, UFPR) <!-- -25.4510802,-49.2328735-->
+  * CM103, Mathematics Laboratory ([Prof. Abel Soares Siqueira](http://abelsiqueira.github.io/)): 2016, 2017, and 2018
+  * CM106, Nonlinear Optimization ([Prof. Abel Soares Siqueira](http://abelsiqueira.github.io/)): 2018
+
 - Federal University of Uberlândia, Institute of Physics <!---18.918506,-48.25817-->
   * [GFM050](http://www.infis.ufu.br/gerson), Física Computacional (Prof. Gerson J. Ferreira), Fall 2016
 
