@@ -105,6 +105,10 @@ Julia is now being used in several universities and online courses. If you know 
 
 - Purdue University <!--40.4319722,-86.923893679845-->
   * [CS51400](https://www.cs.purdue.edu/homes/dgleich/cs514-2016/), Numerical Analysis (Prof. [David Gleich](https://www.cs.purdue.edu/homes/dgleich/)), Spring 2016
+  
+- Royal Military Academy (Brussels <!--50.84451, 4.39342-->
+  * [ES123](http://www.rma.ac.be/en/rma-bachelor-in-engineering.html), Computer Algorithms and Programming Project (Prof. [Ben Lauwens](http://www.rma.ac.be/en/rma-contact.html)), Spring 2018
+  * [ES313](http://www.rma.ac.be/en/rma-bachelor-in-engineering.html), Mathematical modelling and Computer Simulation (Prof. [Ben Lauwens](http://www.rma.ac.be/en/rma-contact.html)), Fall 2018
 
 - "Sapienza" University of Rome, Italy <!--41.903763,12.514438-->
   * [Operations Research](http://www.iasi.cnr.it/~liuzzi/teachita.htm) (Giampaolo Liuzzi), Spring 2015
