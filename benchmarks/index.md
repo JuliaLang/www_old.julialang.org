@@ -88,7 +88,7 @@ Implementations of benchmark algorithms in other languages:
 [Lua](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.lua),
 [Mathematica](https://github.com/JuliaLang/Microbenchmarks/blob/master/perf.nb).
 
-### Benchmark platform
+## Benchmark platform
 
 These micro-benchmark results were obtained on a single core (serial
 execution) of an Intel(R) Core(TM) i7-3960X 3.30GHz CPU with 64GB of
