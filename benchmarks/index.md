@@ -22,26 +22,20 @@ benchmark times relative to C (smaller is better, C performance = 1.0).
 ## Benchmark algorithms
 
 It is important to note that the benchmark codes are not written for
-absolute maximal performance (the fastest code to compute
-`recursion_fibonacci(20)` is the constant literal `6765`).  Instead,
+absolute maximal performance --the fastest code to compute
+`recursion_fibonacci(20)` is the constant literal `6765`.  Instead,
 the benchmarks are written to test the performance of *identical
 algorithms and code patterns* implemented in each language.  For
-example, the Fibonacci benchmarks all use the same (inefficient)
+example, the Fibonacci benchmarks all use the same inefficient
 doubly-recursive algorithm, and the pi summation benchmarks evaluate
-the same slowly-converging series with the same *for* loop.  The
-"algorithm" for matrix multiplication is to call
-the most obvious built-in/standard random-number and matmul routines
-(or to directly call BLAS if the language does not provide a
-high-level matmul), except where a matmul/BLAS call is not possible
-(such as in JavaScript).
+the same slowly-converging series with the same *for* loop.
 
-[iteration_pisum](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L18-L27)
-tests performance of a hot *for* loop that approximates 
-π via the slowly-converging series π²/6 = 1/1² + 1/2² + 1/3² + ⋅ ⋅ ⋅
-summed to 10,000 terms.
+[iteration_pisum](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L89-L98)
+tests performance of a hot *for* loop that sums the slowly-converging series π²/6 = 1/1² + 1/2² + 1/3² + ⋅ ⋅ ⋅ to 10,000 terms.
+
   
 [recursion_fibonacci](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L11)
-tests performance of  recursion by computing the 20th fibonacci number 6765 with a
+tests performance of  recursion by computing the 20th Fibonacci number 6765 with a
 doubly-recursive algorithm. The Julia code is the one-liner
 `fib(n) = n < 2 ? n : fib(n-1) + fib(n-2)`. 
 
@@ -49,7 +43,7 @@ doubly-recursive algorithm. The Julia code is the one-liner
 tests recursion by sorting a vector of 5000 random integers with a
 recursive quicksort algorithm. 
 
-[parse_integers](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L65-L81)
+[parse_integers](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L18-L27)
 tests performance of string libraries by converting 1000 random
 integers to strings and parsing the strings back to integers.
 An assertion for equality is included in the timing.
@@ -65,15 +59,22 @@ on small (5 × 5) random matrices.
 
 [matrix_multiply](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L142) 
 tests random number generation and matrix multiplication on moderately
-large matrices. The Julia code is the one-liner `rand(1000,1000)*rand(1000,1000)`;
-the matrix multiplication is computed by a direct call to BLAS. 
+large (1000 × 1000) matrices. In Julia, the benchmark code is the one-liner
+`rand(1000,1000)*rand(1000,1000)` and the matrix multiplication is
+computed by a direct call to BLAS. In other languages the "algorithm"
+is to call the most obvious built-in/standard random-number and matmul
+routines (or to directly call BLAS if the language does not provide a
+high-level matmul), except where a matmul/BLAS call is not possible
+(such as in JavaScript).
 
 [userfunc_mandelbrot](https://github.com/JuliaLang/Microbenchmarks/blob/1a88c0048de0507be69640c4e34cc07a30d45ee0/perf.jl#L43-L57)
 tests performance of calls to user-defined functions, via calculation
 of the Mandelbrot set over a 2d grid. The bottleneck is the user-defined
 norm-squared function `myabs2(z) = real(z)*real(z) + imag(z)*imag(z)`,
 which is called repeatedly to test divergence of the Mandelbrot iteration
-z → z² + c.
+z → z² + c. In most languages it would be more efficient to call a built-in
+`abs` function, but the point of the benchmark is to test the performance
+of the user-defined `myabs2`. 
 
 
 Implementations of benchmark algorithms in other languages:
