@@ -66,6 +66,7 @@ Get jupyter notebooks for all past tutorials [here](https://github.com/JuliaComp
 - [Learn Julia the Hard Way](https://github.com/chrisvoncsefalvay/learn-julia-the-hard-way) by [Chris von Csefalvay](http://chrisvoncsefalvay.com/)
 - [Hands-on Julia](https://github.com/dpsanders/hands_on_julia) by [David P. Sanders](http://sistemas.fciencias.unam.mx/~dsanders/)
 - [A Comprehensive Tutorial to Learn Data Science with Julia from Scratch](https://www.analyticsvidhya.com/blog/2017/10/comprehensive-tutorial-learn-data-science-julia-from-scratch/) by [Mohd Sanad Zaki Rizvi](https://www.analyticsvidhya.com/blog/author/mohdsanadzakirizvigmail-com/)
+- [Think Julia](https://github.com/BenLauwens/ThinkJulia.jl) - a Julia version of [Alan Downey's](http://www.greenteapress.com/thinkpython/thinkpython.html) "Think Python: How to Think Like a Computer Scientist"
 
 
 # Resources
