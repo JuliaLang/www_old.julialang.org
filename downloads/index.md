@@ -59,13 +59,13 @@ trouble installing Julia.  Checksums for this release are available in both [MD5
 If the provided download files do not work for you, please [file an
 issue in the Julia project](https://github.com/JuliaLang/julia/issues).
 
-# Upcoming Release (v0.7.0-beta)
+# Upcoming Release (v0.7.0-beta2)
 
-We are currently testing a beta version for the next release of Julia, v0.7.0.
+We are currently testing the second beta version for the next release of Julia, v0.7.0.
 Please see [platform](platform.html) specific instructions if you have trouble installing Julia.
 As with the latest stable release, checksums for this release are available in both
-[MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-beta.md5)
-and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-beta.sha256) format.
+[MD5](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-beta2.md5)
+and [SHA256](https://julialang-s3.julialang.org/bin/checksums/julia-0.7.0-beta2.sha256) format.
 Download the beta version here, and please report any issues to the
 [issue tracker](https://github.com/JuliaLang/julia/issues) on Github.
 
@@ -73,35 +73,40 @@ Download the beta version here, and please report any issues to the
 <tbody>
 <tr>
     <th rowspan="2"> Windows Self-Extracting Archive (.exe) <a href="platform.html#windows">[help]</a></th>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.7/julia-0.7.0-beta-win32.exe">32-bit</a> </td>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.7/julia-0.7.0-beta-win64.exe">64-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x86/0.7/julia-0.7.0-beta2-win32.exe">32-bit</a> </td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/winnt/x64/0.7/julia-0.7.0-beta2-win64.exe">64-bit</a> </td>
 </tr>
 <tr>
     <td colspan="6">Windows 7/Windows Server 2012 users also require <a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in">TLS "Easy Fix" update</a>, and <a href="https://docs.microsoft.com/en-us/powershell/wmf/readme">Windows Management Framework 3.0 or later</a></td>
 </tr>
 <tr>
     <th> macOS Package (.dmg) <a href="platform.html#macos">[help]</a></th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.7/julia-0.7.0-beta-mac64.dmg">10.8+ 64-bit</a> </td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/mac/x64/0.7/julia-0.7.0-beta2-mac64.dmg">10.8+ 64-bit</a> </td>
 </tr>
 <tr>
     <th> Generic Linux Binaries for x86 <a href="platform.html#generic-binaries">[help]</a></th>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-beta-linux-i686.tar.gz">32-bit</a>
-        (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-beta-linux-i686.tar.gz.asc">GPG</a>)</td>
-    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-beta-linux-x86_64.tar.gz">64-bit</a>
-        (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-beta-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-beta2-linux-i686.tar.gz">32-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x86/0.7/julia-0.7.0-beta2-linux-i686.tar.gz.asc">GPG</a>)</td>
+    <td colspan="3"> <a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-beta2-linux-x86_64.tar.gz">64-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/x64/0.7/julia-0.7.0-beta2-linux-x86_64.tar.gz.asc">GPG</a>)</td>
+</tr>
+<tr>
+    <th> Generic Linux Binaries for ARM <a href="platform.html#generic-binaries">[help]</a></th>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/linux/armv7l/0.7/julia-0.7.0-beta2-linux-armv7l.tar.gz">ARMv7-A hard float (32-bit)</a>
+        (<a href="https://julialang-s3.julialang.org/bin/linux/armv7l/0.7/julia-0.7.0-beta2-linux-armv7l.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Generic FreeBSD Binaries for x86 <a href="platform.html#generic-binaries">[help]</a></th>
-    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.7/julia-0.7.0-freebsd-x86_64.tar.gz">64-bit</a>
-        (<a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.7/julia-0.7.0-freebsd-x86_64.tar.gz.asc">GPG</a>)</td>
+    <td colspan="6"> <a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.7/julia-0.7.0-beta2-freebsd-x86_64.tar.gz">64-bit</a>
+        (<a href="https://julialang-s3.julialang.org/bin/freebsd/x64/0.7/julia-0.7.0-beta2-freebsd-x86_64.tar.gz.asc">GPG</a>)</td>
 </tr>
 <tr>
     <th> Source </th>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta/julia-0.7.0-beta.tar.gz">Tarball</a>
-        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta/julia-0.7.0-beta.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta/julia-0.7.0-beta-full.tar.gz">Tarball with dependencies</a>
-        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta/julia-0.7.0-beta-full.tar.gz.asc">GPG</a>) </td>
-    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.7.0-beta">GitHub</a> </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta2/julia-0.7.0-beta2.tar.gz">Tarball</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta2/julia-0.7.0-beta2.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta2/julia-0.7.0-beta2-full.tar.gz">Tarball with dependencies</a>
+        (<a href="https://github.com/JuliaLang/julia/releases/download/v0.7.0-beta2/julia-0.7.0-beta2-full.tar.gz.asc">GPG</a>) </td>
+    <td colspan="2"> <a href="https://github.com/JuliaLang/julia/tree/v0.7.0-beta2">GitHub</a> </td>
 </tr>
 </tbody>
 </table>
