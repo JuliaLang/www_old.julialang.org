@@ -119,7 +119,7 @@ Web portals such as:
  - https://dataverse.harvard.edu/
  - http://datadryad.org/
  - https://figshare.com/
- 
+
 Expose great quanities of data just wating to be used.
 
 [DataDeps.jl](https://github.com/oxinabox/DataDeps.jl) is a package that helps data scientists ensures that anyone running their code has all the data it needs, no matter when or where it is run.
@@ -159,11 +159,11 @@ The purpose of this project is to utilize the growing array of statistical,
 optimization, and machine learning tools in the Julia ecosystem to build
 library functions that make it easy for scientists to perform this parameter
 estimation with the most high-powered and robust methodologies. Possible projects
-include investigating methods for Bayesian estimation of parameters via Stan.jl
-and Julia-based libraries like Turing.jl, or global optimization-based approaches.
-Novel techniques like classifying model outcomes via support vector machines
-and deep neural networks is can also be considered. Research and benchmarking
-to attempt to find the most robust methods will take place in this project.
+include integration of differential equations libraries with neural network
+libraries like Flux.jl, empirical Bayes estimation, expectation-maximization
+methods applied to ODEs/SDEs/DAEs/DDEs, machine learning surrogate models
+for differential equations (neural networks, Gaussian processes, etc.),
+and adaptive classification techniques on simulation-derived data.
 
 Some work in this area can be found in
 [DiffEqParamEstim.jl](https://github.com/JuliaDiffEq/DiffEqParamEstim.jl)
@@ -187,23 +187,23 @@ simultaneously.
 
 ## Artificial Intelligence Library Package based on Artificial Intelligence - A Modern Approach (AIMA)
 
-AIMA is a seminal text on representation of agents to solve AI problems. Most packages 
+AIMA is a seminal text on representation of agents to solve AI problems. Most packages
 available today as AI libraries tend to focus on ML only and not the architectural
-aspect of AI. The scope of the project is to create a library with a clean API 
-(following AIMA) to easily allow the application of core algorithms to AI problems. 
-The student will implement a package that brings together implementations of algorithms 
-like depth-first search and simulated annealing, both from other Julia packages and 
-from sample code in the AIMA book, and build sample programs to demonstrate AI 
+aspect of AI. The scope of the project is to create a library with a clean API
+(following AIMA) to easily allow the application of core algorithms to AI problems.
+The student will implement a package that brings together implementations of algorithms
+like depth-first search and simulated annealing, both from other Julia packages and
+from sample code in the AIMA book, and build sample programs to demonstrate AI
 applications. Starter code can be found at [AIMACore]
 (https://github.com/sambitdash/AIMACore.jl) along with [AIMASamples]
 (https://github.com/sambitdash/AIMASamples.jl).
 
-**Recommended Skills**: Previous experience with AI or the ability to quickly pick up on 
+**Recommended Skills**: Previous experience with AI or the ability to quickly pick up on
 the AI algorithms in AIMA
 
 **Expected Results**: A well-documented library of functions derived from the AIMA book.
 
-**Mentors** [Sambit Kumar Dash](https://github.com/sambitdash). 
+**Mentors** [Sambit Kumar Dash](https://github.com/sambitdash).
 
 ## A SQL backend for Query.jl
 
