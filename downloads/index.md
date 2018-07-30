@@ -13,7 +13,7 @@ We provide several ways for you to run Julia:
 
 * In the terminal using the built-in Julia command line.
 * In the browser on [JuliaBox.com](https://www.juliabox.com) with Jupyter notebooks. No installation is required -- just point your browser there, login and start computing.
-* [JuliaPro](http://juliacomputing.com/products/juliapro.html) by [Julia Computing](http://juliacomputing.com) is a batteries included distribution of Julia. It includes the [Juno IDE](http://junolab.org), the [Gallium debugger](https://github.com/Keno/Gallium.jl), and a number of packages for plotting, optimization, machine learning, databases and much more (requires registration).
+* [JuliaPro](http://juliacomputing.com/products/juliapro.html) by [Julia Computing](http://juliacomputing.com) is a batteries included distribution of Julia. It includes the [Juno IDE](http://junolab.org) and a number of packages for plotting, optimization, machine learning, databases and much more (requires registration).
 
 A package which integrates most of Julia's plotting backends into one convenient and
 well-documented API is [Plots.jl](https://github.com/JuliaPlots/Plots.jl).
